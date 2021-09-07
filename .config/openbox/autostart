@@ -1,1 +1,6 @@
-
+$HOME/.config/polybar/launch.sh &
+tint2 &
+plank &
+nitrogen --restore &
+picom &
+lxpolkit &
