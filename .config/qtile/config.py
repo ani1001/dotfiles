@@ -33,13 +33,10 @@ from libqtile import bar, layout, widget, hook
 from libqtile.config import Click, Drag, Group, Key, KeyChord, Screen
 from libqtile.lazy import lazy
 from libqtile.command import lazy
-from libqtile.utils import guess_terminal
 
 mod = "mod4"
-terminal = guess_terminal()
-
-myTerm = "alacritty"
-myConfig = "/home/anikb/.config/qtile/config.py"
+myTerminal = "alacritty"
+myConfig = "~/.config/qtile/config.py"
 
 keys = [
     # Switch between windows in current stack pane
@@ -69,7 +66,7 @@ keys = [
     Key([mod, "shift"], "Return", lazy.layout.toggle_split(),
         desc="Toggle between split and unsplit sides of stack"),
     # Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
-    Key([mod], "Return", lazy.spawn(myTerm), desc="Launch terminal"),
+    Key([mod], "Return", lazy.spawn(myTerminal), desc="Launch terminal"),
 
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
@@ -105,7 +102,7 @@ layouts = [
     # Try more layouts by unleashing below layouts.
     layout.Bsp(),
     layout.Columns(),
-    # layout.Matrix(),
+    layout.Matrix(),
     layout.MonadTall(),
     # layout.MonadWide(),
     # layout.RatioTile(),
