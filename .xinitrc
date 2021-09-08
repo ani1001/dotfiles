@@ -14,10 +14,19 @@ fi
 xrdb -merge $HOME/.Xresources &
 xrandr --output VGA-1 --brightness 0.9 &
 
-# exec gnome-session
-# exec startkde
 # exec startxfce4
-exec awesome
+# exec awesome
 # exec xmonad
+
+# Here Xfce is kept as default
+session=${1:-xfce4}
+
+case $session in
+    i3|i3wm           ) exec i3;;
+    kde               ) exec startplasma-x11;;
+    xfce|xfce4        ) exec startxfce4;;
+    # No known session, try to run it as command
+    *                 ) exec $1;;
+esac
 
 # ...or the Window Manager of your choice
