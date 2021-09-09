@@ -1,8 +1,8 @@
 import XMonad
 import System.IO
 
-import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.DynamicLog
+import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.SetWMName
 
@@ -26,7 +26,6 @@ myFocusedBorderColor = "#ff0000"      -- Color of focused border
 myNormalBorderColor  = "#dddddd"      -- Color of inactive border
 myBorderWidth        = 2              -- Width of border around windows
 
-myStartupHook :: X ()
 myStartupHook = do
     spawnOnce "nitrogen --restore &"
     spawnOnce "picom &"
@@ -34,7 +33,6 @@ myStartupHook = do
     spawnOnce "urxvtd -q -o -f &"
     setWMName "LG3D"
     setDefaultCursor xC_left_ptr
-
 
 myLayout = ( tiled ||| Mirror tiled ||| Full ||| Grid ||| spiral(6/7) |||
              threeCol ||| noBorders (tabbed shrinkText def) ||| Accordion )
@@ -61,9 +59,9 @@ myKeys = [ ((myModMask, xK_b), sendMessage ToggleStruts)
 main :: IO ()
 main = do
     xmproc <- spawnPipe "xmobar"
-    xmonad $ ewmh $ docks $ def
+    xmonad . ewmh . docks $ def
         { manageHook = myManageHook <+> manageHook def
-        , layoutHook = smartBorders $ avoidStruts $ myLayout
+        , layoutHook = smartBorders . avoidStruts $ myLayout
         , startupHook = myStartupHook
         , logHook = dynamicLogWithPP xmobarPP
                         { ppOutput = hPutStrLn xmproc
