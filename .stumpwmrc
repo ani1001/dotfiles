@@ -8,23 +8,32 @@
 (run-shell-command "nitrogen --restore")
 (run-shell-command "picom")
 (run-shell-command "lxpolkit")
+(run-shell-command "urxvtd -q -o -f")
 (run-shell-command "xsetroot -cursor_name left_ptr")
 
-;; window focus on mouse click
-(setf *mouse-focus-policy* :click)
+;; look and feel
+(setf *maxsize-border-width* 2
+      *normal-border-width* 2
+      *window-border-style* :thin
+      *mouse-focus-policy* :click
+      )
 
-;; create group and enable modeline
+;; mode-line format
 (setf *window-format* "%m%n%s%c"
       stumpwm:*screen-mode-line-format* (list "[^B%n^b] %W^>%d")
       stumpwm:*time-modeline-string* "%a %b %e %k:%M"
       stumpwm:*mode-line-timeout* 1
       )
+
+;; starts the mode-line
+(stumpwm:enable-mode-line (current-screen) (current-head) t)
+
+;; rename the default group and create some more
 (stumpwm:grename "Web")
 (stumpwm:gnewbg "Code")
 (stumpwm:gnewbg "Shell")
 (stumpwm:gnewbg "Music")
 (stumpwm:gnewbg "Connect")
-(stumpwm:enable-mode-line (current-screen) (current-head) t)
 
 ;; change the prefix key to something else
 (set-prefix-key (kbd "C-z"))
@@ -44,16 +53,14 @@
 (define-key *root-map* (kbd "C-s") "colon1 exec xterm -e ssh ")
 ;; Lock screen
 (define-key *root-map* (kbd "C-l") "exec slock")
-
 ;; Launch dmenu
 (define-key *root-map* (kbd "C-d") "exec dmenu_run")
 ;; Launch terminal
 (define-key *root-map* (kbd "RET") "exec urxvt")
-
 ;; Quit stumpwm
 (define-key *root-map* (kbd "C-q") "quit")
 ;; Restart stumpwm
-;; (define-key *root-map* (kbd "C-r") "restart-hard")
+(define-key *root-map* (kbd "C-r") "restart-hard")
 
 ;; Web jump (works for DuckDuckGo and Imdb)
 (defmacro make-web-jump (name prefix)
