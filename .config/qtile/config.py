@@ -130,25 +130,13 @@ screens = [
                     highlight_method='line',
                     this_current_screen_border='#ebcb8b'
                     ),
-                widget.Sep(),
-
-                widget.CurrentLayoutIcon(),
-                widget.Sep(),
-
-                widget.CurrentLayout(
-                    font='ShureTechMono Nerd Font Bold',
-                    foreground='#5e81ac'
-                    ),
-                widget.Sep(),
-
                 widget.Spacer(),
-                widget.Sep(),
 
                 widget.CPU(foreground='#88c0d0'),
                 widget.Sep(),
 
                 widget.Memory(
-                    format='{MemUsed: .0f}{mm}',
+                    format='{MemUsed:.0f}{mm}',
                     foreground='#8fbcbb'
                     ),
                 widget.Sep(),
@@ -160,7 +148,17 @@ screens = [
                     format='%a %d, (%B) %H:%M',
                     foreground='#b48ead'
                     ),
-            ],
+                widget.Sep(),
+
+                widget.CurrentLayout(
+                    font='ShureTechMono Nerd Font Bold',
+                    foreground='#5e81ac'
+                    ),
+                widget.Sep(),
+
+                widget.CurrentLayoutIcon(),
+            
+                ],
 
             24,
         ),
