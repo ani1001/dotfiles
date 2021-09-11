@@ -54,7 +54,6 @@ keys = [
     # Switch window focus to other pane(s) of stack
     Key([mod], "space", lazy.layout.next(),
         desc="Switch window focus to other pane(s) of stack"),
-
     # Swap panes of split stack
     Key([mod, "shift"], "space", lazy.layout.rotate(),
         desc="Swap panes of split stack"),
@@ -65,17 +64,15 @@ keys = [
     # multiple stack panes
     Key([mod, "shift"], "Return", lazy.layout.toggle_split(),
         desc="Toggle between split and unsplit sides of stack"),
-    # Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
     Key([mod], "Return", lazy.spawn(myTerminal), desc="Launch terminal"),
 
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
-    Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
 
+    Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "control"], "r", lazy.restart(), desc="Restart qtile"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown qtile"),
-    # Key([mod], "r", lazy.spawncmd(),
-        # desc="Spawn a command using a prompt widget"),
+
     Key([mod], "r", lazy.spawn("rofi -show run"), desc="Launch rofi"),
 ]
 
