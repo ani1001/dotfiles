@@ -58,12 +58,12 @@ myKeys = [ ((myModMask, xK_b), sendMessage ToggleStruts)
 
 main :: IO ()
 main = do
-    xmproc0 <- spawnPipe "xmobar -x 0 $HOME/.config/xmobar/xmobarrc0"
+    xmproc0 <- spawnPipe "xmobar -x 0 $HOME/.config/xmobar/xmobarrc"
     xmonad . ewmh . docks $ def
         { manageHook = myManageHook <+> manageHook def
         , layoutHook = smartBorders . avoidStruts $ myLayout
         , startupHook = myStartupHook
-        , logHook = dynamicLogWithPP xmobarPP
+        , logHook = dynamicLogWithPP $ xmobarPP
                         { ppOutput = hPutStrLn xmproc0
                         , ppTitle = xmobarColor "green" "" . shorten 50
                         }
