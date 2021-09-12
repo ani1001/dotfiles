@@ -93,19 +93,28 @@ for i in groups:
         #     desc="move focused window to group {}".format(i.name)),
     ])
 
+def init_layout_theme():
+    return {"margin": 4,
+            "border_width": 2,
+            "border_focus": '#5e81ac',
+            "border_normal": '#4c566a'
+            }
+
+layout_theme = init_layout_theme()
+
 layouts = [
     # layout.Max(),
     # layout.Stack(num_stacks=2),
     # Try more layouts by unleashing below layouts.
-    # layout.Bsp(),
+    layout.Bsp(**layout_theme),
     # layout.Columns(),
-    # layout.Matrix(),
-    layout.MonadTall(),
-    layout.MonadWide(),
-    layout.RatioTile(),
-    layout.Tile(),
+    layout.Matrix(**layout_theme),
+    layout.MonadTall(margin=6, border_width=2, border_focus='#5e81ac', border_normal='#4c566a'),
+    layout.MonadWide(margin=6, border_width=2, border_focus='#5e81ac', border_normal='#4c566a'),
+    layout.RatioTile(**layout_theme),
+    # layout.Tile(),
     # layout.TreeTab(),
-    # layout.VerticalTile(),
+    layout.VerticalTile(**layout_theme),
     # layout.Zoomy(),
 ]
 
@@ -154,7 +163,6 @@ screens = [
                 widget.Sep(),
 
                 widget.CurrentLayoutIcon(),
-            
                 ],
 
             24,
