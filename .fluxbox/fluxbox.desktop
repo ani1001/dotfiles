@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Fluxbox
+Comment=Highly configurable and low resource X11 Window manager
+Exec=/usr/bin/startfluxbox
+Terminal=false
+TryExec=/usr/bin/startfluxbox
+Type=Application
+
+[X-Window Manager]
+SessionManaged=true
