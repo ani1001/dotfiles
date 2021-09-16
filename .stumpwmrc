@@ -12,28 +12,46 @@
 (run-shell-command "xsetroot -cursor_name left_ptr")
 
 ;; look and feel
-(setf *maxsize-border-width* 2
-      *normal-border-width* 2
+(setf *message-window-gravity* :bottom-right
+      *input-window-gravity* :top-left
+      *maxsize-border-width* 1
+      *normal-border-width* 0
       *window-border-style* :thin
+      *transient-border-width* 2
+      stumpwm::*float-window-border* 2
+      stumpwm::*float-window-title-height* 5
+      *timeout-wait* 10
       *mouse-focus-policy* :click
       )
 
+;; (stumpwm:set-fg-color "#d8dee9")
+;; (stumpwm:set-bg-color "#2e3440")
+;; (stumpwm:set-focus-color "#5e81ac")
+(stumpwm:set-unfocus-color "#3b4252")
+;; (stumpwm:set-border-color "#ebcb8b")
+(stumpwm:set-win-bg-color "#81a1c1")
+
 ;; mode-line format
-(setf *window-format* "%m%n%s%c"
+(setf stumpwm:*mode-line-background-color* "#2e3440"
+      stumpwm:*mode-line-foreground-color* "#d8dee9"
+      stumpwm:*mode-line-border-color* "#ebcb8b"
+      stumpwm:*window-format* "%m%n%s%c"
       stumpwm:*screen-mode-line-format* (list "[^B%n^b] %W^>%d")
-      stumpwm:*time-modeline-string* "%a %b %e %k:%M"
+      stumpwm:*time-modeline-string* "%a, %b %d, %Y %l:%M%p"
       stumpwm:*mode-line-timeout* 1
       )
 
 ;; starts the mode-line
 (stumpwm:enable-mode-line (current-screen) (current-head) t)
 
+(stumpwm:set-focus-color "#5e81ac")
+
 ;; rename the default group and create some more
-(stumpwm:grename "Web")
-(stumpwm:gnewbg "Code")
-(stumpwm:gnewbg "Shell")
-(stumpwm:gnewbg "Music")
-(stumpwm:gnewbg "Connect")
+(stumpwm:grename "web")
+(stumpwm:gnewbg "irc")
+(stumpwm:gnewbg-float "email")
+(stumpwm:gnewbg "code")
+(stumpwm:gnewbg "shell")
 
 ;; bugfix for scrolling doesn't work with an external mouse in GTK+3 apps
 (setf (getenv "GDK_CORE_DEVICE_EVENTS") "1")
@@ -63,7 +81,7 @@
 ;; Quit stumpwm
 (define-key *root-map* (kbd "C-q") "quit")
 ;; Restart stumpwm
-(define-key *root-map* (kbd "C-r") "restart-hard")
+(define-key *root-map* (kbd "C-r") "reload")
 
 ;; Web jump (works for DuckDuckGo and Imdb)
 (defmacro make-web-jump (name prefix)
@@ -79,7 +97,8 @@
 (define-key *root-map* (kbd "i") "imdb")
 
 ;; Message window font
-(set-font "-xos4-terminus-medium-r-normal--14-140-72-72-c-80-iso8859-15")
+;; (set-font "-xos4-terminus-medium-r-normal--14-140-72-72-c-80-iso8859-15")
+(set-font "-misc-fixed-*-*-*-*-13-*-*-*-*-*-*-*")
 
 ;;; Define window placement policy...
 
