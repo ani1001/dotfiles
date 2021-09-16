@@ -13,6 +13,8 @@ fi
 
 xrdb -merge $HOME/.Xresources &
 xrandr --output VGA-1 --brightness 0.9 &
+xset +fp /home/anik/.local/share/fonts &
+xset fp rehash &
 
 ## some applications that should be run in the background
 # xscreensaver -no-splash &
