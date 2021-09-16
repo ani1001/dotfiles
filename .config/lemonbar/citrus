@@ -11,7 +11,7 @@ Workspaces() {
 		nodes=$(bspc query -N -d $desktop)
 
 		if [ ! -z "$nodes" ]; then
-			desktops=$(echo $desktops | sed "s/$desktop/%{F#5e81ac}$desktop%{F-}/")
+			desktops=$(echo $desktops | sed "s/$desktop/%{F#d08770}$desktop%{F-}/")
     fi
 
   done
@@ -20,7 +20,7 @@ Workspaces() {
   echo $desktops | sed "s/_/ /g"
 }
 
-ActiveWindow(){
+ActiveWindow() {
 	printf "$(xdotool getwindowfocus getwindowname)"
 }
 
