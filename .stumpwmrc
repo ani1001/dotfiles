@@ -22,12 +22,12 @@
 
 ;; window appearance
 (setf *message-window-padding* 2
-      *message-window-gravity* :bottom-right
-      *timeout-wait* 5
-      *input-window-gravity* :top-left
-      *maxsize-border-width* 2
+      *message-window-gravity* :bottom-left
+      *timeout-wait* 3
+      *input-window-gravity* :bottom-left
+      *maxsize-border-width* 3
       *transient-border-width* 2
-      *normal-border-width* 2
+      *normal-border-width* 3
       *window-border-style* :thin
       *float-window-border* 2
       *float-window-title-height* 5
@@ -66,10 +66,10 @@
       stumpwm:*mode-line-foreground-color* "#d8dee9"
       stumpwm:*mode-line-border-color* "#ebcb8b"
       stumpwm:*mode-line-timeout* 1
-      stumpwm:*group-format* "%n·%t%s"
+      stumpwm:*group-format* "%n·[%t%s]"
       ;; stumpwm:*window-format* "%m%n%s%c"
       stumpwm:*window-format* "^b^(:fg \"#b48ead\")<%20t>"
-      stumpwm:*time-modeline-string* "%a, %b %d, %Y %l:%M%p"
+      stumpwm:*time-modeline-string* "%a, %b %d, %Y (%l:%M%p )"
       )
 
 ;; starts the mode-line
