@@ -4,47 +4,76 @@
 
 (in-package :stumpwm)
 
-;; autorun program
+;; autorun programs
 (run-shell-command "nitrogen --restore")
 (run-shell-command "picom")
 (run-shell-command "lxpolkit")
 (run-shell-command "urxvtd -q -o -f")
 (run-shell-command "xsetroot -cursor_name left_ptr")
 
-;; look and feel
-(setf *message-window-gravity* :bottom-right
+;; interactive commands
+(defun show-kernel ()
+  (let ((ip (run-shell-command "uname -r" t)))
+    (substitute #\Space #\Newline ip)))
+
+(defun show-hostname ()
+  (let ((host-name (run-shell-command "cat /etc/hostname" t)))
+    (substitute #\Space #\Newline host-name)))
+
+;; window appearance
+(setf *message-window-padding* 2
+      *message-window-gravity* :bottom-right
+      *timeout-wait* 5
       *input-window-gravity* :top-left
-      *maxsize-border-width* 1
-      *normal-border-width* 0
-      *window-border-style* :thin
+      *maxsize-border-width* 2
       *transient-border-width* 2
-      stumpwm::*float-window-border* 2
-      stumpwm::*float-window-title-height* 5
-      *timeout-wait* 10
+      *normal-border-width* 2
+      *window-border-style* :thin
+      *float-window-border* 2
+      *float-window-title-height* 5
       *mouse-focus-policy* :click
       )
 
-;; (stumpwm:set-fg-color "#d8dee9")
-;; (stumpwm:set-bg-color "#2e3440")
-;; (stumpwm:set-focus-color "#5e81ac")
-(stumpwm:set-unfocus-color "#3b4252")
-;; (stumpwm:set-border-color "#ebcb8b")
+;; message and input bar colors 
+(stumpwm:set-fg-color "#d8dee9")
+(stumpwm:set-bg-color "#2e3440")
+(stumpwm:set-border-color "#ebcb8b")
+
+;; message and input bar format
+(stumpwm:set-msg-border-width 1)
+
+;; window color setup
 (stumpwm:set-win-bg-color "#81a1c1")
+(stumpwm:set-focus-color "#5e81ac")
+(stumpwm:set-unfocus-color "#3b4252")
+(stumpwm:set-float-focus-color "#d08770")
+(stumpwm:set-float-unfocus-color "#a3be8c")
+
+;; window gravity
+(stumpwm:set-normal-gravity :center)
+(stumpwm:set-maxsize-gravity :center)
+(stumpwm:set-transient-gravity :center)
 
 ;; mode-line format
-(setf stumpwm:*mode-line-background-color* "#2e3440"
+(setf ;; stumpwm:*screen-mode-line-format* (list "[^B%n^b] %W^>%d")
+      stumpwm:*screen-mode-line-format* (list " ")
+      stumpwm:*screen-mode-line-format* (list "%g | %v ^>^7 | " '(:eval (show-hostname)) "| " '(:eval (show-kernel)) "| %d ")
+      stumpwm:*mode-line-position* :top
+      stumpwm:*mode-line-border-width* 1
+      stumpwm:*mode-line-pad-x* 6
+      stumpwm:*mode-line-pad-y* 2
+      stumpwm:*mode-line-background-color* "#2e3440"
       stumpwm:*mode-line-foreground-color* "#d8dee9"
       stumpwm:*mode-line-border-color* "#ebcb8b"
-      stumpwm:*window-format* "%m%n%s%c"
-      stumpwm:*screen-mode-line-format* (list "[^B%n^b] %W^>%d")
-      stumpwm:*time-modeline-string* "%a, %b %d, %Y %l:%M%p"
       stumpwm:*mode-line-timeout* 1
+      stumpwm:*group-format* "%n·%t"
+      ;; stumpwm:*window-format* "%m%n%s%c"
+      stumpwm:*window-format* "^b^(:fg \"#b48ead\")<%20t>"
+      stumpwm:*time-modeline-string* "%a, %b %d, %Y %l:%M%p"
       )
 
 ;; starts the mode-line
 (stumpwm:enable-mode-line (current-screen) (current-head) t)
-
-(stumpwm:set-focus-color "#5e81ac")
 
 ;; rename the default group and create some more
 (stumpwm:grename "web")
@@ -69,15 +98,15 @@
 ;; Read some doc
 (define-key *root-map* (kbd "d") "exec gv")
 ;; Browse somewhere
-(define-key *root-map* (kbd "b") "colon1 exec firefox http://www.")
+(define-key *root-map* (kbd "b") "colon1 exec firefox http://duckduckgo.com/?=")
 ;; Ssh somewhere
-(define-key *root-map* (kbd "C-s") "colon1 exec xterm -e ssh ")
+(define-key *root-map* (kbd "C-s") "colon1 exec st -e ssh ")
 ;; Lock screen
 (define-key *root-map* (kbd "C-l") "exec slock")
 ;; Launch dmenu
 (define-key *root-map* (kbd "C-d") "exec dmenu_run")
 ;; Launch terminal
-(define-key *root-map* (kbd "RET") "exec urxvt")
+(define-key *root-map* (kbd "RET") "exec urxvtc")
 ;; Quit stumpwm
 (define-key *root-map* (kbd "C-q") "quit")
 ;; Restart stumpwm
