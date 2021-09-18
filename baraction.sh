@@ -90,7 +90,7 @@ while :; do
 	fi
 	# print_date
 	print_mem
-	# print_cpu $IOSTAT_DATA
+	print_cpu $IOSTAT_DATA
 	print_cpuspeed
 	# print_bat $ACPI_DATA
 	echo ""
