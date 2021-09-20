@@ -68,7 +68,7 @@
       stumpwm:*mode-line-timeout* 1
       stumpwm:*group-format* "%n·[%t%s]"
       ;; stumpwm:*window-format* "%m%n%s%c"
-      stumpwm:*window-format* "^b^(:fg \"#b48ead\")<%20t>"
+      stumpwm:*window-format* "^b^(:fg \"#b48ead\")<%25t>"
       stumpwm:*time-modeline-string* "%a, %b %d, %Y (%l:%M%p )"
       )
 
@@ -76,11 +76,11 @@
 (stumpwm:enable-mode-line (current-screen) (current-head) t)
 
 ;; rename the default group and create some more
-(stumpwm:grename "web")
-(stumpwm:gnewbg "irc")
-(stumpwm:gnewbg-float "email")
-(stumpwm:gnewbg "code")
-(stumpwm:gnewbg "shell")
+(stumpwm:grename "WWW")
+(stumpwm:gnewbg "IRC")
+(stumpwm:gnewbg-float "Email")
+(stumpwm:gnewbg "Code")
+(stumpwm:gnewbg "Shell")
 
 ;; bugfix for scrolling doesn't work with an external mouse in GTK+3 apps
 (setf (getenv "GDK_CORE_DEVICE_EVENTS") "1")
