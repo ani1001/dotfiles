@@ -21,7 +21,7 @@ import XMonad.Util.SpawnOnce
 
 myModMask            = mod4Mask
 myTerminal           = "urxvtc"
-myWorkspaces         = ["web", "irc", "code" ] ++ map show [4..9]
+myWorkspaces         = ["WWW", "IRC", "Email", "Code", "Shell"] ++ map show [6..9]
 myFocusedBorderColor = "#ff0000"      -- Color of focused border
 myNormalBorderColor  = "#dddddd"      -- Color of inactive border
 myBorderWidth        = 2              -- Width of border around windows
