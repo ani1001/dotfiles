@@ -1,9 +1,14 @@
 [begin] (FluxBox)
+    [submenu] (Development)
+        [exec] (Emacs) {emacs}
+    [end]
     [submenu] (Editors)
         [exec] (Mousepad) {mousepad}
+        [exec] (Neovim) {st -e nvim}
         [exec] (Vim) {st -e vim}
     [end]
     [submenu] (Graphics)
+        [exec] (ImageMagick [color depth=q16]) {display-im6.q16}
         [exec] (Ristretto Image Viewer) {ristretto}
         [exec] (XSane) {xsane}
     [end]
@@ -30,6 +35,11 @@
         [exec] (Atril Document Viewer) {atril}
         [exec] (Dictionary) {xfce4-dict}
         [exec] (LibreOffice Impress) {libreoffice}
+        [exec] (mutt) {st -e mutt}
+        [exec] (qpdfview) {qpdfview}
+    [end]
+    [submenu] (Science)
+        [exec] (Calc) {st -e calc}
     [end]
     [submenu] (Shells)
         [exec] (kitty) {kitty}
@@ -79,7 +89,6 @@
         [end]
         [exec] (BleachBit) {bleachbit}
         [exec] (BleachBit [as root]) {pkexec bleachbit}
-        [exec] (conky) {conky --daemonize --pause=1}
         [exec] (CPU-X) {cpu-x}
         [exec] (GParted) {/usr/sbin/gparted}
         [exec] (Htop) {st -e htop}
@@ -106,7 +115,6 @@
     [submenu] (FluxBox)
         [workspaces] (Workspaces)
         [submenu] (Styles)
-            [stylesdir] (/usr/local/share/fluxbox/styles)
             [stylesdir] (~/.fluxbox/styles)
         [end]
         [config] (Configure)
