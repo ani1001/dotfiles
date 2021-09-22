@@ -24,7 +24,6 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-
 import os
 import re
 import socket
@@ -42,7 +41,6 @@ mod1 = "alt"
 mod2 = "control"
 home = os.path.expanduser('~')
 
-
 @lazy.function
 def window_to_prev_group(qtile):
     if qtile.currentWindow is not None:
@@ -58,8 +56,6 @@ def window_to_next_group(qtile):
 myTerm = "alacritty" # My terminal of choice
 
 keys = [
-
-
 
 # SUPER + FUNCTION KEYS
 
@@ -77,7 +73,7 @@ keys = [
 
     Key([mod, "shift"], "Return", lazy.spawn('pcmanfm')),
     Key([mod, "shift"], "d", lazy.spawn("dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'")),
-#    Key([mod, "shift"], "d", lazy.spawn(home + '/.config/qtile/scripts/dmenu.sh')),
+#   Key([mod, "shift"], "d", lazy.spawn(home + '/.config/qtile/scripts/dmenu.sh')),
     Key([mod, "shift"], "q", lazy.window.kill()),
     Key([mod, "shift"], "r", lazy.restart()),
     Key([mod, "control"], "r", lazy.restart()),
@@ -85,23 +81,20 @@ keys = [
 
 # CONTROL + ALT KEYS
 
-#    Key(["mod1", "control"], "o", lazy.spawn(home + '/.config/qtile/scripts/picom-toggle.sh')),
+#   Key(["mod1", "control"], "o", lazy.spawn(home + '/.config/qtile/scripts/picom-toggle.sh')),
     Key(["mod1", "control"], "t", lazy.spawn('xterm')),
     Key(["mod1", "control"], "u", lazy.spawn('pavucontrol')),
 
 # ALT + ... KEYS
-
 
 #    Key(["mod1"], "p", lazy.spawn('pamac-manager')),
 #    Key(["mod1"], "f", lazy.spawn('firedragon')),
 #    Key(["mod1"], "m", lazy.spawn('pcmanfm')),
 #    Key(["mod1"], "w", lazy.spawn('garuda-welcome')),
 
-
 # CONTROL + SHIFT KEYS
 
     Key([mod2, "shift"], "Escape", lazy.spawn('lxtask')),
-
 
 # SCREENSHOTS
 
@@ -143,7 +136,6 @@ keys = [
     Key([mod], "j", lazy.layout.down()),
     Key([mod], "h", lazy.layout.left()),
     Key([mod], "l", lazy.layout.right()),
-
 
 # RESIZE UP, DOWN, LEFT, RIGHT
     Key([mod, "control"], "l",
@@ -191,7 +183,6 @@ keys = [
         lazy.layout.increase_nmaster(),
         ),
 
-
 # FLIP LAYOUT FOR MONADTALL/MONADWIDE
     Key([mod, "shift"], "f", lazy.layout.flip()),
 
@@ -216,8 +207,6 @@ keys = [
         lazy.layout.section_down(),
         desc='Move down a section in treetab'
         ),
-
-
 
 # MOVE WINDOWS UP OR DOWN MONADTALL/MONADWIDE LAYOUT
     Key([mod, "shift"], "Up", lazy.layout.shuffle_up()),
@@ -268,7 +257,6 @@ for i in groups:
         Key([mod, "shift"], i.name, lazy.window.togroup(i.name) , lazy.group[i.name].toscreen()),
     ])
 
-
 def init_layout_theme():
     return {"margin":0,
             "border_width":2,
@@ -277,7 +265,6 @@ def init_layout_theme():
             }
 
 layout_theme = init_layout_theme()
-
 
 layouts = [
     layout.MonadTall(margin=0, border_width=2, border_focus="#ff00ff", border_normal="#f4c2c2"),
@@ -303,7 +290,6 @@ layouts = [
 ]
 
 # COLORS FOR THE BAR
-
 
 def init_colors():
     return [["#2F343F", "#2F343F"], # color 0
@@ -336,7 +322,6 @@ colors = init_colors()
 def base(fg='text', bg='dark'):
     return {'foreground': colors[14],'background': colors[15]}
 
-
 # WIDGETS FOR THE BAR
 
 def init_widgets_defaults():
@@ -350,31 +335,27 @@ widget_defaults = init_widgets_defaults()
 def init_widgets_list():
     prompt = "{0}@{1}: ".format(os.environ["USER"], socket.gethostname())
     widgets_list = [
-
-                 widget.Sep(
-                        linewidth = 1,
-                        padding = 10,
-                        foreground = colors[15],
-                        background = colors[15]
-                        ),              #
-               widget.Image(
-                       filename = "~/.config/qtile/icons/python.png",
-                       iconsize = 9,
-                       background = colors[15],
-                       mouse_callbacks = {'Button1': lambda : qtile.cmd_spawn('jgmenu_run')}
-                       ),
-               widget.GroupBox(
-
+        widget.Sep(
+            linewidth = 1,
+            padding = 10,
+            foreground = colors[15],
+            background = colors[15]
+        ),              #
+        widget.Image(
+            filename = "~/.config/qtile/icons/python.png",
+            iconsize = 9,
+            background = colors[15],
+            mouse_callbacks = {'Button1': lambda : qtile.cmd_spawn('jgmenu_run')}
+        ),
+        widget.GroupBox(
             **base(bg=colors[15]),
             font='UbuntuMono Nerd Font',
-
-                    fontsize = 11,
-                    margin_y = 3,
-                    margin_x = 2,
-                    padding_y = 5,
-                    padding_x = 4,
-                    borderwidth = 3,
-
+            fontsize = 11,
+            margin_y = 3,
+            margin_x = 2,
+            padding_y = 5,
+            padding_x = 4,
+            borderwidth = 3,
             active=colors[5],
             inactive=colors[6],
             rounded= True,
@@ -386,94 +367,82 @@ def init_widgets_list():
             other_current_screen_border=colors[13],
             other_screen_border=colors[17],
             disable_drag=True
-
-
-                   
-                        ),
-                widget.TaskList(
-                    highlight_method = 'border', # or block
-                    icon_size=17,
-                    max_title_width=150,
-                    rounded=True,
-                    padding_x=0,
-                    padding_y=0,
-                    margin_y=0,
-                    fontsize=14,
-                    border=colors[7],
-                    foreground=colors[9],
-                    margin=2,
-                    txt_floating='🗗',
-                    txt_minimized='>_ ',
-                    borderwidth = 1,
-                    background=colors[20],
-                    #unfocused_border = 'border'
-                ),
-
-               widget.CurrentLayoutIcon(
-                       custom_icon_paths = [os.path.expanduser("~/.config/qtile/icons")],
-                       foreground = colors[5],
-                       background = colors[3],
-                       padding = 0,
-                       scale = 0.7
-                       ),
-
-               widget.CurrentLayout(
-                      font = "Noto Sans Bold",
-                      fontsize = 12,
-                      foreground = colors[5],
-                      background = colors[3]
-                        ),
-
-
-                widget.Net(
-                         font="Noto Sans",
-                         fontsize=12,
-                        # Here enter your network name
-                         interface=["wlp6s0"],
-                         format = '{down} ↓↑ {up}',
-                         foreground=colors[5],
-                         background=colors[19],
-                         padding = 0,
-                         ),
-
-                widget.CPU(
-                        font="Noto Sans",
-                        #format = '{MemUsed}M/{MemTotal}M',
-                        update_interval = 1,
-                        fontsize = 12,
-                        foreground = colors[5],
-                        background = colors[22],
-                        mouse_callbacks = {'Button1': lambda : qtile.cmd_spawn(myTerm + ' -e htop')},
-                       ),
-
-               widget.Memory(
-                        font="Noto Sans",
-                        format = '{MemUsed: .0f}M/{MemTotal: .0f}M',
-                        update_interval = 1,
-                        fontsize = 12,
-                        measure_mem = 'M',
-                        foreground = colors[5],
-                        background = colors[16],
-                        mouse_callbacks = {'Button1': lambda : qtile.cmd_spawn(myTerm + ' -e htop')},
-                       ),
-
-               widget.Clock(
-                        foreground = colors[9],
-                        background = colors[23],
-                        fontsize = 12,
-                        format="%Y-%m-%d %H:%M"
-                        ),
-
-               widget.Systray(
-                       background=colors[10],
-                       icon_size=20,
-                       padding = 4
-                       ),
-              ]
+        ),
+        widget.TaskList(
+            highlight_method = 'border', # or block
+            icon_size=17,
+            max_title_width=150,
+            rounded=True,
+            padding_x=0,
+            padding_y=0,
+            margin_y=0,
+            fontsize=14,
+            border=colors[7],
+            foreground=colors[9],
+            margin=2,
+            txt_floating='🗗',
+            txt_minimized='>_ ',
+            borderwidth = 1,
+            background=colors[20],
+            #unfocused_border = 'border'
+        ),
+        widget.CurrentLayoutIcon(
+            custom_icon_paths = [os.path.expanduser("~/.config/qtile/icons")],
+            foreground = colors[5],
+            background = colors[3],
+            padding = 0,
+            scale = 0.7
+        ),
+        widget.CurrentLayout(
+            font = "Noto Sans Bold",
+            fontsize = 12,
+            foreground = colors[5],
+            background = colors[3]
+        ),
+        widget.Net(
+            font="Noto Sans",
+            fontsize=12,
+            # Here enter your network name
+            interface=["all"],
+            format = '{down} ↓↑ {up}',
+            foreground=colors[5],
+            background=colors[19],
+            padding = 0,
+        ),
+        widget.CPU(
+            font="Noto Sans",
+            #format = '{MemUsed}M/{MemTotal}M',
+            update_interval = 1,
+            fontsize = 12,
+            foreground = colors[5],
+            background = colors[22],
+            mouse_callbacks = {'Button1': lambda : qtile.cmd_spawn(myTerm + ' -e htop')},
+        ),
+        widget.Memory(
+            font="Noto Sans",
+            format = '{MemUsed: .0f}M/{MemTotal: .0f}M',
+            update_interval = 1,
+            fontsize = 12,
+            measure_mem = 'M',
+            foreground = colors[5],
+            background = colors[16],
+            mouse_callbacks = {'Button1': lambda : qtile.cmd_spawn(myTerm + ' -e htop')},
+        ),
+        widget.Clock(
+            foreground = colors[9],
+            background = colors[23],
+            fontsize = 12,
+            format="%Y-%m-%d %H:%M"
+        ),
+        widget.Systray(
+            background=colors[10],
+            icon_size=20,
+            padding = 4
+        ),
+    ]
     return widgets_list
 
 widgets_list = init_widgets_list()
-
 
 def init_widgets_screen1():
     widgets_screen1 = init_widgets_list()
@@ -486,12 +455,10 @@ def init_widgets_screen2():
 widgets_screen1 = init_widgets_screen1()
 widgets_screen2 = init_widgets_screen2()
 
-
 def init_screens():
     return [Screen(top=bar.Bar(widgets=init_widgets_screen1(), size=20, opacity=0.85, background= "000000")),
             Screen(top=bar.Bar(widgets=init_widgets_screen2(), size=20, opacity=0.85, background= "000000"))]
 screens = init_screens()
-
 
 # MOUSE CONFIGURATION
 mouse = [
@@ -545,8 +512,6 @@ dgroups_app_rules = []
 # END
 # ASSIGN APPLICATIONS TO A SPECIFIC GROUPNAME
 
-
-
 main = None
 
 @hook.subscribe.startup_once
@@ -566,7 +531,6 @@ def set_floating(window):
         window.floating = True
 
 floating_types = ["notification", "toolbar", "splash", "dialog"]
-
 
 follow_mouse_focus = True
 bring_front_click = False
@@ -597,7 +561,6 @@ floating_layout = layout.Floating(float_rules=[
     Match(wm_class='Yad'),
     Match(wm_class='Cairo-dock'),
     Match(wm_class='cairo-dock'),
-
 
 ],  fullscreen_border_width = 0, border_width = 0)
 auto_fullscreen = True
