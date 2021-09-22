@@ -69,9 +69,9 @@ font-2 = FontAwesome:style=Regular:size=14
 font-3 = Weather Icons:size=14;1
 font-4 = Source Code Pro:size=14;0
 
-modules-left = bspwm i3
-modules-center = date
-modules-right = filesystem temperature cpu memory
+modules-left = bspwm
+;modules-center = filesystem
+modules-right = xkeyboard temperature cpu memory alsa
 
 ; wm-restack = bspwm
 wm-restack = i3
@@ -119,9 +119,9 @@ font-1 = Unifont:size=10:style=Medium;0
 font-2 = FontAwesome:style=Regular:size=14
 font-3 = Weather Icons:size=14;1
 
-modules-left = xkeyboard info-redshift-temp
-modules-center = mpd pulseaudio
-modules-right = wlan eth
+modules-left = xwindow
+;modules-center = mpd eth
+modules-right = date
 
 tray-position = right
 tray-padding = 1
