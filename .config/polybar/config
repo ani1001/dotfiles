@@ -74,7 +74,7 @@ modules-left = bspwm
 modules-right = xkeyboard temperature cpu memory alsa
 
 ; wm-restack = bspwm
-wm-restack = i3
+; wm-restack = i3
 
 ; override-redirect = true
 
@@ -126,7 +126,7 @@ modules-right = date
 tray-position = right
 tray-padding = 1
 tray-max-icons = 6
-tray-transparent = false
+; tray-transparent = false
 tray-background = ${colors.background}
 
 cursor-click = pointer
