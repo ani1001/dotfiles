@@ -41,7 +41,7 @@ Cpu() {
 
 Volume() {
     vol=`amixer get Master | awk -F'[][]' 'END{ print $4":"$2 }' | sed 's/on://g'`
-    echo -e "VOL: $vol"
+    echo -e "|| VOL: $vol"
 }
 
 Clock() {
