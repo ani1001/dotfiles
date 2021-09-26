@@ -1,5 +1,4 @@
 tint2 &
-#$HOME/.config/polybar/launch.sh &
 nitrogen --restore &
 picom &
 plank &
