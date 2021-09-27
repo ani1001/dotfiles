@@ -6,6 +6,7 @@ nitrogen --restore &
 picom &
 lxpolkit &
 urxvtd -q -o -f &
+$HOME/.config/polybar/launch.sh &
 
 # Set decoration geometry
 berryc border_width       5
