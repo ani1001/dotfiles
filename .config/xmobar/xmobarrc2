@@ -15,7 +15,7 @@ Config { font = "-misc-fixed-*-*-*-*-13-*-*-*-*-*-*-*"
        , iconRoot = "."
        , allDesktops = True
        , overrideRedirect = True
-       , commands = [ Run Weather "VGHS" ["-t","<station>: <tempC>dC",
+       , commands = [ Run Weather "VGHS" ["-t","<station>: <tempC>°C",
                                           "-L","18","-H","25",
                                           "--normal","green",
                                           "--high","red",
@@ -34,5 +34,5 @@ Config { font = "-misc-fixed-*-*-*-*-13-*-*-*-*-*-*-*"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%UnsafeStdinReader% }{ %cpu% | %memory% * %swap% | %usb0% | <fc=#ee9a00>%date%</fc> | %uname% | %VGHS% "
+       , template = "%UnsafeStdinReader% }{ %cpu% | %memory% * %swap% | %usb0% | <fc=#ee9a00>%date%</fc> | %uname% [%VGHS%]"
        }
