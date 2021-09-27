@@ -1,6 +1,6 @@
 #!/bin/bash
 
-$HOME/.config/herbstluftwm/xmobar-tags | xmobar -x 0 $HOME/.config/xmobar/xmobarrc &
-#$HOME/.config/herbstluftwm/xmobar-tags | xmobar -x 0 -B "#2e3440" -F "#d8dee9" $HOME/.config/xmobar/xmobarrc &
+#$HOME/.config/herbstluftwm/xmobar-tags | xmobar -x 0 $HOME/.config/xmobar/xmobarrc0 &
+$HOME/.config/herbstluftwm/xmobar-tags | xmobar -x 0 -B "#2e3440" -F "#d8dee9" $HOME/.config/xmobar/xmobarrc1 &
 
 echo "Xmobar launched..."
