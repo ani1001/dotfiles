@@ -93,13 +93,11 @@ keys = [
 
     # Keybindings to launch user defined programs
     Key(["mod1"], "w", lazy.spawn("brave-browser"), desc="Launch brave-browser"),
-    Key(["mod1"], "p", lazy.spawn("rofi -show run"), desc="Launch rofi"),
+    Key(["mod1"], "r", lazy.spawn("rofi -show run"), desc="Launch rofi"),
     Key(["mod1"], "d", lazy.spawn("dmenu_run"), desc="Launch dmenu"),
-
-    Key(["mod1"], "p", lazy.spawn('pcmanfm'), desc="Launch pcmanfm"),
     Key(["mod1"], "f", lazy.spawn('thunar'), desc="Launch thunar"),
-    Key(["mod1"], "t", lazy.spawn('alacritty'), desc="Launch alacritty"),
-    Key(["mod1"], "w", lazy.spawn('nitrogen'), desc="Launch nitrogen"),
+    Key(["mod1"], "t", lazy.spawn('st'), desc="Launch st"),
+    Key(["mod1"], "n", lazy.spawn('nitrogen'), desc="Launch nitrogen"),
 ]
 
 #groups = [Group(i) for i in "123456789"]
