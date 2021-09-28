@@ -187,7 +187,7 @@ for_window [class="^.*"] border pixel 2
 bar {
     output            VGA-1
     status_command    i3status --config ~/.config/i3status/i3status.conf
-    position          bottom
+    position          top
     workspace_buttons yes
     tray_output       primary
     tray_padding      0
@@ -200,7 +200,7 @@ bar {
     colors {
         background #2E3440
         statusline #D8DEE9
-        separator #8FBCBB
+        separator  #8FBCBB
 
         focused_workspace  #D8DEE9 #5E81AC
         active_workspace   #D8DEE9 #4C566A
@@ -209,6 +209,6 @@ bar {
     }
 }
 
-exec_always --no-startup-id nitrogen --restore
-exec_always --no-startup-id picom
-exec_always --no-startup-id lxpolkit
+exec --no-startup-id nitrogen --restore
+exec --no-startup-id picom
+exec --no-startup-id lxpolkit
