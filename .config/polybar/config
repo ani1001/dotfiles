@@ -94,7 +94,7 @@ label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 2
 
 ; Separator in between workspaces
-;label-separator = |
+label-separator = |
 
 [module/cpu]
 type = internal/cpu
