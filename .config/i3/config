@@ -186,7 +186,8 @@ for_window [class="^.*"] border pixel 2
 
 bar {
     output            VGA-1
-    status_command    i3status --config ~/.config/i3status/i3status.conf
+#    status_command    i3status -c ~/.config/i3status/i3status.conf
+    status_command    i3blocks -c ~/.config/i3blocks/i3blocks.conf
     position          top
     workspace_buttons yes
     tray_output       primary
