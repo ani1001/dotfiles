@@ -8,6 +8,7 @@ Xft.lcdfilter:  lcddefault
 
 
 ! XTerm
+XTerm.termName: xterm-256color
 XTerm*renderFont: true
 XTerm*faceName: xft:Hack:size=12:antialias=true, \
                 xft:JoyPixels:size=12, \
@@ -27,6 +28,9 @@ XTerm*savelines: 16384
 ! double-click to select whole URLs :D
 XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
 
+XTerm.vt100.backarrowKey: false
+XTerm.ttyModes: erase ^?
+
 
 ! URxvt
 URxvt*termName: rxvt-unicode-256color
@@ -34,6 +38,8 @@ URxvt*imLocale: en_US.UTF-8
 URxvt*buffered: false
 URxvt.cursorColor: white
 URxvt.intensityStyles: false
+URxvt.iso14755: false
+URxvt.iso14755_52: false
 URxvt.saveLines: 2000
 
 ! Using Xft
@@ -47,20 +53,23 @@ URxvt.scrollBar_right: false
 URxvt.scrollBar_floating: false
 URxvt.scrollstyle: rxvt
 
+! Disable printing the terminal contents when pressing PrintScreen.
+! The string will be interpreted as if typed into the shell as-is.
+! In this example, printing will be disabled altogether.
+URxvt.print-pipe: "cat > /dev/null"
+
+! Copy/Paste and URL handling
 !-*- Perl extensions -*-
-URxvt.perl-ext-common: default,matcher,resize-font,url-select,keyboard-select,clipboard
-URxvt.colorUL: #4682B4
+URxvt.perl-ext-common: default,selection-to-clipboard,pasta,matcher,keyboard-select
 URxvt.keysym.M-u:     perl:url-select:select_next
-URxvt.url-select.launcher:   /usr/bin/firefox
-URxvt.url-select.underline: true
+URxvt.colorUL: #4682B4
+URxvt.url-launcher:   /usr/bin/firefox
+URxvt.underlineURLs:  True
+URxvt.matcher.button: 1 
 URxvt.keysym.M-Escape:perl:keyboard-select:activate
-URxvt.keysym.C-k:   font-size:increase
-URxvt.keysym.C-j:   font-size:decrease
-URxvt.url-launcher:	/usr/bin/firefox
-URxvt.matcher.button: 1
-URxvt.keysym.M-c: perl:clipboard:copy
-URxvt.keysym.M-v: perl:clipboard:paste
-URxvt*depth: 32
+URxvt.keysym.Control-Shift-V:     perl:pasta:paste
+! Comment this if you don't want copy when text is selected
+URxvt.clipboard.autocopy: true
 
 
 ! Solarized color scheme for the X Window System
