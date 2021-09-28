@@ -2,15 +2,15 @@
 background = #2e3440
 background-alt = #3b4252
 foreground = #d8dee9
-foreground-alt = #434c5e
+foreground-alt = #4c566a
 primary = #ebcb8b
 secondary = #d08770
 alert = #bf616a
 
 [bar/main]
 width = 100%
-height = 20
-radius = 3.0
+height = 25
+;radius = 3.0
 fixed-center = false
 
 background = ${colors.background}
@@ -19,7 +19,7 @@ foreground = ${colors.foreground}
 line-size = 3
 line-color = #bf616a
 
-border-size = 4
+;border-size = 2
 ;border-color = #000000
 
 padding-left = 0
@@ -30,7 +30,7 @@ module-margin-right = 2
 
 font-0 = fixed:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
+font-2 = FontAwesome:style=Regular:size=10;1
 
 modules-left = bspwm
 modules-right = sep1 filesystem sep2 sep1 pulseaudio sep2 sep1 memory sep0 cpu sep0 temperature sep2 sep1 date sep2
@@ -99,7 +99,7 @@ label-empty-padding = 2
 [module/cpu]
 type = internal/cpu
 interval = 2
-;format-prefix = " "
+format-prefix = "  "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #88c0d0
 label = %percentage:2%%
@@ -107,7 +107,7 @@ label = %percentage:2%%
 [module/memory]
 type = internal/memory
 interval = 2
-;format-prefix = " "
+format-prefix = "  "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #8fbcbb
 label = %percentage_used%%
@@ -122,7 +122,7 @@ date-alt = " %Y-%m-%d"
 time = %H:%M
 time-alt = %H:%M:%S
 
-;format-prefix = 
+format-prefix = "  "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #5e81ac
 
@@ -160,18 +160,18 @@ type = internal/temperature
 thermal-zone = 0
 warn-temperature = 60
 
-format = <ramp> <label>
+format = <ramp>   <label>
 format-underline = #81a1c1
-format-warn = <ramp> <label-warn>
+format-warn = <ramp>   <label-warn>
 format-warn-underline = ${self.format-underline}
 
 label = %temperature-c%
 label-warn = %temperature-c%
 label-warn-foreground = ${colors.secondary}
 
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
 ramp-foreground = ${colors.foreground-alt}
 
 [global/wm]
