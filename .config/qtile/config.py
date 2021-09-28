@@ -133,7 +133,7 @@ layouts = [
     # Try more layouts by unleashing below layouts.
     # layout.Bsp(**layout_theme),
     # layout.Columns(),
-    # layout.Matrix(**layout_theme),
+    layout.Matrix(**layout_theme),
     layout.MonadTall(margin=5, border_width=2, border_focus='#5e81ac', border_normal='#4c566a'),
     layout.MonadWide(margin=5, border_width=2, border_focus='#5e81ac', border_normal='#4c566a'),
     layout.RatioTile(**layout_theme),
