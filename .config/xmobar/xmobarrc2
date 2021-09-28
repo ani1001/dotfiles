@@ -15,7 +15,7 @@ Config { font = "-misc-fixed-*-*-*-*-13-*-*-*-*-*-*-*"
        , iconRoot = "."
        , allDesktops = True
        , overrideRedirect = True
-       , commands = [ Run Weather "VGHS" ["-t","<station>: <tempC>°C",
+       , commands = [ Run Weather "VGHS" ["-t"," <tempC>°C",
                                           "-L","18","-H","25",
                                           "--normal","green",
                                           "--high","red",
