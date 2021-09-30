@@ -29,8 +29,8 @@
       *transient-border-width* 2
       *normal-border-width* 3
       *window-border-style* :thin
-      *float-window-border* 2
-      *float-window-title-height* 5
+      stumpwm::*float-window-border* 2
+      stumpwm::*float-window-title-height* 5
       *mouse-focus-policy* :click
       )
 
@@ -109,7 +109,7 @@
 (define-key *root-map* (kbd "RET") "exec urxvtc")
 ;; Quit stumpwm
 (define-key *root-map* (kbd "C-q") "quit")
-;; Restart stumpwm
+;; Reload stumpwm
 (define-key *root-map* (kbd "C-r") "reload")
 
 ;; Web jump (works for DuckDuckGo and Imdb)
