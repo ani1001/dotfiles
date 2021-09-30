@@ -40,7 +40,7 @@ mod1 = "alt"
 home = os.path.expanduser('~')
 
 #terminal = guess_terminal()
-terminal = "st"
+terminal = "alacritty"
 
 @lazy.function
 def window_to_prev_group(qtile):
@@ -174,16 +174,16 @@ layouts = [
 
 #Colors for the bar
 def init_colors():
-    return [["#2E3440", "#2E3440"], # color 0 bg
-            ["#2E3440", "#2E3440"], # color 1 bg
-            ["#D8DEE9", "#D8DEE9"], # color 2 fg
-            ["#EBCB8B", "#EBCB8B"], # color 3 yellow
-            ["#5E81AC", "#5E81AC"], # color 4 deep blue
-            ["#E5E9F0", "#E5E9F0"], # color 5 bright
-            ["#BF616A", "#BF616A"], # color 6 deep red
-            ["#A3BE8C", "#A3BE8C"], # color 7 light yellow
-            ["#81A1C1", "#81A1C1"], # color 8 light blue
-            ["#B48EAD", "#B48EAD"]] # color 9 deep grey
+    return [["#2e3440", "#2e3440"], # color 0 dark grayish blue
+            ["#2e3440", "#2e3440"], # color 1 dark grayish blue
+            ["#d8dee9", "#d8dee9"], # color 2 grayish blue
+            ["#e5e9f0", "#e5e9f0"], # color 3 light grayish blue
+            ["#88c0d0", "#88c0d0"], # color 4 desaturated cyan
+            ["#81a1c1", "#81a1c1"], # color 5 desaturated blue
+            ["#d08770", "#d08770"], # color 6 desaturated red
+            ["#ebcb8b", "#ebcb8b"], # color 7 soft orange
+            ["#a3be8c", "#a3be8c"], # color 8 desaturated green
+            ["#b48ead", "#b48ead"]] # color 9 grayish magenta
 
 colors = init_colors()
 
@@ -207,7 +207,7 @@ def init_widgets_list():
             ),
         widget.Image(
             filename = "~/.config/qtile/icons/python.png",
-            iconsize = 10,
+            iconsize = 9,
             background = colors[1],
             mouse_callbacks = {'Button1': lambda : qtile.cmd_spawn('rofi -show run')}
             ),
@@ -219,9 +219,9 @@ def init_widgets_list():
             ),
         widget.GroupBox(
             active = colors[9],
-            inactive = colors[5],
+            inactive = colors[3],
             highlight_method = 'line',
-            this_current_screen_border = colors[3],
+            this_current_screen_border = colors[7],
             foreground = colors[2],
             background = colors[1]
             ),
@@ -234,21 +234,21 @@ def init_widgets_list():
         widget.WindowName(
             font="Noto Sans",
             fontsize = 12,
-            foreground = colors[5],
+            foreground = colors[3],
             background = colors[1],
             ),
         #widget.Spacer(),
-        #widget.Sep(
-        #    linewidth = 1,
-        #    padding = 10,
-        #    foreground = colors[2],
-        #    background = colors[1]
-        #    ),
-        #widget.Systray(
-        #    background = colors[1],
-        #    icon_size = 20,
-        #    padding = 4
-        #    ),
+        widget.Sep(
+            linewidth = 1,
+            padding = 10,
+            foreground = colors[2],
+            background = colors[1]
+            ),
+        widget.Systray(
+            background = colors[1],
+            icon_size = 20,
+            padding = 4
+            ),
         widget.Sep(
             linewidth = 1,
             padding = 10,
@@ -260,13 +260,13 @@ def init_widgets_list():
             format="CPU {freq_current}GHz {load_percent}%",
             update_interval = 1,
             fontsize = 12,
-            foreground = colors[5],
+            foreground = colors[3],
             background = colors[1],
             ),
         #widget.CPUGraph(
         #    border_color = colors[2],
-        #    fill_color = colors[3],
-        #    graph_color = colors[3],
+        #    fill_color = colors[5],
+        #    graph_color = colors[5],
         #    background = colors[1],
         #    border_width = 1,
         #    line_width = 1,
@@ -284,7 +284,7 @@ def init_widgets_list():
             format="{MemUsed: .0f}{mm} /{MemTotal: .0f}{mm}",
             update_interval = 1,
             fontsize = 12,
-            foreground = colors[5],
+            foreground = colors[3],
             background = colors[1],
             ),
         widget.Sep(
@@ -306,10 +306,10 @@ def init_widgets_list():
         #    fontsize = 12,
         #    bandwidth = "down",
         #    interface = "auto",
-        #    fill_color = colors[3],
+        #    fill_color = colors[5],
         #    foreground = colors[2],
         #    background = colors[1],
-        #    graph_color = colors[3],
+        #    graph_color = colors[5],
         #    border_color = colors[2],
         #    padding = 0,
         #    border_width = 1,
@@ -322,7 +322,7 @@ def init_widgets_list():
             background = colors[1]
             ),
         widget.Clock(
-            foreground = colors[5],
+            foreground = colors[3],
             background = colors[1],
             fontsize = 12,
             format = "%Y-%m-%d %H:%M"
@@ -335,7 +335,7 @@ def init_widgets_list():
             ),
         widget.CurrentLayout(
             font = "Noto Sans Bold",
-            foreground = colors[5],
+            foreground = colors[3],
             background = colors[1]
             ),
         widget.Sep(
@@ -346,7 +346,7 @@ def init_widgets_list():
             ),
         widget.CurrentLayoutIcon(
             custom_icon_paths = [os.path.expanduser("~/.config/qtile/icons")],
-            foreground = colors[5],
+            foreground = colors[3],
             background = colors[1],
             padding = 0,
             scale = 0.7
