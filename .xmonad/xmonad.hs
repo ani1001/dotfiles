@@ -36,7 +36,7 @@ import XMonad.Util.SpawnOnce
 -- The preferred terminal program, which is used in a binding below and by
 -- certain contrib modules.
 --
-myTerminal      = "urxvtc"
+myTerminal      = "kitty"
 
 -- Whether focus follows the mouse pointer.
 myFocusFollowsMouse :: Bool
@@ -67,7 +67,8 @@ myModMask       = mod4Mask
 -- > workspaces = ["web", "irc", "code" ] ++ map show [4..9]
 --
 -- myWorkspaces    = ["1","2","3","4","5","6","7","8","9"]
-myWorkspaces    = ["WWW", "IRC", "Email", "Code", "Shell"] ++ map show [6..9]
+-- myWorkspaces    = ["WWW", "IRC", "Email", "Code", "Shell"] ++ map show [6..9]
+myWorkspaces    = ["1:dev","2:mail","3:web","4:comm","5:ham","6:tmp","7:dvi","8","9","0","-","="]
 
 -- Border colors for unfocused and focused windows, respectively.
 --
@@ -237,6 +238,10 @@ myManageHook :: ManageHook
 myManageHook = composeAll
     [ className =? "MPlayer"        --> doFloat
     , className =? "Gimp"           --> doFloat
+    , className =? "Firefox-esr"    --> doShift "3:web"
+    , className =? "Rhythmbox"      --> doShift "="
+    , className =? "XDvi"           --> doShift "7:dvi"
+    , className =? "Xmessage"       --> doFloat
     , resource  =? "desktop_window" --> doIgnore
     , resource  =? "kdesktop"       --> doIgnore ]
 
@@ -281,7 +286,7 @@ myStartupHook = do
 myBar = "xmobar -x 0 $HOME/.config/xmobar/xmobarrc2"
 
 -- Custom PP, configure it as you like. It determines what is being written to the bar.
-myPP = xmobarPP { ppCurrent = xmobarColor "#429942" "" . wrap "<" ">" }
+myPP = xmobarPP { ppCurrent = xmobarColor "#81a1c1" "" . wrap "<" ">" }
 
 -- Key binding to toggle the gap for the bar.
 toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)

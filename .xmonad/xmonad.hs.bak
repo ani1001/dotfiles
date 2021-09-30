@@ -21,7 +21,8 @@ import XMonad.Util.SpawnOnce
 
 myModMask            = mod4Mask
 myTerminal           = "urxvtc"
-myWorkspaces         = ["WWW", "IRC", "Email", "Code", "Shell"] ++ map show [6..9]
+-- myWorkspaces         = ["WWW", "IRC", "Email", "Code", "Shell"] ++ map show [6..9]
+myWorkspaces         = ["1:dev","2:mail","3:web","4:comm","5:ham","6:tmp","7:dvi","8","9","0","-","="]
 myFocusedBorderColor = "#ff0000"      -- Color of focused border
 myNormalBorderColor  = "#dddddd"      -- Color of inactive border
 myBorderWidth        = 2              -- Width of border around windows
@@ -45,8 +46,12 @@ myLayout = ( tiled ||| Mirror tiled ||| Full ||| Grid ||| spiral(6/7) |||
 
 myManageHook :: ManageHook
 myManageHook = composeAll
-    [ className =? "Gimp"      --> doFloat
-    , className =? "MPlayer"   --> doFloat
+    [ className =? "Gimp"           --> doFloat
+    , className =? "MPlayer"        --> doFloat
+    , className =? "Xmessage"       --> doFloat
+    , className =? "Firefox-bin"    --> doShift "3:web"
+    , className =? "Rhythmbox"      --> doShift "="
+    , className =? "XDvi"           --> doShift "7:dvi"
     ]
 
 myKeys = [ ((myModMask, xK_b), sendMessage ToggleStruts)
