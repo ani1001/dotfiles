@@ -1,31 +1,29 @@
 Config { font = "-misc-fixed-*-*-*-*-13-*-*-*-*-*-*-*"
        , additionalFonts = []
-       , borderColor = "black"
-       , border = TopB
-       , bgColor = "black"
-       , fgColor = "grey"
+       , borderColor = "#4c566a"
+       , border = BottomB
+       , bgColor = "#2e3440"
+       , fgColor = "#d8dee9"
        , alpha = 255
        , position = Top
        , textOffset = -1
        , iconOffset = -1
        , lowerOnStart = True
        , pickBroadest = False
-       , persistent = False
+       , persistent = True
        , hideOnStart = False
        , iconRoot = "."
        , allDesktops = True
-       , overrideRedirect = True
+       , overrideRedirect = False
        , commands = [ Run Weather "VGHS" ["-t"," <tempC>°C",
                                           "-L","18","-H","25",
-                                          "--normal","green",
-                                          "--high","red",
-                                          "--low","lightblue"] 36000
-                    , Run Network "enp2s0" ["-L","0","-H","32",
-                                          "--normal","green","--high","red"] 10
+                                          "--normal","#a3be8c",
+                                          "--high","#d08770",
+                                          "--low","#81a1c1"] 36000
                     , Run Network "usb0" ["-L","0","-H","32",
-                                          "--normal","green","--high","red"] 10
+                                          "--normal","#a3be8c","--high","#d08770"] 10
                     , Run Cpu ["-L","3","-H","50",
-                               "--normal","green","--high","red"] 10
+                               "--normal","#a3be8c","--high","#d08770"] 10
                     , Run Memory ["-t","Mem: <usedratio>%"] 10
                     , Run Swap [] 10
                     , Run Com "uname" ["-s","-r"] "" 36000
@@ -34,5 +32,5 @@ Config { font = "-misc-fixed-*-*-*-*-13-*-*-*-*-*-*-*"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%UnsafeStdinReader% }{ %cpu% | %memory% * %swap% | %usb0% | <fc=#ee9a00>%date%</fc> | %uname% [%VGHS%]"
+       , template = "%UnsafeStdinReader% }{ %cpu% | %memory% * %swap% | %usb0% | <fc=#b48ead>%date%</fc> | %uname% [%VGHS%]"
        }
