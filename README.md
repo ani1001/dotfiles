@@ -14,43 +14,45 @@
 Debian Bullseye (11) GNU/LINUX
 
 #### CONTENTS
-a.) Window Managers:
-  i.) Floating/Stacking: Openbox, IceWM, Fluxbox
-  ii.) Tiling: BSPWM, HLWM, Stumpwm
-  iii.) Dynamic: DWM, Xmonad, SpectrWM, Qtile
+1. Window Managers:
+  1. Floating/Stacking: Openbox, IceWM, Fluxbox
+  2. Tiling: BSPWM, HLWM, Stumpwm
+  3. Dynamic: DWM, Xmonad, SpectrWM, Qtile
 
-b.) Application Launchers:
-  i.) Dmenu
-  ii.) Rofi
+2. Application Launchers:
+  1. Dmenu
+  2. Rofi
 
-c.) Panel/Bars:
-  i.) Tint2
-  ii.) Polybar
-  iii.) Lemonbar
-  iv.) Xmobar
+3. Panel/Bars:
+  1. Tint2
+  2. Polybar
+  3. Lemonbar
+  4. Xmobar
   
-d.) Terminal Emulators:
-  i.) Rxvt Unicode
-  ii.) ST
-  iii.) Kitty
-  iv.) Alacritty
+4. Terminal Emulators:
+  1. Rxvt Unicode
+  2. ST
+  3. Kitty
+  4. Alacritty
 
-e.) Multimedia:
-  i.) MPD
-  ii.) NCMPCPP
+5. Multimedia:
+  1. MPD
+  2. NCMPCPP
   
 #### DEPENDENCIES
 Applications:
+
 openbox, obconf, obmenu-generator, lxappearance, lxpolkit, pcmanfm, thunar, tint2, mousepad, nano, neovim, emacs, rofi, polybar, lemonbar, rxvt-unicode, suckless-tools, kitty, alacritty, mpd, ncmpcpp, redshift-gtk, gufw, feh, nitrogen, fish, zsh, volumeicon, nm-applet
 
 Fonts:
-A.) Nerd Fonts:
+
+1. Nerd Fonts:
   1. Mononoki Nerd Font
   2. ShureTechMono Nerd Font
   3. JetBrainsMono Nerd Font
   4. Ubuntu Nerd Font
 
-B.) Terminal Fonts:
+2. Terminal Fonts:
   1. Hack
   2. Terminus
   3. Monospace
