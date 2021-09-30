@@ -7,10 +7,10 @@
 
 -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 
-# DOTFILES
+### DOTFILES
 "DOTFILES" repo contains config files for my personal workstation. I like tiling window managers a lot as they provides simplicity, productivity, minimalism and efficiency with custimizability and uniqueness.
 
-# OPERATING ENVIRONMENT:
+### OPERATING ENVIRONMENT:
 Debian Bullseye (11) GNU/LINUX
 
 # CONTENTS
@@ -39,7 +39,7 @@ e.) Multimedia:
   i.) MPD
   ii.) NCMPCPP
   
-# DEPENDENCIES
+### DEPENDENCIES
 Applications:
 openbox, obconf, obmenu-generator, lxappearance, lxpolkit, pcmanfm, thunar, tint2, mousepad, nano, neovim, emacs, rofi, polybar, lemonbar, rxvt-unicode, suckless-tools, kitty, alacritty, mpd, ncmpcpp, redshift-gtk, gufw, feh, nitrogen, fish, zsh, volumeicon, nm-applet
 
