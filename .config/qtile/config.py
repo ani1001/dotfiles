@@ -402,12 +402,12 @@ reconfigure_screens = True
 
 @hook.subscribe.restart
 def cleanup():
-    shutil.rmtree(os.path.expanduser("~/.config/qtile/__pycache__"))
+    shutil.rmtree(os.path.expanduser('~/.config/qtile/__pycache__'))
 
 @hook.subscribe.shutdown
 def killall():
-    shutil.rmtree(os.path.expanduser("~/.config/qtile/__pycache__"))
-    subprocess.Popen(["killall","urxvtd","lxpolkit","nitrogen","picom"])
+    shutil.rmtree(os.path.expanduser('~/.config/qtile/__pycache__'))
+    subprocess.Popen(['killall', 'urxvtd', 'lxpolkit', 'nitrogen', 'picom'])
 
 @hook.subscribe.startup_once
 def start_once():
