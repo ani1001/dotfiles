@@ -24,7 +24,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-import os, re, socket, subprocess
+import os, re, shutil, socket, subprocess
 from libqtile import bar, hook, layout, qtile, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Rule, Screen
 from libqtile.lazy import lazy
@@ -399,6 +399,15 @@ floating_layout = layout.Floating(float_rules=[
 auto_fullscreen = True
 focus_on_window_activation = "smart"
 reconfigure_screens = True
+
+@hook.subscribe.restart
+def cleanup():
+    shutil.rmtree(os.path.expanduser("~/.config/qtile/__pycache__"))
+
+@hook.subscribe.shutdown
+def killall():
+    shutil.rmtree(os.path.expanduser("~/.config/qtile/__pycache__"))
+    subprocess.Popen(["killall","urxvtd","lxpolkit","nitrogen","picom"])
 
 @hook.subscribe.startup_once
 def start_once():
