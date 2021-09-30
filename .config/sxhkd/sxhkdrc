@@ -20,7 +20,7 @@ super + Escape
 
 # quit/restart bspwm
 super + alt + r
-	bspc wm -r
+	pkill -x panel; bspc wm -r
 
 super + alt + Escape
 	pkill -x panel; bspc quit
