@@ -36,7 +36,7 @@ import XMonad.Util.SpawnOnce
 -- The preferred terminal program, which is used in a binding below and by
 -- certain contrib modules.
 --
-myTerminal      = "kitty"
+myTerminal      = "st"
 
 -- Whether focus follows the mouse pointer.
 myFocusFollowsMouse :: Bool
@@ -286,7 +286,7 @@ myStartupHook = do
 myBar = "xmobar -x 0 $HOME/.config/xmobar/xmobarrc2"
 
 -- Custom PP, configure it as you like. It determines what is being written to the bar.
-myPP = xmobarPP { ppCurrent = xmobarColor "#81a1c1" "" . wrap "<" ">" }
+myPP = xmobarPP { ppCurrent = xmobarColor "#81a1c1" "" . wrap "[" "]" }
 
 -- Key binding to toggle the gap for the bar.
 toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
