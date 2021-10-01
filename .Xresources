@@ -8,22 +8,29 @@ Xft.lcdfilter:  lcddefault
 
 
 ! XTerm
-XTerm.termName: xterm-256color
+XTerm*termName: xterm
 XTerm*renderFont: true
-XTerm*faceName: xft:Hack:size=12:antialias=true, \
+XTerm*faceName: xft:Hack:size=12, \
                 xft:JoyPixels:size=12, \
-                xft:Monospace:style=Medium:size=12   
+                xft:Monospace:style=Medium:size=12
 XTerm*faceSize: 11
 XTerm*utf8: 2
 XTerm*locale: true
 
 XTerm.vt100.translations: #override \n\
   Ctrl <Key> j: smaller-vt-font() \n\
-  Ctrl <Key> k: larger-vt-font()
+  Ctrl <Key> k: larger-vt-font() \n\
+  Ctrl <Key>M: maximize() \n\
+  Ctrl <Key>R: restore() \n\
+  Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
+  Ctrl Shift <Key>V: insert-selection(CLIPBOARD)
 
+
+! Every shell is a login shell by default (for inclusion of all necessary environment variables)
+XTerm*loginshell: true
 
 ! I like a LOT of scrollback...
-XTerm*savelines: 16384
+XTerm*savelines: 4096
 
 ! double-click to select whole URLs :D
 XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
@@ -43,7 +50,7 @@ URxvt.iso14755_52: false
 URxvt.saveLines: 2000
 
 ! Using Xft
-URxvt.font: xft:Hack:size=12:antialias=true, \
+URxvt.font: xft:Hack:size=12, \
             xft:JoyPixels:size=12, \
             xft:Monospace:style=Medium:size=12
 
@@ -60,7 +67,7 @@ URxvt.print-pipe: "cat > /dev/null"
 
 ! Copy/Paste and URL handling
 !-*- Perl extensions -*-
-URxvt.perl-ext-common: default,selection-to-clipboard,pasta,matcher,keyboard-select
+URxvt.perl-ext-common: default,selection-to-clipboard,pasta,matcher,keyboard-select,font-size
 URxvt.keysym.M-u:     perl:url-select:select_next
 URxvt.colorUL: #4682B4
 URxvt.url-launcher:   /usr/bin/firefox
@@ -68,77 +75,34 @@ URxvt.underlineURLs:  True
 URxvt.matcher.button: 1 
 URxvt.keysym.M-Escape:perl:keyboard-select:activate
 URxvt.keysym.Control-Shift-V:     perl:pasta:paste
-! Comment this if you don't want copy when text is selected
+! Comment this if you do not want copy when text is selected
 URxvt.clipboard.autocopy: true
 
-
-! Solarized color scheme for the X Window System
-!
-! http://ethanschoonover.com/solarized
-
-
-! Common
-
-#define S_yellow        #b58900
-#define S_orange        #cb4b16
-#define S_red           #dc322f
-#define S_magenta       #d33682
-#define S_violet        #6c71c4
-#define S_blue          #268bd2
-#define S_cyan          #2aa198
-#define S_green         #859900
+! Key combination to increase or decrease the font size
+URxvt.keysym.C-Up:     font-size:increase
+URxvt.keysym.C-Down:   font-size:decrease
+URxvt.keysym.C-S-Up:   font-size:incglobal
+URxvt.keysym.C-S-Down: font-size:decglobal
+URxvt.keysym.C-equal:  font-size:reset
+URxvt.keysym.C-slash:  font-size:show
 
 
-! Dark
-
-#define S_base03        #002b36
-#define S_base02        #073642
-#define S_base01        #586e75
-#define S_base00        #657b83
-#define S_base0         #839496
-#define S_base1         #93a1a1
-#define S_base2         #eee8d5
-#define S_base3         #fdf6e3
-
-
-! Light
-
-! #define S_base03        #fdf6e3
-! #define S_base02        #eee8d5
-! #define S_base01        #93a1a1
-! #define S_base00        #839496
-! #define S_base0         #657b83
-! #define S_base1         #586e75
-! #define S_base2         #073642
-! #define S_base3         #002b36
-
-
-! To only apply colors to your terminal, for example, prefix
-! the color assignment statement with its name. Example:
-!
-! URxvt*background:            S_base03
-
-URxvt*background:              S_base03
-URxvt*foreground:              S_base0
-URxvt*fading:                  40
-URxvt*fadeColor:               S_base03
-URxvt*cursorColor:             S_base1
-URxvt*pointerColorBackground:  S_base01
-URxvt*pointerColorForeground:  S_base1
-
-URxvt*color0:                  S_base02
-URxvt*color1:                  S_red
-URxvt*color2:                  S_green
-URxvt*color3:                  S_yellow
-URxvt*color4:                  S_blue
-URxvt*color5:                  S_magenta
-URxvt*color6:                  S_cyan
-URxvt*color7:                  S_base2
-URxvt*color9:                  S_orange
-URxvt*color8:                  S_base03
-URxvt*color10:                 S_base01
-URxvt*color11:                 S_base00
-URxvt*color12:                 S_base0
-URxvt*color13:                 S_violet
-URxvt*color14:                 S_base1
-URxvt*color15:                 S_base3
+! Dracula Xresources palette
+*.foreground: #F8F8F2
+*.background: #282A36
+*.color0:     #000000
+*.color8:     #4D4D4D
+*.color1:     #FF5555
+*.color9:     #FF6E67
+*.color2:     #50FA7B
+*.color10:    #5AF78E
+*.color3:     #F1FA8C
+*.color11:    #F4F99D
+*.color4:     #BD93F9
+*.color12:    #CAA9FA
+*.color5:     #FF79C6
+*.color13:    #FF92D0
+*.color6:     #8BE9FD
+*.color14:    #9AEDFE
+*.color7:     #BFBFBF
+*.color15:    #E6E6E6
