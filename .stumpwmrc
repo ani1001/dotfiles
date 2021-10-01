@@ -106,7 +106,7 @@
 ;; Launch dmenu
 (define-key *root-map* (kbd "C-d") "exec dmenu_run")
 ;; Launch terminal
-(define-key *root-map* (kbd "RET") "exec urxvtc")
+(define-key *root-map* (kbd "RET") "exec kitty")
 ;; Quit stumpwm
 (define-key *root-map* (kbd "C-q") "quit")
 ;; Reload stumpwm
