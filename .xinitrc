@@ -21,21 +21,21 @@ xset fp rehash &
 # xsetroot -cursor_name left_ptr &
 
 # Set the default session here
-session=${1:-qtile}
+session=${1:-bspwm}
 
 case $session in
-    i3|i3wm           ) exec dbus-launch i3;;
+    i3|i3wm           ) exec dbus-launch --auto-syntax --exit-with-session i3;;
     kde               ) exec startplasma-x11;;
     xfce|xfce4        ) exec startxfce4;;
-    awesome           ) exec dbus-launch awesome;;
-    bspwm             ) exec dbus-launch bspwm;;
-    dwm               ) exec dbus-launch dwm;;
-    herbstluftwm      ) exec dbus-launch herbstluftwm;;
-    openbox           ) exec dbus-launch openbox-session;;
-    qtile             ) exec dbus-launch $HOME/.local/bin/qtile start;;
-    stumpwm           ) exec dbus-launch stumpwm;;
-    spectrwm          ) exec dbus-launch spectrwm;;
-    xmonad            ) exec dbus-launch xmonad;;
+    awesome           ) exec dbus-launch --auto-syntax --exit-with-session awesome;;
+    bspwm             ) exec dbus-launch --auto-syntax --exit-with-session bspwm;;
+    dwm               ) exec dbus-launch --auto-syntax --exit-with-session dwm;;
+    herbstluftwm      ) exec dbus-launch --auto-syntax --exit-with-session herbstluftwm;;
+    openbox           ) exec dbus-launch --auto-syntax --exit-with-session openbox-session;;
+    qtile             ) exec dbus-launch --auto-syntax --exit-with-session $HOME/.local/bin/qtile start;;
+    stumpwm           ) exec dbus-launch --auto-syntax --exit-with-session stumpwm;;
+    spectrwm          ) exec dbus-launch --auto-syntax --exit-with-session spectrwm;;
+    xmonad            ) exec dbus-launch --auto-syntax --exit-with-session xmonad;;
     # No known session, try to run it as command
     *                 ) exec $1;;
 esac
