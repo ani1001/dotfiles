@@ -11,7 +11,7 @@ Xcursor*theme: Vimix-Cursors
 ! XTerm
 XTerm*termName: xterm
 XTerm*renderFont: true
-XTerm.faceName: xft:Hack:size=12, \
+XTerm*faceName: xft:Hack:size=12, \
                 xft:JoyPixels:size=12, \
                 xft:Monospace:style=Medium:size=12
 XTerm*faceSize: 11

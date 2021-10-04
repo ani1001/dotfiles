@@ -24,13 +24,18 @@ xset fp rehash &
 session=${1:-qtile}
 
 case $session in
-    i3|i3wm           ) exec i3;;
+    i3|i3wm           ) exec dbus-launch i3;;
     kde               ) exec startplasma-x11;;
     xfce|xfce4        ) exec startxfce4;;
+    awesome           ) exec dbus-launch awesome;;
+    bspwm             ) exec dbus-launch bspwm;;
     dwm               ) exec dbus-launch dwm;;
+    herbstluftwm      ) exec dbus-launch herbstluftwm;;
+    openbox           ) exec dbus-launch openbox-session;;
     qtile             ) exec dbus-launch $HOME/.local/bin/qtile start;;
-    xmonad            ) exec dbus-launch xmonad;;
     stumpwm           ) exec dbus-launch stumpwm;;
+    spectrwm          ) exec dbus-launch spectrwm;;
+    xmonad            ) exec dbus-launch xmonad;;
     # No known session, try to run it as command
     *                 ) exec $1;;
 esac
