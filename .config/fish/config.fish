@@ -2,7 +2,7 @@
 # Hide welcome message
 set fish_greeting
 set VIRTUAL_ENV_DISABLE_PROMPT "1"
-set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
+#set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 
 ## Export variable need for qt-theme
 if type "qtile" >> /dev/null 2>&1
@@ -106,9 +106,9 @@ alias l.="exa -a | egrep '^\.'"                                     # show only 
 #[ ! -x /usr/bin/yay ] && [ -x /usr/bin/paru ] && alias yay='paru'
 
 # Common use
-alias grubup="sudo update-grub"
+#alias grubup="sudo update-grub"
 #alias fixpacman="sudo rm /var/lib/pacman/db.lck"
-alias tarnow='tar -acf '
+#alias tarnow='tar -acf '
 alias untar='tar -zxvf '
 alias wget='wget -c '
 #alias rmpkg="sudo pacman -Rdd"
@@ -120,12 +120,12 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
-alias dir='dir --color=auto'
-alias vdir='vdir --color=auto'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-alias hw='hwinfo --short'                                   # Hardware Info
+#alias dir='dir --color=auto'
+#alias vdir='vdir --color=auto'
+#alias grep='grep --color=auto'
+#alias fgrep='fgrep --color=auto'
+#alias egrep='egrep --color=auto'
+#alias hw='hwinfo --short'                                   # Hardware Info
 #alias big="expac -H M '%m\t%n' | sort -h | nl"             # Sort installed packages according to size in MB
 #alias gitpkg='pacman -Q | grep -i "\-git" | wc -l'	    # List amount of -git packages
 
@@ -145,15 +145,16 @@ alias hw='hwinfo --short'                                   # Hardware Info
 #alias cleanup='sudo pacman -Rns (pacman -Qtdq)'
 
 # Get the error messages from journalctl
-alias jctl="journalctl -p 3 -xb"
+#alias jctl="journalctl -p 3 -xb"
 
 # Recent installed packages
 #alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 
 
-## Run paleofetch if session is interactive
-#if status --is-interactive
-#   neofetch
-#end
+## Run pfetch if session is interactive
+if status --is-interactive
+   pfetch
+end
 
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.cabal/bin:$PATH"
