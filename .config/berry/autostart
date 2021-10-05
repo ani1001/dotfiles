@@ -7,8 +7,6 @@ picom &
 lxpolkit &
 urxvtd -q -o -f &
 $HOME/.config/polybar/launch.sh &
-#tint2 &
-#volumeicon &
 
 # Set decoration geometry
 berryc border_width       5
