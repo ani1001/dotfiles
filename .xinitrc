@@ -21,7 +21,7 @@ xset fp rehash &
 # xsetroot -cursor_name left_ptr &
 
 # Set the default session here
-session=${1:-bspwm}
+session=${1:-herbstluftwm}
 
 case $session in
     i3|i3wm           ) exec dbus-launch --auto-syntax --exit-with-session i3;;
