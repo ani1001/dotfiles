@@ -16,12 +16,15 @@ xrandr --output VGA1 --brightness 0.8 &
 xset +fp $HOME/.local/share/fonts &
 xset fp rehash &
 
-## some applications that should be run in the background
-# xscreensaver -no-splash &
-# xsetroot -cursor_name left_ptr &
+## Some applications that should be run in the background
+#xscreensaver -no-splash &
+xsetroot -cursor_name left_ptr &
+
+# Uncomment only if the default session is frankenwm
+#$HOME/.frankenwm/autostart.sh &
 
 # Set the default session here
-session=${1:-qtile}
+session=${1:-bspwm}
 
 case $session in
     i3|i3wm           ) exec dbus-launch --auto-syntax --exit-with-session i3;;
