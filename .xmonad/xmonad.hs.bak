@@ -20,7 +20,7 @@ import XMonad.Util.Run (spawnPipe)
 import XMonad.Util.SpawnOnce
 
 myModMask            = mod4Mask
-myTerminal           = "st"
+myTerminal           = "xterm"
 -- myWorkspaces         = ["WWW", "IRC", "Email", "Code", "Shell"] ++ map show [6..9]
 myWorkspaces         = ["1:dev","2:mail","3:web","4:comm","5:ham","6:tmp","7:dvi","8","9","0","-","="]
 myFocusedBorderColor = "#ff0000"      -- Color of focused border
