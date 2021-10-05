@@ -17,6 +17,7 @@ xmodmap "/home/anik/.Xmodmap"
 nitrogen --restore &
 picom &
 lxpolkit &
+urxvtd -q -o -f &
 setxkbmap us -variant intl &
 #
 # Debian-local change:
