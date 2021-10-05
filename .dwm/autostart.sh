@@ -4,4 +4,4 @@ nitrogen --restore &
 picom &
 lxpolkit &
 slstatus &
-#urxvtd -q -o -f &
+urxvtd -q -o -f &
