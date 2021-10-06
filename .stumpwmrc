@@ -105,8 +105,16 @@
 (define-key *root-map* (kbd "C-l") "exec slock")
 ;; Launch dmenu
 (define-key *root-map* (kbd "C-d") "exec dmenu_run")
+;; Launch xterm
+(define-key *root-map* (kbd "c") "exec xterm")
+;; Launch rxvt-unicode client
+(define-key *root-map* (kbd "C-c") "exec urxvtc")
 ;; Launch terminal
-(define-key *root-map* (kbd "RET") "exec kitty")
+(define-key *root-map* (kbd "RET") "exec alacritty")
+;; Launch neovim
+(define-key *root-map* (kbd "e") "colon1 exec alacritty -e nvim")
+;; Launch kakoune
+(define-key *root-map* (kbd "C-e") "colon1 exec alacritty -e kak")
 ;; Quit stumpwm
 (define-key *root-map* (kbd "C-q") "quit")
 ;; Reload stumpwm
