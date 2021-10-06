@@ -12,19 +12,19 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
 fi
 
 xrdb $HOME/.Xresources &
-xrandr --output VGA1 --brightness 0.8 &
+xrandr --output VGA1 --brightness 0.9 &
 xset +fp $HOME/.local/share/fonts &
 xset fp rehash &
 
 ## Some applications that should be run in the background
 #xscreensaver -no-splash &
-xsetroot -cursor_name left_ptr &
+#xsetroot -cursor_name left_ptr &
 
 # Uncomment only if the default session is frankenwm
 #$HOME/.frankenwm/autostart.sh &
 
 # Set the default session here
-session=${1:-bspwm}
+session=${1:-qtile}
 
 case $session in
     i3|i3wm           ) exec dbus-launch --auto-syntax --exit-with-session i3;;
