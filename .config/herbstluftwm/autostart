@@ -11,7 +11,7 @@ hc emit_hook reload
 xsetroot -solid '#5A8E3A'
 
 nitrogen --restore &
-picom &
+xcompmgr &
 lxpolkit &
 urxvtd -q -o -f &
 $HOME/.config/herbstluftwm/xmobar &
