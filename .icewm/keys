@@ -8,7 +8,7 @@
 # You'll have to omit XK_ prefixs and to replace XF86XK_ prefixes by
 # XF86. Valid modifiers are Alt, Ctrl, Shift, Meta, Super and Hyper.
 #
-key "Alt+Ctrl+t"            st
+key "Alt+Ctrl+t"            alacritty
 key "Alt+Ctrl+b"            xdg-open about:blank
 key "Alt+Ctrl+s"            xdg-open https://www.google.com
 
