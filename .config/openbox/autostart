@@ -1,6 +1,4 @@
 tint2 &
 nitrogen --restore &
 picom &
-plank &
 lxpolkit &
-volumeicon &
