@@ -3,7 +3,7 @@
 pgrep -x sxhkd > /dev/null || sxhkd &
 set -U SXHKD_SHELL sh &
 nitrogen --restore &
-picom &
+xcompmgr &
 lxpolkit &
 xsetroot -cursor_name left_ptr &
 wmname LG3D &
@@ -12,16 +12,17 @@ $HOME/.config/polybar/launch.sh &
 bspc monitor -d I II III IV V VI VII VIII IX X
 
 #overlapping borders
-#BW=3
-#bspc config border_width $BW
-#bspc config window_gap -$BW
-#for side in top right bottom left ; do
-#	bspc config ${side}_padding $BW
-#done
+BW=3
+bspc config border_width $BW
+bspc config window_gap -$BW
+for side in top right bottom left ; do
+	bspc config ${side}_padding $BW
+done
 
-bspc config border_width         2
-bspc config window_gap           2
-bspc config split_ratio          0.55
+#bspc config border_width         2
+#bspc config window_gap           2
+
+bspc config split_ratio          0.50
 
 bspc config click_to_focus       true
 bspc config borderless_monocle   false
