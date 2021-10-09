@@ -1,13 +1,16 @@
 #!/bin/sh
 
+[ -e ~/.profile ] && . ~/.profile
+
 pgrep -x sxhkd > /dev/null || sxhkd &
 set -U SXHKD_SHELL sh &
+pgrep -x panel > /dev/null || $HOME/.config/bspwm/panel/panel &
 nitrogen --restore &
 xcompmgr &
 lxpolkit &
 xsetroot -cursor_name left_ptr &
 wmname LG3D &
-$HOME/.config/polybar/launch.sh &
+#$HOME/.config/polybar/launch.sh &
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
@@ -19,11 +22,13 @@ for side in top right bottom left ; do
 	bspc config ${side}_padding $BW
 done
 
+#external rules
+bspc config external_rules_command "$(which external_rules)"
+
 #bspc config border_width         2
-#bspc config window_gap           2
+#bspc config window_gap          12
 
-bspc config split_ratio          0.50
-
+bspc config split_ratio          0.52
 bspc config click_to_focus       true
 bspc config borderless_monocle   false
 bspc config gapless_monocle      false
