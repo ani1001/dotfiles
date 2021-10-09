@@ -20,11 +20,13 @@ xset fp rehash &
 # xscreensaver -no-splash &
 # xsetroot -cursor_name left_ptr &
 
-# Autostart script for frankenwm
+## FrankenWM
+## Startup & bar script
 # $HOME/.frankenwm/autostart.sh &
+# $HOME/.frankenwm/frankenwm2bar.sh &
 
 # Set the default session here
-session=${1:-qtile}
+session=${1:-bspwm}
 
 case $session in
     i3|i3wm           ) exec dbus-launch --auto-syntax --exit-with-session i3;;
@@ -37,6 +39,7 @@ case $session in
     frankenwm         ) exec dbus-launch --auto-syntax --exit-with-session frankenwm;;
     herbstluftwm      ) exec dbus-launch --auto-syntax --exit-with-session herbstluftwm;;
     icewm             ) exec dbus-launch --auto-syntax --exit-with-session icewm-session;;
+    jwm               ) exec dbus-launch --auto-syntax --exit-with-session jwm;;
     openbox           ) exec dbus-launch --auto-syntax --exit-with-session openbox-session;;
     qtile             ) exec dbus-launch --auto-syntax --exit-with-session $HOME/.local/bin/qtile start;;
     stumpwm           ) exec dbus-launch --auto-syntax --exit-with-session stumpwm;;
