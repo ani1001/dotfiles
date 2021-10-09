@@ -17,11 +17,11 @@ xset +fp $HOME/.local/share/fonts &
 xset fp rehash &
 
 ## Some applications that should be run in the background
-#xscreensaver -no-splash &
-#xsetroot -cursor_name left_ptr &
+# xscreensaver -no-splash &
+# xsetroot -cursor_name left_ptr &
 
-# Uncomment only if the default session is frankenwm
-#$HOME/.frankenwm/autostart.sh &
+# Autostart script for frankenwm
+# $HOME/.frankenwm/autostart.sh &
 
 # Set the default session here
 session=${1:-qtile}
@@ -31,10 +31,12 @@ case $session in
     kde               ) exec startplasma-x11;;
     xfce|xfce4        ) exec startxfce4;;
     awesome           ) exec dbus-launch --auto-syntax --exit-with-session awesome;;
+    berry             ) exec dbus-launch --auto-syntax --exit-with-session berry;;
     bspwm             ) exec dbus-launch --auto-syntax --exit-with-session bspwm;;
     dwm               ) exec dbus-launch --auto-syntax --exit-with-session dwm;;
     frankenwm         ) exec dbus-launch --auto-syntax --exit-with-session frankenwm;;
     herbstluftwm      ) exec dbus-launch --auto-syntax --exit-with-session herbstluftwm;;
+    icewm             ) exec dbus-launch --auto-syntax --exit-with-session icewm-session;;
     openbox           ) exec dbus-launch --auto-syntax --exit-with-session openbox-session;;
     qtile             ) exec dbus-launch --auto-syntax --exit-with-session $HOME/.local/bin/qtile start;;
     stumpwm           ) exec dbus-launch --auto-syntax --exit-with-session stumpwm;;
