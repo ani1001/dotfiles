@@ -11,6 +11,7 @@ lxpolkit &
 xsetroot -cursor_name left_ptr &
 wmname LG3D &
 #$HOME/.config/polybar/launch.sh &
+#$HOME/.config/lemonbar/launch &
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
