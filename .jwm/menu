@@ -24,10 +24,8 @@
     </Menu>
     <Separator/>
 	<Menu label="Accesories">
-	    <Program label="City Temperature">st -e "bash -c 'curl wttr.in;exec bash'"</Program>
-	    <Program label="ImageWriter ISO/USB">imagewriter</Program>
+		<Program label="Geany">geany</Program>
         <Program label="Mousepad Editor">mousepad</Program>
-        <Program label="Medit Editor">medit</Program>
         <Program label="Xarchiver Compressed">xarchiver</Program>
     </Menu>
     <Menu label="Graphics">
@@ -48,13 +46,9 @@
         <Program label="uGet">env GDK_BACKEND=x11 uget-gtk</Program>        
     </Menu>
     <Menu label="Office">
-        <Program label="AbiWord Word">abiword</Program>
         <Program label="Atril Document Viewer">atril</Program>
-        <Program label="Epdfview PDF">epdfview</Program>
-        <Program label="Gnumeric Calc">gnumeric</Program>
 	    <Program label="Online Open365 Tools">chromium https://cloud.open365.io/applogin/</Program>
         <Program label="Online PDF Tools">chromium http://smallpdf.com/</Program>
-        <Program label="Simple Scan">simple-scan</Program>
     </Menu>
     <Menu label="Shells">
         <Program label="Alacritty">alacritty</Program>
