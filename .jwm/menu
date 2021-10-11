@@ -1,1 +1,146 @@
+<?xml version="1.0"?>
+<JWM>
 
+    <!-- The root menu. -->
+    <RootMenu onroot="7">
+        <Program label="Home">pcmanfm ~/</Program>
+        <Program label="Root">gksu pcmanfm /</Program>
+    <Separator/>
+	<Program label="Applications">pcmanfm menu://applications/</Program>
+        <Program label="Devices">pcmanfm computer:///</Program>
+        <Program label="Trash">pcmanfm trash:///</Program>
+    </RootMenu>
+    <RootMenu onroot="3">
+        <Program label="Run Applications">gmrun</Program>
+        <Program label="Terminal">st</Program>
+        <Program label="Emacs">emacs</Program>
+        <Program label="File Manager">pcmanfm</Program>
+        <Program label="Web Browser">chromium</Program>
+    <Menu label="Screenshot">
+	    <Program label="Active Window Delay">notify-send 'Selection will be saved in ~/Screenshots in 5s' &amp; scrot -ud 5 -e 'mv $f ~/Screenshots' &amp;&amp; sleep 1 &amp;&amp; notify-send 'Screenshot has been saved in ~/Screenshots'</Program>            
+	    <Program label="Active Window">scrot -ue 'mv $f ~/Screenshots' &amp;&amp; sleep 1 &amp;&amp; notify-send 'Screenshot has been saved in ~/Screenshots'</Program>
+        <Program label="Full Screen">scrot -e 'mv $f ~/Screenshots' &amp;&amp; sleep 1 &amp;&amp; notify-send 'Screenshot has been saved in ~/Screenshots'</Program>
+        <Program label="Select Area">notify-send 'Selection will be saved in ~/Screenshots' &amp; scrot -se 'mv $f ~/Screenshots' &amp;&amp; sleep 1 &amp;&amp; notify-send 'Screenshot has been saved in ~/Screenshots'</Program>
+    </Menu>
+    <Separator/>
+	<Menu label="Accesories">
+	    <Program label="City Temperature">st -e "bash -c 'curl wttr.in;exec bash'"</Program>
+	    <Program label="ImageWriter ISO/USB">imagewriter</Program>
+        <Program label="Mousepad Editor">mousepad</Program>
+        <Program label="Medit Editor">medit</Program>
+        <Program label="Xarchiver Compressed">xarchiver</Program>
+    </Menu>
+    <Menu label="Graphics">
+        <Program label="GNU Image Manipulation Program">gimp-2.10</Program>
+        <Program label="Ristretto Image Viewer">ristretto</Program>
+    </Menu>
+    <Menu label="Multimedia">
+        <Program label="DeaDBeeF Music">deadbeef</Program>
+        <Program label="Parole Media Player">parole</Program>        
+        <Program label="VLC media player">vlc</Program>
+    </Menu>
+    <Menu label="Network">
+		<Program label="Chromium">chromium</Program>
+	    <Program label="HexChat IRC">hexchat</Program>
+	    <Program label="MEGAsync">megasync</Program>
+	    <Program label="NetworkManager">nm-applet</Program>
+	    <Program label="Transmission">transmission-gtk</Program>
+        <Program label="uGet">env GDK_BACKEND=x11 uget-gtk</Program>        
+    </Menu>
+    <Menu label="Office">
+        <Program label="AbiWord Word">abiword</Program>
+        <Program label="Atril Document Viewer">atril</Program>
+        <Program label="Epdfview PDF">epdfview</Program>
+        <Program label="Gnumeric Calc">gnumeric</Program>
+	    <Program label="Online Open365 Tools">chromium https://cloud.open365.io/applogin/</Program>
+        <Program label="Online PDF Tools">chromium http://smallpdf.com/</Program>
+        <Program label="Simple Scan">simple-scan</Program>
+    </Menu>
+    <Menu label="Shells">
+        <Program label="Alacritty">alacritty</Program>
+        <Program label="kitty">kitty</Program>
+        <Program label="rxvt-unicode">urxvt</Program>
+        <Program label="Thunar File Manager">thunar</Program>
+        <Program label="Xfce Terminal">xfce4-terminal</Program>
+        <Program label="XTerm">xterm</Program>
+    </Menu>
+    <Menu label="System">
+        <Menu label="Settings">
+            <Menu label="GNOME">
+                <Program label="Advanced Network Configuration">nm-connection-editor</Program>
+            </Menu>
+            <Menu label="Xfce">
+                <Program label="Settings Manager">xfce4-settings-manager</Program>
+            </Menu>
+            <Program label="Accessibility">xfce4-accessibility-settings</Program>
+            <Program label="Appearance">xfce4-appearance-settings</Program>
+            <Program label="Color Profiles">xfce4-color-settings</Program>
+            <Program label="Customize Look and Feel">lxappearance</Program>
+            <Program label="Default Applications">xfce4-mime-settings</Program>
+            <Program label="Default applications for LXSession">lxsession-default-apps</Program>
+            <Program label="Desktop">xfdesktop-settings</Program>
+            <Program label="Desktop Preferences">pcmanfm --desktop-pref</Program>
+            <Program label="Desktop Session Settings">lxsession-edit</Program>
+            <Program label="Desktop Settings">jwm-settings-manager --desktop</Program>
+            <Program label="Display">xfce4-display-settings</Program>
+            <Program label="File Manager Settings">thunar-settings</Program>
+            <Program label="Font Settings">jwm-settings-manager --font</Program>
+            <Program label="Icon Settings">jwm-settings-manager --icons</Program>
+            <Program label="JWM Settings Manager">jwm-settings-manager</Program>
+            <Program label="Keyboard">xfce4-keyboard-settings</Program>
+            <Program label="Keyboard Settings">jwm-settings-manager --keyboard</Program>
+            <Program label="Manage Printing">xdg-open http://localhost:631/</Program>
+            <Program label="Mouse and Touchpad">xfce4-mouse-settings</Program>
+            <Program label="Mouse/Touchpad Settings">fltk-mouse</Program>
+            <Program label="nitrogen">nitrogen</Program>
+            <Program label="Notifications">xfce4-notifyd-config</Program>
+            <Program label="Openbox Configuration Manager">obconf</Program>
+            <Program label="Panel">xfce4-panel --preferences</Program>
+            <Program label="Panel Settings">jwm-settings-manager --panel</Program>
+            <Program label="Power Manager">xfce4-power-manager-settings</Program>
+            <Program label="Preferred Applications">libfm-pref-apps</Program>
+            <Program label="Removable Drives and Media">thunar-volman-settings</Program>
+            <Program label="Screensaver">xfce4-screensaver-preferences</Program>
+            <Program label="Session and Startup">xfce4-session-settings</Program>
+            <Program label="Settings Editor">xfce4-settings-editor</Program>
+            <Program label="Startup Program Settings">jwm-settings-manager --autostart</Program>
+            <Program label="Text Editor Settings">mousepad --preferences</Program>
+            <Program label="Theme Settings">jwm-settings-manager --themes</Program>
+            <Program label="Window Manager Tweaks">xfwm4-tweaks-settings</Program>
+            <Program label="Window Settings">jwm-settings-manager --window</Program>
+            <Program label="Workspaces">xfwm4-workspace-settings</Program>
+            <Program label="Xfce Terminal Settings">xfce4-terminal --preferences</Program>
+        </Menu>
+        <Program label="BleachBit">bleachbit</Program>
+        <Program label="conky">conky --daemonize --pause=1</Program>
+        <Program label="fish">xterm -e fish</Program>
+        <Program label="Htop">xterm -e htop</Program>
+        <Program label="jgmenu">jgmenu_run</Program>
+        <Program label="Log Out">xfce4-session-logout</Program>
+        <Program label="Psensor">psensor</Program>
+        <Program label="Sensor Viewer">xfce4-sensors</Program>
+        <Program label="Task Manager">xfce4-taskmanager</Program>
+        <Program label="Tint2">tint2</Program>
+    </Menu>
+    <Menu label="Utilities">
+        <Program label="About Xfce">xfce4-about</Program>
+        <Program label="Application Finder">xfce4-appfinder</Program>
+        <Program label="compton">compton</Program>
+        <Program label="File Manager">exo-open --launch FileManager</Program>
+        <Program label="picom">picom</Program>
+        <Program label="Run Program...">xfce4-appfinder --collapsed</Program>
+        <Program label="Shortcut Editor">desktop-file-editor</Program>
+        <Program label="Terminal Emulator">exo-open --launch TerminalEmulator</Program>
+        <Program label="Xarchiver">xarchiver</Program>
+    </Menu>
+	<Separator/>
+    <Menu label="JWM">
+        <Program label="JWM Projet">chromium http://joewing.net/projects/jwm/index.shtml</Program>        
+        <Program label="JWM Configuration">chromium http://joewing.net/projects/jwm/config.shtml</Program>
+		<Program label="JWM Wiki ArchLinux">chromium https://wiki.archlinux.org/index.php/JWM</Program>
+    </Menu>
+    <Restart label="Restart" icon="restart.png"/>
+    <Exit label="Exit" confirm="true" icon="quit.png"/>
+	</RootMenu>
+
+</JWM>
