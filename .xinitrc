@@ -25,24 +25,24 @@ xset fp rehash &
 # $HOME/.frankenwm/autostart.sh &
 
 # Set the default session here
-session=${1:-bspwm}
+session=${1:-qtile}
 
 case $session in
-    i3|i3wm           ) exec dbus-launch --auto-syntax --exit-with-session i3;;
-    kde               ) exec startplasma-x11;;
-    xfce|xfce4        ) exec startxfce4;;
     awesome           ) exec dbus-launch --auto-syntax --exit-with-session awesome;;
     berry             ) exec dbus-launch --auto-syntax --exit-with-session berry;;
     bspwm             ) exec dbus-launch --auto-syntax --exit-with-session bspwm;;
     dwm               ) exec dbus-launch --auto-syntax --exit-with-session dwm;;
+    fluxbox           ) exec dbus-launch --auto-syntax --exit-with-session fluxbox;;
     frankenwm         ) exec dbus-launch --auto-syntax --exit-with-session frankenwm;;
     herbstluftwm      ) exec dbus-launch --auto-syntax --exit-with-session herbstluftwm;;
+    i3|i3wm           ) exec dbus-launch --auto-syntax --exit-with-session i3;;
     icewm             ) exec dbus-launch --auto-syntax --exit-with-session icewm-session;;
     jwm               ) exec dbus-launch --auto-syntax --exit-with-session jwm;;
     openbox           ) exec dbus-launch --auto-syntax --exit-with-session openbox-session;;
     qtile             ) exec dbus-launch --auto-syntax --exit-with-session $HOME/.local/bin/qtile start;;
     stumpwm           ) exec dbus-launch --auto-syntax --exit-with-session stumpwm;;
     spectrwm          ) exec dbus-launch --auto-syntax --exit-with-session spectrwm;;
+    xfce|xfce4        ) exec startxfce4;;
     xmonad            ) exec dbus-launch --auto-syntax --exit-with-session xmonad;;
     # No known session, try to run it as command
     *                 ) exec $1;;
