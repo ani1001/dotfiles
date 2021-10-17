@@ -12,13 +12,16 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
 fi
 
 xrdb $HOME/.Xresources &
-xrandr --output VGA1 --brightness 0.8 &
+xrandr --output VGA1 --brightness 0.9 &
 xset +fp $HOME/.local/share/fonts &
 xset fp rehash &
 
 ## Some applications that should be run in the background
 # xscreensaver -no-splash &
 # xsetroot -cursor_name left_ptr &
+# xcompmgr &
+# lxpolkit &
+pulseaudio --start &
 
 ## FrankenWM
 ## Autostart script
