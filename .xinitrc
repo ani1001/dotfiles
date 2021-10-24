@@ -28,7 +28,7 @@ pulseaudio --start &
 # $HOME/.frankenwm/autostart.sh &
 
 # Set the default session here
-session=${1:-qtile}
+session=${1:-bspwm}
 
 case $session in
     awesome           ) exec dbus-launch --auto-syntax --exit-with-session awesome;;
