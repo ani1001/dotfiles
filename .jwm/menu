@@ -15,16 +15,16 @@
         <Program label="Terminal">st</Program>
         <Program label="Emacs">emacs</Program>
         <Program label="File Manager">pcmanfm</Program>
-        <Program label="Web Browser">chromium</Program>
+	<Program label="Web Browser">/usr/local/src/firefox/firefox</Program>
     <Menu label="Screenshot">
-	    <Program label="Active Window Delay">notify-send 'Selection will be saved in ~/Screenshots in 5s' &amp; scrot -ud 5 -e 'mv $f ~/Screenshots' &amp;&amp; sleep 1 &amp;&amp; notify-send 'Screenshot has been saved in ~/Screenshots'</Program>            
-	    <Program label="Active Window">scrot -ue 'mv $f ~/Screenshots' &amp;&amp; sleep 1 &amp;&amp; notify-send 'Screenshot has been saved in ~/Screenshots'</Program>
+	<Program label="Active Window Delay">notify-send 'Selection will be saved in ~/Screenshots in 5s' &amp; scrot -ud 5 -e 'mv $f ~/Screenshots' &amp;&amp; sleep 1 &amp;&amp; notify-send 'Screenshot has been saved in ~/Screenshots'</Program>            
+	<Program label="Active Window">scrot -ue 'mv $f ~/Screenshots' &amp;&amp; sleep 1 &amp;&amp; notify-send 'Screenshot has been saved in ~/Screenshots'</Program>
         <Program label="Full Screen">scrot -e 'mv $f ~/Screenshots' &amp;&amp; sleep 1 &amp;&amp; notify-send 'Screenshot has been saved in ~/Screenshots'</Program>
         <Program label="Select Area">notify-send 'Selection will be saved in ~/Screenshots' &amp; scrot -se 'mv $f ~/Screenshots' &amp;&amp; sleep 1 &amp;&amp; notify-send 'Screenshot has been saved in ~/Screenshots'</Program>
     </Menu>
     <Separator/>
 	<Menu label="Accesories">
-		<Program label="Geany">geany</Program>
+    	<Program label="Geany">geany</Program>
         <Program label="Mousepad Editor">mousepad</Program>
         <Program label="Xarchiver Compressed">xarchiver</Program>
     </Menu>
@@ -38,16 +38,16 @@
         <Program label="VLC media player">vlc</Program>
     </Menu>
     <Menu label="Network">
-		<Program label="Chromium">chromium</Program>
-	    <Program label="HexChat IRC">hexchat</Program>
-	    <Program label="MEGAsync">megasync</Program>
-	    <Program label="NetworkManager">nm-applet</Program>
-	    <Program label="Transmission">transmission-gtk</Program>
+	<Program label="Chromium">chromium</Program>
+	<Program label="HexChat IRC">hexchat</Program>
+	<Program label="MEGAsync">megasync</Program>
+	<Program label="NetworkManager">nm-applet</Program>
+	<Program label="Transmission">transmission-gtk</Program>
         <Program label="uGet">env GDK_BACKEND=x11 uget-gtk</Program>        
     </Menu>
     <Menu label="Office">
         <Program label="Atril Document Viewer">atril</Program>
-	    <Program label="Online Open365 Tools">chromium https://cloud.open365.io/applogin/</Program>
+	<Program label="Online Open365 Tools">chromium https://cloud.open365.io/applogin/</Program>
         <Program label="Online PDF Tools">chromium http://smallpdf.com/</Program>
     </Menu>
     <Menu label="Shells">
