@@ -87,7 +87,7 @@ skin=yadt256
 
 [Layout]
 output_lines=0
-left_panel_size=67
+left_panel_size=85
 top_panel_size=0
 message_visible=true
 keybar_visible=true
@@ -114,6 +114,10 @@ clipboard_paste=
 base_color=
 xterm-kitty=
 color_terminals=
+
+alacritty=
+
+linux=
 
 [Panels]
 show_mini_info=true
