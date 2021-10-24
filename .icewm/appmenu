@@ -1,0 +1,87 @@
+menu "Applications" _none_ {
+  menu "Accessories" _none_ {
+    prog "Application Finder" _none_ xfce4-appfinder
+    prog "Mousepad" _none_ mousepad 
+    prog "Neovim" _none_ xterm -e nvim 
+    prog "Sensor Viewer" _none_ xfce4-sensors
+    prog "Shortcut Editor" _none_ desktop-file-editor 
+    prog "Xarchiver" _none_ xarchiver 
+    prog "compton" _none_ compton
+    prog "nitrogen" _none_ nitrogen
+    prog "picom" _none_ picom
+  }
+  menu "Development" _none_ {
+    prog "Emacs" _none_ emacs 
+    prog "Geany" _none_ geany 
+  }
+  menu "Graphics" _none_ {
+    prog "Flameshot" _none_ /usr/bin/flameshot
+    prog "GNU Image Manipulation Program" _none_ gimp-2.10 
+    prog "Ristretto Image Viewer" _none_ ristretto 
+  }
+  menu "Multimedia" _none_ {
+    prog "DeaDBeeF" _none_ deadbeef 
+    prog "Echomixer" _none_ echomixer
+    prog "Envy24 Control" _none_ envy24control
+    prog "HDAJackRetask" _none_ hdajackretask
+    prog "HDSPConf" _none_ hdspconf
+    prog "HDSPMixer" _none_ hdspmixer
+    prog "Hwmixvolume" _none_ hwmixvolume
+    prog "Parole Media Player" _none_ parole 
+    prog "VLC media player" _none_ /usr/bin/vlc --started-from-file 
+  }
+  menu "Network" _none_ {
+    prog "Chromium" _none_ chromium 
+    prog "Firefox Web Browser" _none_ firefox 
+    prog "HexChat" _none_ hexchat --existing 
+    prog "MEGAsync" _none_ megasync
+    prog "Transmission" _none_ transmission-gtk 
+    prog "pcloud" _none_ "/run/media/anik/Galaxy/FLOSS/Applications/AppImages/pcloud" 
+    prog "uGet" _none_ env GDK_BACKEND=x11 uget-gtk 
+  }
+  menu "Office" _none_ {
+    prog "Atril Document Viewer" _none_ atril 
+  }
+  menu "Settings" _none_ {
+    prog "Advanced Network Configuration" _none_ nm-connection-editor
+    prog "Customize Look and Feel" _none_ lxappearance
+    prog "Desktop Preferences" _none_ pcmanfm --desktop-pref
+    prog "Desktop Settings" _none_ jwm-settings-manager --desktop
+    prog "File Manager Settings" _none_ thunar-settings
+    prog "Firewall Configuration" _none_ gufw
+    prog "Font Settings" _none_ jwm-settings-manager --font
+    prog "Icon Settings" _none_ jwm-settings-manager --icons
+    prog "JWM Settings Manager" _none_ jwm-settings-manager
+    prog "Keyboard Settings" _none_ jwm-settings-manager --keyboard
+    prog "Mouse/Touchpad Settings" _none_ fltk-mouse
+    prog "Openbox Configuration Manager" _none_ obconf 
+    prog "Panel Settings" _none_ jwm-settings-manager --panel
+    prog "Power Manager" _none_ xfce4-power-manager-settings
+    prog "Removable Drives and Media" _none_ thunar-volman-settings
+    prog "Startup Program Settings" _none_ jwm-settings-manager --autostart
+    prog "Text Editor Settings" _none_ mousepad --preferences
+    prog "Window Settings" _none_ jwm-settings-manager --window
+    prog "Xfce Terminal Settings" _none_ xfce4-terminal --preferences
+    prog "theme Settings" _none_ jwm-settings-manager --themes
+  }
+  menu "System" _none_ {
+    prog "Alacritty" _none_ alacritty
+    prog "BleachBit" _none_ bleachbit
+    prog "Bulk Rename" _none_ thunar --bulk-rename 
+    prog "File Manager PCManFM" _none_ pcmanfm 
+    prog "Htop" _none_ xterm -e htop
+    prog "Manage Printing" _none_ xdg-open http://localhost:631/
+    prog "Psensor" _none_ psensor
+    prog "Task Manager" _none_ xfce4-taskmanager
+    prog "Thunar File Manager" _none_ thunar 
+    prog "Tint2" _none_ tint2
+    prog "UXTerm" _none_ uxterm
+    prog "XTerm" _none_ xterm
+    prog "Xfce Terminal" _none_ xfce4-terminal
+    prog "conky" _none_ conky --daemonize --pause=1
+    prog "fish" _none_ xterm -e fish
+    prog "jgmenu" _none_ jgmenu_run
+    prog "kitty" _none_ kitty
+    prog "rxvt-unicode" _none_ urxvt
+  }
+}

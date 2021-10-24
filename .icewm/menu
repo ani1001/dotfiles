@@ -1,0 +1,118 @@
+menu "Development" folder {
+    prog "Emacs" - emacs
+    prog "Geany" - geany
+}
+menu "Editors" folder {
+    prog "Mousepad" - mousepad
+    prog "Neovim" - st -e nvim
+}
+menu "Graphics" folder {
+    prog "Flameshot" - flameshot
+    prog "GNU Image Manipulation Program" - gimp-2.10
+    prog "MATE Color Selection" - mate-color-select
+    prog "Ristretto Image Viewer" - ristretto
+}
+menu "Multimedia" folder {
+    prog "DeaDBeeF" - deadbeef
+    prog "Echomixer" - echomixer
+    prog "Envy24 Control" - envy24control
+    prog "HDAJackRetask" - hdajackretask
+    prog "HDSPConf" - hdspconf
+    prog "HDSPMixer" - hdspmixer
+    prog "Hwmixvolume" - hwmixvolume
+    prog "Parole Media Player" - parole
+    prog "VLC media player" - vlc
+}
+menu "Network" folder {
+    prog "Chromium" - chromium
+    prog "Firefox Web Browser" - firefox
+    prog "HexChat" - hexchat
+    prog "Mail Reader" - exo-open --launch MailReader
+    prog "MEGAsync" - megasync
+    prog "Transmission" - transmission-gtk
+    prog "uGet" - env GDK_BACKEND=x11 uget-gtk
+    prog "Web Browser" - exo-open --launch WebBrowser
+}
+menu "Office" folder {
+    prog "Atril Document Viewer" - atril
+}
+menu "Shells" folder {
+    prog "Alacritty" - alacritty
+    prog "File Manager PCManFM" - pcmanfm
+    prog "kitty" - kitty
+    prog "rxvt-unicode" - urxvt
+    prog "Thunar File Manager" - thunar
+    prog "UXTerm" - uxterm
+    prog "Xfce Terminal" - xfce4-terminal
+    prog "XTerm" - xterm
+}
+menu "System" folder {
+    menu "Settings" folder {
+        menu "GNOME" folder {
+            prog "Advanced Network Configuration" - nm-connection-editor
+            prog "Firewall Configuration" - gufw
+        }
+        menu "Xfce" folder {
+            prog "Settings Manager" - xfce4-settings-manager
+        }
+        prog "Accessibility" - xfce4-accessibility-settings
+        prog "Appearance" - xfce4-appearance-settings
+        prog "Color Profiles" - xfce4-color-settings
+        prog "Customize Look and Feel" - lxappearance
+        prog "Default Applications" - xfce4-mime-settings
+        prog "Default applications for LXSession" - lxsession-default-apps
+        prog "Desktop" - xfdesktop-settings
+        prog "Desktop Preferences" - pcmanfm --desktop-pref
+        prog "Desktop Session Settings" - lxsession-edit
+        prog "Desktop Settings" - jwm-settings-manager --desktop
+        prog "Display" - xfce4-display-settings
+        prog "File Manager Settings" - thunar-settings
+        prog "Font Settings" - jwm-settings-manager --font
+        prog "Icon Settings" - jwm-settings-manager --icons
+        prog "JWM Settings Manager" - jwm-settings-manager
+        prog "Keyboard" - xfce4-keyboard-settings
+        prog "Keyboard Settings" - jwm-settings-manager --keyboard
+        prog "Manage Printing" - xdg-open http://localhost:631/
+        prog "Mouse and Touchpad" - xfce4-mouse-settings
+        prog "Mouse/Touchpad Settings" - fltk-mouse
+        prog "nitrogen" - nitrogen
+        prog "Notifications" - xfce4-notifyd-config
+        prog "Openbox Configuration Manager" - obconf
+        prog "Panel" - xfce4-panel --preferences
+        prog "Panel Settings" - jwm-settings-manager --panel
+        prog "Power Manager" - xfce4-power-manager-settings
+        prog "Preferred Applications" - libfm-pref-apps
+        prog "Removable Drives and Media" - thunar-volman-settings
+        prog "Screensaver" - xfce4-screensaver-preferences
+        prog "Session and Startup" - xfce4-session-settings
+        prog "Settings Editor" - xfce4-settings-editor
+        prog "Startup Program Settings" - jwm-settings-manager --autostart
+        prog "Text Editor Settings" - mousepad --preferences
+        prog "Theme Settings" - jwm-settings-manager --themes
+        prog "Window Manager Tweaks" - xfwm4-tweaks-settings
+        prog "Window Settings" - jwm-settings-manager --window
+        prog "Workspaces" - xfwm4-workspace-settings
+        prog "Xfce Terminal Settings" - xfce4-terminal --preferences
+    }
+    prog "BleachBit" - bleachbit
+    prog "conky" - conky --daemonize --pause=1
+    prog "fish" - st -e fish
+    prog "Htop" - st -e htop
+    prog "jgmenu" - jgmenu_run
+    prog "Log Out" - xfce4-session-logout
+    prog "Psensor" - psensor
+    prog "Sensor Viewer" - xfce4-sensors
+    prog "Task Manager" - xfce4-taskmanager
+    prog "Tint2" - tint2
+}
+menu "Utilities" folder {
+    prog "About Xfce" - xfce4-about
+    prog "Application Finder" - xfce4-appfinder
+    prog "compton" - compton
+    prog "File Manager" - exo-open --launch FileManager
+    prog "picom" - picom
+    prog "Run Program..." - xfce4-appfinder --collapsed
+    prog "Shortcut Editor" - desktop-file-editor
+    prog "Terminal Emulator" - exo-open --launch TerminalEmulator
+    prog "Xarchiver" - xarchiver
+}
