@@ -7,6 +7,6 @@ function run {
   fi
 }
 
-run nitrogen --restore
-run picom
+#run nitrogen --restore
+run xcompmgr
 run lxpolkit
