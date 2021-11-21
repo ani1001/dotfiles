@@ -67,7 +67,7 @@ config = defaultConfig {
                              "--normal","green","--high","red"] 10
                , Run $ Memory ["-t","Mem: <usedratio>%"] 10
                , Run $ Swap [] 10
-               , Run $ Com "uname" ["-s","-r"] "" 36000
+--                , Run $ Com "uname" ["-s","-r"] "" 36000
                , Run $ Date "%a %b %_d %Y %H:%M:%S" "date" 10
 	       , Run XMonadLog
 --                , Run HelloWorld
@@ -76,7 +76,7 @@ config = defaultConfig {
   , alignSep = "}{"
 --   , template = "%cpu% | %memory% * %swap% | %eth0% - %eth1% }\
 --                \ %hw% { <fc=#ee9a00>%date%</fc>| %EGPH% | %uname%"
-  , template = "%XMonadLog% }{ %cpu% | %memory% * %swap% | %enp0s29u1u5% | <fc=#81a1c1>%date%</fc> | %VGHS% | %uname% "
+  , template = "%XMonadLog% }{ %cpu% | %memory% * %swap% | %enp0s29u1u5% | <fc=#81a1c1>%date%</fc> [%VGHS%]"
 }
 
 main :: IO ()
