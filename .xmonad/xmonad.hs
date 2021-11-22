@@ -1,5 +1,4 @@
 import XMonad
-import System.IO
 
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.EwmhDesktops
@@ -10,7 +9,7 @@ import XMonad.Hooks.StatusBar
 import XMonad.Hooks.StatusBar.PP
 
 import XMonad.Util.Cursor
-import XMonad.Util.EZConfig
+import XMonad.Util.EZConfig (additionalKeysP)
 import XMonad.Util.Loggers
 import XMonad.Util.Ungrab
 import XMonad.Util.Run (spawnPipe)
@@ -25,7 +24,7 @@ import XMonad.Layout.Tabbed
 import XMonad.Layout.ThreeColumns
 
 myModMask            = mod4Mask
-myTerminal           = "xterm"
+myTerminal           = "urxvtc"
 -- myWorkspaces         = ["1:web","2:irc","3:mail","4:dev","5:comm","6:tmp","7:dvi","8","9"]
 myWorkspaces         = ["WWW","IRC","Email","Code","Shell"]
 myFocusedBorderColor = "#5e81ac"      -- Color of focused border
@@ -34,7 +33,7 @@ myBorderWidth        = 2              -- Width of border around windows
 
 myStartupHook = do
     spawnOnce "nitrogen --restore &"
-    spawnOnce "xcompmgr &"
+    spawnOnce "picom &"
     spawnOnce "lxpolkit &"
     spawnOnce "urxvtd -q -o -f &"
     setWMName "LG3D"
@@ -63,6 +62,7 @@ myConfig = def
     , ("M-S-=" , unGrab *> spawn "scrot -s"        )
     , ("M-]"   , spawn "firefox"                   )
     , ("M-S-p" , spawn "rofi -show run"            )
+    , ("M-S-t" , spawn "st"                        )
     ]
 
 myManageHook :: ManageHook
@@ -71,7 +71,7 @@ myManageHook = composeAll
     , isDialog                      --> doFloat
     , className =? "MPlayer"        --> doFloat
     , className =? "Xmessage"       --> doFloat
-    , className =? "Firefox-bin"    --> doShift "www"
+    , className =? "Firefox"        --> doShift "WWW"
 --    , className =? "Rhythmbox"      --> doShift "8"
 --    , className =? "XDvi"           --> doShift "7:dvi"
     ]
