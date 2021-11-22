@@ -55,7 +55,7 @@ config = defaultConfig {
   , iconRoot = "."
   , allDesktops = True
   , overrideRedirect = False
-  , commands = [ Run $ Weather "VGHS" ["-t","<station>: <tempC>C",
+  , commands = [ Run $ Weather "VGHS" ["-t"," <tempC>°C",
                                         "-L","18","-H","25",
                                         "--normal","green",
                                         "--high","red",
