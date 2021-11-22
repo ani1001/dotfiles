@@ -38,7 +38,8 @@ config = defaultConfig {
   , additionalFonts = []
 --   , borderColor = "black"
   , borderColor =  "#4c566a"
-  , border = TopB
+--   , border = TopB
+  , border = BottomB
 --   , bgColor = "black"
   , bgColor =      "#2e3440"
 --   , fgColor = "grey"
@@ -53,7 +54,7 @@ config = defaultConfig {
   , hideOnStart = False
   , iconRoot = "."
   , allDesktops = True
-  , overrideRedirect = True
+  , overrideRedirect = False
   , commands = [ Run $ Weather "VGHS" ["-t","<station>: <tempC>C",
                                         "-L","18","-H","25",
                                         "--normal","green",
