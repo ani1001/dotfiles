@@ -22,13 +22,14 @@ xset fp rehash &
 # xcompmgr &
 # lxpolkit &
 pulseaudio --start &
+mpd &
 
 ## FrankenWM
 ## Autostart script
 # $HOME/.frankenwm/autostart.sh &
 
 # Set the default session here
-session=${1:-bspwm}
+session=${1:-herbstluftwm}
 
 case $session in
     awesome           ) exec dbus-launch --auto-syntax --exit-with-session awesome;;
