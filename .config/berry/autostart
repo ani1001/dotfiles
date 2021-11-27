@@ -3,7 +3,7 @@
 pgrep -x sxhkd > /dev/null || sxhkd -c $HOME/.config/berry/sxhkdrc &
 set -U SXHKD_SHELL sh &
 nitrogen --restore &
-picom &
+xcompmgr &
 lxpolkit &
 urxvtd -q -o -f &
 $HOME/.config/polybar/launch.sh &
