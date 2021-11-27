@@ -21,6 +21,6 @@
 #    /usr/lib/notification-daemon-1.0/notification-daemon &
 
 nitrogen --restore &
-picom &
+xcompmgr &
 lxpolkit &
 xsetroot -cursor_name left_ptr &
