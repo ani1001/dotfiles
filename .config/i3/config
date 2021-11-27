@@ -51,6 +51,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
+bindsym $mod+Shift+Return exec --no-startup-id "rofi -show run"
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
@@ -184,36 +185,37 @@ bindsym $mod+r mode "resize"
 #        status_command i3status
 #}
 
-bar {
-    
-    output            VGA1
-    status_command    i3status -c ~/.config/i3status/i3status.conf
-    #status_command    i3blocks -c ~/.config/i3blocks/i3blocks.conf
-    position          top
-    workspace_buttons yes
-    tray_output       primary
-    tray_padding      0
-    separator_symbol "|"
-    strip_workspace_numbers yes
-    
-    #font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-    font pango:DejaVu Sans Mono 10
+#bar {
+#    
+#    output            VGA1
+#    status_command    i3status -c ~/.config/i3status/i3status.conf
+#    status_command    i3blocks -c ~/.config/i3blocks/i3blocks.conf
+#    position          top
+#    workspace_buttons yes
+#    tray_output       primary
+#    tray_padding      0
+#    separator_symbol "|"
+#    strip_workspace_numbers yes
+#    
+#    font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+#    font pango:DejaVu Sans Mono 10
+#
+#    colors {
+#
+#        background #2E3440
+#        statusline #D8DEE9
+#        separator  #8FBCBB
+#
+#        focused_workspace  #D8DEE9 #5E81AC
+#        active_workspace   #D8DEE9 #4C566A
+#        inactive_workspace #B48EAD #434C5E
+#        urgent_workspace   #D8DEE9 #D08770
+#
+#	}
+#
+#}
 
-    colors {
-
-        background #2E3440
-        statusline #D8DEE9
-        separator  #8FBCBB
-
-        focused_workspace  #D8DEE9 #5E81AC
-        active_workspace   #D8DEE9 #4C566A
-        inactive_workspace #B48EAD #434C5E
-        urgent_workspace   #D8DEE9 #D08770
-
-	}
-
-}
-
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id xcompmgr
 exec --no-startup-id lxpolkit
