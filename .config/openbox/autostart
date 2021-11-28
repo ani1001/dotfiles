@@ -1,4 +1,4 @@
 tint2 &
 nitrogen --restore &
-xcompmgr &
+picom &
 lxpolkit &
