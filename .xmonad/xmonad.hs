@@ -25,7 +25,6 @@ import XMonad.Layout.ThreeColumns
 
 myModMask            = mod4Mask
 myTerminal           = "urxvtc"
--- myWorkspaces         = ["1:web","2:irc","3:mail","4:dev","5:comm","6:tmp","7:dvi","8","9"]
 myWorkspaces         = ["WWW","IRC","Email","Code","Shell"]
 myFocusedBorderColor = "#5e81ac"      -- Color of focused border
 myNormalBorderColor  = "#a3be8c"      -- Color of inactive border
@@ -62,7 +61,7 @@ myConfig = def
     , ("M-S-=" , unGrab *> spawn "scrot -s"        )
     , ("M-]"   , spawn "firefox"                   )
     , ("M-S-p" , spawn "rofi -show run"            )
-    , ("M-S-t" , spawn "st"                        )
+    , ("M-S-t" , spawn "kitty"                     )
     ]
 
 myManageHook :: ManageHook
@@ -72,8 +71,6 @@ myManageHook = composeAll
     , className =? "MPlayer"        --> doFloat
     , className =? "Xmessage"       --> doFloat
     , className =? "Firefox"        --> doShift "WWW"
---    , className =? "Rhythmbox"      --> doShift "8"
---    , className =? "XDvi"           --> doShift "7:dvi"
     ]
 
 myLayout = ( 
