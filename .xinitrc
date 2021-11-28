@@ -19,14 +19,8 @@ xset fp rehash &
 ## Some applications that should be run in the background
 # xscreensaver -no-splash &
 # xsetroot -cursor_name left_ptr &
-# xcompmgr &
-# lxpolkit &
 pulseaudio --start &
 mpd &
-
-## FrankenWM
-## Autostart script
-# $HOME/.frankenwm/autostart.sh &
 
 # Set the default session here
 session=${1:-herbstluftwm}
