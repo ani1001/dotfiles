@@ -3,7 +3,7 @@
 
     <!-- Startup for program. -->
     <StartupCommand>nitrogen --restore &amp;</StartupCommand>
-    <StartupCommand>xcompmgr &amp;</StartupCommand>
+    <StartupCommand>picom &amp;</StartupCommand>
     <StartupCommand>lxpolkit &amp;</StartupCommand>
     <!-- <StartupCommand>sleep 1s &amp;&amp; volumeicon &amp;</StartupCommand>
     <StartupCommand>sleep 2s &amp;&amp; conky &amp;</StartupCommand>
