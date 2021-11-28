@@ -1,7 +1,7 @@
 #!/bin/sh
 
 nitrogen --restore &
-xcompmgr &
+picom &
 lxpolkit &
 slstatus &
 urxvtd -q -o -f &
