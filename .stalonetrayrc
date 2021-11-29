@@ -1,16 +1,22 @@
+#https://wiki.archlinux.org/index.php/stalonetray
+#sudo pacman -S stalonetray
+#run in terminal
+#theme it yourself if you want to
+#it is not intended to stay permanently
+#set your applications and kill stalonetray again
 decorations none
 transparent false
 dockapp_mode none
-geometry 5x1+1820-0
-background "#0D0D16"
-kludges "force_icons_size"
-grow_gravity SW
-icon_gravity SW
-icon_size 20
+geometry 6x1-6+0
+max_geometry 5x1-325-10
+background "#2F343F"
+kludges force_icons_size
+grow_gravity NE
+icon_gravity NE
+icon_size 36
 sticky true
-window_strut auto
+#window_strut none
 window_type dock
-window_layer normal
-no_shrink false
+window_layer bottom
+#no_shrink false
 skip_taskbar true
-# vim: ft=conf
