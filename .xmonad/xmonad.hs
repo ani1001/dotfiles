@@ -42,19 +42,20 @@ main :: IO ()
 main = xmonad
      . ewmhFullscreen
      . ewmh
+     . docks
      . withEasySB (statusBarProp "xmobar ~/.config/xmobar/xmobar.hs" (pure myXmobarPP)) defToggleStrutsKey
      $ myConfig
 
 myConfig = def
-    { modMask     = myModMask      -- Rebind Mod to the Super key
-    , layoutHook  = myLayout       -- Use custom layouts
-    , manageHook  = myManageHook   -- Match on certain windows
-    , startupHook = myStartupHook
+    { modMask            = myModMask                                   -- Rebind Mod to the Super key
+    , layoutHook         = smartBorders . avoidStruts $ myLayout       -- Use custom layouts
+    , manageHook         = myManageHook <+> manageHook def             -- Match on certain windows
+    , startupHook        = myStartupHook
     , focusedBorderColor = myFocusedBorderColor
-    , normalBorderColor = myNormalBorderColor
-    , borderWidth = myBorderWidth
-    , terminal = myTerminal
-    , workspaces = myWorkspaces
+    , normalBorderColor  = myNormalBorderColor
+    , borderWidth        = myBorderWidth
+    , terminal           = myTerminal
+    , workspaces         = myWorkspaces
     }
   `additionalKeysP`
     [ ("M-S-z" , spawn "slock")
@@ -73,17 +74,14 @@ myManageHook = composeAll
     , className =? "Firefox"        --> doShift "WWW"
     ]
 
-myLayout = ( 
-             tiled                             |||
-	     Mirror tiled                      |||
-	     Full                              |||
-	     Grid                              |||
-	     spiral(6/7)                       |||
-             threeCol                          |||
-	     noBorders (tabbed shrinkText def) |||
-	     Accordion
-
-	     )
+myLayout = ( tiled 
+        ||| Mirror tiled
+	||| Full
+	||| Grid
+	||| spiral(6/7)
+	||| threeCol
+	||| noBorders (tabbed shrinkText def)
+	||| Accordion )
   where
     threeCol = magnifiercz' 1.3 $ ThreeColMid nmaster delta ratio
     tiled    = Tall nmaster delta ratio
