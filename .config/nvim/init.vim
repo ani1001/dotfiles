@@ -1,13 +1,24 @@
 colorscheme slate
+filetype off
 syntax on
 set autoindent
 set bg=light
+set clipboard=unnamedplus
 set cursorline
 set encoding=utf-8
 set expandtab
+set hidden
+set incsearch
 set linebreak
 set mouse=a
-set number
+set mouse=nicr
+set nobackup
+set nocompatible
+set noswapfile
+set number relativenumber
+set path+=**
 set shiftwidth=4
+set smarttab
 set softtabstop=4
 set tabstop=4
+set wildmenu
