@@ -13,3 +13,6 @@
 
 (add-to-list 'custom-theme-load-path (expand-file-name "~/.emacs.d/themes/"))
 (load-theme 'nord t)
+
+(set-face-attribute 'default nil :font "Hack-12")
+(set-frame-font "Hack-12" nil t)
