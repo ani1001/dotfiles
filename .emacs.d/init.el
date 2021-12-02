@@ -16,3 +16,7 @@
 
 (set-face-attribute 'default nil :font "Hack-12")
 (set-frame-font "Hack-12" nil t)
+
+(require 'server)
+(unless (server-running-p)
+  (server-start))
