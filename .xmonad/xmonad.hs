@@ -74,14 +74,7 @@ myManageHook = composeAll
     , className =? "Firefox"        --> doShift "WWW"
     ]
 
-myLayout = ( tiled 
-        ||| Mirror tiled
-	||| Full
-	||| Grid
-	||| spiral(6/7)
-	||| threeCol
-	||| noBorders (tabbed shrinkText def)
-	||| Accordion )
+myLayout = (tiled ||| Mirror tiled ||| Full ||| Grid ||| spiral(6/7) ||| threeCol ||| noBorders (tabbed shrinkText def) ||| Accordion)
   where
     threeCol = magnifiercz' 1.3 $ ThreeColMid nmaster delta ratio
     tiled    = Tall nmaster delta ratio
