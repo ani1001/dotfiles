@@ -43,7 +43,7 @@ main = xmonad
      . ewmhFullscreen
      . ewmh
      . docks
-     . withEasySB (statusBarProp "xmobar ~/.config/xmobar/xmobar.hs" (pure myXmobarPP)) defToggleStrutsKey
+     . withEasySB (statusBarProp "xmobar ~/.config/xmobar/xmobarrc2" (pure myXmobarPP)) defToggleStrutsKey
      $ myConfig
 
 myConfig = def
