@@ -152,7 +152,7 @@ for i in groups:
     ])
 
 def init_layout_theme():
-    return {"margin": 5,
+    return {"margin": 4,
             "border_width": 2,
             "border_focus": '#5e81ac',
             "border_normal": '#4c566a'
@@ -224,16 +224,17 @@ def init_widgets_list():
         widget.GroupBox(
             font = "Ubuntu Nerd Font",
             fontsize = 14,
-            margin_y = 2,
-            margin_x = 5,
-            padding_y = 5,
-            padding_x = 4,
+            margin_y = 3,
+            margin_x = 0,
+            padding_y = 8,
+            padding_x = 5,
             borderwidth = 2,
             disable_drag = True,
             active = colors[9],
             inactive = colors[3],
             rounded = False,
-            highlight_method = "line",
+            highlight_method = "line", #block
+            urgent_alert_method = "line", #block
             this_current_screen_border = colors[7],
             foreground = colors[2],
             background = colors[1],
