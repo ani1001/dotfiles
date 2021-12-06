@@ -2,9 +2,6 @@ colorscheme slate
 filetype off
 syntax on
 set autoread
-set backup
-set backupdir=/tmp
-set backupext='.bak'
 set bg=light
 set clipboard=unnamedplus
 set cursorline
