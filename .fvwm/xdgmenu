@@ -1,0 +1,101 @@
+DestroyMenu "xdgmenu"
+AddToMenu "xdgmenu"
++ "Accessories" Popup "Accessories"
++ "Development" Popup "Development"
++ "Graphics" Popup "Graphics"
++ "Multimedia" Popup "Multimedia"
++ "Network" Popup "Network"
++ "Office" Popup "Office"
++ "Settings" Popup "Settings"
++ "System" Popup "System"
+
+DestroyMenu "Accessories"
+AddToMenu "Accessories"
++ "Accessories" Title
++ "Application Finder" Exec xfce4-appfinder
++ "Kvantum Manager" Exec kvantummanager
++ "Mousepad" Exec mousepad 
++ "Neovim" Exec xterm -e nvim 
++ "Sensor Viewer" Exec xfce4-sensors
++ "Xarchiver" Exec xarchiver 
++ "compton" Exec compton
++ "nitrogen" Exec nitrogen
++ "picom" Exec picom
+
+DestroyMenu "Development"
+AddToMenu "Development"
++ "Development" Title
++ "Emacs" Exec emacs 
++ "Geany" Exec geany 
+
+DestroyMenu "Graphics"
+AddToMenu "Graphics"
++ "Graphics" Title
++ "Flameshot" Exec /usr/bin/flameshot
++ "GNU Image Manipulation Program" Exec gimp-2.10 
++ "Ristretto Image Viewer" Exec ristretto 
+
+DestroyMenu "Multimedia"
+AddToMenu "Multimedia"
++ "Multimedia" Title
++ "DeaDBeeF" Exec deadbeef 
++ "Parole Media Player" Exec parole 
++ "PulseAudio Volume Control" Exec pavucontrol
++ "VLC media player" Exec /usr/bin/vlc --started-from-file 
+
+DestroyMenu "Network"
+AddToMenu "Network"
++ "Network" Title
++ "Deluge" Exec deluge-gtk 
++ "Firefox Web Browser" Exec firefox 
++ "HexChat" Exec hexchat --existing 
++ "MEGAsync" Exec megasync
++ "Opera" Exec opera 
++ "Xtreme Download Manager" Exec "/opt/xdman/xdman"
++ "pcloud" Exec "/run/media/anik/Galaxy/FLOSS/Applications/AppImages/pcloud" 
++ "uGet" Exec env GDK_BACKEND=x11 uget-gtk 
+
+DestroyMenu "Office"
+AddToMenu "Office"
++ "Office" Title
++ "Atril Document Viewer" Exec atril 
+
+DestroyMenu "Settings"
+AddToMenu "Settings"
++ "Settings" Title
++ "ARandR" Exec arandr
++ "Advanced Network Configuration" Exec nm-connection-editor
++ "Customize Look and Feel" Exec lxappearance
++ "Desktop Preferences" Exec pcmanfm --desktop-pref
++ "File Manager Settings" Exec thunar-settings
++ "Firewall Configuration" Exec gufw
++ "Openbox Configuration Manager" Exec obconf 
++ "Power Manager" Exec xfce4-power-manager-settings
++ "Qt5 Settings" Exec qt5ct
++ "Removable Drives and Media" Exec thunar-volman-settings
++ "Text Editor Settings" Exec mousepad --preferences
++ "Xfce Terminal Settings" Exec xfce4-terminal --preferences
+
+DestroyMenu "System"
+AddToMenu "System"
++ "System" Title
++ "Alacritty" Exec alacritty
++ "BleachBit" Exec bleachbit
++ "Bulk Rename" Exec thunar --bulk-rename 
++ "File Manager PCManFM" Exec pcmanfm 
++ "GParted" Exec /usr/bin/gparted-pkexec 
++ "Htop" Exec xterm -e htop
++ "Manage Printing" Exec xdg-open http://localhost:631/
++ "Psensor" Exec psensor
++ "Task Manager" Exec xfce4-taskmanager
++ "Thunar File Manager" Exec thunar 
++ "Tint2" Exec tint2
++ "UXTerm" Exec uxterm
++ "XTerm" Exec xterm
++ "Xfce Terminal" Exec xfce4-terminal
++ "conky" Exec conky --daemonize --pause=1
++ "fish" Exec xterm -e fish
++ "kitty" Exec kitty
++ "lf" Exec xterm -e lf
++ "rxvt-unicode" Exec urxvt
+
