@@ -23,7 +23,7 @@ pulseaudio --start &
 mpd &
 
 # Set the default session here
-session=${1:-qtile}
+session=${1:-jwm}
 
 case $session in
     awesome           ) exec dbus-launch --auto-syntax --exit-with-session awesome;;
