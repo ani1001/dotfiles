@@ -1,7 +1,7 @@
 INCLUDE = "$_PEKWM_ETC_PATH/config_system"
 
 Files {
-    Theme = "/usr/local/share/pekwm/themes/default"
+    Theme = "~/.pekwm/themes/pekwm-theme-spiff-p-master"
     ThemeVariant = ""
 }
 
