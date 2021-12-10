@@ -23,7 +23,7 @@ pulseaudio --start &
 mpd &
 
 # Set the default session here
-session=${1:-jwm}
+session=${1:-herbstluftwm}
 
 case $session in
     awesome           ) exec dbus-launch --auto-syntax --exit-with-session awesome;;
