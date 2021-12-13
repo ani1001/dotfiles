@@ -28,15 +28,15 @@ disabled = #707880
 [bar/example]
 width = 100%
 height = 2.5%
-radius = 6
+; radius = 6
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
 line-size = 3
 
-border-size = 4
-border-color = #00000000
+; border-size = 4
+; border-color = #00000000
 
 padding-left = 0
 padding-right = 1
@@ -48,8 +48,8 @@ separator-foreground = ${colors.disabled}
 
 font-0 = monospace;2
 
-modules-left = xworkspaces xwindow
-modules-right = filesystem pulseaudio xkeyboard memory cpu wlan eth date
+modules-left = xworkspaces
+modules-right = filesystem pulseaudio memory cpu date
 
 cursor-click = pointer
 cursor-scroll = ns-resize
