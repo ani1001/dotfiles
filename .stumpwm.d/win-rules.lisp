@@ -12,7 +12,7 @@
 ;; restored from *data-dir*/create file.
 ;; TIP: if the :restore flag is set then group dump is restored even for an
 ;; existing group using *data-dir*/restore file.
-(define-frame-preference "WWW"
+(define-frame-preference "Default"
   ;; frame raise lock (lock AND raise == jumpto)
   (0 t nil :class "Konqueror" :role "...konqueror-mainwindow")
   (1 t nil :class "XTerm"))
@@ -31,6 +31,6 @@
   (0 t   nil :class "XTerm")
   (1 nil t   :class "aMule"))
 
-(define-frame-preference "Emacs"
-  (1 t t :restore "emacs-editing-dump" :title "...xdvi")
-  (0 t t :create "emacs-dump" :class "Emacs"))
+;; (define-frame-preference "Emacs"
+  ;; (1 t t :restore "emacs-editing-dump" :title "...xdvi")
+  ;; (0 t t :create "emacs-dump" :class "Emacs"))
