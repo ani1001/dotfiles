@@ -1,12 +1,21 @@
 Config { font = "-misc-fixed-*-*-*-*-13-*-*-*-*-*-*-*"
-    , bgColor = "#2e3440"
-    , fgColor = "#d8dee9"
-    , position = Top
-    , lowerOnStart = True
-    , allDesktops = True
-    , pickBroadest = False
-    , overrideRedirect = False
-    , commands = [    Run Weather "VGHS" ["-t"," <tempC>°C","-L","64","-H","77","--normal","#a3be8c","--high","#d08770","--low","#81a1c1"] 36000
+       , additionalFonts = []
+       , borderColor = "#4c566a"
+       , border = BottomB
+       , bgColor = "#2e3440"
+       , fgColor = "#d8dee9"
+       , alpha = 255
+       , position = Top
+       , textOffset = -1
+       , iconOffset = -1
+       , lowerOnStart = True
+       , pickBroadest = False
+       , persistent = True
+       , hideOnStart = False
+       , iconRoot = "."
+       , allDesktops = True
+       , overrideRedirect = False
+       , commands = [    Run Weather "VGHS" ["-t"," <tempC>°C","-L","64","-H","77","--normal","#a3be8c","--high","#d08770","--low","#81a1c1"] 36000
                     , Run Network "enp0s29u1u5" ["-L","0","-H","32","--normal","#a3be8c","--high","#d08770"] 10
                     , Run MultiCpu ["-L","15","-H","50","--normal","#a3be8c","--high","#d08770"] 10
                     , Run Memory [] 10
@@ -14,8 +23,8 @@ Config { font = "-misc-fixed-*-*-*-*-13-*-*-*-*-*-*-*"
                     , Run TopProc [] 10
                     , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
                     , Run UnsafeStdinReader
-    ]
-    , sepChar = "%"
-    , alignSep = "}{"
-    , template = "%UnsafeStdinReader% }{ %top% | %multicpu% | %memory% * %swap% | %enp0s29u1u5% | %date% [%VGHS%]"
+       ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = " %UnsafeStdinReader% }{ %multicpu% | %memory% * %swap% | %enp0s29u1u5% | <fc=#b48ead>%date%</fc> | %VGHS% "
 }
