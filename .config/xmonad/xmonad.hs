@@ -18,16 +18,6 @@ import XMonad.Hooks.FadeInactive
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.ManageHelpers
 import XMonad.Hooks.SetWMName
-import XMonad.Hooks.StatusBar
-import XMonad.Hooks.StatusBar.PP
-
--- Utilities
-import XMonad.Util.Cursor
-import XMonad.Util.EZConfig (additionalKeysP)
-import XMonad.Util.Loggers
-import XMonad.Util.Run (spawnPipe)
-import XMonad.Util.SpawnOnce
-import XMonad.Util.Ungrab
 
 -- Layouts
 import XMonad.Layout.Accordion
@@ -46,27 +36,67 @@ import XMonad.Layout.NoBorders
 import XMonad.Layout.ResizableTile
 import XMonad.Layout.Spacing
 
-myFocusFollowsMouse  = True :: Bool                                     -- Whether focus follows the mouse pointer
-myClickJustFocuses   = False :: Bool                                    -- Whether clicking on a window to focus also passes the click to the window
-myModMask            = mod4Mask :: KeyMask                              -- "windows key" is usually mod4Mask
-myTerminal           = "urxvtc" :: String                               -- Sets default terminal
-myFocusedBorderColor = "#5e81ac" :: String                              -- Color of focused border
-myNormalBorderColor  = "#a3be8c" :: String                              -- Color of inactive border
-myFont               = "-misc-fixed-*-*-*-*-13-*-*-*-*-*-*-*" :: String -- Sets default font
-myBorderWidth        = 2 :: Dimension                                   -- Width of border around windows
+-- Utilities
+import XMonad.Util.Cursor
+import XMonad.Util.EZConfig (additionalKeysP)
+import XMonad.Util.Run (spawnPipe)
+import XMonad.Util.SpawnOnce
+import XMonad.Util.Ungrab
+
+-- Whether focus follows the mouse pointer
+myFocusFollowsMouse :: Bool
+myFocusFollowsMouse = True
+
+-- Whether clicking on a window to focus also passes the click to the window
+myClickJustFocuses :: Bool
+myClickJustFocuses = False
+
+-- "windows key" is usually mod4Mask
+myModMask :: KeyMask
+myModMask = mod4Mask
+
+-- Sets default terminal
+myTerminal :: String
+myTerminal = "alacritty"
+
+myFocusedBorderColor :: String
+myFocusedBorderColor = "#5e81ac"      -- Color of focused border
+
+myNormalBorderColor :: String
+myNormalBorderColor = "#a3be8c"       -- Color of inactive border
+
+myBorderWidth :: Dimension
+myBorderWidth = 2                     -- Width of border around windows
+
+myFont :: String
+myFont = "-misc-fixed-*-*-*-*-13-*-*-*-*-*-*-*"
 
 windowCount :: X (Maybe String)
 windowCount = gets $ Just . show . length . W.integrate' . W.stack . W.workspace . W.current . windowset
 
+-- Workspaces
+xmobarEscape = concatMap doubleLts
+  where
+    doubleLts '<' = "<<"
+    doubleLts x   = [x]
+
+myWorkspaces :: [String]
+myWorkspaces = clickable . (map xmobarEscape)
+             $ ["1:web","2:irc","3:mail","4:dev","5:comm","6:tmp","7:dvi","8","9"]
+  where
+    clickable l = [ "<action=xdotool key super+" ++ show (n) ++ ">" ++ ws ++ "</action>" |
+                  (i,ws) <- zip [1..9] l,
+                  let n = i ]
+
 -- Startup hook
 myStartupHook :: X ()
 myStartupHook = do
-    spawnOnce "nitrogen --restore &"
-    spawnOnce "picom &"
-    spawnOnce "lxpolkit &"
-    spawnOnce "urxvtd -q -o -f &"
-    setWMName "LG3D"
-    setDefaultCursor xC_left_ptr
+  spawnOnce "nitrogen --restore &"
+  spawnOnce "picom &"
+  spawnOnce "lxpolkit &"
+  spawnOnce "urxvtd -q -o -f &"
+  setWMName "LG3D"
+  setDefaultCursor xC_left_ptr
 
 -- The available layouts
 myLayout =
@@ -90,19 +120,22 @@ myLayout =
     ratio    = 1/2    -- Default proportion of screen occupied by master pane
     delta    = 3/100  -- Percent of screen to increment by when resizing panes
 
--- Workspaces
-xmobarEscape = concatMap doubleLts
-  where
-    doubleLts '<' = "<<"
-    doubleLts x   = [x]
+-- Window rules
+myManageHook :: ManageHook
+myManageHook = composeAll
+    [ className =? "Gimp"           --> doFloat
+    , isDialog                      --> doFloat
+    , className =? "MPlayer"        --> doFloat
+    , className =? "Xmessage"       --> doFloat
+    , className =? "Firefox"        --> doShift "1:web"
+    , className =? "Rhythmbox"      --> doShift "8"
+    , className =? "XDvi"           --> doShift "7:dvi"
+    ]
 
-myWorkspaces :: [String]
-myWorkspaces = clickable . (map xmobarEscape)
-             $ ["1:web","2:irc","3:mail","4:dev","5:comm","6:tmp","7:dvi","8","9"]
-  where
-    clickable l = [ "<action=xdotool key super+" ++ show (n) ++ ">" ++ ws ++ "</action>" |
-                  (i,ws) <- zip [1..9] l,
-                  let n = i ]
+-- Status bars and logging
+myLogHook :: X ()
+myLogHook = fadeInactiveLogHook fadeAmount
+  where fadeAmount = 1.0
 
 -- Key bindings
 myKeys :: [(String, X ())]
@@ -114,66 +147,25 @@ myKeys = [ ("M-S-z"    , spawn "slock"                     )
          , ("M-C-f"    , sendMessage $ JumpToLayout "Full" )  -- jump directly to the Full layout
          ]
 
+-- Now run xmonad with all the defaults available
 main :: IO ()
-main = xmonad
-     . ewmhFullscreen
-     . ewmh
-     . docks
-     . withEasySB (statusBarProp "xmobar ~/.config/xmobar/xmobar.hs" (pure myXmobarPP)) defToggleStrutsKey
-     $ myConfig
-
-myConfig = def
-    { modMask            = myModMask                                   -- Rebind Mod to the Super key
-    , layoutHook         = smartBorders . avoidStruts $ myLayout       -- Use custom layouts
-    , manageHook         = myManageHook <+> manageHook def             -- Match on certain windows
-    , startupHook        = myStartupHook
-    , logHook            = myLogHook
-    , focusedBorderColor = myFocusedBorderColor
-    , normalBorderColor  = myNormalBorderColor
-    , borderWidth        = myBorderWidth
-    , terminal           = myTerminal
-    , workspaces         = myWorkspaces
-    } `additionalKeysP` myKeys
-
-myManageHook :: ManageHook
-myManageHook = composeAll
-    [ className =? "Gimp"           --> doFloat
-    , isDialog                      --> doFloat
-    , className =? "MPlayer"        --> doFloat
-    , className =? "Xmessage"       --> doFloat
-    , className =? "Firefox"        --> doShift "1:web"
-    ]
-
--- Status bars and logging
-myLogHook :: X ()
-myLogHook = fadeInactiveLogHook fadeAmount
-  where fadeAmount = 1.0
-
-myXmobarPP :: PP
-myXmobarPP = def
-    { ppSep             = magenta " • "
-    , ppTitleSanitize   = xmobarStrip
-    , ppCurrent         = wrap " " "" . xmobarBorder "Top" "#8be9fd" 2
-    , ppHidden          = white . wrap " " ""
-    , ppHiddenNoWindows = lowWhite . wrap " " ""
-    , ppUrgent          = red . wrap (yellow "!") (yellow "!")
-    , ppOrder           = \[ws, l, _, wins] -> [ws, l, wins]
-    , ppExtras          = [windowCount logTitles formatFocused formatUnfocused]
-    }
-  where
-    formatFocused   = wrap (white    "[") (white    "]") . magenta . ppWindow
-    formatUnfocused = wrap (lowWhite "[") (lowWhite "]") . blue    . ppWindow
-
-    -- | Windows should have *some* title, which should not not exceed a
-    -- sane length.
-    ppWindow :: String -> String
-    ppWindow = xmobarRaw . (\w -> if null w then "untitled" else w) . shorten 30
-
-    blue, lowWhite, magenta, red, white, yellow :: String -> String
-    magenta  = xmobarColor "#ff79c6" ""
-    blue     = xmobarColor "#bd93f9" ""
-    white    = xmobarColor "#f8f8f2" ""
-    yellow   = xmobarColor "#f1fa8c" ""
-    red      = xmobarColor "#ff5555" ""
-    lowWhite = xmobarColor "#bbbbbb" ""
-    
+main = do
+    xmproc0 <- spawnPipe "xmobar -x 0 $HOME/.config/xmobar/xmobarrc1"
+    xmonad . ewmh . docks $ def
+        { manageHook = myManageHook <+> manageHook def
+        , layoutHook = smartBorders . avoidStruts $ myLayout
+        , startupHook = myStartupHook
+        , logHook = myLogHook <+> dynamicLogWithPP xmobarPP
+                        { ppOutput = hPutStrLn xmproc0
+                        , ppTitle = xmobarColor "green" "" . shorten 35           -- Title of active window
+                        , ppSep =  "<fc=" ++ "magenta" ++ "> <fn=1>|</fn> </fc>"  -- Separator character
+                        , ppExtras  = [windowCount]                               -- Adding # of windows on current workspace to the bar
+                        , ppOrder   = \(ws:l:t:ex) -> [ws,l]++ex++[t]             -- order of things in xmobar
+                        }
+        , modMask = myModMask
+        , focusedBorderColor = myFocusedBorderColor
+        , normalBorderColor = myNormalBorderColor
+        , borderWidth = myBorderWidth
+        , terminal = myTerminal
+        , workspaces = myWorkspaces
+        } `additionalKeysP` myKeys
