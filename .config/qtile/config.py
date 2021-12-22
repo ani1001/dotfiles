@@ -95,13 +95,13 @@ keys = [
 ]
 
 groups = [
-    Group("", layout="max",        matches=[Match(wm_class=["firefox", "vivaldi-stable"])]),
-    Group("", layout="monadtall",  matches=[Match(wm_class=["Emacs", "Sublime_text"])]),
-    Group("", layout="monadtall",  matches=[Match(wm_class=["Lxappearance", "Nitrogen"])]),
-    Group("", layout="monadtall",  matches=[Match(wm_class=["qpdfview"])]),
-    Group("", layout="max",        matches=[Match(wm_class=["TelegramDesktop"])]),
+    Group("", layout="max",        matches=[Match(wm_class=["navigator", "firefox", "vivaldi-stable", "chromium", "brave"])]),
+    Group("", layout="monadtall",  matches=[Match(wm_class=["emacs", "geany", "subl"])]),
+    Group("", layout="monadtall",  matches=[Match(wm_class=["inkscape", "nomacs", "ristretto", "nitrogen"])]),
+    Group("", layout="monadtall",  matches=[Match(wm_class=["qpdfview", "thunar", "nemo", "caja", "pcmanfm"])]),
+    Group("", layout="max",        matches=[Match(wm_class=["telegramDesktop"])]),
     Group("", layout="ratiotile"),
-    Group("", layout="max",        matches=[Match(wm_class=["Deadbeef"]), Match(title=["VLC media player"])]),
+    Group("", layout="max",        matches=[Match(wm_class=["spotify", "pragha", "clementine", "deadbeef", "audacious"]), Match(title=["VLC media player"])]),
     Group("", layout="tile"),
 ]
 
@@ -124,21 +124,21 @@ layouts = [
     layout.Max(**layout_theme),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2, **layout_theme),
-    # layout.Bsp(),
-    # layout.Matrix(**layout_theme),
-    layout.MonadTall(margin=0, border_width=1, border_focus='#5e81ac', border_normal='#4c566a'),
-    # layout.MonadWide(margin=0, border_width=1, border_focus='#5e81ac', border_normal='#4c566a'),
+    layout.Bsp(**layout_theme),
+    layout.Matrix(**layout_theme),
+    layout.MonadTall(**layout_theme),
+    layout.MonadWide(**layout_theme),
     layout.RatioTile(**layout_theme),
     layout.Tile(**layout_theme),
-    layout.TreeTab(
-        sections=['FIRST', 'SECOND'],
-        bg_color='#3b4252',
-        active_bg='#bf616a',
-        inactive_bg='#a3be8c',
-        padding_y=5,
-        section_top=10,
-        panel_width=280
-    ),
+    #layout.TreeTab(
+    #    sections=['FIRST', 'SECOND'],
+    #    bg_color='#3b4252',
+    #    active_bg='#bf616a',
+    #    inactive_bg='#a3be8c',
+    #    padding_y=5,
+    #    section_top=10,
+    #    panel_width=280
+    #),
     # layout.VerticalTile(),
     # layout.Zoomy(),
 ]
@@ -250,7 +250,7 @@ screens = [
                     fontsize=14,
                     foreground=colors[6],
                     padding=0,
-                    text=" "
+                    text=' '
                 ),
                 widget.KeyboardLayout(
                     background=colors[1],
@@ -270,14 +270,14 @@ screens = [
                     fontsize=14,
                     foreground=colors[6],
                     padding=0,
-                    text=" "
+                    text=' '
                 ),
                 widget.Clock(
                     background=colors[1],
                     font='Ubuntu',
                     fontsize=12,
                     foreground=colors[6],
-                    format='%Y-%m-%d %a %I:%M %p'
+                    format='%a %d, (%B) %H:%M:%S'
                 ),
             ],
             22,
@@ -290,7 +290,7 @@ screens = [
                     foreground=colors[6],
                     font='Ubuntu',
                     fontsize = 12,
-                    max_chars=50
+                    max_chars=60
                 ),
                 widget.Spacer(),
                 widget.Systray(
@@ -310,11 +310,11 @@ screens = [
                     fontsize=14,
                     foreground=colors[6],
                     padding=0,
-                    text=" "
+                    text=' '
                 ),
                 widget.Memory(
                     background=colors[1],
-                    font='Ubuntu Nerd Font',
+                    font='Ubuntu',
                     fontsize=12,
                     foreground=colors[6],
                     format="{MemUsed: .0f}{mm}",
@@ -331,15 +331,15 @@ screens = [
                     font='Ubuntu Nerd Font',
                     fontsize=14,
                     foreground=colors[6],
-                    padding = 0,
-                    text=" "
+                    padding=0,
+                    text=' '
                 ),
                 widget.CPU(
                     background=colors[1],
-                    font='Ubuntu Nerd Font',
+                    font='Ubuntu',
                     fontsize=12,
                     foreground=colors[6],
-                    format='CPU {freq_current}GHz {load_percent}%',
+                    format='CPU {load_percent}%',
                     update_interval=1    
                 ),
                 #widget.CPUGraph(
@@ -364,12 +364,12 @@ screens = [
                     font='Ubuntu Nerd Font',
                     fontsize=14,
                     foreground=colors[6],
-                    padding = 0,
-                    text="說 "
+                    padding=0,
+                    text='  '
                 ),
                 widget.Net(
                     background=colors[1],
-                    font='Ubuntu Nerd Font',
+                    font='Ubuntu',
                     fontsize=12,
                     foreground=colors[5],
                     interface='all',
@@ -423,7 +423,7 @@ floating_layout = layout.Floating(float_rules=[
     border_focus=colors[12] [0]
 )
 auto_fullscreen = True
-focus_on_window_activation = "urgent"
+focus_on_window_activation = "focus"
 reconfigure_screens = True
 
 @hook.subscribe.restart
