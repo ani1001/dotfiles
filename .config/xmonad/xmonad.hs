@@ -34,7 +34,6 @@ import XMonad.Layout.LayoutCombinators
 import XMonad.Layout.Magnifier
 import XMonad.Layout.NoBorders
 import XMonad.Layout.ResizableTile
-import XMonad.Layout.Spacing
 
 -- Utilities
 import XMonad.Util.Cursor
@@ -66,8 +65,9 @@ myNormalBorderColor :: String
 myNormalBorderColor = "#a3be8c"       -- Color of inactive border
 
 myBorderWidth :: Dimension
-myBorderWidth = 2                     -- Width of border around windows
+myBorderWidth = 1                     -- Width of border around windows
 
+-- Sets default font
 myFont :: String
 myFont = "-misc-fixed-*-*-*-*-13-*-*-*-*-*-*-*"
 
@@ -114,8 +114,8 @@ myLayout =
 
   where
     threeCol = magnifiercz' 1.3 $ ThreeColMid nmaster delta ratio
-    twopane  = spacing 2 $ TwoPane delta ratio
-    tiled    = spacing 2 $ ResizableTall nmaster delta ratio []
+    twopane  = TwoPane delta ratio
+    tiled    = ResizableTall nmaster delta ratio []
     nmaster  = 1      -- Default number of windows in the master pane
     ratio    = 1/2    -- Default proportion of screen occupied by master pane
     delta    = 3/100  -- Percent of screen to increment by when resizing panes
@@ -144,7 +144,7 @@ myKeys = [ ("M-S-z"    , spawn "slock"                     )
          , ("M-]"      , spawn "firefox"                   )
          , ("M-S-p"    , spawn "rofi -show run"            )
          , ("M-S-t"    , spawn "kitty"                     )
-         , ("M-C-f"    , sendMessage $ JumpToLayout "Full" )  -- jump directly to the Full layout
+         , ("M-C-f"    , sendMessage $ JumpToLayout "Full" )
          ]
 
 -- Now run xmonad with all the defaults available
