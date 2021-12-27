@@ -13,6 +13,8 @@ xsetroot -solid '#5A8E3A'
 nitrogen --restore &
 picom &
 lxpolkit &
+urxvtd -q -o -f &
+emacs --daemon &
 #$HOME/.config/herbstluftwm/xmobar &
 
 # remove all existing keybindings
