@@ -15,7 +15,6 @@ picom &
 lxpolkit &
 urxvtd -q -o -f &
 emacs --daemon &
-#$HOME/.config/herbstluftwm/xmobar &
 
 # remove all existing keybindings
 hc keyunbind --all
