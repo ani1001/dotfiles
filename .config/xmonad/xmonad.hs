@@ -56,21 +56,25 @@ myModMask = mod4Mask
 
 -- Sets default terminal
 myTerminal :: String
-myTerminal = "alacritty"
+myTerminal = "kitty"
 
+-- Color of focused border
 myFocusedBorderColor :: String
-myFocusedBorderColor = "#5e81ac"      -- Color of focused border
+myFocusedBorderColor = "#5e81ac"
 
+-- Color of inactive border
 myNormalBorderColor :: String
-myNormalBorderColor = "#a3be8c"       -- Color of inactive border
+myNormalBorderColor = "#a3be8c"
 
+-- Width of border around windows
 myBorderWidth :: Dimension
-myBorderWidth = 1                     -- Width of border around windows
+myBorderWidth = 1
 
 -- Sets default font
 myFont :: String
 myFont = "-misc-fixed-*-*-*-*-13-*-*-*-*-*-*-*"
 
+-- Counts the number of window
 windowCount :: X (Maybe String)
 windowCount = gets $ Just . show . length . W.integrate' . W.stack . W.workspace . W.current . windowset
 
@@ -95,6 +99,7 @@ myStartupHook = do
   spawnOnce "picom &"
   spawnOnce "lxpolkit &"
   spawnOnce "urxvtd -q -o -f &"
+  spawnOnce "emacs --daemon &"
   setWMName "LG3D"
   setDefaultCursor xC_left_ptr
 
@@ -143,7 +148,7 @@ myKeys = [ ("M-S-z"    , spawn "slock"                     )
          , ("M-S-="    , unGrab *> spawn "scrot -s"        )
          , ("M-]"      , spawn "firefox"                   )
          , ("M-S-p"    , spawn "rofi -show run"            )
-         , ("M-S-t"    , spawn "kitty"                     )
+         , ("M-S-t"    , spawn "urxvtc"                    )
          , ("M-C-f"    , sendMessage $ JumpToLayout "Full" )
          ]
 
