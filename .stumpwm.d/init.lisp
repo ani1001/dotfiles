@@ -20,11 +20,11 @@
       *transient-border-width* 2
       *normal-border-width* 3
       *window-border-style* :thin
-      *float-window-border* 2
-      *float-window-title-height* 15
+      ;; *float-window-border* 2
+      ;; *float-window-title-height* 15
       *mouse-focus-policy* :click)
 
-;; Message and input bar colors 
+;; Message and input bar colors
 (set-fg-color nord4)
 (set-bg-color nord0)
 (set-border-color nord13)

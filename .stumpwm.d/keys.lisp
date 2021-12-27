@@ -10,7 +10,7 @@
 ;; Ssh somewhere
 (define-key *root-map* (kbd "C-s") "colon1 exec xterm -e ssh ")
 ;; Lock screen
-(define-key *root-map* (kbd "C-l") "exec xlock")
+(define-key *root-map* (kbd "C-l") "exec slock")
 
 ;; Launch dmenu
 (define-key *root-map* (kbd "C-d") "exec dmenu_run")
@@ -20,12 +20,12 @@
 ;; Launch rxvt-unicode client
 (define-key *root-map* (kbd "C-c") "exec urxvtc")
 ;; Launch terminal
-(define-key *root-map* (kbd "RET") "exec alacritty")
+(define-key *root-map* (kbd "RET") "exec kitty")
 
-;; Launch nano
-(define-key *root-map* (kbd "e") "colon1 exec alacritty -e nano")
-;; Launch neovim
-(define-key *root-map* (kbd "C-e") "colon1 exec alacritty -e nvim")
+;; Launch emacs
+(define-key *root-map* (kbd "e") "exec emacs")
+;; Launch emacsclient
+(define-key *root-map* (kbd "C-e") "exec emacsclient -c -a 'emacs'")
 
 ;; Quit stumpwm
 (define-key *root-map* (kbd "C-q") "quit")

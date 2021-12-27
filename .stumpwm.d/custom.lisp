@@ -5,6 +5,8 @@
 (run-shell-command "picom")
 (run-shell-command "lxpolkit")
 (run-shell-command "xsetroot -cursor_name left_ptr")
+(run-shell-command "urxvtd -q -o -f")
+(run-shell-command "emacs --daemon")
 
 ;; Interactive commands
 (defun show-kernel ()
