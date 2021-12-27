@@ -1,90 +1,89 @@
 [submenu] (Applications)
   [submenu] (Accessories)
     [exec] (Application Finder) {xfce4-appfinder}
-    [exec] (Kvantum Manager) {kvantummanager}
+    [exec] (Emacs (GUI\)) {/usr/bin/emacs }
+    [exec] (Emacs (Terminal\)) {/usr/bin/x-terminal-emulator -e /usr/bin/emacs -nw }
+    [exec] (Keyboard layout viewer) {kbd-layout-viewer5}
     [exec] (Mousepad) {mousepad }
-    [exec] (Neovim) {xterm -e nvim }
+    [exec] (Neovim) {/usr/bin/x-terminal-emulator -e nvim }
+    [exec] (Plank) {plank}
+    [exec] (Rxvt Color Unicode Terminal) {urxvt}
+    [exec] (Screenshot) {xfce4-screenshooter}
     [exec] (Sensor Viewer) {xfce4-sensors}
-    [exec] (Shortcut Editor) {desktop-file-editor }
+    [exec] (Vim) {/usr/bin/x-terminal-emulator -e vim }
     [exec] (Xarchiver) {xarchiver }
-    [exec] (compton) {compton}
     [exec] (nitrogen) {nitrogen}
     [exec] (picom) {picom}
   [end] # (Accessories)
   [submenu] (Development)
-    [exec] (Emacs) {emacs }
     [exec] (Geany) {geany }
   [end] # (Development)
-  [submenu] (Games)
-    [exec] (Chromium B.S.U.) {chromium-bsu}
-  [end] # (Games)
   [submenu] (Graphics)
-    [exec] (Flameshot) {/usr/bin/flameshot}
-    [exec] (GNU Image Manipulation Program) {gimp-2.10 }
     [exec] (Ristretto Image Viewer) {ristretto }
+    [exec] (XSane) {xsane}
   [end] # (Graphics)
   [submenu] (Multimedia)
-    [exec] (DeaDBeeF) {deadbeef }
+    [exec] (Ex Falso) {exfalso}
     [exec] (Parole Media Player) {parole }
     [exec] (PulseAudio Volume Control) {pavucontrol}
+    [exec] (Quod Libet) {quodlibet --run --play-file }
     [exec] (VLC media player) {/usr/bin/vlc --started-from-file }
+    [exec] (Xfburn) {xfburn}
   [end] # (Multimedia)
   [submenu] (Network)
-    [exec] (Chromium) {chromium }
+    [exec] (Brave Web Browser) {/usr/bin/brave-browser-stable }
     [exec] (Deluge) {deluge-gtk }
-    [exec] (Firefox Web Browser) {firefox }
-    [exec] (HexChat) {hexchat --existing }
-    [exec] (MEGAsync) {megasync}
-    [exec] (Xtreme Download Manager) {"/opt/xdman/xdman"}
-    [exec] (pcloud) {"/run/media/anik/Galaxy/FLOSS/Applications/AppImages/pcloud" }
+    [exec] (Firefox ESR) {/usr/lib/firefox-esr/firefox-esr }
     [exec] (uGet) {env GDK_BACKEND=x11 uget-gtk }
   [end] # (Network)
   [submenu] (Office)
     [exec] (Atril Document Viewer) {atril }
+    [exec] (Dictionary) {xfce4-dict}
+    [exec] (GoldenDict) {goldendict}
+    [exec] (LibreOffice) {libreoffice }
+    [exec] (LibreOffice Calc) {libreoffice --calc }
+    [exec] (LibreOffice Draw) {libreoffice --draw }
+    [exec] (LibreOffice Impress) {libreoffice --impress }
+    [exec] (LibreOffice Math) {libreoffice --math }
+    [exec] (LibreOffice Writer) {libreoffice --writer }
   [end] # (Office)
   [submenu] (Settings)
-    [exec] (ARandR) {arandr}
     [exec] (Advanced Network Configuration) {nm-connection-editor}
+    [exec] (Anthy Dictionary editor) {kasumi}
     [exec] (Customize Look and Feel) {lxappearance}
     [exec] (Desktop Preferences) {pcmanfm --desktop-pref}
-    [exec] (Desktop Settings) {jwm-settings-manager --desktop}
+    [exec] (Fcitx 5 Configuration) {/usr/bin/fcitx5-configtool}
+    [exec] (Fcitx 5 Migration Wizard) {fcitx5-migrator}
+    [exec] (Fcitx Configuration) {fcitx-configtool}
     [exec] (File Manager Settings) {thunar-settings}
     [exec] (Firewall Configuration) {gufw}
-    [exec] (Font Settings) {jwm-settings-manager --font}
-    [exec] (Icon Settings) {jwm-settings-manager --icons}
-    [exec] (JWM Settings Manager) {jwm-settings-manager}
-    [exec] (Keyboard Settings) {jwm-settings-manager --keyboard}
-    [exec] (Mouse/Touchpad Settings) {fltk-mouse}
+    [exec] (IBus Preferences) {ibus-setup}
+    [exec] (Input Method) {uim-pref-gtk}
+    [exec] (Input Method) {im-config}
+    [exec] (Mozc Setup) {/usr/lib/mozc/mozc_tool --mode=config_dialog}
     [exec] (Openbox Configuration Manager) {obconf }
-    [exec] (Panel Settings) {jwm-settings-manager --panel}
     [exec] (Power Manager) {xfce4-power-manager-settings}
-    [exec] (Qt5 Settings) {qt5ct}
     [exec] (Removable Drives and Media) {thunar-volman-settings}
-    [exec] (Startup Program Settings) {jwm-settings-manager --autostart}
-    [exec] (Text Editor Settings) {mousepad --preferences}
-    [exec] (Window Settings) {jwm-settings-manager --window}
+    [exec] (Tint2 Settings) {tint2conf}
     [exec] (Xfce Terminal Settings) {xfce4-terminal --preferences}
-    [exec] (theme Settings) {jwm-settings-manager --themes}
   [end] # (Settings)
   [submenu] (System)
-    [exec] (Alacritty) {alacritty}
-    [exec] (BleachBit) {bleachbit}
     [exec] (Bulk Rename) {thunar --bulk-rename }
+    [exec] (Fcitx) {fcitx}
+    [exec] (Fcitx 5) {/usr/bin/fcitx5}
     [exec] (File Manager PCManFM) {pcmanfm }
-    [exec] (GParted) {/usr/bin/gparted-pkexec }
-    [exec] (Htop) {xterm -e htop}
-    [exec] (Manage Printing) {xdg-open http://localhost:631/}
+    [exec] (Htop) {/usr/bin/x-terminal-emulator -e htop}
+    [exec] (Multilingual Terminal) {mlterm}
+    [exec] (Print Settings) {system-config-printer}
     [exec] (Psensor) {psensor}
+    [exec] (Synaptic Package Manager) {synaptic-pkexec}
     [exec] (Task Manager) {xfce4-taskmanager}
+    [exec] (Thai X terminal) {txiterm -ls -cursorColor yellow -cursorColorThai red -bg black -fg white}
     [exec] (Thunar File Manager) {thunar }
     [exec] (Tint2) {tint2}
     [exec] (UXTerm) {uxterm}
     [exec] (XTerm) {xterm}
     [exec] (Xfce Terminal) {xfce4-terminal}
-    [exec] (conky) {conky --daemonize --pause=1}
-    [exec] (fish) {xterm -e fish}
     [exec] (kitty) {kitty}
-    [exec] (lf) {xterm -e lf}
-    [exec] (rxvt-unicode) {urxvt}
   [end] # (System)
 [end] # (Applications)
