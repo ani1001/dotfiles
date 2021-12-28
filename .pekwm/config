@@ -1,8 +1,8 @@
 INCLUDE = "$_PEKWM_ETC_PATH/config_system"
 
 Files {
-    Theme = "~/.pekwm/themes/pekwm-theme-spiff-p-master"
-    ThemeVariant = ""
+    Theme = "~/.pekwm/themes/pekwm-theme-pwm-p-main"
+    ThemeVariant = "beos"
 }
 
 Screen {

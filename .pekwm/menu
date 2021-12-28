@@ -13,7 +13,7 @@ RootMenu = "Pekwm" {
 
   Separator {}
 
-  Entry = "" { Actions = "Dynamic /usr/bin/xdgmenumaker -n -f pekwm --pekwm-dynamic" }
+  Entry = "" { Actions = "Dynamic /usr/local/bin/xdgmenumaker -n -f pekwm --pekwm-dynamic" }
 
   Separator {}
 
