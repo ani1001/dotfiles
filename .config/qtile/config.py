@@ -90,8 +90,8 @@ keys = [
     Key("A-r", lazy.spawn("rofi -show run"), desc="Launch rofi"),
     Key("A-s", lazy.spawn("st"), desc="Launch suckless terminal"),
     Key("A-t", lazy.spawn("urxvtc"), desc="Launch rxvt-unicode"),
-    Key("A-w", lazy.spawn("firefox"), desc="Launch firefox"),
-    Key("A-C-w", lazy.spawn("/usr/local/src/waterfox/waterfox"), desc="Launch waterfox"),
+    Key("A-w", lazy.spawn("/usr/local/src/waterfox/waterfox-bin"), desc="Launch waterfox"),
+    Key("A-C-w", lazy.spawn("brave-browser"), desc="Launch brave-browser"),
     Key("A-C-s", lazy.spawn("/usr/local/src/sublime_text/sublime_text"), desc="Launch sublime_text"),
 ]
 
@@ -185,7 +185,7 @@ screens = [
                     background=colors[1], #2e3440
                     foreground=colors[5], #d8dee9
                     linewidth=1,
-                    padding=10                   
+                    padding=10
                 ),
                 widget.Image(
                     filename="~/.config/qtile/icons/qtilelogo.png",
@@ -376,7 +376,7 @@ screens = [
                     fontsize=12,
                     foreground=colors[6],
                     format='CPU {load_percent}%',
-                    update_interval=1    
+                    update_interval=1
                 ),
                 #widget.CPUGraph(
                 #    background=colors[1],
