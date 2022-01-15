@@ -13,15 +13,15 @@
 
 ;; Window appearance
 (setf *message-window-padding* 2
-      *message-window-gravity* :bottom-left
+      *message-window-gravity* :top-right
       *timeout-wait* 3
-      *input-window-gravity* :bottom-left
+      *input-window-gravity* :bottom-right
       *maxsize-border-width* 3
       *transient-border-width* 2
       *normal-border-width* 3
       *window-border-style* :thin
-      ;; *float-window-border* 2
-      ;; *float-window-title-height* 15
+      *float-window-border* 2
+      *float-window-title-height* 15
       *mouse-focus-policy* :click)
 
 ;; Message and input bar colors

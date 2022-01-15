@@ -31,6 +31,6 @@
   (0 t   nil :class "XTerm")
   (1 nil t   :class "aMule"))
 
-;; (define-frame-preference "Emacs"
-  ;; (1 t t :restore "emacs-editing-dump" :title "...xdvi")
-  ;; (0 t t :create "emacs-dump" :class "Emacs"))
+(define-frame-preference "Emacs"
+  (1 t t :restore "emacs-editing-dump" :title "...xdvi")
+  (0 t t :create "emacs-dump" :class "Emacs"))
