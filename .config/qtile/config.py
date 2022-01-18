@@ -32,7 +32,7 @@ from typing import List  # noqa: F401
 from libqtile.widget import Spacer
 
 home = os.path.expanduser('~')
-terminal = "kitty"
+terminal = "alacritty"
 
 keys = [
     # Switch between windows
@@ -427,7 +427,7 @@ screens = [
                 #),
             ],
             22,
-            opacity=0.9
+            opacity=1.0
         ),
     ),
 ]
