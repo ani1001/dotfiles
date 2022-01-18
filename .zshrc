@@ -101,6 +101,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 
+export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cabal/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
@@ -119,11 +120,11 @@ alias l.='exa -a | egrep "^\."'
 # alias tarnow='tar -acf '
 # alias untar='tar -zxvf '
 # alias wget='wget -c '
-# alias ..='cd ..'
-# alias ...='cd ../..'
-# alias ....='cd ../../..'
-# alias .....='cd ../../../..'
-# alias ......='cd ../../../../..'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
 # alias dir='dir --color=auto'
 # alias vdir='vdir --color=auto'
 # alias grep='grep --color=auto'
