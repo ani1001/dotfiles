@@ -84,7 +84,7 @@ keys = [
     # Keybindings to launch user defined programs
     Key("A-d", lazy.spawn("dmenu_run"), desc="Launch dmenu"),
     Key("A-e", lazy.spawn("emacs"), desc="Launch emacs"),
-    Key("A-f", lazy.spawn("pcmanfm"), desc="Launch pcmanfm"),
+    Key("A-f", lazy.spawn("thunar"), desc="Launch thunar"),
     Key("A-m", lazy.spawn("/usr/local/src/thunderbird/thunderbird"), desc="Launch thunderbird"),
     Key("A-n", lazy.spawn("nitrogen"), desc="Launch nitrogen"),
     Key("A-r", lazy.spawn("rofi -show run"), desc="Launch rofi"),
@@ -427,7 +427,7 @@ screens = [
                 #),
             ],
             22,
-            opacity=1.0
+            opacity=0.9
         ),
     ),
 ]
