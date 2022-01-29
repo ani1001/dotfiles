@@ -32,7 +32,7 @@ from typing import List  # noqa: F401
 from libqtile.widget import Spacer
 
 home = os.path.expanduser('~')
-terminal = "alacritty"
+terminal = "kitty"
 
 keys = [
     # Switch between windows
@@ -91,7 +91,7 @@ keys = [
     Key("A-s", lazy.spawn("st"), desc="Launch suckless terminal"),
     Key("A-t", lazy.spawn("urxvtc"), desc="Launch rxvt-unicode"),
     Key("A-w", lazy.spawn("/usr/local/src/waterfox/waterfox-bin"), desc="Launch waterfox"),
-    Key("A-C-w", lazy.spawn("brave-browser"), desc="Launch brave-browser"),
+    Key("A-C-w", lazy.spawn("vivaldi-stable"), desc="Launch vivaldi-stable"),
     Key("A-C-s", lazy.spawn("/usr/local/src/sublime_text/sublime_text"), desc="Launch sublime_text"),
 ]
 
