@@ -48,8 +48,8 @@ end
 beautiful.init(gears.filesystem.get_themes_dir() .. "zenburn/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "st"
-editor = os.getenv("EDITOR") or "nano"
+terminal = "urxvtc"
+editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
 
 -- Default modkey.
