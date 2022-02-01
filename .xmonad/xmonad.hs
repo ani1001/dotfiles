@@ -56,7 +56,7 @@ myModMask = mod4Mask
 
 -- Sets default terminal
 myTerminal :: String
-myTerminal = "alacritty"
+myTerminal = "urxvtc"
 
 -- Color of focused border
 myFocusedBorderColor :: String
@@ -96,10 +96,10 @@ myWorkspaces = clickable . (map xmobarEscape)
 myStartupHook :: X ()
 myStartupHook = do
   spawnOnce "nitrogen --restore &"
-  spawnOnce "picom &"
+  spawnOnce "picom -b &"
   spawnOnce "lxpolkit &"
   spawnOnce "urxvtd -q -o -f &"
-  spawnOnce "emacs --daemon &"
+  -- spawnOnce "emacs --daemon &"
   setWMName "LG3D"
   setDefaultCursor xC_left_ptr
 
