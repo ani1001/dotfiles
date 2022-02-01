@@ -1,7 +1,7 @@
 #!/bin/sh
 
 nitrogen --restore &
-picom &
+picom -b &
 lxpolkit &
-emacs --daemon &
+#emacs --daemon &
 urxvtd -q -o -f &
