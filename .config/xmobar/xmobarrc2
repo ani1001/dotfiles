@@ -20,7 +20,7 @@ Config { font = "-misc-fixed-*-*-*-*-13-*-*-*-*-*-*-*"
                                           "--normal","#a3be8c",
                                           "--high","#d08770",
                                           "--low","#81a1c1"] 36000
-                    , Run Network "usb0" ["-L","0","-H","32",
+                    , Run Network "enp0s29u1u5" ["-L","0","-H","32",
                                           "--normal","#a3be8c","--high","#d08770"] 10
                     , Run Cpu ["-L","3","-H","50",
                                "--normal","#a3be8c","--high","#d08770"] 10
@@ -28,9 +28,9 @@ Config { font = "-misc-fixed-*-*-*-*-13-*-*-*-*-*-*-*"
                     , Run Swap [] 10
                     , Run Com "uname" ["-s","-r"] "" 36000
                     , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
-                    , Run UnsafeStdinReader
+                    , Run XMonadLog
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%UnsafeStdinReader% }{ %cpu% | %memory% * %swap% | %usb0% | <fc=#b48ead>%date%</fc> | %uname% [%VGHS%]"
+       , template = "%XMonadLog% }{ %cpu% | %memory% * %swap% | %enp0s29u1u5% | <fc=#b48ead>%date%</fc> | %uname% [%VGHS%]"
        }
