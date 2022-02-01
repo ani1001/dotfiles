@@ -1,53 +1,66 @@
-#!/bin/sh
+#!/bin/bash
 #
 # ~/.xinitrc
 #
 # Executed by startx (run your window manager from here)
 
-if [ -d /etc/X11/xinit/xinitrc.d ]; then
-  for f in /etc/X11/xinit/xinitrc.d/*; do
-    [ -x "$f" ] && . "$f"
-  done
-  unset f
+userresources=$HOME/.Xresources
+usermodmap=$HOME/.Xmodmap
+sysresources=/etc/X11/xinit/.Xresources
+sysmodmap=/etc/X11/xinit/.Xmodmap
+
+DEFAULT_SESSION='i3 --shmlog-size 0'
+
+# merge in defaults and keymaps
+
+if [ -f $sysresources ]; then
+    xrdb -merge $sysresources
 fi
 
-xrdb $HOME/.Xresources &
-xrandr --output VGA1 --brightness 0.9 &
-xset +fp $HOME/.local/share/fonts &
-xset fp rehash &
+if [ -f $sysmodmap ]; then
+    xmodmap $sysmodmap
+fi
 
-## Some applications that should be run in the background
-# xscreensaver -no-splash &
-# xsetroot -cursor_name left_ptr &
-pulseaudio --start &
-mpd &
+if [ -f "$userresources" ]; then
+    xrdb -merge "$userresources"
+fi
 
-# Set the default session here
-session=${1:-xmonad}
+if [ -f "$usermodmap" ]; then
+    xmodmap "$usermodmap"
+fi
 
-case $session in
-    awesome           ) exec dbus-launch --auto-syntax --exit-with-session awesome;;
-    berry             ) exec dbus-launch --auto-syntax --exit-with-session berry;;
-    bspwm             ) exec dbus-launch --auto-syntax --exit-with-session bspwm;;
-    cwm               ) exec dbus-launch --auto-syntax --exit-with-session cwm;;
-    dwm               ) exec dbus-launch --auto-syntax --exit-with-session dwm;;
-    fluxbox           ) exec dbus-launch --auto-syntax --exit-with-session fluxbox;;
-    frankenwm         ) exec dbus-launch --auto-syntax --exit-with-session frankenwm;;
-    fvwm3             ) exec dbus-launch --auto-syntax --exit-with-session fvwm3;;
-    herbstluftwm      ) exec dbus-launch --auto-syntax --exit-with-session herbstluftwm;;
-    i3|i3wm           ) exec dbus-launch --auto-syntax --exit-with-session i3;;
-    icewm             ) exec dbus-launch --auto-syntax --exit-with-session icewm-session;;
-    leftwm            ) exec dbus-launch --auto-syntax --exit-with-session leftwm;;
-    jwm               ) exec dbus-launch --auto-syntax --exit-with-session jwm;;
-    openbox           ) exec dbus-launch --auto-syntax --exit-with-session openbox-session;;
-    pekwm             ) exec dbus-launch --auto-syntax --exit-with-session pekwm;;
-    qtile             ) exec dbus-launch --auto-syntax --exit-with-session $HOME/.local/bin/qtile start;;
-    stumpwm           ) exec dbus-launch --auto-syntax --exit-with-session stumpwm;;
-    spectrwm          ) exec dbus-launch --auto-syntax --exit-with-session spectrwm;;
-    xfce|xfce4        ) exec startxfce4;;
-    xmonad            ) exec dbus-launch --auto-syntax --exit-with-session xmonad;;
-    # No known session, try to run it as command
-    *                 ) exec $1;;
-esac
+# start some nice programs
 
-# ...or the Window Manager of your choice
+if [ -d /etc/X11/xinit/xinitrc.d ] ; then
+    for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
+        [ -x "$f" ] && . "$f"
+    done
+    unset f
+fi
+
+get_session(){
+	local dbus_args=(--sh-syntax --exit-with-session)
+	case $1 in
+		awesome) dbus_args+=(awesome) ;;
+		bspwm) dbus_args+=(bspwm-session) ;;
+		budgie) dbus_args+=(budgie-desktop) ;;
+		cinnamon) dbus_args+=(cinnamon-session) ;;
+		deepin) dbus_args+=(startdde) ;;
+		enlightenment) dbus_args+=(enlightenment_start) ;;
+		fluxbox) dbus_args+=(startfluxbox) ;;
+		gnome) dbus_args+=(gnome-session) ;;
+		i3|i3wm) dbus_args+=(i3 --shmlog-size 0) ;;
+		jwm) dbus_args+=(jwm) ;;
+		kde) dbus_args+=(startplasma-x11) ;;
+		lxde) dbus_args+=(startlxde) ;;
+		lxqt) dbus_args+=(lxqt-session) ;;
+		mate) dbus_args+=(mate-session) ;;
+		xfce) dbus_args+=(xfce4-session) ;;
+		openbox) dbus_args+=(openbox-session) ;;
+		*) dbus_args+=($DEFAULT_SESSION) ;;
+	esac
+
+	echo "dbus-launch ${dbus_args[*]}"
+}
+
+exec $(get_session "$1")
