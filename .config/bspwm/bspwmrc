@@ -1,8 +1,11 @@
 #!/bin/sh
 
-pgrep -x sxhkd > /dev/null || sxhkd &
+[ -e ~/.profile ] && . ~/.profile
 
-$HOME/.config/polybar/launch.sh &
+pgrep -x sxhkd > /dev/null || sxhkd &
+set -U SXHKD_SHELL sh &
+pgrep -x panel > /dev/null || $HOME/.config/bspwm/panel/panel &
+#$HOME/.config/polybar/launch.sh &
 nitrogen --restore &
 picom -b &
 lxpolkit &
@@ -13,8 +16,19 @@ wmname LG3D &
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
-bspc config border_width             1
-bspc config window_gap               5
+#overlapping borders
+BW=1
+bspc config border_width $BW
+bspc config window_gap -$BW
+for side in top right bottom left ; do
+	bspc config ${side}_padding $BW
+done
+
+#external rules
+bspc config external_rules_command "$(which external_rules)"
+
+#bspc config border_width             1
+#bspc config window_gap               5
 
 bspc config split_ratio              0.52
 bspc config click_to_focus           false
