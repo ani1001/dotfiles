@@ -3,5 +3,6 @@
 nitrogen --restore &
 picom -b &
 lxpolkit &
-#emacs --daemon &
+emacs --daemon &
+mpd &
 urxvtd -q -o -f &
