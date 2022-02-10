@@ -3,10 +3,7 @@ from modules.groups import groups
 from modules.layouts import layouts, floating_layout
 from modules.mouse import mouse
 from modules.hooks import *
-from modules.widgets import colors, prompt, widget_defaults
-from modules.screens import screens
-
-import os
+from modules.screens import *
 
 main = None  # WARNING: this is deprecated and will be removed soon
 dgroups_key_binder = None
