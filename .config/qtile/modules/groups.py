@@ -1,6 +1,6 @@
-from libqtile.config import EzKey as Key, Group, Match
-from libqtile.command import lazy
-from .keys import keys
+from libqtile.config import Group
+from .keys import *
+from .layouts import *
 
 groups = [
     Group("", layout="max",        matches=[Match(wm_class=["navigator", "firefox", "vivaldi-stable", "chromium", "brave"])]),
