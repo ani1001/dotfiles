@@ -1,6 +1,6 @@
-from libqtile.config import Group
+from libqtile.config import Group, Match
 from .keys import *
-from .layouts import *
+from .layouts import layouts
 
 groups = [
     Group("", layout="max",        matches=[Match(wm_class=["navigator", "firefox", "vivaldi-stable", "chromium", "brave"])]),
