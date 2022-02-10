@@ -2,9 +2,6 @@ from libqtile import widget
 from libqtile.widget import Spacer
 from libqtile import qtile
 
-import os
-import socket
-
 def init_colors():
     return [["#2e3440", "#2e3440"], # color 0  dark grayish blue
             ["#2e3440", "#2e3440"], # color 1  dark grayish blue
@@ -25,8 +22,6 @@ def init_colors():
             ["#b48ead", "#b48ead"]] # color 16 grayish magenta
 
 colors = init_colors()
-
-prompt = "{0}@{1}: ".format(os.environ["USER"], socket.gethostname())
 
 widget_defaults = dict(
     font='Ubuntu Nerd Font',

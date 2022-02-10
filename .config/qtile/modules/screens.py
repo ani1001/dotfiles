@@ -2,6 +2,8 @@ from libqtile import bar
 from .widgets import *
 from libqtile.config import Screen
 
+import os
+
 screens = [
     Screen(
         top=bar.Bar(

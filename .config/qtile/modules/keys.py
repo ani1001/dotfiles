@@ -1,5 +1,5 @@
 from libqtile.config import EzKey as Key
-from libqtile.command import lazy
+from .mouse import *
 
 terminal = "alacritty"
 

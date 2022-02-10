@@ -2,10 +2,12 @@ from libqtile import hook
 
 import os
 import re
+import socket
 import shutil
 import subprocess
 
 home = os.path.expanduser('~')
+prompt = "{0}@{1}: ".format(os.environ["USER"], socket.gethostname())
 
 @hook.subscribe.restart
 def cleanup():
