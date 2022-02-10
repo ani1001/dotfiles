@@ -1,5 +1,5 @@
 from libqtile import layout
-from libqtile.config import Match, Rule
+from libqtile.config import Match
 from .widgets import colors
 
 def init_layout_theme():

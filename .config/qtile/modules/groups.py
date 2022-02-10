@@ -1,5 +1,5 @@
 from libqtile.config import EzKey as Key, Group, Match
-from libqtile.lazy import lazy
+from libqtile.command import lazy
 from .keys import keys
 
 groups = [

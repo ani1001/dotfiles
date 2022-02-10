@@ -1,5 +1,5 @@
 from libqtile import widget
-from libqtile import qtile
+
 import os
 import socket
 

@@ -1,8 +1,9 @@
 from libqtile import hook
-import subprocess
+
 import os
-import shutil
 import re
+import shutil
+import subprocess
 
 home = os.path.expanduser('~')
 

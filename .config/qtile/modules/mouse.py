@@ -1,5 +1,5 @@
 from libqtile.config import EzClick as Click, EzDrag as Drag
-from libqtile.lazy import lazy
+from libqtile.command import lazy
 
 # Drag floating layouts.
 mouse = [
