@@ -1,4 +1,5 @@
 from libqtile import widget
+from libqtile.widget import Spacer
 from libqtile import qtile
 
 import os

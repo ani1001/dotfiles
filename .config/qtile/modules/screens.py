@@ -1,9 +1,6 @@
 from libqtile import bar
 from .widgets import *
 from libqtile.config import Screen
-from libqtile.widget import Spacer
-
-import os
 
 screens = [
     Screen(
