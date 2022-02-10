@@ -3,12 +3,9 @@ from modules.groups import groups
 from modules.layouts import layouts, floating_layout
 from modules.mouse import mouse
 from modules.hooks import *
-from modules.widgets import *
-import os
+from modules.widgets import colors, prompt, widget_defaults
 from modules.screens import screens
-from typing import List  # noqa: F401
 
-main = None
 dgroups_key_binder = None
 dgroups_app_rules = []  # type: List
 follow_mouse_focus = True
