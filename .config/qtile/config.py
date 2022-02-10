@@ -1,7 +1,6 @@
-from modules.keys import keys
 from modules.groups import groups
 from modules.layouts import layouts, floating_layout
-from modules.mouse import mouse
+from modules.keys import *
 from modules.hooks import *
 from modules.screens import *
 
