@@ -1,0 +1,133 @@
+ThemeName="iceskel"
+ThemeDescription="Este tema está basado en el tema por defecto de Trisquel"
+ThemeAuthor="Ren Canteros Sousa <ren.kudun@gmail.com>"
+License="GPL"
+Look=flat
+
+RolloverButtonsSupported=1
+TitleButtonsSupported="xmis"
+ShowMenuButtonIcon=1
+TaskBarClockLeds=0
+
+TitleBarJustify=50
+TitleBarHeight=19
+BorderSizeX=3
+BorderSizeY=3
+CornerSizeX=19
+CornerSizeY=19
+DlgBorderSizeX=3
+DlgBorderSizeY=3
+
+ColorToolTip="#6698ca"
+ColorToolTipText="white"
+ColorLabel="#6698ca"
+ColorLabelText="white" 
+
+TitleBarVertOffset=-1
+ColorActiveTitleBarText="rgb:44/44/44"
+ColorActiveTitleBarShadow="rgb:f0/ef/ed"
+ColorNormalTitleBarText="#b1b0b0"
+ColorNormalTitleBarShadow="#e9e9e9"
+ColorActiveBorder="rgb:3D/3D/3D"
+ColorNormalBorder="rgb:44/44/44"
+
+ColorDialog="#010b15"
+ColorListBox="#010b15"
+ColorListBoxText="white" 
+ColorListBoxSelection="#6698ca"
+ColorListBoxSelectionText="white"
+ScrollBarX=15
+ScrollBarY=15
+ColorScrollBar="#010b15"
+ColorScrollBarSlider="#6698ca"
+ColorScrollBarButton="#010b15"
+ColorScrollBarButtonArrow="white"
+
+ColorNormalMenu="#f7f7f7"
+ColorNormalMenuItemText="rgb:44/44/44" 
+ColorActiveMenuItem="#e1e1e1"
+ColorActiveMenuItemText="rgb:ff/ff/ff"
+ColorDisabledMenuItemText="rgb:ab/a7/a5"
+ColorDisabledMenuItemShadow="rgb:ff/ff/ff"
+
+ColorInput="rgb:ff/ff/ff"
+ColorInputText="rgb:44/44/44"
+ColorInputSelection="rgb:71/91/b5"
+ColorInputSelectionText="rgb:ff/ff/ff"
+
+ColorDefaultTaskBar="#010b15"
+ColorNormalTaskBarApp="#010b15"
+ColorNormalTaskBarAppText="white"
+ColorInvisibleTaskBarApp="#010b15"
+ColorInvisibleTaskBarAppText="white" 
+ColorActiveTaskBarApp="#6698ca"
+ColorActiveTaskBarAppText="white"
+ColorMinimizedTaskBarApp="#010b15"
+ColorMinimizedTaskBarAppText="white"
+ColorInvisibleTaskBarApp="#010b15"
+ColorInvisibleTaskBarAppText="white"
+
+ColorNormalButton="#010b15"
+ColorNormalButtonText="white"
+ColorActiveButton="#010b15"
+ColorActiveButtonText="white"
+
+ColorApm=""
+ColorApmText="white"
+
+ColorCPUStatusIdle="rgb:44/44/44"
+ColorCPUStatusInterrupts="rgb:44/44/44"
+ColorCPUStatusIoWait="rgb:68/68/68"
+ColorCPUStatusSoftIrq="rgb:ff/ff/ff"
+ColorCPUStatusUser="rgb:71/91/b5"
+ColorCPUStatusSystem="rgb:ff/55/55"
+ColorCPUStatusNice="rgb:7e/00/00"
+
+ColorNetIdle="rgb:44/44/44"
+ColorNetReceive="rgb:71/91/b5"
+ColorNetSend="rgb:8e/0c/a4"
+
+ColorMEMStatusFree="#444444"
+ColorMEMStatusCached="#82b4e7"
+ColorMEMStatusUser="#6698ca"
+ColorMEMStatusBuffers="black"
+
+ColorClock="#010b15"
+ColorClockText="white"
+
+DesktopBackgroundColor="rgb:71/91/b5"
+DesktopBackgroundCenter = 1
+DesktopBackgroundScaled = 1
+#DesktopBackgroundImage = ''
+
+ColorMoveSizeStatus="#6698ca"
+ColorMoveSizeStatusText="white"
+
+ColorQuickSwitch="rgb:e3/e2/e0"
+ColorQuickSwitchText="rgb:44/44/44"
+ColorQuickSwitchActive="#6698ca"
+
+# Font Specification
+TitleFontNameXft="droid sans:size=10:bold"
+MenuFontNameXft="droid sans:size=10"
+StatusFontNameXft="droid sans:size=10"
+QuickSwitchFontNameXft="droid sans:size=10"
+NormalButtonFontNameXft="droid sans:size=10"
+ActiveButtonFontNameXft="droid sans:size=10"
+NormalTaskBarFontNameXft="droid sans:size=10"
+ActiveTaskBarFontNameXft="droid sans:size=10:bold"
+ToolButtonFontNameXft="droid sans:size=10"
+NormalWorkspaceFontNameXft="droid sans:size=10"
+ActiveWorkspaceFontNameXft="droid sans:size=10"
+MinimizedWindowFontNameXft="droid sans:size=10"
+ListBoxFontNameXft="droid sans:size=10"
+ToolTipFontNameXft="droid sans:size=10"
+ClockFontNameXft="droid sans:size=10:bold"
+ApmFontNameXft="droid sans:size=10:bold"
+InputFontNameXft="droid sans:size=10"
+LabelFontNameXft="droid sans:size=10"
+
+DesktopBackgroundColor="#555555"
+DesktopBackgroundCenter=0
+DesktopBackgroundScaled=1 
+DesktopBackgroundImage="/usr/share/backgrounds/arcolinux/arco-wallpaper.jpg"

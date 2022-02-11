@@ -1,0 +1,76 @@
+# ion cleanice color variant
+
+$FONT = "Bitstream Vera Sans-10#Center#XFT"
+
+# borders
+$COLOR_BORDER_FOCUSED="#303030"
+$COLOR_BORDER_UNFOCUSED="#303030"
+
+# tab - FocusedSelected
+$COLOR_TAB_FS="#889898"
+$COLOR_TAB_FS_LIGHT="#f8fcf8"
+$COLOR_TAB_FS_DARK="#f8fcf8"
+# tab - Focused
+$COLOR_TAB_F="#586468"
+$COLOR_TAB_F_LIGHT="#f8fcf8"
+$COLOR_TAB_F_DARK="#f8fcf8"
+# tab - UnfocusedSelected
+$COLOR_TAB_US="#505c70"
+$COLOR_TAB_US_LIGHT="#b8bcb8"
+$COLOR_TAB_US_DARK="#b8bcb8"
+# tab - Unfocused
+$COLOR_TAB_U="#283038"
+$COLOR_TAB_U_LIGHT="#b8bcb8"
+$COLOR_TAB_U_DARK="#b8bcb8"
+
+# button - Focused
+$COLOR_BUTTON_F="#fff49a"
+$COLOR_BUTTON_F_LIGHT="#ffffff"
+$COLOR_BUTTON_F_DARK="#a49d63"
+# button - Unfocused
+$COLOR_BUTTON_U="#e5e5e5"
+$COLOR_BUTTON_U_LIGHT="#999999"
+$COLOR_BUTTON_U_DARK="#999999"
+# button - Pressed
+$COLOR_BUTTON_P="#fff49a"
+$COLOR_BUTTON_P_LIGHT="#a49d63"
+$COLOR_BUTTON_P_DARK="#ffffff"
+
+# font - Focused
+$COLOR_FONT_F="#b8bcb8"
+# font - FocusedSelected
+$COLOR_FONT_FS="#f8fcf8"
+# font - Unfocused
+$COLOR_FONT_U="#989c98"
+# font - UnfocusedSelected
+$COLOR_FONT_US="#b8bcb8"
+
+# menu - Focused
+$COLOR_MENU_F_BG="#f8fcf8"
+$COLOR_MENU_F_ITEM="#ffffff"
+$COLOR_MENU_F_SEP="#888888"
+$COLOR_MENU_F_TEXT="#111111"
+# menu - Unfocusd
+$COLOR_MENU_U_BG="#b8bcb8"
+$COLOR_MENU_U_ITEM="#cccccc"
+$COLOR_MENU_U_SEP="#303030"
+$COLOR_MENU_U_TEXT="#555555"
+# menu - Selected
+$COLOR_MENU_S_BG="Empty"
+$COLOR_MENU_S_ITEM="#bbbbbb"
+$COLOR_MENU_S_ITEM_DARK="#666666"
+$COLOR_MENU_S_ITEM_LIGHT="#666666"
+$COLOR_MENU_S_TEXT="#000000"
+
+# cmddialog
+$COLOR_CMD_BG="#ffffff"
+$COLOR_CMD_TEXT="#000000"
+
+# status
+$COLOR_STATUS_BG="#ffffff"
+$COLOR_STATUS_TEXT="#000000"
+
+# desktop background
+$COLOR_XROOT="#eeeeee"
+
+INCLUDE = "$THEME_DIR/template"

@@ -1,0 +1,93 @@
+menu "Applications" _none_ {
+  menu "Accessories" _none_ {
+    prog "Application Finder" _none_ xfce4-appfinder
+    prog "Archive Manager" _none_ file-roller 
+    prog "ArcoLinux Betterlockscreen" _none_ /usr/local/bin/arcolinux-betterlockscreen
+    prog "Arcolinux Tweak Tool" _none_ /usr/local/bin/arcolinux-tweak-tool
+    prog "Atom" _none_ env ATOM_DISABLE_SHELLING_OUT_FOR_ENVIRONMENT=false /usr/bin/atom 
+    prog "Catfish File Search" _none_ /usr/bin/catfish 
+    prog "Conky Toggle" _none_ conky-toggle
+    prog "Conkyzen" _none_ am-conkyzen
+    prog "Screenshot" _none_ xfce4-screenshooter
+    prog "Software Token" _none_ stoken-gui
+    prog "Software Token (small)" _none_ stoken-gui --small
+    prog "USB Image Writer" _none_ mintstick -m iso
+    prog "USB Stick Formatter" _none_ mintstick -m format
+    prog "Variety" _none_ variety 
+    prog "compton" _none_ compton
+    prog "picom" _none_ picom
+  }
+  menu "Development" _none_ {
+    prog "Electron" _none_ electron 
+    prog "Electron" _none_ electron5 
+    prog "Geany" _none_ geany 
+    prog "GitAhead" _none_ gitahead
+    prog "Hyper" _none_ hyper
+    prog "Icon Browser" _none_ yad-icon-browser
+    prog "Meld" _none_ meld 
+    prog "Sublime Text Dev" _none_ subl 
+  }
+  menu "Graphics" _none_ {
+    prog "Flameshot" _none_ flameshot
+    prog "GNU Image Manipulation Program" _none_ gimp-2.10 
+    prog "Inkscape" _none_ inkscape 
+    prog "Peek" _none_ peek
+    prog "nomacs" _none_ nomacs 
+  }
+  menu "Multimedia" _none_ {
+    prog "PulseAudio Volume Control" _none_ pavucontrol
+    prog "Qt V4L2 test Utility" _none_ qv4l2
+    prog "Qt V4L2 video capture utility" _none_ qvidcap
+    prog "SimpleScreenRecorder" _none_ simplescreenrecorder --logfile
+    prog "Spotify" _none_ spotify 
+    prog "VLC media player" _none_ /usr/bin/vlc --started-from-file 
+    prog "Volume Icon" _none_ volumeicon
+  }
+  menu "Network" _none_ {
+    prog "Avahi SSH Server Browser" _none_ /usr/bin/bssh
+    prog "Avahi VNC Server Browser" _none_ /usr/bin/bvnc
+    prog "Chromium" _none_ /usr/bin/chromium 
+    prog "Discord" _none_ /usr/bin/discord
+    prog "Firefox" _none_ /usr/lib/firefox/firefox 
+    prog "Telegram Desktop" _none_ telegram-desktop -- 
+    prog "qBittorrent" _none_ qbittorrent 
+  }
+  menu "Office" _none_ {
+    prog "Document Viewer" _none_ evince 
+  }
+  menu "Settings" _none_ {
+    prog "ARandR" _none_ arandr
+    prog "Adblock" _none_ urxvt -hold -e "pkexec hblock -b" 
+    prog "Advanced Network Configuration" _none_ nm-connection-editor
+    prog "Arcolinux Welcome" _none_ /usr/local/bin/arcolinux-welcome-app
+    prog "Bluetooth Manager" _none_ blueman-manager
+    prog "Customize Look and Feel" _none_ lxappearance
+    prog "File Manager Settings" _none_ thunar-settings
+    prog "LightDM GTK+ Greeter settings" _none_ lightdm-gtk-greeter-settings-pkexec
+    prog "Monitor Settings" _none_ lxrandr
+    prog "Power Manager" _none_ xfce4-power-manager-settings
+    prog "Removable Drives and Media" _none_ thunar-volman-settings
+    prog "Xfce Terminal" _none_ xfce4-terminal --preferences
+  }
+  menu "System" _none_ {
+    prog "Add/Remove Software" _none_ pamac-manager 
+    prog "Avahi Zeroconf Browser" _none_ /usr/bin/avahi-discover
+    prog "Bulk Rename" _none_ /usr/lib/Thunar/ThunarBulkRename 
+    prog "GParted" _none_ /usr/bin/gparted 
+    prog "Hardware Locality lstopo" _none_ lstopo
+    prog "Htop" _none_ xterm -e htop
+    prog "Software Update" _none_ pamac-manager --updates
+    prog "Task Manager" _none_ xfce4-taskmanager
+    prog "Urxvt" _none_ urxvt
+    prog "Thunar File Manager" _none_ thunar 
+    prog "UXTerm" _none_ uxterm
+    prog "Virtual Machine Manager" _none_ virt-manager
+    prog "XTerm" _none_ xterm
+    prog "Xfce Terminal" _none_ xfce4-terminal
+    prog "conky" _none_ conky --daemonize --pause=1
+    prog "dconf Editor" _none_ dconf-editor
+    prog "urxvt" _none_ urxvt
+    prog "urxvt (client)" _none_ urxvtc
+    prog "urxvt (tabbed)" _none_ urxvt-tabbed
+  }
+}

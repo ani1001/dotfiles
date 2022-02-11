@@ -1,0 +1,132 @@
+ThemeName="miniblack"
+ThemeDescription="A minimal black theme for iceWM :)"
+ThemeAuthor="Ren Canteros <ren DOT kudun AT gmx DOT com>"
+License="GPL"
+Look=flat
+
+
+BorderSizeX=4
+BorderSizeY=4
+CornerSizeX=22
+CornerSizeY=22
+DlgBorderSizeX=4
+DlgBorderSizeY=4
+
+TitleBarHeight=19
+TitleBarJustify=50
+TitleBarCentered=0
+TitleButtonsSupported="xmsir"
+TitleButtonsLeft="s"
+TitleButtonsRight="x"
+
+ColorCPUStatusUser="rgb:00/81/c4"
+ColorCPUStatusSystem="rgb:00/b0/84"
+ColorCPUStatusNice="rgb:80/80/80"
+ColorCPUStatusIdle="rgb:00/00/00"
+ColorNetSend="rgb:00/b0/84"
+ColorNetReceive="rgb:00/81/c4"
+ColorNetIdle="rgb:00/00/00"
+
+ColorDialog="rgb:22/22/22"
+ColorActiveBorder="rgb:22/22/22"
+ColorNormalBorder="rgb:22/22/22"
+
+ColorNormalTitleButton="rgb:f0/f0/f0"
+ColorNormalTitleButtonText="rgb:00/00/00"
+ColorNormalButton="rgb:22/22/22"
+ColorNormalButtonText="rgb:00/00/00"
+ColorActiveButton="rgb:22/22/22"
+ColorActiveButtonText="rgb:00/00/00"
+ColorActiveTitleBar="rgb:22/22/22"
+ColorNormalTitleBar="rgb:22/22/22"
+ColorActiveTitleBarText="white"
+ColorNormalTitleBarText="white"
+ColorNormalMinimizedWindow="rgb:f0/f0/f0"
+ColorNormalMinimizedWindowText="rgb:00/00/00"
+ColorActiveMinimizedWindow="rgb:73/ad/ef"
+ColorActiveMinimizedWindowText="rgb:00/00/00"
+
+ColorNormalMenu="black"
+ColorActiveMenuItem="black"
+ColorNormalMenuItemText="white"
+ColorActiveMenuItemText="rgb:00/00/00"
+ColorDisabledMenuItemText="rgb:99/99/99"
+
+ColorMoveSizeStatus="black"
+ColorMoveSizeStatusText="white"
+
+ColorQuickSwitch=""rgb:22/22/22""
+ColorQuickSwitchText="white"
+
+ColorDefaultTaskBar=""rgb:22/22/22""
+ColorNormalTaskBarApp="rgb:f0/f0/f0"
+ColorNormalTaskBarAppText="white"
+ColorActiveTaskBarApp="rgb:73/ad/ef"
+ColorActiveTaskBarAppText="black"
+ColorMinimizedTaskBarApp="black"
+ColorMinimizedTaskBarAppText="white"
+
+ColorScrollBar="rgb:22/22/22"
+ColorScrollBarArrow="rgb:22/22/22"
+ColorScrollBarSlider="rgb:22/22/22"
+
+ColorListBox="rgb:22/22/22"
+ColorListBoxText="white"
+ColorListBoxSelection="gray"
+ColorListBoxSelectionText="white"
+
+ColorToolTip=""rgb:22/22/22""
+ColorToolTipText="white"
+
+ColorClock="rgb:08/08/08"
+ColorClockText="white"
+
+ColorApm="rgb:f0/f0/f0"
+ColorApmText="rgb:00/00/00"
+
+ColorLabel="rgb:22/22/22"
+ColorLabelText="white"
+ColorDialog="rgb:22/22/22"
+
+ColorInput="rgb:22/22/22"
+ColorInputText="white"
+ColorInputSelection="rgb:22/22/22"
+ColorInputSelectionText="white"
+
+DesktopBackgroundColor="#555555"
+DesktopBackgroundCenter=0
+DesktopBackgroundScaled=1 
+DesktopBackgroundImage="/usr/share/backgrounds/arcolinux/arco-wallpaper.jpg"
+
+TitleFontNameXft	   = 	"Snap:size=10,sans-serif:size=8"
+MenuFontNameXft	           =    "Snap:size=10,sans-serif:size=8"
+MinimizedWindowFontNameXft =    "Snap:size=10,sans-serif:size=8"
+ActiveButtonFontNameXft    =    "Snap:size=10,sans-serif:size=8:bold"
+NormalButtonFontNameXft    =    "Snap:size=10,sans-serif:size=8"
+QuickSwitchFontNameXft     =    "Snap:size=10,sans-serif:size=8"
+ListBoxFontNameXft         =    "Snap:size=10,sans-serif:size=8"
+StatusFontNameXft          =    "Snap:size=10,sans-serif:size=8"
+ToolTipFontNameXft         =    "Snap:size=10,sans-serif:size=8"
+ActiveTaskBarFontNameXft   =    "Snap:size=10,sans-serif:size=8:bold"
+NormalTaskBarFontNameXft   =    "Snap:size=10,sans-serif:size=8"
+ClockFontNameXft           =    "-artwiz-snap-regular-r-normal-sans-10-*-*-*-*-*-*-*"
+ApmFontNameXft             =    "-artwiz-snap-regular-r-normal-sans-10-*-*-*-*-*-*-*"
+
+TitleFontName		=	"-artwiz-snap-regular-r-normal-sans-10-*-*-*-*-*-*-*"
+MenuFontName		=	"-artwiz-snap-regular-r-normal-sans-10-*-*-*-*-*-*-*"
+MinimizedWindowFontName	=	"-artwiz-snap-regular-r-normal-sans-10-*-*-*-*-*-*-*"
+ActiveButtonFontName	=	"-artwiz-snap-regular-r-normal-sans-10-*-*-*-*-*-*-*"
+NormalButtonFontName	=	"-artwiz-snap-regular-r-normal-sans-10-*-*-*-*-*-*-*"
+QuickSwitchFontName	=	"-artwiz-snap-regular-r-normal-sans-10-*-*-*-*-*-*-*"
+ListBoxFontName		=	"-artwiz-snap-regular-r-normal-sans-10-*-*-*-*-*-*-*"
+StatusFontName		=	"-artwiz-snap-regular-r-normal-sans-10-*-*-*-*-*-*-*"
+ToolTipFontName		=	"-artwiz-snap-regular-r-normal-sans-10-*-*-*-*-*-*-*"
+ActiveTaskBarFontName	=	"-artwiz-snap-regular-r-normal-sans-10-*-*-*-*-*-*-*"
+NormalTaskBarFontName	=	"-artwiz-snap-regular-r-normal-sans-10-*-*-*-*-*-*-*"
+ClockFontName		=	"-artwiz-snap-regular-r-normal-sans-10-*-*-*-*-*-*-*"
+ApmFontName		=	"-artwiz-snap-regular-r-normal-sans-10-*-*-*-*-*-*-*"
+
+
+
+
+
