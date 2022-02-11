@@ -1,32 +1,19 @@
 <?xml version="1.0"?>
 <JWM>
-
-    <!-- The root menu. -->
-    <RootMenu onroot="7">
-      <Program label="Home">pcmanfm ~/</Program>
-      <Program label="Root">gksu pcmanfm /</Program>
-      <Separator/>
-      <Program label="Applications">pcmanfm menu://applications/</Program>
-      <Program label="Devices">pcmanfm computer:///</Program>
-      <Program label="Trash">pcmanfm trash:///</Program>
-    </RootMenu>
     <RootMenu onroot="3">
-      <Program label="Run Applications">gmrun</Program>
-      <Program label="Terminal">alacritty</Program>
-      <Program label="Refresh Menu">jwm -reload</Program>
-      <Program label="File Manager">pcmanfm</Program>
-      <Program label="Web Browser">/usr/local/src/firefox/firefox</Program>
-      <Menu label="Screenshot">
-        <Program label="Active Window Delay">notify-send 'Selection will be saved in ~/Screenshots in 5s' &amp; scrot -ud 5 -e 'mv $f ~/Screenshots' &amp;&amp; sleep 1 &amp;&amp; notify-send 'Screenshot has been saved in ~/Screenshots'</Program>
-        <Program label="Active Window">scrot -ue 'mv $f ~/Screenshots' &amp;&amp; sleep 1 &amp;&amp; notify-send 'Screenshot has been saved in ~/Screenshots'</Program>
-        <Program label="Full Screen">scrot -e 'mv $f ~/Screenshots' &amp;&amp; sleep 1 &amp;&amp; notify-send 'Screenshot has been saved in ~/Screenshots'</Program>
-        <Program label="Select Area">notify-send 'Selection will be saved in ~/Screenshots' &amp; scrot -se 'mv $f ~/Screenshots' &amp;&amp; sleep 1 &amp;&amp; notify-send 'Screenshot has been saved in ~/Screenshots'</Program>
-      </Menu>
+      <Program label="Filemanager">
+        thunar
+      </Program>
+      <Program label="Terminal">
+        urxvt
+      </Program>
       <Separator/>
-      <Include>exec: xdgmenumaker -n -f jwm</Include>
+      <Include>exec:xdgmenumaker -n -f jwm</Include>
       <Separator/>
-      <Restart label="Restart" icon="reload"/>
-      <Exit label="Exit" confirm="true" icon="exit"/>
-    </RootMenu>
 
+	    <Program label="Jwm folder">thunar ~/.jwm</Program>
+      <Separator/>
+      <Restart label="Restart Jwm"/>
+      <Exit label="Exit" confirm="true"/>
+    </RootMenu>
 </JWM>
