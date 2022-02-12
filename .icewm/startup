@@ -8,7 +8,7 @@
 # Change if issues
 
 #generate menu
-xdgmenumaker -f icewm > ~/.config/icewm/menu
+xdgmenumaker -f icewm > ~/.icewm/menu
 
 #picom
 picom -b &
