@@ -101,14 +101,40 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/.cabal/bin:$PATH"
-export PATH="$HOME/.cargo/bin:$PATH"
+####   USER SETTINGS   ####
+
 export MICRO_TRUECOLOR=1
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Make nano the default editor
+
+export EDITOR='nano'
+export VISUAL='nano'
+
+# PS1='[\u@\h \W]\$ '
+
+if [ -d "$HOME/.bin" ] ;
+  then PATH="$HOME/.bin:$PATH"
+fi
+
+if [ -d "$HOME/.local/bin" ] ;
+  then PATH="$HOME/.local/bin:$PATH"
+fi
+
+# export PATH="$HOME/.cabal/bin:$PATH"
+# export PATH="$HOME/.cargo/bin:$PATH"
+
+### ALIASES ###
+
+# List
+# alias ls='ls --color=auto'
+# alias la='ls -a'
+# alias ll='ls -alFh'
+# alias l='ls'
+# alias l.="ls -A | egrep '^\.'"
 
 # Changing "ls" to "exa"
 alias ls='exa -al --color=always --group-directories-first' # my preferred listing
@@ -117,19 +143,27 @@ alias ll='exa -l --color=always --group-directories-first'  # long format
 alias lt='exa -aT --color=always --group-directories-first' # tree listing
 alias l.='exa -a | egrep "^\."'
 
+# Continue download
+alias wget='wget -c '
+
+# Grub update
+alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+
+# Add new fonts
+alias update-fc='sudo fc-cache -fv'
+
 # Common use
-# alias grubup="sudo update-grub"
-# alias tarnow='tar -acf '
-# alias untar='tar -zxvf '
-# alias wget='wget -c '
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
-# alias dir='dir --color=auto'
-# alias vdir='vdir --color=auto'
-# alias grep='grep --color=auto'
-# alias fgrep='fgrep --color=auto'
-# alias egrep='egrep --color=auto'
-# alias hw='hwinfo --short'
+
+## Colorize the grep command output for ease of use (good for log files) ##
+
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# Hardware info --short
+alias hw='hwinfo --short'
