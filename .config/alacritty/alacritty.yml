@@ -21,7 +21,7 @@ env:
   # each instance of Alacritty. If it is not present, alacritty will
   # check the local terminfo database and use `alacritty` if it is
   # available, otherwise `xterm-256color` is used.
-  TERM: alacritty
+  TERM: xterm-256color
 
 window:
   # Window dimensions (changes require restart)
@@ -50,7 +50,7 @@ window:
   #  y: 0
 
   # Spread additional padding evenly around the terminal content.
-  dynamic_padding: false
+  dynamic_padding: true
 
   # Window decorations
   #
@@ -61,7 +61,7 @@ window:
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background and no title bar buttons
-  #decorations: full
+  decorations: full
 
   # Background opacity
   #
@@ -97,7 +97,7 @@ window:
   #
   # Override the variant of the GTK theme. Commonly supported values are `dark`
   # and `light`. Set this to `None` to use the default theme variant.
-  #gtk_theme_variant: None
+  gtk_theme_variant: dark
 
 scrolling:
   # Maximum number of lines in the scrollback buffer.
@@ -105,7 +105,7 @@ scrolling:
   history: 10000
 
   # Scrolling distance multiplier.
-  #multiplier: 3
+  multiplier: 3
 
 # Font configuration
 font:
@@ -117,7 +117,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: hack
+    family: Source Code Pro
 
     # The `style` can be specified to pick a specific face.
     style: Regular
@@ -128,7 +128,7 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: hack
+    family: Source Code Pro
 
     # The `style` can be specified to pick a specific face.
     style: Bold
@@ -139,7 +139,7 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: hack
+    family: Source Code Pro
 
     # The `style` can be specified to pick a specific face.
     style: Italic
@@ -150,7 +150,7 @@ font:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: hack
+    family: Source Code Pro
 
     # The `style` can be specified to pick a specific face.
     style: Bold Italic
@@ -179,9 +179,9 @@ font:
   #use_thin_strokes: true
 
 # If `true`, bold text is drawn using the bright color variants.
-#draw_bold_text_with_bright_colors: false
+draw_bold_text_with_bright_colors: true
 
-# Colors (Tomorrow Night)
+# Colors (Dracula)
 colors:
   # Default colors
   primary:
@@ -372,18 +372,18 @@ colors:
   #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
 
   # When set to `true`, selected text will be copied to the primary clipboard.
-  #save_to_clipboard: false
+  save_to_clipboard: true
 
-#cursor:
+cursor:
   # Cursor style
-  #style:
+  style:
     # Cursor shape
     #
     # Values for `shape`:
     #   - ▇ Block
     #   - _ Underline
     #   - | Beam
-    #shape: Block
+    shape: Block
 
     # Cursor blinking state
     #
@@ -392,7 +392,7 @@ colors:
     #   - Off: Disable blinking by default
     #   - On: Enable blinking by default
     #   - Always: Force the cursor to always blink
-    #blinking: Off
+    blinking: Off
 
   # Vi mode cursor style
   #
@@ -414,7 +414,7 @@ colors:
   #thickness: 0.15
 
 # Live config reload (changes require restart)
-#live_config_reload: true
+live_config_reload: true
 
 # Shell
 #
@@ -443,7 +443,7 @@ colors:
 # Offer IPC using `alacritty msg` (unix only)
 #ipc_socket: true
 
-#mouse:
+mouse:
   # Click settings
   #
   # The `double_click` and `triple_click` settings control the time
@@ -453,7 +453,7 @@ colors:
   #triple_click: { threshold: 300 }
 
   # If this is `true`, the cursor is temporarily hidden when typing.
-  #hide_when_typing: false
+  hide_when_typing: true
 
 # Regex hints
 #
