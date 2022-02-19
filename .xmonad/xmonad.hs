@@ -99,7 +99,7 @@ myStartupHook = do
   spawnOnce "picom -b &"
   spawnOnce "lxpolkit &"
   spawnOnce "urxvtd -q -o -f &"
-  -- spawnOnce "emacs --daemon &"
+  spawnOnce "emacs --daemon &"
   setWMName "LG3D"
   setDefaultCursor xC_left_ptr
 
