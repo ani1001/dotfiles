@@ -3,6 +3,7 @@ update_info=kscreenlocker.upd:0.1-autolock
 
 [Daemon]
 Autolock=false
+LockGrace=10
 Timeout=15
 
 [Greeter]

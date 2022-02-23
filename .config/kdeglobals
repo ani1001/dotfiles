@@ -147,7 +147,7 @@ toolBarFont=Noto Sans,10,-1,5,50,0,0,0,0,0
 widgetStyle=kvantum
 
 [Icons]
-Theme=BeautyLine
+Theme=ePapirus-Dark
 
 [KDE]
 AnimationDurationFactor=1.000000

@@ -3,14 +3,6 @@ _k_friendly_name=Activity Manager
 switch-to-activity-1e514a7b-7c42-4cfa-accb-aff01256b219=none,none,Switch to activity "Default"
 switch-to-activity-d4a8c754-b12d-4bf5-a630-41a1e83e453b=none,none,Switch to activity "Default"
 
-[Clementine]
-_k_friendly_name=Clementine
-next_album=Shift+Media Next,none,Next album
-next_track=Media Next,none,Next track
-play_pause=Media Play,none,Play/Pause
-prev_track=Media Previous,none,Previous track
-stop=Media Stop,none,Stop
-
 [krunner.desktop]
 RunClipboard=Alt+Shift+F2,Alt+Shift+F2,Run command on clipboard contents
 _k_friendly_name=KRunner

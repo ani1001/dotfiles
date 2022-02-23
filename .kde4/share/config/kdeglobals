@@ -80,7 +80,7 @@ ForegroundPositive=80,250,122
 ForegroundVisited=82,148,226
 
 [Colors:View]
-BackgroundAlternate=20,26,33
+BackgroundAlternate=43,45,59
 BackgroundNormal=30,31,41
 DecorationFocus=124,96,163
 DecorationHover=124,96,163
@@ -119,8 +119,8 @@ History Items[$e]=file:///usr/share/wallpapers
 
 [General]
 BrowserApplication[$e]=firefox.desktop
-ColorScheme=DraculaPurple
-Name=Dracula
+ColorScheme=Dracula-purple
+Name=Dracula-purple
 UseSystemBell=true
 XftHintStyle=hintslight
 XftSubPixel=rgb
@@ -130,10 +130,10 @@ menuFont=Noto Sans,10,-1,5,50,0,0,0,0,0
 shadeSortColumn=true
 smallestReadableFont=Noto Sans,8,-1,5,50,0,0,0,0,0
 toolBarFont=Noto Sans,10,-1,5,50,0,0,0,0,0
-widgetStyle=Breeze
+widgetStyle=kvantum
 
 [Icons]
-Theme=BeautyLine
+Theme=ePapirus-Dark
 
 [KDE]
 AnimationDurationFactor=1.000000

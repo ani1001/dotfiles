@@ -78,9 +78,6 @@ CommandWindow2=Activate and pass click
 CommandWindow3=Activate and pass click
 CommandWindowWheel=Scroll
 
-[NightColor]
-Active=true
-
 [Plugins]
 blurEnabled=true
 contrastEnabled=true
