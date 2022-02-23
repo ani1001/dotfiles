@@ -20,7 +20,7 @@
 ;; Launch rxvt-unicode client
 (define-key *root-map* (kbd "C-c") "exec urxvtc")
 ;; Launch terminal
-(define-key *root-map* (kbd "RET") "exec kitty")
+(define-key *root-map* (kbd "RET") "exec alacritty")
 
 ;; Launch emacs
 (define-key *root-map* (kbd "e") "exec emacs")
