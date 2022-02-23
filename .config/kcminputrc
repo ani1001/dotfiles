@@ -1,0 +1,8 @@
+[Keyboard]
+KeyboardRepeating=0
+NumLock=1
+RepeatDelay=600
+RepeatRate=25
+
+[Mouse]
+cursorTheme=Oxygen 07 Purple
