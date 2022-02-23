@@ -1,4 +1,0 @@
-$BROWSER="firefox-esr"
-$EDITOR="emacsclient -c -a 'emacs'"
-$FILEMANAGER="thunar"
-$TERM="xterm -fn fixed +sb -bg white -fg black"
