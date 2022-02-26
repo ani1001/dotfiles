@@ -1,0 +1,41 @@
+------------------------------------------
+Log File: /home/anikb/.fluxbox/log
+Fluxbox version: 1.3.7
+GIT Revision: 1d19662c8975e881b4fa6465a8305be3ea5282ee
+Compiled: Sep 27 2021 10:35:59
+Compiler: GCC
+Compiler version: 11.1.0
+
+Defaults: 
+       menu: /usr/share/fluxbox/menu
+ windowmenu: /usr/share/fluxbox/windowmenu
+      style: /usr/share/fluxbox/styles/bloe
+       keys: /usr/share/fluxbox/keys
+       init: /usr/share/fluxbox/init
+        nls: /usr/share/fluxbox/nls
+
+Compiled options (- => disabled): 
+BIDI
+-DEBUG
+EWMH
+IMLIB2
+NLS
+REMEMBER
+RENDER
+SHAPE
+SLIT
+SYSTEMTRAY
+TOOLBAR
+RANDR
+XFT
+XINERAMA
+XMB
+XPM
+
+------------------------------------------
+Failed to read: session.screen0.struts
+Setting default value
+Failed to read: session.screen0.struts.1
+Setting default value
+Failed to read: session.screen0.iconbar.iconifiedPattern
+Setting default value

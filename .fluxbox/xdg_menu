@@ -1,0 +1,107 @@
+[submenu] (Applications)
+  [submenu] (Accessories)
+    [exec] (ClipIt) {clipit}
+    [exec] (FeatherPad) {featherpad }
+    [exec] (Kate) {kate -b }
+    [exec] (Klipper) {klipper}
+    [exec] (Kvantum Manager) {kvantummanager}
+    [exec] (LXQt File Archiver) {lxqt-archiver }
+    [exec] (OpenBangla Keyboard) {/usr/share/openbangla-keyboard/openbangla-gui }
+    [exec] (PCManFM-Qt File Manager) {pcmanfm-qt }
+    [exec] (Plank) {plank}
+    [exec] (Software Token) {stoken-gui}
+    [exec] (Software Token (small\)) {stoken-gui --small}
+    [exec] (Vim) {xterm -e vim }
+    [exec] (Xarchiver) {xarchiver }
+    [exec] (compton) {compton}
+    [exec] (nitrogen) {nitrogen}
+    [exec] (picom) {picom}
+  [end] # (Accessories)
+  [submenu] (Development)
+    [exec] (Emacs) {emacs }
+    [exec] (Geany) {geany }
+    [exec] (Qt Assistant) {assistant}
+    [exec] (Qt Designer) {designer }
+    [exec] (Qt Linguist) {linguist }
+    [exec] (Qt QDBusViewer) {qdbusviewer}
+    [exec] (UserFeedback Console) {UserFeedbackConsole}
+  [end] # (Development)
+  [submenu] (Graphics)
+    [exec] (Gcolor2) {gcolor2}
+    [exec] (LXImage) {lximage-qt }
+    [exec] (ScreenGrab) {screengrab}
+    [exec] (Screenshot) {lximage-qt --screenshot}
+  [end] # (Graphics)
+  [submenu] (Multimedia)
+    [exec] (Clementine) {clementine }
+    [exec] (PulseAudio Volume Control) {pavucontrol}
+    [exec] (PulseAudio Volume Control) {pavucontrol-qt}
+    [exec] (Qmmp) {qmmp }
+    [exec] (Qt V4L2 test Utility) {qv4l2}
+    [exec] (Qt V4L2 video capture utility) {qvidcap}
+    [exec] (SMPlayer) {smplayer }
+    [exec] (VLC media player) {/usr/bin/vlc --started-from-file }
+    [exec] (Volume Icon) {volumeicon}
+    [exec] (mpv Media Player) {mpv --player-operation-mode=pseudo-gui -- }
+  [end] # (Multimedia)
+  [submenu] (Network)
+    [exec] (AnyDesk) {/usr/bin/anydesk }
+    [exec] (Avahi SSH Server Browser) {/usr/bin/bssh}
+    [exec] (Avahi VNC Server Browser) {/usr/bin/bvnc}
+    [exec] (Firefox) {/usr/lib/firefox/firefox }
+    [exec] (MEGAsync) {megasync}
+    [exec] (Persepolis Download Manager) {persepolis}
+    [exec] (Vivaldi) {/usr/bin/vivaldi-stable }
+    [exec] (Xtreme Download Manager) {"/opt/xdman/xdman"}
+    [exec] (pcloud) {"/run/media/anikb/Galaxy/FLOSS/Applications/AppImages/pcloud" }
+    [exec] (qBittorrent) {qbittorrent }
+  [end] # (Network)
+  [submenu] (Office)
+    [exec] (qpdfview) {qpdfview --unique }
+  [end] # (Office)
+  [submenu] (Other)
+    [exec] (gmrun) {gmrun}
+  [end] # (Other)
+  [submenu] (Settings)
+    [exec] (ARandR) {arandr}
+    [exec] (Advanced Network Configuration) {nm-connection-editor}
+    [exec] (Customize Look and Feel) {lxappearance}
+    [exec] (Desktop) {pcmanfm-qt --desktop-pref=general}
+    [exec] (File Manager Settings) {thunar-settings}
+    [exec] (Firewall Configuration) {gufw}
+    [exec] (IBus Preferences) {ibus-setup}
+    [exec] (KDE System Settings) {systemsettings5}
+    [exec] (Keyboard and Mouse) {lxinput}
+    [exec] (LightDM GTK+ Greeter settings) {lightdm-gtk-greeter-settings-pkexec}
+    [exec] (Openbox Settings) {obconf-qt}
+    [exec] (Power Manager) {xfce4-power-manager-settings}
+    [exec] (Qt5 Settings) {qt5ct}
+    [exec] (Removable Drives and Media) {thunar-volman-settings}
+    [exec] (Tint2 Settings) {tint2conf}
+  [end] # (Settings)
+  [submenu] (System)
+    [exec] (Add/Remove Software) {pamac-manager }
+    [exec] (Alacritty) {alacritty}
+    [exec] (Avahi Zeroconf Browser) {/usr/bin/avahi-discover}
+    [exec] (Bulk Rename) {thunar --bulk-rename }
+    [exec] (Hardware Locality lstopo) {lstopo}
+    [exec] (Htop) {xterm -e htop}
+    [exec] (KDE Partition Manager) {partitionmanager}
+    [exec] (LSHW) {/usr/sbin/gtk-lshw}
+    [exec] (Manage Printing) {/usr/bin/xdg-open http://localhost:631/}
+    [exec] (Modem Manager GUI) {modem-manager-gui}
+    [exec] (Psensor) {psensor}
+    [exec] (QTerminal) {qterminal}
+    [exec] (QTerminal drop down) {qterminal --drop}
+    [exec] (Thunar File Manager) {thunar }
+    [exec] (Tint2) {tint2}
+    [exec] (ToolBox) {xterm -e bmenu}
+    [exec] (UXTerm) {uxterm}
+    [exec] (XTerm) {xterm}
+    [exec] (conky) {conky --daemonize --pause=1}
+    [exec] (ranger) {xterm -e ranger}
+    [exec] (urxvt) {urxvt}
+    [exec] (urxvt (client\)) {urxvtc}
+    [exec] (urxvt (tabbed\)) {urxvt-tabbed}
+  [end] # (System)
+[end] # (Applications)
