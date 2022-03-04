@@ -20,30 +20,67 @@ if test -d ~/.local/bin
     end
 end
 
+####   USER SETTINGS   ####
+
+### EXPORT ###
+
 export PATH="$HOME/.cabal/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
-## Useful aliases
-# Replace ls with exa
-alias ls='exa -al --color=always --group-directories-first --icons' # preferred listing
-alias la='exa -a  --color=always --group-directories-first --icons' # all files and dirs
-alias ll='exa -l  --color=always --group-directories-first --icons' # long format
-alias lt='exa -aT --color=always --group-directories-first --icons' # tree listing
-alias l.="exa -a | egrep '^\.'"                                     # show only dotfiles
+export MICRO_TRUECOLOR=1
+
+# Make nano the default editor
+
+export EDITOR='nano'
+export VISUAL='nano'
+
+### ALIASES ###
+
+# Vim and Emacs
+alias vim="nvim"
+alias em="/usr/bin/emacs -nw"
+alias emacs="emacsclient -c -a 'emacs'"
+alias doom-sc="~/.emacs.d/bin/doom sync"
+alias doom-dr="~/.emacs.d/bin/doom doctor"
+alias doom-up="~/.emacs.d/bin/doom upgrade"
+alias doom-pg="~/.emacs.d/bin/doom purge"
+
+# List
+# alias ls='ls --color=auto'
+# alias la='ls -a'
+# alias ll='ls -alFh'
+# alias l='ls'
+# alias l.="ls -A | egrep '^\.'"
+
+# Changing "ls" to "exa"
+alias ls='exa -al --color=always --group-directories-first' # my preferred listing
+alias la='exa -a --color=always --group-directories-first'  # all files and dirs
+alias ll='exa -l --color=always --group-directories-first'  # long format
+alias lt='exa -aT --color=always --group-directories-first' # tree listing
+alias l.='exa -a | egrep "^\."'
+
+# Continue download
+alias wget='wget -c '
+
+# Grub update
+alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+
+# Add new fonts
+alias update-fc='sudo fc-cache -fv'
 
 # Common use
-# alias grubup="sudo update-grub"
-# alias tarnow='tar -acf '
-# alias untar='tar -zxvf '
-# alias wget='wget -c '
-# alias ..='cd ..'
-# alias ...='cd ../..'
-# alias ....='cd ../../..'
-# alias .....='cd ../../../..'
-# alias ......='cd ../../../../..'
-# alias dir='dir --color=auto'
-# alias vdir='vdir --color=auto'
-# alias grep='grep --color=auto'
-# alias fgrep='fgrep --color=auto'
-# alias egrep='egrep --color=auto'
-# alias hw='hwinfo --short'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
+
+## Colorize the grep command output for ease of use (good for log files) ##
+
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# Hardware info --short
+alias hw='hwinfo --short'
+

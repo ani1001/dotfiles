@@ -103,18 +103,23 @@ source $ZSH/oh-my-zsh.sh
 
 ####   USER SETTINGS   ####
 
-export MICRO_TRUECOLOR=1
+### EXPORT ###
 
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+export PATH="$HOME/.cabal/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+
+export MICRO_TRUECOLOR=1
 
 # Make nano the default editor
 
 export EDITOR='nano'
 export VISUAL='nano'
 
-# PS1='[\u@\h \W]\$ '
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+### PATH ###
 
 if [ -d "$HOME/.bin" ] ;
   then PATH="$HOME/.bin:$PATH"
@@ -124,10 +129,16 @@ if [ -d "$HOME/.local/bin" ] ;
   then PATH="$HOME/.local/bin:$PATH"
 fi
 
-# export PATH="$HOME/.cabal/bin:$PATH"
-# export PATH="$HOME/.cargo/bin:$PATH"
-
 ### ALIASES ###
+
+# Vim and Emacs
+alias vim="nvim"
+alias em="/usr/bin/emacs -nw"
+alias emacs="emacsclient -c -a 'emacs'"
+alias doom-sc="~/.emacs.d/bin/doom sync"
+alias doom-dr="~/.emacs.d/bin/doom doctor"
+alias doom-up="~/.emacs.d/bin/doom upgrade"
+alias doom-pg="~/.emacs.d/bin/doom purge"
 
 # List
 # alias ls='ls --color=auto'
