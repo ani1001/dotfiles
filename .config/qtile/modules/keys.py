@@ -59,6 +59,6 @@ keys = [
     Key("A-r", lazy.spawn("rofi -show run"), desc="Launch rofi"),
     Key("A-t", lazy.spawn("urxvtc"), desc="Launch rxvt-unicode"),
     Key("A-w", lazy.spawn("/usr/local/src/waterfox/waterfox-bin"), desc="Launch waterfox"),
-    Key("A-C-w", lazy.spawn("brave-browser"), desc="Launch brave-browser"),
+    Key("A-C-w", lazy.spawn("chromium"), desc="Launch chromium"),
     Key("A-C-s", lazy.spawn("/usr/local/src/sublime_text/sublime_text"), desc="Launch sublime_text"),
 ]

@@ -5,7 +5,7 @@
         thunar
       </Program>
       <Program label="Terminal">
-        urxvt
+        urxvtc
       </Program>
       <Separator/>
       <Include>exec:xdgmenumaker -n -f jwm</Include>

@@ -133,7 +133,7 @@ toolBarFont=Noto Sans,10,-1,5,50,0,0,0,0,0
 widgetStyle=kvantum
 
 [Icons]
-Theme=ePapirus-Dark
+Theme=Papirus-Dark-Maia
 
 [KDE]
 AnimationDurationFactor=1.000000

@@ -274,7 +274,7 @@ bindsym $mod+9 exec --no-startup-id blurlock
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # exec --no-startup-id nitrogen --restore; sleep 1; picom -b
-exec --no-startup-id feh --bg-fill /usr/share/backgrounds/i3_default_background.jpg
+exec --no-startup-id feh --bg-fill /usr/share/backgrounds/ant_mi3.jpg
 exec --no-startup-id picom -b
 exec --no-startup-id manjaro-hello
 exec --no-startup-id nm-applet

@@ -33,3 +33,5 @@ picom &
 #run discord &
 #run spotify &
 #run atom &
+urxvtd -q -o -f &
+emacs --daemon &
