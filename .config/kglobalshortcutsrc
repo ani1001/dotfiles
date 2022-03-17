@@ -1,16 +1,6 @@
 [ActivityManager]
 _k_friendly_name=Activity Manager
 switch-to-activity-1e514a7b-7c42-4cfa-accb-aff01256b219=none,none,Switch to activity "Default"
-switch-to-activity-d4a8c754-b12d-4bf5-a630-41a1e83e453b=none,none,Switch to activity "Default"
-
-[krunner.desktop]
-RunClipboard=Alt+Shift+F2,Alt+Shift+F2,Run command on clipboard contents
-_k_friendly_name=KRunner
-_launch=Alt+Space\tAlt+F2\tSearch,Alt+Space\tAlt+F2\tSearch,KRunner
-
-[ksmserver]
-Lock Session=Ctrl+Alt+L\tScreensaver,none,Lock Session
-_k_friendly_name=Session Management
 
 [kwin]
 Activate Window Demanding Attention=Ctrl+Alt+A,Ctrl+Alt+A,Activate Window Demanding Attention
@@ -18,12 +8,9 @@ Decrease Opacity=none,,Decrease Opacity of Active Window by 5 %
 Expose=Ctrl+F9,Ctrl+F9,Toggle Present Windows (Current desktop)
 ExposeAll=Ctrl+F10\tLaunch (C),Ctrl+F10\tLaunch (C),Toggle Present Windows (All desktops)
 ExposeClass=Ctrl+F7,Ctrl+F7,Toggle Present Windows (Window class)
-FlipSwitchAll=none,none,Toggle Flip Switch (All desktops)
-FlipSwitchCurrent=none,none,Toggle Flip Switch (Current desktop)
 Increase Opacity=none,,Increase Opacity of Active Window by 5 %
 Invert Screen Colors=none,,Invert Screen Colors
 Kill Window=Ctrl+Alt+Esc,Ctrl+Alt+Esc,Kill Window
-MinimizeAll=Meta+Shift+D,none,MinimizeAll
 MoveMouseToCenter=Meta+F6,Meta+F6,Move Mouse to Center
 MoveMouseToFocus=Meta+F5,Meta+F5,Move Mouse to Focus
 MoveZoomDown=none,none,Move Zoomed Area Downwards
@@ -92,25 +79,26 @@ Window Above Other Windows=none,,Keep Window Above Others
 Window Below Other Windows=none,,Keep Window Below Others
 Window Close=Alt+F4,Alt+F4,Close Window
 Window Fullscreen=none,,Make Window Fullscreen
-Window Grow Horizontal=none,,Pack Grow Window Horizontally
-Window Grow Vertical=none,,Pack Grow Window Vertically
+Window Grow Horizontal=none,,Expand Window Horizontally
+Window Grow Vertical=none,,Expand Window Vertically
 Window Lower=none,,Lower Window
 Window Maximize=Meta+PgUp,Meta+PgUp,Maximize Window
 Window Maximize Horizontal=none,,Maximize Window Horizontally
 Window Maximize Vertical=none,,Maximize Window Vertically
 Window Minimize=Meta+PgDown,Meta+PgDown,Minimize Window
 Window Move=none,,Move Window
+Window Move Center=none,,Move Window to the Center
 Window No Border=none,,Hide Window Border
 Window On All Desktops=none,,Keep Window on All Desktops
-Window One Desktop Down=none,Meta+Ctrl+Shift+Down,Window One Desktop Down
-Window One Desktop Up=none,Meta+Ctrl+Shift+Up,Window One Desktop Up
-Window One Desktop to the Left=none,Meta+Ctrl+Shift+Left,Window One Desktop to the Left
-Window One Desktop to the Right=none,Meta+Ctrl+Shift+Right,Window One Desktop to the Right
+Window One Desktop Down=Meta+Ctrl+Shift+Down,Meta+Ctrl+Shift+Down,Window One Desktop Down
+Window One Desktop Up=Meta+Ctrl+Shift+Up,Meta+Ctrl+Shift+Up,Window One Desktop Up
+Window One Desktop to the Left=Meta+Ctrl+Shift+Left,Meta+Ctrl+Shift+Left,Window One Desktop to the Left
+Window One Desktop to the Right=Meta+Ctrl+Shift+Right,Meta+Ctrl+Shift+Right,Window One Desktop to the Right
 Window Operations Menu=Alt+F3,Alt+F3,Window Operations Menu
-Window Pack Down=none,,Pack Window Down
-Window Pack Left=none,,Pack Window to the Left
-Window Pack Right=none,,Pack Window to the Right
-Window Pack Up=none,,Pack Window Up
+Window Pack Down=none,,Move Window Down
+Window Pack Left=none,,Move Window Left
+Window Pack Right=none,,Move Window Right
+Window Pack Up=none,,Move Window Up
 Window Quick Tile Bottom=Meta+Down,Meta+Down,Quick Tile Window to the Bottom
 Window Quick Tile Bottom Left=none,,Quick Tile Window to the Bottom Left
 Window Quick Tile Bottom Right=none,,Quick Tile Window to the Bottom Right
@@ -122,8 +110,8 @@ Window Quick Tile Top Right=none,,Quick Tile Window to the Top Right
 Window Raise=none,,Raise Window
 Window Resize=none,,Resize Window
 Window Shade=none,,Shade Window
-Window Shrink Horizontal=none,,Pack Shrink Window Horizontally
-Window Shrink Vertical=none,,Pack Shrink Window Vertically
+Window Shrink Horizontal=none,,Shrink Window Horizontally
+Window Shrink Vertical=none,,Shrink Window Vertically
 Window to Desktop 1=none,,Window to Desktop 1
 Window to Desktop 10=none,,Window to Desktop 10
 Window to Desktop 11=none,,Window to Desktop 11
@@ -145,9 +133,9 @@ Window to Desktop 7=none,,Window to Desktop 7
 Window to Desktop 8=none,,Window to Desktop 8
 Window to Desktop 9=none,,Window to Desktop 9
 Window to Next Desktop=none,,Window to Next Desktop
-Window to Next Screen=none,Meta+Shift+Right,Window to Next Screen
+Window to Next Screen=Meta+Shift+Right,Meta+Shift+Right,Window to Next Screen
 Window to Previous Desktop=none,,Window to Previous Desktop
-Window to Previous Screen=none,Meta+Shift+Left,Window to Previous Screen
+Window to Previous Screen=Meta+Shift+Left,Meta+Shift+Left,Window to Previous Screen
 Window to Screen 0=none,,Window to Screen 0
 Window to Screen 1=none,,Window to Screen 1
 Window to Screen 2=none,,Window to Screen 2
@@ -162,9 +150,9 @@ view_zoom_in=Meta+=,Meta+=,Zoom In
 view_zoom_out=Meta+-,Meta+-,Zoom Out
 
 [org.kde.krunner.desktop]
-RunClipboard=none,Alt+Shift+F2,Run command on clipboard contents
+RunClipboard=Alt+Shift+F2,Alt+Shift+F2,Run command on clipboard contents
 _k_friendly_name=KRunner
-_launch=none,Alt+Space\tAlt+F2\tSearch,KRunner
+_launch=Alt+Space\tAlt+F2\tSearch,Alt+Space\tAlt+F2\tSearch,KRunner
 
 [systemsettings.desktop]
 _k_friendly_name=System Settings

@@ -1,8 +1,5 @@
-[Keyboard]
-KeyboardRepeating=0
-NumLock=1
-RepeatDelay=600
-RepeatRate=25
+[$Version]
+update_info=delete_cursor_old_default_size.upd:DeleteCursorOldDefaultSize
 
 [Mouse]
-cursorTheme=default
+cursorTheme=Breeze_Snow

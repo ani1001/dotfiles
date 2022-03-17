@@ -3,204 +3,114 @@ update_info=filepicker.upd:filepicker-remove-old-previews-entry,fonts_global.upd
 
 [ColorEffects:Disabled]
 ChangeSelectionColor=
-Color=56,56,56
+Color=112,111,110
 ColorAmount=0
 ColorEffect=0
 ContrastAmount=0.65
 ContrastEffect=1
 Enable=
 IntensityAmount=0.1
-IntensityEffect=2
+IntensityEffect=0
 
 [ColorEffects:Inactive]
 ChangeSelectionColor=true
 Color=112,111,110
-ColorAmount=0.025000000000000001
+ColorAmount=0.025
 ColorEffect=2
-ContrastAmount=0.10000000000000001
+ContrastAmount=0.1
 ContrastEffect=2
-Enable=false
+Enable=true
 IntensityAmount=0
 IntensityEffect=0
 
 [Colors:Button]
-BackgroundAlternate=64,69,82
-BackgroundNormal=40,42,54
-DecorationFocus=124,96,163
-DecorationHover=124,96,163
-ForegroundActive=61,174,233
-ForegroundInactive=102,106,115
-ForegroundLink=41,128,185
-ForegroundNegative=255,85,85
-ForegroundNeutral=255,184,108
-ForegroundNormal=248,248,242
-ForegroundPositive=80,250,122
-ForegroundVisited=82,148,226
-
-[Colors:Complementary]
-BackgroundAlternate=59,64,69
-BackgroundNormal=49,54,59
-DecorationFocus=61,174,233
-DecorationHover=147,206,233
-ForegroundActive=147,206,233
-ForegroundInactive=175,176,179
-ForegroundLink=61,174,230
-ForegroundNegative=231,76,60
-ForegroundNeutral=253,188,75
-ForegroundNormal=239,240,241
-ForegroundPositive=46,174,230
-ForegroundVisited=61,174,230
-
-[Colors:Header]
-BackgroundAlternate=47,52,63
-BackgroundNormal=40,42,54
-DecorationFocus=124,96,163
-DecorationHover=124,96,163
-ForegroundActive=139,233,253
-ForegroundInactive=102,106,115
-ForegroundLink=41,128,185
-ForegroundNegative=255,85,85
-ForegroundNeutral=255,184,108
-ForegroundNormal=248,248,242
-ForegroundPositive=80,250,122
-ForegroundVisited=68,71,90
+BackgroundAlternate=74,74,74
+BackgroundNormal=85,85,85
+DecorationFocus=170,170,170
+DecorationHover=150,150,150
+ForegroundActive=255,128,224
+ForegroundInactive=160,160,160
+ForegroundLink=46,184,230
+ForegroundNegative=240,1,1
+ForegroundNeutral=255,221,0
+ForegroundNormal=255,255,255
+ForegroundPositive=128,255,128
+ForegroundVisited=255,102,102
 
 [Colors:Selection]
-BackgroundAlternate=29,153,243
-BackgroundNormal=124,96,163
-DecorationFocus=124,96,163
-DecorationHover=124,96,163
-ForegroundActive=252,252,252
-ForegroundInactive=211,218,227
-ForegroundLink=253,188,75
-ForegroundNegative=255,85,85
-ForegroundNeutral=255,184,108
-ForegroundNormal=254,254,254
-ForegroundPositive=80,250,122
-ForegroundVisited=189,195,199
+BackgroundAlternate=63,103,165
+BackgroundNormal=63,103,165
+DecorationFocus=170,170,170
+DecorationHover=150,150,150
+ForegroundActive=255,128,224
+ForegroundInactive=160,160,160
+ForegroundLink=46,184,230
+ForegroundNegative=240,1,1
+ForegroundNeutral=255,221,0
+ForegroundNormal=255,255,255
+ForegroundPositive=128,255,128
+ForegroundVisited=255,102,102
 
 [Colors:Tooltip]
-BackgroundAlternate=47,52,63
-BackgroundNormal=53,57,69
-DecorationFocus=124,96,163
-DecorationHover=124,96,163
-ForegroundActive=61,174,233
-ForegroundInactive=102,106,115
-ForegroundLink=41,128,185
-ForegroundNegative=255,85,85
-ForegroundNeutral=255,184,108
-ForegroundNormal=211,218,227
-ForegroundPositive=80,250,122
-ForegroundVisited=82,148,226
+BackgroundAlternate=0,0,0
+BackgroundNormal=0,0,0
+DecorationFocus=170,170,170
+DecorationHover=150,150,150
+ForegroundActive=255,128,224
+ForegroundInactive=225,225,225
+ForegroundLink=46,184,230
+ForegroundNegative=240,1,1
+ForegroundNeutral=255,221,0
+ForegroundNormal=255,255,255
+ForegroundPositive=128,255,128
+ForegroundVisited=255,102,102
 
 [Colors:View]
-BackgroundAlternate=20,26,33
-BackgroundNormal=30,31,41
-DecorationFocus=124,96,163
-DecorationHover=124,96,163
-ForegroundActive=139,233,253
-ForegroundInactive=102,106,115
-ForegroundLink=82,148,226
-ForegroundNegative=255,85,85
-ForegroundNeutral=255,184,108
-ForegroundNormal=248,248,242
-ForegroundPositive=80,250,122
-ForegroundVisited=124,183,255
+BackgroundAlternate=56,56,56
+BackgroundNormal=46,46,46
+DecorationFocus=170,170,170
+DecorationHover=150,150,150
+ForegroundActive=255,128,224
+ForegroundInactive=160,160,160
+ForegroundLink=46,184,230
+ForegroundNegative=240,1,1
+ForegroundNeutral=255,221,0
+ForegroundNormal=255,255,255
+ForegroundPositive=128,255,128
+ForegroundVisited=255,102,102
 
 [Colors:Window]
-BackgroundAlternate=47,52,63
-BackgroundNormal=40,42,54
-DecorationFocus=124,96,163
-DecorationHover=124,96,163
-ForegroundActive=139,233,253
-ForegroundInactive=102,106,115
-ForegroundLink=41,128,185
-ForegroundNegative=255,85,85
-ForegroundNeutral=255,184,108
-ForegroundNormal=248,248,242
-ForegroundPositive=80,250,122
-ForegroundVisited=68,71,90
-
-[DesktopIcons]
-Size=32
-
-[DialogIcons]
-Size=32
-
-[DirSelect Dialog]
-DirSelectDialog Size=640,480
-History Items[$e]=file:///usr/share/wallpapers
+BackgroundAlternate=49,49,49
+BackgroundNormal=61,61,62
+DecorationFocus=170,170,170
+DecorationHover=150,150,150
+ForegroundActive=255,128,224
+ForegroundInactive=160,160,160
+ForegroundLink=46,184,230
+ForegroundNegative=240,1,1
+ForegroundNeutral=255,221,0
+ForegroundNormal=255,255,255
+ForegroundPositive=128,255,128
+ForegroundVisited=255,102,102
 
 [General]
-BrowserApplication[$e]=firedragon.desktop
-ColorScheme=DraculaPurple
-Name=Dracula
-UseSystemBell=true
+ColorScheme=KvFlat
+ColorSchemeHash=9163139877916089673a361083a2231d380293d7
 XftHintStyle=hintslight
 XftSubPixel=rgb
-fixed=Hack,9,-1,5,50,0,0,0,0,0
-font=Noto Sans,10,-1,5,50,0,0,0,0,0
-menuFont=Noto Sans,10,-1,5,50,0,0,0,0,0
-shadeSortColumn=true
-smallestReadableFont=Noto Sans,8,-1,5,50,0,0,0,0,0
-toolBarFont=Noto Sans,10,-1,5,50,0,0,0,0,0
-widgetStyle=kvantum
+fixed=Hack,10,-1,5,50,0,0,0,0,0
 
 [Icons]
-Theme=ePapirus-Dark
+Theme=breeze-dark
 
 [KDE]
-AnimationDurationFactor=1.000000
-ColorScheme=Breeze
-LookAndFeelPackage=Dracula
-ShowIconsInMenuItems=true
-ShowIconsOnPushButtons=true
-contrast=5
+LookAndFeelPackage=org.kde.breezedark.desktop
 widgetStyle=kvantum
 
-[KFileDialog Settings]
-Allow Expansion=false
-Automatically select filename extension=true
-Breadcrumb Navigation=true
-Decoration position=2
-LocationCombo Completionmode=5
-PathCombo Completionmode=5
-Show Bookmarks=false
-Show Full Path=false
-Show Inline Previews=true
-Show Preview=false
-Show Speedbar=true
-Show hidden files=false
-Sort by=Name
-Sort directories first=true
-Sort reversed=false
-Speedbar Width=152
-View Style=DetailTree
-
-[KShortcutsDialog Settings]
-Dialog Size=600,480
-
-[MainToolbarIcons]
-Size=22
-
-[PanelIcons]
-Size=48
-
-[SmallIcons]
-Size=16
-
-[Toolbar style]
-ToolButtonStyle=TextBesideIcon
-ToolButtonStyleOtherToolbars=TextBesideIcon
-
-[ToolbarIcons]
-Size=22
-
 [WM]
-activeBackground=47,52,63
-activeBlend=47,52,63
-activeFont=Noto Sans,10,-1,5,50,0,0,0,0,0
-activeForeground=211,218,227
-inactiveBackground=47,52,63
-inactiveBlend=47,52,63
-inactiveForeground=102,106,115
+activeBackground=61,61,62
+activeBlend=61,61,62
+activeForeground=255,255,255
+inactiveBackground=61,61,62
+inactiveBlend=61,61,62
+inactiveForeground=155,155,155

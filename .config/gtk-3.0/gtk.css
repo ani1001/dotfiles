@@ -1,4 +1,6 @@
-.window-frame {
-  box-shadow: none;
-  margin: 0;
+decoration {
+border-width: 0.4px;
+/*border-color: #808080;*/
+border-color: #F57641;
+border-style: solid;
 }
