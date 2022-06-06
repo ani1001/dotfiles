@@ -7,9 +7,11 @@ function run {
   fi
 }
 
-#run nitrogen --restore
-run picom
+run nitrogen --restore
+run picom -b
 run lxpolkit
+run nm-applet
+run volumeicon
 run mpd
 run urxvtd -q -o -f
 run emacs --daemon

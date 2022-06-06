@@ -12,16 +12,17 @@
 (load "~/.stumpwm.d/web-jump.lisp")
 
 ;; Window appearance
-(setf *message-window-padding* 2
-      *message-window-gravity* :top-right
-      *timeout-wait* 3
-      *input-window-gravity* :bottom-right
-      *maxsize-border-width* 3
-      *transient-border-width* 2
-      *normal-border-width* 3
+(setf *message-window-padding* 10
+      *message-window-y-padding* 10
+      *message-window-gravity* :top-left
+      *timeout-wait* 5
+      *input-window-gravity* :top-left
+      *maxsize-border-width* 1
+      *transient-border-width* 1
+      *normal-border-width* 0
       *window-border-style* :thin
-      *float-window-border* 2
-      *float-window-title-height* 15
+      *float-window-border* 1
+      *float-window-title-height* 1
       *mouse-focus-policy* :click)
 
 ;; Message and input bar colors
@@ -40,6 +41,6 @@
 (set-float-unfocus-color nord14)
 
 ;; Window gravity
-(set-normal-gravity :center)
-(set-maxsize-gravity :center)
-(set-transient-gravity :center)
+(set-normal-gravity :top) ;; top for terminals
+(set-maxsize-gravity :center) ;; center for floating X apps
+(set-transient-gravity :center) ;; center for save-as/open popups
