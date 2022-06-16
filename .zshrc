@@ -2,7 +2,7 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/anikb/.oh-my-zsh"
+export ZSH="/home/anik/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -70,7 +70,7 @@ zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -108,16 +108,15 @@ source $ZSH/oh-my-zsh.sh
 export PATH="$HOME/.cabal/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
-export MICRO_TRUECOLOR=1
+# export MICRO_TRUECOLOR=1
 
 # Make nano the default editor
 
 export EDITOR='nano'
 export VISUAL='nano'
 
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 ### PATH ###
 
@@ -132,13 +131,9 @@ fi
 ### ALIASES ###
 
 # Vim and Emacs
-alias vim="nvim"
+alias vi="nvim"
 alias em="/usr/bin/emacs -nw"
 alias emacs="emacsclient -c -a 'emacs'"
-alias doom-sc="~/.emacs.d/bin/doom sync"
-alias doom-dr="~/.emacs.d/bin/doom doctor"
-alias doom-up="~/.emacs.d/bin/doom upgrade"
-alias doom-pg="~/.emacs.d/bin/doom purge"
 
 # List
 # alias ls='ls --color=auto'
@@ -158,7 +153,7 @@ alias l.='exa -a | egrep "^\."'
 alias wget='wget -c '
 
 # Grub update
-alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+# alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
 # Add new fonts
 alias update-fc='sudo fc-cache -fv'
