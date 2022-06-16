@@ -1,7 +1,7 @@
 from libqtile.config import EzKey as Key
 from .mouse import *
 
-terminal = "alacritty"
+terminal = "kitty"
 
 keys = [
     # Switch between windows
@@ -52,13 +52,13 @@ keys = [
 
     # Keybindings to launch user defined programs
     Key("A-d", lazy.spawn("dmenu_run"), desc="Launch dmenu"),
-    Key("A-e", lazy.spawn("emacs"), desc="Launch emacs"),
+    Key("A-e", lazy.spawn("emacsclient -c -a 'emacs'"), desc="Launch emacs"),
     Key("A-f", lazy.spawn("thunar"), desc="Launch thunar"),
-    Key("A-m", lazy.spawn("/usr/local/src/thunderbird/thunderbird"), desc="Launch thunderbird"),
     Key("A-n", lazy.spawn("nitrogen"), desc="Launch nitrogen"),
     Key("A-r", lazy.spawn("rofi -show run"), desc="Launch rofi"),
     Key("A-t", lazy.spawn("urxvtc"), desc="Launch rxvt-unicode"),
-    Key("A-w", lazy.spawn("/usr/local/src/waterfox/waterfox-bin"), desc="Launch waterfox"),
-    Key("A-C-w", lazy.spawn("chromium"), desc="Launch chromium"),
+    Key("A-w", lazy.spawn("brave-browser"), desc="Launch brave"),
+    Key("A-C-m", lazy.spawn("/usr/local/src/thunderbird/thunderbird"), desc="Launch thunderbird"),
     Key("A-C-s", lazy.spawn("/usr/local/src/sublime_text/sublime_text"), desc="Launch sublime_text"),
+    Key("A-C-w", lazy.spawn("/usr/local/src/waterfox/waterfox-bin"), desc="Launch waterfox"),
 ]
