@@ -4,7 +4,7 @@
 ;   go to https://github.com/jaagr/polybar
 ;
 ;   The README contains alot of information
-;	Themes : https://github.com/jaagr/dots/tree/master/.local/etc/themer/themes
+;   Themes : https://github.com/jaagr/dots/tree/master/.local/etc/themer/themes
 ;   https://github.com/jaagr/polybar/wiki/
 ;   https://github.com/jaagr/polybar/wiki/Configuration
 ;   https://github.com/jaagr/polybar/wiki/Formatting
@@ -165,7 +165,6 @@ double-click-right =
 cursor-click =
 cursor-scroll =
 
-
 ################################################################################
 ################################################################################
 ############                         MAINBAR-I3-EXTRA               ############
@@ -320,8 +319,6 @@ tray-scale = 1.0
 tray-position = right
 tray-background = ${colors.background}
 
-
-
 ################################################################################
 ################################################################################
 ############                    MAINBAR-OPENBOX-EXTRA               ############
@@ -381,7 +378,6 @@ modules-right = filesystem
 ;tray-scale = 1.0
 ;tray-position = right
 ;tray-background = ${colors.background}
-
 
 ################################################################################
 ################################################################################
@@ -449,7 +445,6 @@ tray-background = ${colors.background}
 scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
 
-
 ################################################################################
 ################################################################################
 ############                  MAINBAR-BSPWM-EXTRA                   ############
@@ -516,7 +511,6 @@ modules-right = filesystem
 scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
 
-
 ################################################################################
 ################################################################################
 ############                  MAINBAR-HERBSTLUFTWM                  ############
@@ -582,7 +576,6 @@ tray-background = ${colors.background}
 
 scroll-up = herbstclient use_index -1
 scroll-down = herbstclient use_index +1
-
 
 ################################################################################
 ################################################################################
@@ -715,7 +708,6 @@ tray-background = ${colors.background}
 
 ;scroll-up = herbstclient use_index -1
 ;scroll-down = herbstclient use_index +1
-
 
 ################################################################################
 ################################################################################
@@ -970,7 +962,6 @@ tray-scale = 1.0
 tray-position = right
 tray-background = ${colors.background}
 
-
 ################################################################################
 ################################################################################
 ############                  MAINBAR-XMONAD-EXTRA                  ############
@@ -1033,7 +1024,6 @@ modules-right = filesystem
 ;tray-scale = 1.0
 ;tray-position = right
 ;tray-background = ${colors.background}
-
 
 ################################################################################
 ################################################################################
@@ -1166,7 +1156,6 @@ tray-background = ${colors.background}
 scroll-up = cwm-desknext
 scroll-down = cwm-deskprev
 
-
 ################################################################################
 ################################################################################
 ############                  MAINBAR-CWM-EXTRA                     ############
@@ -1298,7 +1287,6 @@ tray-background = ${colors.background}
 scroll-up = fvwm3-desknext
 scroll-down = fvwm3-deskprev
 
-
 ################################################################################
 ################################################################################
 ############                  MAINBAR-FVWM3-EXTRA                   ############
@@ -1428,7 +1416,6 @@ tray-scale = 1.0
 tray-position = right
 tray-background = ${colors.background}
 
-
 ################################################################################
 ################################################################################
 ############                  MAINBAR-WMDERLAND-EXTRA               ############
@@ -1491,7 +1478,6 @@ modules-right = filesystem
 ;tray-scale = 1.0
 ;tray-position = right
 ;tray-background = ${colors.background}
-
 
 ################################################################################
 ################################################################################
@@ -1556,7 +1542,6 @@ tray-scale = 1.0
 tray-position = right
 tray-background = ${colors.background}
 
-
 ################################################################################
 ################################################################################
 ############                  MAINBAR-LEFTWM-EXTRA               ############
@@ -1619,7 +1604,6 @@ modules-right = filesystem
 ;tray-scale = 1.0
 ;tray-position = right
 ;tray-background = ${colors.background}
-
 
 ################################################################################
 ################################################################################
@@ -1768,7 +1752,6 @@ ws-icon-8 = 9;
 ws-icon-9 = 10;
 ws-icon-default = " "
 
-
 format = <label-state> <label-mode>
 
 label-focused = %icon%
@@ -1814,7 +1797,6 @@ label-private-foreground = ${colors.foreground}
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
-
 ################################################################################
 ###############################################################################
 ############                       MODULES A-Z                      ############
@@ -1854,6 +1836,7 @@ format-background = ${colors.background}
 format-prefix-foreground = #7D49B6
 format-prefix-underline = #7D49B6
 format-underline = #7D49B6
+
 ################################################################################
 
 [module/backlight]
@@ -2096,7 +2079,6 @@ label-empty-padding = 2
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
-
 #################################################################
 
 [module/ewmh-noscroll]
@@ -2171,7 +2153,6 @@ format-mounted = <label-mounted>
 format-mounted-foreground = ${colors.foreground}
 format-mounted-background = ${colors.background}
 format-mounted-underline = #fe0000
-
 
 ; Available tokens:
 ;   %mountpoint%
@@ -2312,7 +2293,6 @@ format-underline = #3384d0
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
-
 ################################################################################
 
 [module/mpd]
@@ -2337,6 +2317,7 @@ bar-progress-fill-background = ${colors.background}
 bar-progress-indicator-foreground = ${colors.foreground}
 format-online-foreground = ${colors.foreground}
 format-online-background = ${colors.background}
+
 ################################################################################
 
 [module/networkspeedup]
@@ -2416,8 +2397,6 @@ format-underline = #3EC13F
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
-
-
 ################################################################################
 
 [module/pub-ip]
@@ -2485,7 +2464,6 @@ format = <label>
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 exec = ~/.config/polybar/scripts/scroll_spotify_status.sh
-
 
 [module/spotify-prev]
 type = custom/script
@@ -2778,7 +2756,6 @@ format-background = ${colors.background}
 
 ###############################################################################
 
-
 [module/xworkspaces]
 type = internal/xworkspaces
 
@@ -2786,7 +2763,6 @@ pin-workspaces = false
 enable-click = true
 enable-scroll = true
 reverse-scroll = true
-
 
 icon-0 = 1;
 icon-1 = 2;
