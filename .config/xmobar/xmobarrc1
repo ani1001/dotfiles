@@ -22,9 +22,9 @@ Config { font = "-misc-fixed-*-*-*-*-13-*-*-*-*-*-*-*"
                     , Run Swap [] 10
                     , Run TopProc [] 10
                     , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
-                    , Run StdinReader
+                    , Run UnsafeStdinReader
        ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = " %StdinReader% }{ %multicpu% | %memory% * %swap% | %usb0% | <fc=#b48ead>%date%</fc> | %VGHS% "
+       , template = "%UnsafeStdinReader% }{ %multicpu% | %memory% * %swap% | %usb0% | <fc=#b48ead>%date%</fc> | %VGHS% "
 }
