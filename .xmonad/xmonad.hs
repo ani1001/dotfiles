@@ -6,12 +6,11 @@ import XMonad.Hooks.SetWMName
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.EwmhDesktops
-import XMonad.Hooks.ManageHelpers(doFullFloat, doCenterFloat, isFullscreen, isDialog)
+import XMonad.Hooks.ManageHelpers ( doFullFloat, doCenterFloat, isFullscreen, isDialog )
 import XMonad.Config.Desktop
-import XMonad.Config.Azerty
-import XMonad.Util.Run(spawnPipe)
+import XMonad.Util.Run ( spawnPipe )
 import XMonad.Actions.SpawnOn
-import XMonad.Util.EZConfig (additionalKeys, additionalMouseBindings)
+import XMonad.Util.EZConfig ( additionalKeys, additionalMouseBindings )
 import XMonad.Actions.CycleWS
 import XMonad.Hooks.UrgencyHook
 import qualified Codec.Binary.UTF8.String as UTF8
@@ -19,22 +18,22 @@ import qualified Codec.Binary.UTF8.String as UTF8
 import XMonad.Layout.Spacing
 import XMonad.Layout.Gaps
 import XMonad.Layout.ResizableTile
---import XMonad.Layout.NoBorders
-import XMonad.Layout.Fullscreen (fullscreenFull)
-import XMonad.Layout.Cross(simpleCross)
-import XMonad.Layout.Spiral(spiral)
+import XMonad.Layout.NoBorders
+import XMonad.Layout.Fullscreen ( fullscreenFull )
+import XMonad.Layout.Cross ( simpleCross )
+import XMonad.Layout.Spiral ( spiral )
 import XMonad.Layout.ThreeColumns
 import XMonad.Layout.MultiToggle
 import XMonad.Layout.MultiToggle.Instances
 import XMonad.Layout.IndependentScreens
 
-import XMonad.Layout.CenteredMaster(centerMaster)
+import XMonad.Layout.CenteredMaster ( centerMaster )
 
 import Graphics.X11.ExtraTypes.XF86
 import qualified XMonad.StackSet as W
 import qualified Data.Map as M
 import qualified Data.ByteString as B
-import Control.Monad (liftM2)
+import Control.Monad ( liftM2 )
 import qualified DBus as D
 import qualified DBus.Client as D
 
@@ -49,18 +48,18 @@ fore     = "#DEE3E0"
 back     = "#282c34"
 winType  = "#c678dd"
 
---mod4Mask= super key
---mod1Mask= alt key
---controlMask= ctrl key
---shiftMask= shift key
+-- mod4Mask= super key
+-- mod1Mask= alt key
+-- controlMask= ctrl key
+-- shiftMask= shift key
 
 myModMask = mod4Mask
 encodeCChar = map fromIntegral . B.unpack
 myFocusFollowsMouse = True
 myBorderWidth = 2
 myWorkspaces    = ["\61612","\61899","\61947","\61635","\61502","\61501","\61705","\61564","\62150","\61872"]
---myWorkspaces    = ["1","2","3","4","5","6","7","8","9","10"]
---myWorkspaces    = ["I","II","III","IV","V","VI","VII","VIII","IX","X"]
+-- myWorkspaces    = ["1","2","3","4","5","6","7","8","9","10"]
+-- myWorkspaces    = ["I","II","III","IV","V","VI","VII","VIII","IX","X"]
 
 myBaseConfig = desktopConfig
 
@@ -127,29 +126,29 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
 
   [ ((modMask, xK_c), spawn $ "conky-toggle" )
   , ((modMask, xK_d ), spawn $ "dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'")
-  , ((modMask, xK_e), spawn $ "emacs" )
+  , ((modMask, xK_e), spawn $ "emacsclient -c -a 'emacs'" )
   , ((modMask, xK_f), sendMessage $ Toggle NBFULL)
   , ((modMask, xK_h), spawn $ "urxvtc 'htop task manager' -e htop" )
   , ((modMask, xK_m), spawn $ "pragha" )
   , ((modMask, xK_r), spawn $ "rofi-theme-selector" )
-  , ((modMask, xK_t), spawn $ "urxvtc" )
+  , ((modMask, xK_t), spawn $ "kitty" )
   , ((modMask, xK_v), spawn $ "pavucontrol" )
   , ((modMask, xK_w), kill )
   , ((modMask, xK_y), spawn $ "polybar-msg cmd toggle" )
   , ((modMask, xK_Escape), spawn $ "xkill" )
-  , ((modMask, xK_Return), spawn $ "urxvtc" )
-  , ((modMask, xK_F1), spawn $ "brave-browser" )
-  , ((modMask, xK_F2), spawn $ "emacs" )
-  , ((modMask, xK_F3), spawn $ "inkscape" )
-  , ((modMask, xK_F4), spawn $ "gimp" )
-  , ((modMask, xK_F5), spawn $ "meld" )
-  , ((modMask, xK_F6), spawn $ "vlc --video-on-top" )
-  , ((modMask, xK_F7), spawn $ "virtualbox" )
-  , ((modMask, xK_F8), spawn $ "thunar" )
-  , ((modMask, xK_F9), spawn $ "evolution" )
-  , ((modMask, xK_F10), spawn $ "spotify" )
-  , ((modMask, xK_F11), spawn $ "rofi -theme-str 'window {width: 100%;height: 100%;}' -show drun" )
-  , ((modMask, xK_F12), spawn $ "rofi -show run" )
+  , ((modMask, xK_Return), spawn $ "st" )
+  -- , ((modMask, xK_F1), spawn $ "brave-browser" )
+  -- , ((modMask, xK_F2), spawn $ "emacs" )
+  -- , ((modMask, xK_F3), spawn $ "inkscape" )
+  -- , ((modMask, xK_F4), spawn $ "gimp" )
+  -- , ((modMask, xK_F5), spawn $ "meld" )
+  -- , ((modMask, xK_F6), spawn $ "vlc --video-on-top" )
+  -- , ((modMask, xK_F7), spawn $ "virtualbox" )
+  -- , ((modMask, xK_F8), spawn $ "thunar" )
+  -- , ((modMask, xK_F9), spawn $ "evolution" )
+  -- , ((modMask, xK_F10), spawn $ "spotify" )
+  -- , ((modMask, xK_F11), spawn $ "rofi -theme-str 'window {width: 100%;height: 100%;}' -show drun" )
+  -- , ((modMask, xK_F12), spawn $ "rofi -show run" )
 
   -- FUNCTION KEYS
   , ((0, xK_F12), spawn $ "xfce4-terminal --drop-down" )
@@ -164,35 +163,35 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
 
   -- CONTROL + ALT KEYS
 
-  -- , ((controlMask .|. mod1Mask , xK_Next ), spawn $ "conky-rotate -n")
-  -- , ((controlMask .|. mod1Mask , xK_Prior ), spawn $ "conky-rotate -p")
-  -- , ((controlMask .|. mod1Mask , xK_a ), spawn $ "xfce4-appfinder")
-  -- , ((controlMask .|. mod1Mask , xK_b ), spawn $ "thunar")
-  -- , ((controlMask .|. mod1Mask , xK_c ), spawn $ "catfish")
-  -- , ((controlMask .|. mod1Mask , xK_e ), spawn $ "archlinux-tweak-tool")
-  -- , ((controlMask .|. mod1Mask , xK_f ), spawn $ "firefox")
+  , ((controlMask .|. mod1Mask , xK_Next ), spawn $ "conky-rotate -n")
+  , ((controlMask .|. mod1Mask , xK_Prior ), spawn $ "conky-rotate -p")
+  , ((controlMask .|. mod1Mask , xK_a ), spawn $ "xfce4-appfinder")
+  , ((controlMask .|. mod1Mask , xK_b ), spawn $ "brave-browser")
+  , ((controlMask .|. mod1Mask , xK_c ), spawn $ "catfish")
+  , ((controlMask .|. mod1Mask , xK_e ), spawn $ "nvim")
+  , ((controlMask .|. mod1Mask , xK_f ), spawn $ "firefox")
   -- , ((controlMask .|. mod1Mask , xK_g ), spawn $ "chromium -no-default-browser-check")
   -- , ((controlMask .|. mod1Mask , xK_i ), spawn $ "nitrogen")
   -- , ((controlMask .|. mod1Mask , xK_k ), spawn $ "archlinux-logout")
   -- , ((controlMask .|. mod1Mask , xK_l ), spawn $ "archlinux-logout")
-  -- , ((controlMask .|. mod1Mask , xK_m ), spawn $ "xfce4-settings-manager")
-  -- , ((controlMask .|. mod1Mask , xK_o ), spawn $ "$HOME/.xmonad/scripts/picom-toggle.sh")
+  , ((controlMask .|. mod1Mask , xK_m ), spawn $ "/usr/local/src/thunderbird/thunderbird")
+  , ((controlMask .|. mod1Mask , xK_o ), spawn $ "$HOME/.xmonad/scripts/picom-toggle.sh")
   -- , ((controlMask .|. mod1Mask , xK_p ), spawn $ "pamac-manager")
   -- , ((controlMask .|. mod1Mask , xK_r ), spawn $ "rofi-theme-selector")
-  -- , ((controlMask .|. mod1Mask , xK_s ), spawn $ "spotify")
-  -- , ((controlMask .|. mod1Mask , xK_t ), spawn $ "alacritty")
+  , ((controlMask .|. mod1Mask , xK_s ), spawn $ "/usr/local/src/sublime_text/sublime_text")
+  , ((controlMask .|. mod1Mask , xK_t ), spawn $ "terminator")
   -- , ((controlMask .|. mod1Mask , xK_u ), spawn $ "pavucontrol")
   -- , ((controlMask .|. mod1Mask , xK_v ), spawn $ "vivaldi-stable")
-  -- , ((controlMask .|. mod1Mask , xK_w ), spawn $ "arcolinux-welcome-app")
+  , ((controlMask .|. mod1Mask , xK_w ), spawn $ "/usr/local/src/waterfox/waterfox-bin")
   -- , ((controlMask .|. mod1Mask , xK_Return ), spawn $ "alacritty")
 
   -- ALT + ... KEYS
 
-  -- , ((mod1Mask, xK_f), spawn $ "variety -f" )
-  -- , ((mod1Mask, xK_n), spawn $ "variety -n" )
-  -- , ((mod1Mask, xK_p), spawn $ "variety -p" )
-  -- , ((mod1Mask, xK_r), spawn $ "xmonad --restart" )
-  -- , ((mod1Mask, xK_t), spawn $ "variety -t" )
+  , ((mod1Mask, xK_f), spawn $ "thunar" )
+  , ((mod1Mask, xK_n), spawn $ "nitrogen" )
+  , ((mod1Mask, xK_p), spawn $ "pcmanfm" )
+  , ((mod1Mask, xK_r), spawn $ "rofi -show run" )
+  , ((mod1Mask, xK_t), spawn $ "urxvtc" )
   -- , ((mod1Mask, xK_Up), spawn $ "variety --pause" )
   -- , ((mod1Mask, xK_Down), spawn $ "variety --resume" )
   -- , ((mod1Mask, xK_Left), spawn $ "variety -p" )
@@ -208,11 +207,11 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   -- , ((mod1Mask .|. shiftMask , xK_t ), spawn $ "variety -t && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&")
   -- , ((mod1Mask .|. shiftMask , xK_u ), spawn $ "wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&")
 
-  --CONTROL + SHIFT KEYS
+  -- CONTROL + SHIFT KEYS
 
   , ((controlMask .|. shiftMask , xK_Escape ), spawn $ "xfce4-taskmanager")
 
-  --SCREENSHOTS
+  -- SCREENSHOTS
 
   -- , ((0, xK_Print), spawn $ "scrot 'Linux-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'")
   -- , ((controlMask, xK_Print), spawn $ "xfce4-screenshooter" )
@@ -260,19 +259,19 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   -- Cycle through the available layout algorithms.
   , ((modMask, xK_space), sendMessage NextLayout)
 
-  --Focus selected desktop
+  -- Focus selected desktop
   , ((mod1Mask, xK_Tab), nextWS)
 
-  --Focus selected desktop
+  -- Focus selected desktop
   , ((modMask, xK_Tab), nextWS)
 
-  --Focus selected desktop
+  -- Focus selected desktop
   , ((controlMask .|. mod1Mask , xK_Left ), prevWS)
 
-  --Focus selected desktop
+  -- Focus selected desktop
   , ((controlMask .|. mod1Mask , xK_Right ), nextWS)
 
-  --  Reset the layouts on the current workspace to default.
+  -- Reset the layouts on the current workspace to default.
   , ((modMask .|. shiftMask, xK_space), setLayout $ XMonad.layoutHook conf)
 
   -- Move focus to the next window.
@@ -318,15 +317,9 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   -- mod-shift-[1..9], Move client to workspace N
   [((m .|. modMask, k), windows $ f i)
 
-  --Keyboard layouts
-  --qwerty users use this line
+  -- Keyboard layouts
+  -- qwerty users use this line
    | (i, k) <- zip (XMonad.workspaces conf) [xK_1,xK_2,xK_3,xK_4,xK_5,xK_6,xK_7,xK_8,xK_9,xK_0]
-
-  --French Azerty users use this line
-  -- | (i, k) <- zip (XMonad.workspaces conf) [xK_ampersand, xK_eacute, xK_quotedbl, xK_apostrophe, xK_parenleft, xK_minus, xK_egrave, xK_underscore, xK_ccedilla , xK_agrave]
-
-  --Belgian Azerty users use this line
-  --   | (i, k) <- zip (XMonad.workspaces conf) [xK_ampersand, xK_eacute, xK_quotedbl, xK_apostrophe, xK_parenleft, xK_section, xK_egrave, xK_exclam, xK_ccedilla, xK_agrave]
 
       , (f, m) <- [(W.greedyView, 0), (W.shift, shiftMask)
       , (\i -> W.greedyView i . W.shift i, shiftMask)]]
@@ -348,26 +341,24 @@ main = do
     -- Request access to the DBus name
     D.requestName dbus (D.busName_ "org.xmonad.Log")
         [D.nameAllowReplacement, D.nameReplaceExisting, D.nameDoNotQueue]
-
+        
     xmonad . ewmh $
-  --Keyboard layouts
-  --qwerty users use this line
+  
+  -- Keyboard layouts
+  -- qwerty users use this line
+            
             myBaseConfig
-  --French Azerty users use this line
-            --myBaseConfig { keys = azertyKeys <+> keys azertyConfig }
-  --Belgian Azerty users use this line
-            --myBaseConfig { keys = belgianKeys <+> keys belgianConfig }
 
-                {startupHook = myStartupHook
-, layoutHook = gaps [(U,35), (D,5), (R,5), (L,5)] $ myLayout ||| layoutHook myBaseConfig
-, manageHook = manageSpawn <+> myManageHook <+> manageHook myBaseConfig
-, modMask = myModMask
-, borderWidth = myBorderWidth
-, handleEventHook    = handleEventHook myBaseConfig <+> fullscreenEventHook
-, focusFollowsMouse = myFocusFollowsMouse
-, workspaces = myWorkspaces
-, focusedBorderColor = focdBord
-, normalBorderColor = normBord
-, keys = myKeys
-, mouseBindings = myMouseBindings
+                { startupHook = myStartupHook
+                , layoutHook = gaps [(U,35), (D,5), (R,5), (L,5)] $ myLayout ||| layoutHook myBaseConfig
+                , manageHook = manageSpawn <+> myManageHook <+> manageHook myBaseConfig
+                , modMask = myModMask
+                , borderWidth = myBorderWidth
+                , handleEventHook    = handleEventHook myBaseConfig <+> fullscreenEventHook
+                , focusFollowsMouse = myFocusFollowsMouse
+                , workspaces = myWorkspaces
+                , focusedBorderColor = focdBord
+                , normalBorderColor = normBord
+                , keys = myKeys
+                , mouseBindings = myMouseBindings
 }

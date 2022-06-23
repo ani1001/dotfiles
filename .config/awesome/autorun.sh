@@ -7,7 +7,7 @@ function run {
   fi
 }
 
-#run nitrogen --restore
+run nitrogen --restore
 run picom -b
 run lxpolkit
 run nm-applet

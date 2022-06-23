@@ -267,9 +267,9 @@ function theme.at_screen_connect(s)
             --theme.mail.widget,
             cpu.widget,
             mem.widget,
-            bat.widget,
+            --bat.widget,
             net.widget,
-            theme.volume.widget,
+            --theme.volume.widget,
             mytextclock
         },
     }
