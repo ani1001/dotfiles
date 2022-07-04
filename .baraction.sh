@@ -89,9 +89,9 @@ while :; do
 		ACPI_DATA=`/usr/bin/acpi -a 2>/dev/null; /usr/bin/acpi -b 2>/dev/null`
 	fi
 	# print_date
-	print_mem
+	# print_mem
 	# print_cpu $IOSTAT_DATA
-	print_cpuspeed
+	# print_cpuspeed
 	# print_bat $ACPI_DATA
 	echo ""
 	I=$(( ( ${I} + 1 ) % 11 ))

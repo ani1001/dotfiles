@@ -1,7 +1,7 @@
 from libqtile.config import EzKey as Key
 from .mouse import *
 
-terminal = "kitty"
+terminal = "st"
 
 keys = [
     # Switch between windows
@@ -52,11 +52,14 @@ keys = [
 
     # Keybindings to launch user defined programs
     Key("A-d", lazy.spawn("dmenu_run"), desc="Launch dmenu"),
-    Key("A-e", lazy.spawn("emacsclient -c -a 'emacs'"), desc="Launch emacs"),
+    Key("A-e", lazy.spawn("emacsclient -c -a 'emacs'"), desc="Launch emacs as emacsclient"),
     Key("A-f", lazy.spawn("thunar"), desc="Launch thunar"),
+    Key("A-g", lazy.spawn("geany"), desc="Launch geany"),
     Key("A-n", lazy.spawn("nitrogen"), desc="Launch nitrogen"),
     Key("A-r", lazy.spawn("rofi -show run"), desc="Launch rofi"),
-    Key("A-t", lazy.spawn("urxvtc"), desc="Launch rxvt-unicode"),
+    Key("A-t", lazy.spawn("transmission-gtk"), desc="Launch transmission-gtk"),
+    Key("A-u", lazy.spawn("uget-gtk"), desc="Launch uget-gtk"),
+    Key("A-v", lazy.spawn("pavucontrol"), desc="Launch pavucontrol"),
     Key("A-w", lazy.spawn("brave-browser"), desc="Launch brave"),
     Key("A-C-m", lazy.spawn("/usr/local/src/thunderbird/thunderbird"), desc="Launch thunderbird"),
     Key("A-C-s", lazy.spawn("/usr/local/src/sublime_text/sublime_text"), desc="Launch sublime_text"),

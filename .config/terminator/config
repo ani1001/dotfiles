@@ -8,7 +8,7 @@
     background_darkness = 0.9
     background_type = transparent
     cursor_color = "#aaaaaa"
-    font = Hack 11
+    font = SauceCodePro NF 11
     foreground_color = "#ebdbb2"
     show_titlebar = False
     scrollbar_position = hidden

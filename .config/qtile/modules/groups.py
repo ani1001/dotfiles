@@ -4,7 +4,7 @@ from .layouts import layouts
 
 groups = [
     Group("", layout="max",        matches=[Match(wm_class=["navigator", "firefox", "vivaldi-stable", "chromium", "brave"])]),
-    Group("", layout="monadtall",  matches=[Match(wm_class=["emacs", "geany", "subl"])]),
+    Group("", layout="monadtall",  matches=[Match(wm_class=["emacs", "geany", "Sublime_text"])]),
     Group("", layout="monadtall",  matches=[Match(wm_class=["inkscape", "nomacs", "ristretto", "nitrogen"])]),
     Group("", layout="monadtall",  matches=[Match(wm_class=["qpdfview", "thunar", "nemo", "caja", "pcmanfm"])]),
     Group("", layout="max",        matches=[Match(wm_class=["telegramDesktop"])]),
