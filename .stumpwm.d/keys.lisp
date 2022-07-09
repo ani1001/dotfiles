@@ -31,7 +31,7 @@
 ;; Launch rxvt-unicode client
 (define-key *top-map* (kbd "C-C") "exec urxvtc")
 ;; Launch terminal
-(define-key *top-map* (kbd "M-RET") "exec kitty")
+(define-key *top-map* (kbd "M-RET") "exec st")
 
 ;; Launch emacs
 (define-key *top-map* (kbd "C-E") "exec emacs")

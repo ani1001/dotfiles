@@ -10,12 +10,14 @@ hc emit_hook reload
 
 xsetroot -solid '#5A8E3A'
 
+#feh --bg-fill $HOME/.config/herbstluftwm/wall.png &
+$HOME/.config/herbstluftwm/xmobar &
 nitrogen --restore &
-picom &
+picom -b &
 lxpolkit &
+mpd &
 urxvtd -q -o -f &
 emacs --daemon &
-$HOME/.config/herbstluftwm/xmobar &
 
 # remove all existing keybindings
 hc keyunbind --all
@@ -28,7 +30,7 @@ Mod=Mod4   # Use the super key as the main modifier
 hc keybind $Mod-Shift-q quit
 hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Shift-c close
-hc keybind $Mod-Return spawn "${TERMINAL:-st}" # use your $TERMINAL with xterm as fallback
+hc keybind $Mod-Return spawn "${TERMINAL:-urxvtc}" # use your $TERMINAL with xterm as fallback
 
 # dmenu launcher
 hc keybind $Mod-d spawn dmenu_run

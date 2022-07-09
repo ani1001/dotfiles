@@ -1,5 +1,4 @@
-sleep 1; tint2 -c ~/.config/tint2/raven-grey.tint2rc &
-$HOME/.config/polybar/launch.sh &
+sleep 1; tint2 -c ~/.config/tint2/repentance.tint2rc &
 plank &
 picom -b &
 lxpolkit &

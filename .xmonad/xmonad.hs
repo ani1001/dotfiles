@@ -187,7 +187,7 @@ myKeys = [ ("M-<Return>"   , spawn "st"                                       )
 -- Now run xmonad with all the defaults available
 main :: IO ()
 main = do
-    xmproc0 <- spawnPipe "xmobar -x 0 $HOME/.config/xmobar/xmobarrc.hs"
+    xmproc0 <- spawnPipe "xmobar -x 0 $HOME/.config/xmobar/xmobarrc1"
     xmonad . ewmh . docks $ def
         { manageHook  = myManageHook <+> manageHook def
         , layoutHook  = smartBorders . avoidStruts $ myLayout

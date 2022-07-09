@@ -1,0 +1,112 @@
+menu "Applications" _none_ {
+  menu "Accessories" _none_ {
+    prog "Application Finder" _none_ xfce4-appfinder
+    prog "Disks" _none_ gnome-disks
+    prog "Emacs (GUI)" _none_ /usr/bin/emacs 
+    prog "Emacs (Terminal)" _none_ /usr/bin/x-terminal-emulator -e /usr/bin/emacs -nw 
+    prog "Kvantum Manager" _none_ kvantummanager
+    prog "Mousepad" _none_ mousepad 
+    prog "Neovim" _none_ /usr/bin/x-terminal-emulator -e nvim 
+    prog "Plank" _none_ plank
+    prog "PlayOnLinux" _none_ playonlinux 
+    prog "Rxvt Color Unicode Terminal" _none_ urxvt
+    prog "Screenshot" _none_ xfce4-screenshooter
+    prog "Sensor Viewer" _none_ xfce4-sensors
+    prog "Terminator" _none_ terminator
+    prog "Vim" _none_ /usr/bin/x-terminal-emulator -e vim 
+    prog "Xarchiver" _none_ xarchiver 
+    prog "nitrogen" _none_ nitrogen
+    prog "picom" _none_ picom
+  }
+  menu "Development" _none_ {
+    prog "Geany" _none_ geany 
+    prog "OCaml" _none_ /usr/bin/x-terminal-emulator -e ocaml
+    prog "RStudio" _none_ /usr/lib/rstudio/bin/rstudio 
+    prog "dmd/phobos documentation v2.100.0" _none_ xdg-open /usr/share/dmd/html/d/spec/spec.html
+  }
+  menu "Graphics" _none_ {
+    prog "Flameshot" _none_ /usr/bin/flameshot
+    prog "FontForge" _none_ fontforge 
+    prog "GNU Image Manipulation Program" _none_ gimp-2.10 
+    prog "ImageMagick (color depth=q16)" _none_ /usr/bin/display-im6.q16 -nostdin 
+    prog "R" _none_ /usr/bin/x-terminal-emulator -e R
+    prog "Ristretto Image Viewer" _none_ ristretto 
+    prog "XSane" _none_ xsane
+  }
+  menu "Multimedia" _none_ {
+    prog "Ex Falso" _none_ exfalso
+    prog "Ncmpcpp" _none_ /usr/bin/x-terminal-emulator -e ncmpcpp
+    prog "Parole Media Player" _none_ parole 
+    prog "PulseAudio Volume Control" _none_ pavucontrol
+    prog "Qmmp" _none_ qmmp 
+    prog "Quod Libet" _none_ quodlibet --run --play-file 
+    prog "VLC media player" _none_ /usr/bin/vlc --started-from-file 
+    prog "Xfburn" _none_ xfburn
+  }
+  menu "Network" _none_ {
+    prog "Brave Web Browser" _none_ /usr/bin/brave-browser-stable 
+    prog "Firefox ESR" _none_ /usr/lib/firefox-esr/firefox-esr 
+    prog "HexChat" _none_ hexchat --existing 
+    prog "MEGAsync" _none_ megasync
+    prog "Transmission" _none_ transmission-gtk 
+    prog "Xtreme Download Manager" _none_ "/opt/xdman/xdman"
+    prog "uGet" _none_ env GDK_BACKEND=x11 uget-gtk 
+  }
+  menu "Office" _none_ {
+    prog "Atril Document Viewer" _none_ atril 
+    prog "Dictionary" _none_ xfce4-dict
+    prog "Document Viewer" _none_ evince 
+    prog "Gnumeric" _none_ gnumeric 
+    prog "LibreOffice" _none_ libreoffice 
+    prog "LibreOffice Calc" _none_ libreoffice --calc 
+    prog "LibreOffice Draw" _none_ libreoffice --draw 
+    prog "LibreOffice Impress" _none_ libreoffice --impress 
+    prog "LibreOffice Math" _none_ libreoffice --math 
+    prog "LibreOffice Writer" _none_ libreoffice --writer 
+    prog "WPS 2019" _none_ /usr/bin/wps 
+    prog "WPS PDF" _none_ /usr/bin/wpspdf 
+    prog "WPS Presentation" _none_ /usr/bin/wpp 
+    prog "WPS Spreadsheets" _none_ /usr/bin/et 
+    prog "WPS Writer" _none_ /usr/bin/wps 
+  }
+  menu "Other" _none_ {
+    prog "GNU PSPP" _none_ psppire 
+    prog "JASP" _none_ /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=org.jaspstats.JASP --file-forwarding org.jaspstats.JASP @@ 
+    prog "jamovi" _none_ /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=jamovi --file-forwarding org.jamovi.jamovi @@ 
+  }
+  menu "Settings" _none_ {
+    prog "Advanced Network Configuration" _none_ nm-connection-editor
+    prog "Customize Look and Feel" _none_ lxappearance
+    prog "File Manager Settings" _none_ thunar-settings
+    prog "Firewall Configuration" _none_ gufw
+    prog "LightDM GTK+ Greeter settings" _none_ lightdm-gtk-greeter-settings-pkexec
+    prog "Openbox Configuration Manager" _none_ obconf 
+    prog "Power Manager" _none_ xfce4-power-manager-settings
+    prog "Qt5 Settings" _none_ qt5ct
+    prog "Removable Drives and Media" _none_ thunar-volman-settings
+    prog "Screensaver" _none_ xscreensaver-demo
+    prog "TeXdoctk" _none_ texdoctk
+    prog "Tint2 Settings" _none_ tint2conf
+    prog "Xfce Terminal Settings" _none_ xfce4-terminal --preferences
+  }
+  menu "System" _none_ {
+    prog "BleachBit" _none_ bleachbit
+    prog "BleachBit (as root)" _none_ pkexec bleachbit
+    prog "Bulk Rename" _none_ thunar --bulk-rename 
+    prog "CPU-X" _none_ cpu-x
+    prog "GParted" _none_ /usr/sbin/gparted 
+    prog "Htop" _none_ /usr/bin/x-terminal-emulator -e htop
+    prog "Print Settings" _none_ system-config-printer
+    prog "Psensor" _none_ psensor
+    prog "Synaptic Package Manager" _none_ synaptic-pkexec
+    prog "Task Manager" _none_ xfce4-taskmanager
+    prog "Thunar File Manager" _none_ thunar 
+    prog "Tint2" _none_ tint2
+    prog "UXTerm" _none_ uxterm
+    prog "XTerm" _none_ xterm
+    prog "Xfce Terminal" _none_ xfce4-terminal
+    prog "conky" _none_ conky --daemonize --pause=1
+    prog "gmrun" _none_ gmrun
+    prog "kitty" _none_ kitty
+  }
+}

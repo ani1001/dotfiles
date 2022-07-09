@@ -6,12 +6,10 @@ Xft.hintstyle:  hintslight
 Xft.autohint:   false
 Xft.lcdfilter:  lcddefault
 
-Xcursor*theme: Vimix-Cursors
-
 ! XTerm
-XTerm*termName: xterm
+! XTerm*termName: xterm
 XTerm*renderFont: true
-XTerm*faceName: xft:Hack:size=12, \
+XTerm*faceName: xft:Source Code Pro:style=Regular, \
                 xft:JoyPixels:size=12, \
                 xft:Monospace:style=Medium:size=12
 XTerm*faceSize: 11
@@ -31,7 +29,7 @@ XTerm.vt100.translations: #override \n\
 XTerm*loginshell: true
 
 ! I like a LOT of scrollback...
-XTerm*savelines: 4096
+XTerm*savelines: 16384
 
 ! double-click to select whole URLs :D
 XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
@@ -44,16 +42,30 @@ XTerm.ttyModes: erase ^?
 URxvt*termName: rxvt-unicode-256color
 URxvt*imLocale: en_US.UTF-8
 URxvt*buffered: false
+URxvt*cursorBlink: true
+URxvt*depth: 32
 URxvt.cursorColor: white
 URxvt.intensityStyles: false
 URxvt.iso14755: false
 URxvt.iso14755_52: false
-URxvt.saveLines: 2000
+URxvt.saveLines: 5000
+! URxvt.letterSpace: -1
+
+! for 'fake' transparency (without Compton) uncomment the following three lines
+! URxvt*inheritPixmap:            true
+! URxvt*transparent:              true
+! URxvt*shading:                  138
 
 ! Using Xft
-URxvt.font: xft:Hack:size=12, \
+URxvt.font: xft:Source Code Pro:style=Regular:size=11, \
             xft:JoyPixels:size=12, \
             xft:Monospace:style=Medium:size=12
+            
+! URxvt.font: 9x15,xft:TerminessTTFNerdFontMono
+            
+! alternative font settings with 'terminus':
+! URxvt.font:      -xos4-terminus-medium-r-normal--16-160-72-72-c-80-iso10646-1
+! URxvt.bold.font: -xos4-terminus-bold-r-normal--16-160-72-72-c-80-iso10646-1
 
 ! Scrollar
 URxvt.scrollBar: false
@@ -79,6 +91,10 @@ URxvt.keysym.Control-Shift-V:     perl:pasta:paste
 ! Comment this if you do not want copy when text is selected
 URxvt.clipboard.autocopy: true
 
+! Normal copy-paste keybindings without perls
+URxvt.keysym.Shift-Control-V:     eval:paste_clipboard
+URxvt.keysym.Shift-Control-C:     eval:selection_to_clipboard
+
 ! Key combination to increase or decrease the font size
 URxvt.keysym.C-Up:     font-size:increase
 URxvt.keysym.C-Down:   font-size:decrease
@@ -87,6 +103,8 @@ URxvt.keysym.C-S-Down: font-size:decglobal
 URxvt.keysym.C-equal:  font-size:reset
 URxvt.keysym.C-slash:  font-size:show
 
+
+! FOR ALL OTHER PROGRAMS USE XRESOURCES
 
 ! Copyright (c) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
 ! Copyright (c) 2016-present Sven Greb <code@svengreb.de>
