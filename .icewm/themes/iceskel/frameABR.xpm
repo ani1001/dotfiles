@@ -1,9 +1,0 @@
-/* XPM */
-static char * frameABR_xpm[] = {
-"3 3 3 1",
-" 	c None",
-".	c #D9D9D9",
-"+	c #D6D8D3",
-"..+",
-"..+",
-"+++"};

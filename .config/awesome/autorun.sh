@@ -10,7 +10,8 @@ function run {
 run nitrogen --restore
 run picom -b
 run lxpolkit
-run nm-applet
-run volumeicon
 run mpd
+run volumeicon
+run nm-applet
+run urxvtd -q -o -f
 run emacs --daemon

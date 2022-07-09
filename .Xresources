@@ -1,236 +1,137 @@
-Xft.dpi:       96
-Xft.antialias: true
-Xft.hinting:   true
-Xft.rgba:      rgb
-Xft.autohint:  false
-Xft.hintstyle: hintslight
-Xft.lcdfilter: lcddefault
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.rgba:       rgb
+Xft.hinting:    true
+Xft.hintstyle:  hintslight
+Xft.autohint:   false
+Xft.lcdfilter:  lcddefault
 
-XTerm*background:        #222D31
-XTerm*foreground:        #d8d8d8
-XTerm*pointerColor:      #1ABB9B
-XTerm*faceName:          Fixed
-XTerm*faceSize:          11
-XTerm*reverseVideo:      on
-XTerm*selectToClipboard: true
+Xcursor*theme: Vimix-Cursors
 
-*background:                      #222D31
-*foreground:                      #d8d8d8
-*fading:                          8
-*fadeColor:                       black
-*cursorColor:                     #1ABB9B
-*pointerColorBackground:          #2B2C2B
-*pointerColorForeground:          #16A085
+! XTerm
+XTerm*termName: xterm
+XTerm*renderFont: true
+XTerm*faceName: xft:Hack:size=12, \
+                xft:JoyPixels:size=12, \
+                xft:Monospace:style=Medium:size=12
+XTerm*faceSize: 11
+XTerm*utf8: 2
+XTerm*locale: true
 
-!! black dark/light
-*color0:                          #222D31
-*color8:                          #585858
+XTerm.vt100.translations: #override \n\
+  Ctrl <Key> j: smaller-vt-font() \n\
+  Ctrl <Key> k: larger-vt-font() \n\
+  Ctrl <Key>M: maximize() \n\
+  Ctrl <Key>R: restore() \n\
+  Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
+  Ctrl Shift <Key>V: insert-selection(CLIPBOARD)
 
-!! red dark/light
-*color1:                          #ab4642
-*color9:                          #ab4642
 
-!! green dark/light
-*color2:                          #7E807E
-*color10:                         #8D8F8D
+! Every shell is a login shell by default (for inclusion of all necessary environment variables)
+XTerm*loginshell: true
 
-!! yellow dark/light
-*color3:                          #f7ca88
-*color11:                         #f7ca88
+! I like a LOT of scrollback...
+XTerm*savelines: 4096
 
-!! blue dark/light
-*color4:                          #7cafc2
-*color12:                         #7cafc2
+! double-click to select whole URLs :D
+XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
 
-!! magenta dark/light
-*color5:                          #ba8baf
-*color13:                         #ba8baf
+XTerm.vt100.backarrowKey: false
+XTerm.ttyModes: erase ^?
 
-!! cyan dark/light
-*color6:                          #1ABB9B
-*color14:                         #1ABB9B
 
-!! white dark/light
-*color7:                          #d8d8d8
-*color15:                         #f8f8f8
+! URxvt
+URxvt*termName: rxvt-unicode-256color
+URxvt*imLocale: en_US.UTF-8
+URxvt*buffered: false
+URxvt.cursorColor: white
+URxvt.intensityStyles: false
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+URxvt.saveLines: 2000
 
-Xcursor.theme: xcursor-breeze
-Xcursor.size:                     0
+! Using Xft
+URxvt.font: xft:Hack:size=12, \
+            xft:JoyPixels:size=12, \
+            xft:Monospace:style=Medium:size=12
 
-URxvt.font:                       9x15,xft:TerminessTTFNerdFontMono
+! Scrollar
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.scrollBar_floating: false
+URxvt.scrollstyle: rxvt
 
-! alternative font settings with 'terminus':
-! URxvt.font:      -xos4-terminus-medium-r-normal--16-160-72-72-c-80-iso10646-1
-! URxvt.bold.font: -xos4-terminus-bold-r-normal--16-160-72-72-c-80-iso10646-1
-!! terminus names see end of file!
+! Disable printing the terminal contents when pressing PrintScreen.
+! The string will be interpreted as if typed into the shell as-is.
+! In this example, printing will be disabled altogether.
+URxvt.print-pipe: "cat > /dev/null"
 
-URxvt.depth:                      32
-URxvt.background:                 [100]#222D31
-URxvt*scrollBar:                  false
-URxvt*mouseWheelScrollPage:       false
-URxvt*cursorBlink:                true
-URxvt*background:                 black
-URxvt*foreground:                 grey
-URxvt*saveLines:                  5000
+! Copy/Paste and URL handling
+!-*- Perl extensions -*-
+URxvt.perl-ext-common: default,selection-to-clipboard,pasta,matcher,keyboard-select,font-size
+URxvt.keysym.M-u:     perl:url-select:select_next
+URxvt.colorUL: #4682B4
+URxvt.url-launcher:   /usr/bin/firefox
+URxvt.underlineURLs:  True
+URxvt.matcher.button: 1 
+URxvt.keysym.M-Escape:perl:keyboard-select:activate
+URxvt.keysym.Control-Shift-V:     perl:pasta:paste
+! Comment this if you do not want copy when text is selected
+URxvt.clipboard.autocopy: true
 
-! for 'fake' transparency (without Compton) uncomment the following three lines
-! URxvt*inheritPixmap:            true
-! URxvt*transparent:              true
-! URxvt*shading:                  138
+! Key combination to increase or decrease the font size
+URxvt.keysym.C-Up:     font-size:increase
+URxvt.keysym.C-Down:   font-size:decrease
+URxvt.keysym.C-S-Up:   font-size:incglobal
+URxvt.keysym.C-S-Down: font-size:decglobal
+URxvt.keysym.C-equal:  font-size:reset
+URxvt.keysym.C-slash:  font-size:show
 
-! Normal copy-paste keybindings without perls
-URxvt.iso14755:                   false
-URxvt.keysym.Shift-Control-V:     eval:paste_clipboard
-URxvt.keysym.Shift-Control-C:     eval:selection_to_clipboard
-!Xterm escape codes, word by word movement
-URxvt.keysym.Control-Left:        \033[1;5D
-URxvt.keysym.Shift-Control-Left:  \033[1;6D
-URxvt.keysym.Control-Right:       \033[1;5C
-URxvt.keysym.Shift-Control-Right: \033[1;6C
-URxvt.keysym.Control-Up:          \033[1;5A
-URxvt.keysym.Shift-Control-Up:    \033[1;6A
-URxvt.keysym.Control-Down:        \033[1;5B
-URxvt.keysym.Shift-Control-Down:  \033[1;6B
-! Rxvt.perl-ext-common:             ...,clipboard
-! URxvt.keysym.M-C-c:               perl:clipboard:copy
-! URxvt.keysym.M-v:                 perl:clipboard:paste
-! URxvt.keysym.M-C-v:               perl:clipboard:paste_escaped
-! URxvt*termName:                   string
-! URxvt*geometry:                   geometry
-! URxvt*chdir:                      string
-! URxvt*loginShell:                 boolean
-! URxvt*multiClickTime:             number
-! URxvt*jumpScroll:                 boolean
-! URxvt*skipScroll:                 boolean
-! URxvt*pastableTabs:               boolean
-! URxvt*scrollstyle:                plain
-! URxvt*scrollBar_right:            boolean
-! URxvt*scrollBar_floating:         true
-! URxvt*scrollBar_align:            mode
-! URxvt*thickness:                  number
-! URxvt*scrollTtyOutput:            boolean
-! URxvt*scrollTtyKeypress:          boolean
-! URxvt*scrollWithBuffer:           boolean
-! URxvt*tintColor:                  !7DA55
-! URxvt*blurRadius:                 HxV
-! URxvt*fading:                     number
-! URxvt*fadeColor:                  color
-! URxvt*utmpInhibit:                boolean
-! URxvt*urgentOnBell:               boolean
-! URxvt*visualBell:                 boolean
-! URxvt*mapAlert:                   boolean
-! URxvt*meta8:                      boolean
-! URxvt*tripleclickwords:           boolean
-! URxvt*insecure:                   boolean
-! URxvt*cursorUnderline:            boolean
-! URxvt*pointerBlank:               boolean
-! URxvt*color0:                     color
-! URxvt*color1:                     color
-! URxvt*color2:                     color
-! URxvt*color3:                     color
-! URxvt*color4:                     color
-! URxvt*color5:                     color
-! URxvt*color6:                     color
-! URxvt*color7:                     color
-! URxvt*color8:                     color
-! URxvt*color9:                     color
-! URxvt*color10:                    color
-! URxvt*color11:                    color
-! URxvt*color12:                    color
-! URxvt*color13:                    color
-! URxvt*color14:                    color
-! URxvt*color15:                    color
-! URxvt*colorBD:                    color
-! URxvt*colorIT:                    color
-! URxvt*colorUL:                    color
-! URxvt*colorRV:                    color
-! URxvt*underlineColor:             color
-! URxvt*scrollColor:                color
-! URxvt*troughColor:                color
-! URxvt*highlightColor:             color
-! URxvt*highlightTextColor:         color
-! URxvt*cursorColor:                color
-! URxvt*cursorColor2:               color
-! URxvt*pointerColor:               color
-! URxvt*pointerColor2:              color
-! URxvt*borderColor:                color
-! URxvt*iconFile:                   file
-! URxvt*font:                       fontname
-! URxvt*boldFont:                   fontname
-! URxvt*italicFont:                 fontname
-! URxvt*boldItalicFont:             fontname
-! URxvt*intensityStyles:            boolean
-! URxvt*inputMethod:                name
-! URxvt*preeditType:                style
-! URxvt*imLocale:                   string
-! URxvt*imFont:                     fontname
-! URxvt*title:                      string
-! URxvt*iconName:                   string
-! URxvt*buffered:                   boolean
-! URxvt*depth:                      number
-! URxvt*visual:                     number
-! URxvt*transient-for:              windowid
-! URxvt*override-redirect:          boolean
-! URxvt*hold:                       boolean
-! URxvt*externalBorder:             number
-! URxvt*internalBorder:             number
-! URxvt*borderLess:                 true
-! URxvt*lineSpace:                  number
-! URxvt*letterSpace:                number
-! URxvt*skipBuiltinGlyphs:          boolean
-! URxvt*pointerBlankDelay:          number
-! URxvt*backspacekey:               string
-! URxvt*deletekey:                  string
-! URxvt*print-pipe:                 string
-! URxvt*modifier:                   modifier
-! URxvt*cutchars:                   string
-! URxvt*answerbackString:           string
-! URxvt*secondaryScreen:            boolean
-! URxvt*secondaryScroll:            boolean
-! URxvt*perl-lib:                   string
-! URxvt*perl-eval:                  perl-eval
-! URxvt*perl-ext-common:            string
-! URxvt*perl-ext:                   string
-! URxvt*iso14755:                   boolean
-! URxvt*iso14755_52:                boolean
-! URxvt*xrm:                        string
-! URxvt*keysym.sym:                 keysym
-! URxvt*background.border:          boolean
-! URxvt*background.expr:            string
-! URxvt*background.interval:        seconds
-! URxvt*bell-command:               string
-! URxvt*kuake.hotkey:               string
-! URxvt*matcher.button:             string
-! URxvt*matcher.launcher:           string
-! URxvt*matcher.launcher.*:         string
-! URxvt*matcher.pattern.*:          string
-! URxvt*matcher.rend.*:             string
-! URxvt*remote-clipboard.fetch:     string
-! URxvt*remote-clipboard.store:     string
-! URxvt*searchable-scrollback:      string
-! URxvt*selection-autotransform.*:  string
-! URxvt*selection-pastebin.cmd:     string
-! URxvt*selection-pastebin.url:     string
-! URxvt*selection.pattern-0:        string
-! URxvt*tab-bg:                     colour
-! URxvt*tab-fg:                     colour
-! URxvt*tabbar-bg:                  colour
-! URxvt*tabbar-fg:                  colour
-! URxvt*url-launcher:               string
 
-! The Terminus font uses the following X-names:
-! -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
-! -xos4-terminus-medium-r-normal--14-140-72-72-c-80-iso10646-1
-! -xos4-terminus-medium-r-normal--16-160-72-72-c-80-iso10646-1
-! -xos4-terminus-medium-r-normal--20-200-72-72-c-100-iso10646-1
-! -xos4-terminus-medium-r-normal--22-220-72-72-c-110-iso10646-1
-! -xos4-terminus-medium-r-normal--24-240-72-72-c-120-iso10646-1
-! -xos4-terminus-medium-r-normal--28-280-72-72-c-140-iso10646-1
-! -xos4-terminus-medium-r-normal--32-320-72-72-c-160-iso10646-1
-! -xos4-terminus-bold-r-normal--12-120-72-72-c-60-iso10646-1
-! -xos4-terminus-bold-r-normal--14-140-72-72-c-80-iso10646-1
-! -xos4-terminus-bold-r-normal--16-160-72-72-c-80-iso10646-1
-! -xos4-terminus-bold-r-normal--20-200-72-72-c-100-iso10646-1
-! -xos4-terminus-bold-r-normal--24-240-72-72-c-120-iso10646-1
-! -xos4-terminus-bold-r-normal--28-280-72-72-c-140-iso10646-1
-! -xos4-terminus-bold-r-normal--32-320-72-72-c-160-iso10646-1
+! Copyright (c) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
+! Copyright (c) 2016-present Sven Greb <code@svengreb.de>
+
+! Project:    Nord XResources
+! Version:    0.1.0
+! Repository: https://github.com/arcticicestudio/nord-xresources
+! License:    MIT
+
+#define nord0 #2E3440
+#define nord1 #3B4252
+#define nord2 #434C5E
+#define nord3 #4C566A
+#define nord4 #D8DEE9
+#define nord5 #E5E9F0
+#define nord6 #ECEFF4
+#define nord7 #8FBCBB
+#define nord8 #88C0D0
+#define nord9 #81A1C1
+#define nord10 #5E81AC
+#define nord11 #BF616A
+#define nord12 #D08770
+#define nord13 #EBCB8B
+#define nord14 #A3BE8C
+#define nord15 #B48EAD
+
+*.foreground:   nord4
+*.background:   nord0
+*.cursorColor:  nord4
+*fading: 35
+*fadeColor: nord3
+
+*.color0: nord1
+*.color1: nord11
+*.color2: nord14
+*.color3: nord13
+*.color4: nord9
+*.color5: nord15
+*.color6: nord8
+*.color7: nord5
+*.color8: nord3
+*.color9: nord11
+*.color10: nord14
+*.color11: nord13
+*.color12: nord9
+*.color13: nord15
+*.color14: nord7
+*.color15: nord6

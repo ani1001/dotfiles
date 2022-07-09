@@ -108,8 +108,6 @@ source $ZSH/oh-my-zsh.sh
 export PATH="$HOME/.cabal/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# export MICRO_TRUECOLOR=1
-
 # Make nano the default editor
 
 export EDITOR='nano'

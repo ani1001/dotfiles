@@ -1,8 +1,0 @@
-/* XPM */
-static char * brdr_bottom_right_xpm[] = {
-"2 2 3 1",
-" 	c None",
-".	c #E0E0E0",
-"+	c #707470",
-".+",
-"++"};
