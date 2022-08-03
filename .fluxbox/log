@@ -1,0 +1,35 @@
+------------------------------------------
+Log File: /home/anik/.fluxbox/log
+Fluxbox version: 1.3.5
+GIT Revision: this_is_tar_ball_build
+Compiled: Feb 25 2014 03:56:46
+Compiler: GCC
+Compiler version: 6.3.0 20170221
+
+Defaults: 
+    menu: /etc/X11/fluxbox/fluxbox.menu-user
+   style: /usr/share/fluxbox/styles//Squared_for_Debian
+    keys: /etc/X11/fluxbox/keys
+    init: /etc/X11/fluxbox/init
+     nls: /usr/share/fluxbox/nls
+
+Compiled options (- => disabled): 
+BIDI
+-DEBUG
+EWMH
+IMLIB2
+NLS
+REMEMBER
+RENDER
+SHAPE
+SLIT
+SYSTEMTRAY
+TOOLBAR
+RANDR1.2
+XFT
+XINERAMA
+XMB
+XPM
+
+------------------------------------------
+failed to open apps file

@@ -435,3 +435,9 @@ ColorMEMStatusFree=              "rgb:00/00/00"
 ColorMEMStatusCached=            "rgb:D0/D0/D0"
 ColorMEMStatusUser=              "rgb:4A/96/E7"
 ColorMEMStatusBuffers=           "rgb:FF/00/00"
+
+
+DesktopBackgroundColor="#555555"
+DesktopBackgroundCenter=0
+DesktopBackgroundScaled=1 
+DesktopBackgroundImage="/usr/share/backgrounds/arcolinux/arco-wallpaper.jpg"

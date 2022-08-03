@@ -21,7 +21,6 @@ menu "Applications" _none_ {
   menu "Development" _none_ {
     prog "Geany" _none_ geany 
     prog "OCaml" _none_ /usr/bin/x-terminal-emulator -e ocaml
-    prog "RStudio" _none_ /usr/lib/rstudio/bin/rstudio 
     prog "dmd/phobos documentation v2.100.0" _none_ xdg-open /usr/share/dmd/html/d/spec/spec.html
   }
   menu "Graphics" _none_ {
@@ -45,38 +44,34 @@ menu "Applications" _none_ {
   }
   menu "Network" _none_ {
     prog "Brave Web Browser" _none_ /usr/bin/brave-browser-stable 
+    prog "Chromium Web Browser" _none_ /usr/bin/chromium 
     prog "Firefox ESR" _none_ /usr/lib/firefox-esr/firefox-esr 
     prog "HexChat" _none_ hexchat --existing 
     prog "MEGAsync" _none_ megasync
     prog "Transmission" _none_ transmission-gtk 
     prog "Xtreme Download Manager" _none_ "/opt/xdman/xdman"
+    prog "qBittorrent" _none_ qbittorrent 
     prog "uGet" _none_ env GDK_BACKEND=x11 uget-gtk 
   }
   menu "Office" _none_ {
     prog "Atril Document Viewer" _none_ atril 
     prog "Dictionary" _none_ xfce4-dict
     prog "Document Viewer" _none_ evince 
-    prog "Gnumeric" _none_ gnumeric 
     prog "LibreOffice" _none_ libreoffice 
     prog "LibreOffice Calc" _none_ libreoffice --calc 
     prog "LibreOffice Draw" _none_ libreoffice --draw 
     prog "LibreOffice Impress" _none_ libreoffice --impress 
     prog "LibreOffice Math" _none_ libreoffice --math 
     prog "LibreOffice Writer" _none_ libreoffice --writer 
-    prog "WPS 2019" _none_ /usr/bin/wps 
-    prog "WPS PDF" _none_ /usr/bin/wpspdf 
-    prog "WPS Presentation" _none_ /usr/bin/wpp 
-    prog "WPS Spreadsheets" _none_ /usr/bin/et 
-    prog "WPS Writer" _none_ /usr/bin/wps 
   }
   menu "Other" _none_ {
-    prog "GNU PSPP" _none_ psppire 
     prog "JASP" _none_ /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=org.jaspstats.JASP --file-forwarding org.jaspstats.JASP @@ 
     prog "jamovi" _none_ /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=jamovi --file-forwarding org.jamovi.jamovi @@ 
   }
   menu "Settings" _none_ {
     prog "Advanced Network Configuration" _none_ nm-connection-editor
     prog "Customize Look and Feel" _none_ lxappearance
+    prog "Desktop Preferences" _none_ pcmanfm --desktop-pref
     prog "File Manager Settings" _none_ thunar-settings
     prog "Firewall Configuration" _none_ gufw
     prog "LightDM GTK+ Greeter settings" _none_ lightdm-gtk-greeter-settings-pkexec
@@ -90,11 +85,15 @@ menu "Applications" _none_ {
     prog "Xfce Terminal Settings" _none_ xfce4-terminal --preferences
   }
   menu "System" _none_ {
+    prog "Alacritty" _none_ alacritty
     prog "BleachBit" _none_ bleachbit
     prog "BleachBit (as root)" _none_ pkexec bleachbit
     prog "Bulk Rename" _none_ thunar --bulk-rename 
     prog "CPU-X" _none_ cpu-x
+    prog "Disk Usage Analyzer" _none_ baobab 
+    prog "File Manager PCManFM" _none_ pcmanfm 
     prog "GParted" _none_ /usr/sbin/gparted 
+    prog "GSmartControl" _none_ "/usr/bin/gsmartcontrol-root"
     prog "Htop" _none_ /usr/bin/x-terminal-emulator -e htop
     prog "Print Settings" _none_ system-config-printer
     prog "Psensor" _none_ psensor

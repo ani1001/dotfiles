@@ -128,3 +128,9 @@ ApmFontName		=	"-b&h-lucida-bold-r-normal-sans-14-*-*-*-*-*-*-*"
 
 ShowMenuButtonIcon=0
 TaskBarClockLeds=0
+
+
+DesktopBackgroundColor="#555555"
+DesktopBackgroundCenter=0
+DesktopBackgroundScaled=1 
+DesktopBackgroundImage="/usr/share/backgrounds/arcolinux/arco-wallpaper.jpg"

@@ -41,3 +41,8 @@ ColorScrollBar="rgb:CC/CC/CC"
 ColorScrollBarSlider="rgb:CC/CC/FF"
 ColorScrollBarButton="rgb:CC/CC/CC"
 ColorScrollBarButtonArrow="rgb:00/00/00"
+
+DesktopBackgroundColor="#555555"
+DesktopBackgroundCenter=0
+DesktopBackgroundScaled=1 
+DesktopBackgroundImage="/usr/share/backgrounds/arcolinux/arco-wallpaper.jpg"

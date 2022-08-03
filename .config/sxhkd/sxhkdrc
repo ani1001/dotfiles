@@ -10,10 +10,6 @@ super + Return
 super + @space
 	dmenu_run
 
-# rofi launcher
-super + r
-	rofi -show run
-
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
@@ -23,8 +19,14 @@ super + Escape
 #
 
 # quit/restart bspwm
-super + alt + {q,r}
-	bspc {quit,wm -r}
+#super + alt + {q,r}
+#	bspc {quit,wm -r}
+
+super + alt + r
+	pkill -x panel; bspc wm -r
+
+super + alt + Escape
+	pkill -x panel; bspc quit
 
 # close and kill
 super + {_,shift + }w

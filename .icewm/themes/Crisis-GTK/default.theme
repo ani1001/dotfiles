@@ -1,0 +1,127 @@
+ThemeAuthor=                          "BlueScorpio_7"
+ThemeDescription=                     "Crisis-GTK"
+License=                              "GPL"
+Look=                                 "gtk"
+
+#Miscellaneous
+Gradients=                            "menubg.xpm dialogbg.xpm"
+TitleBarHeight=                       25
+TitleBarJustify=                      50
+TaskBarClockLeds=                     1
+TaskbarButtonWidthDivisor=            4
+ScrollBarX=                           16
+ScrollBarY=                           16
+
+#Supported Buttons
+RolloverButtonsSupported=             1
+TitleButtonsSupported=                "xmis"
+
+#Borders
+BorderSizeX=                          5
+BorderSizeY=                          5
+DlgBorderSizeX=                       5
+DlgBorderSizeY=                       5
+CornerSizeX=                          24
+CornerSizeY=                          24
+
+TitleBarHeight=                       25
+TitleBarJustify=                      50
+ScrollBarX=                           16
+ScrollBarY=                           16
+TaskbarButtonWidthDivisor=            4
+
+#Icon Size
+MenuIconSize=                         16
+SmallIconSize=                        16
+LargeIconSize=                        32
+HugeIconSize=                         48
+
+
+#DialogBox
+ColorLabelText=                       "rgb:FF/FF/FF"
+ColorDialog=                          "rgb:2D/2D/2D"
+ColorDialogSelectionText=             "rgb:FF/FF/FF"
+
+#Taskbar
+ColorDefaultTaskBar=                  "rgb:2D/2D/2D"
+ColorToolButton=                      "rgb:2D/2D/2D"
+ColorActiveButton=                    "rgb:2D/2D/2D"
+ColorNormalButton=                    "rgb:2D/2D/2D"
+ColorToolButtonText=                  "rgb:FF/FF/FF"
+ColorNormalWorkspaceButtonText=       "rgb:FF/FF/FF"
+ColorActiveWorkspaceButtonText=       "rgb:FF/FF/FF"
+ColorNormalButtonText=                "rgb:FF/FF/FF"
+ColorActiveButtonText=                "rgb:FF/FF/FF"
+ColorActiveTaskBarApp=                "rgb:2D/2D/2D"
+ColorActiveTaskBarAppText=            "rgb:FF/FF/FF"
+ColorMinimizedTaskBarApp=             "rgb:2D/2D/2D"
+ColorMinimizedTaskBarAppText=         "rgb:FF/FF/FF"
+ColorNormalTaskBarApp=                "rgb:2D/2D/2D"
+ColorNormalTaskBarAppText=            "rgb:FF/FF/FF"
+ColorInvisibleTaskbarApp=             "rgb:2D/2D/2D"
+ColorInvisibleTaskBarAppText=         "rgb:FF/FF/FF"
+
+#Menu
+ColorActiveMenu=                      "rgb:2D/2D/2D"
+ColorNormalMenu=                      "rgb:49/49/49"
+ColorNormalMenuItemText=              "rgb:FF/FF/FF"
+ColorActiveMenuItemText=              "rgb:FF/FF/FF"
+ColorDisabledMenuItemText=            "rgb:80/80/80"
+ColorDisabledMenuItemShadow=          "rgb:80/80/80"
+
+#TitleBox
+ColorNormalBorder=                    "rgb:2D/2D/2D"
+ColorActiveBorder=                    "rgb:2D/2D/2D"
+ColorNormalTitleBarText=              "rgb:D9/D9/D9"
+ColorActiveTitleBarText=              "rgb:FF/FF/FF"
+
+#Move
+ColorMoveSizeStatus=                  "rgb:2D/2D/2D"
+ColorMoveSizeStatusText=              "rgb:FF/FF/FF"
+
+#Tooltip
+ColorToolTip=                         "rgb:2D/2D/2D"
+ColorToolTipText=                     "rgb:FF/FF/FF"
+
+#QuickSwitch
+ColorQuickSwitch=                     "rgb:2D/2D/2D"
+ColorQuickSwitchText=                 "rgb:FF/FF/FF"
+
+#ListBox
+ColorListBox=                         "rgb:2D/2D/2D"
+ColorListBoxText=                     "rgb:FF/FF/FF"
+ColorListBoxSelection=                "rgb:21/61/85"
+ColorListBoxSelectionText=            "rgb:FF/FF/FF"
+
+#Label
+ColorLabel=                           "rgb:2D/2D/2D"
+ColorLabelText=                       "rgb:FF/FF/FF"
+
+#Clock
+ColorClock=                           "rgb:2D/2D/2D"
+ColorClockText=                       "rgb:FF/FF/FF"
+
+#CPUMonitor
+ColorCPUStatusUser=                   "rgb:06/A4/FF"
+ColorCPUStatusSystem=                 "rgb:1B/5E/85"
+ColorCPUStatusInterrupts=             "rgb:0E/42/5F"
+ColorCPUStatusIoWait=                 "rgb:C1/00/00"
+ColorCPUStatusSoftIrq=                "rgb:D0/98/00"
+ColorCPUStatusNice=                   "rgb:00/D6/DE"
+
+#Net
+ColorNetSend=                         "rgb:06/A4/FF"
+ColorNetReceive=                      "rgb:0E/42/5F"
+
+#ScrollBar
+ColorScrollBar=                       "rgb:24/24/24"
+ColorScrollBarButton=                 "rgb:80/80/80"
+ColorScrollBarSlider=                 "rgb:21/61/85"
+ColorScrollBarArrow=                  "rgb:80/80/80"
+ColorScrollBarButtonArrow=            "rgb:80/80/80"
+ColorScrollBarInactiveArrow=          "rgb:80/80/80"
+
+DesktopBackgroundColor="#555555"
+DesktopBackgroundCenter=0
+DesktopBackgroundScaled=1 
+DesktopBackgroundImage="/usr/share/backgrounds/arcolinux/arco-wallpaper.jpg"

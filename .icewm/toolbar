@@ -1,10 +1,8 @@
-# This is a default toolbar definition file for IceWM
+# This is an example for icewm 1.8.0 toolbar definition file.
+# It will be installed as /usr/share/icewm/toolbar.
+# Place your variants in /etc/icewm or in $HOME/.icewm since
+# modifications to this file will be overwritten when you reinstall icewm.
 #
-# Place your personal variant in $HOME/.icewm directory.
-
-prog XTerm ! x-terminal-emulator
-#prog FTE fte fte
-#prog Netscape netscape netscape
-#prog    "Vim" vim /usr/bin/gvim -f
-prog    "WWW" ! x-www-browser
-
+prog "Terminal" utilities-terminal urxvt
+prog "Web Browser" web-browser xdg-open about:blank
+prog "File Manager" file-manager thunar

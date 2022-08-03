@@ -155,5 +155,7 @@ QuickSwitchFontNameXft=                 "sans-serif:size=10:bold"
 ClockFontNameXft=                       "sans-serif:size=8:bold"
 
 #Desktop
-DesktopBackgroundColor=                 "rgb:25/33/79"
-DesktopTransparencyColor=               "rgb:25/33/79"
+DesktopBackgroundColor="#555555"
+DesktopBackgroundCenter=0
+DesktopBackgroundScaled=1 
+DesktopBackgroundImage="/usr/share/backgrounds/arcolinux/arco-wallpaper.jpg"
