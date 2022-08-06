@@ -14,7 +14,7 @@ set $mod Mod4
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 #font pango:monospace 8
-font pango:source code pro 9
+font pango: Noto Sans 9
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -42,7 +42,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec terminator
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -185,33 +185,33 @@ for_window [class="^.*"] border pixel 2
 #        status_command i3status
 #}
 
-#bar {
-#    output            VGA1
-#    status_command    i3blocks -c ~/.config/i3blocks/i3blocks.conf
-#    position          bottom
-#    workspace_buttons yes
-#    tray_output       primary
-#    tray_padding      0
-#    separator_symbol "|"
-#    strip_workspace_numbers yes
-#    
-#    font pango:DejaVu Sans Mono 10
-#
-#    colors {
-#
-#        background #2E3440
-#        statusline #D8DEE9
-#        separator  #8FBCBB
-#
-#        focused_workspace  #D8DEE9 #5E81AC
-#        active_workspace   #D8DEE9 #4C566A
-#        inactive_workspace #B48EAD #434C5E
-#        urgent_workspace   #D8DEE9 #D08770
-#
-#        }
-#}
+bar {
+    output            VGA1
+    status_command    i3blocks -c ~/.config/i3blocks/i3blocks.conf
+#    status_command    i3status -c ~/.config/i3status/i3status.conf
+    position          bottom
+    workspace_buttons yes
+    tray_output       primary
+    tray_padding      0
+    separator_symbol "|"
+    strip_workspace_numbers yes
+    
+    font pango: Noto Sans 10
 
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+    colors {
+
+        background #2E3440
+        statusline #D8DEE9
+        separator  #8FBCBB
+
+        focused_workspace  #D8DEE9 #5E81AC
+        active_workspace   #D8DEE9 #4C566A
+        inactive_workspace #B48EAD #434C5E
+        urgent_workspace   #D8DEE9 #D08770
+
+        }
+}
+
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id picom
 exec --no-startup-id lxpolkit
