@@ -4,7 +4,7 @@ Config {
      font =         "-misc-fixed-*-*-*-*-13-*-*-*-*-*-*-*"
    , bgColor =      "#2e3440"
    , fgColor =      "#d8dee9"
-   , position =     Top
+   , position =     TopW L 95
    , border =       BottomB
    , borderColor =  "#4c566a"
 
