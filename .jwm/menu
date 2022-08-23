@@ -7,6 +7,9 @@
       <Program label="Terminal">
         urxvtc
       </Program>
+      <Program label="Waterfox">
+        /usr/local/src/waterfox/waterfox-bin
+      </Program>
       <Separator/>
       <Include>exec:xdgmenumaker -n -f jwm</Include>
       <Separator/>

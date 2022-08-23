@@ -11,7 +11,7 @@
 xdgmenumaker -f icewm > ~/.icewm/menu
 
 #picom
-picom &
+picom -b &
 
 # start ArcoLinux Welcome  App
 #dex $HOME/.config/autostart/arcolinux-welcome-app.desktop
@@ -39,7 +39,7 @@ volumeicon &
 #xset b off
 
 ## Enable power management
-#xfce4-power-manager &
+xfce4-power-manager &
 
 ##Clipboard Manager
 #(xfce4-clipman) &

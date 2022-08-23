@@ -6,10 +6,13 @@ Xft.hintstyle:  hintslight
 Xft.autohint:   false
 Xft.lcdfilter:  lcddefault
 
+! Xcursor.theme: xcursor-breeze
+! Xcursor.size: 0
+
 ! XTerm
 ! XTerm*termName: xterm
 XTerm*renderFont: true
-XTerm*faceName: xft:Source Code Pro:style=Regular, \
+XTerm*faceName: xft:SauceCodePro NF:style=Regular, \
                 xft:JoyPixels:size=12, \
                 xft:Monospace:style=Medium:size=12
 XTerm*faceSize: 11
@@ -57,12 +60,12 @@ URxvt.saveLines: 5000
 ! URxvt*shading:                  138
 
 ! Using Xft
-URxvt.font: xft:Source Code Pro:style=Regular:size=11, \
+URxvt.font: xft:SauceCodePro NF:style=Regular:size=11, \
             xft:JoyPixels:size=12, \
             xft:Monospace:style=Medium:size=12
-            
+
 ! URxvt.font: 9x15,xft:TerminessTTFNerdFontMono
-            
+
 ! alternative font settings with 'terminus':
 ! URxvt.font:      -xos4-terminus-medium-r-normal--16-160-72-72-c-80-iso10646-1
 ! URxvt.bold.font: -xos4-terminus-bold-r-normal--16-160-72-72-c-80-iso10646-1
@@ -85,7 +88,7 @@ URxvt.keysym.M-u:     perl:url-select:select_next
 URxvt.colorUL: #4682B4
 URxvt.url-launcher:   /usr/bin/firefox
 URxvt.underlineURLs:  True
-URxvt.matcher.button: 1 
+URxvt.matcher.button: 1
 URxvt.keysym.M-Escape:perl:keyboard-select:activate
 URxvt.keysym.Control-Shift-V:     perl:pasta:paste
 ! Comment this if you do not want copy when text is selected

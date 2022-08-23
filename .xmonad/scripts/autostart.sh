@@ -61,7 +61,7 @@ xsetroot -cursor_name left_ptr &
 #run ckb-next -b &
 
 run nitrogen --restore &
-run picom &
+run picom -b &
 run lxpolkit &
 run nm-applet &
 #run volumeicon &

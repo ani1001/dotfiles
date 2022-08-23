@@ -123,7 +123,7 @@ screens = [
                 ),
             ],
             22,
-            opacity=1.00
+            opacity=0.85
         ),
         bottom=bar.Bar(
             [
@@ -254,7 +254,7 @@ screens = [
                 #),
             ],
             22,
-            opacity=1.00
+            opacity=0.85
         ),
     ),
 ]

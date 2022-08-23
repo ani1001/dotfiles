@@ -35,4 +35,3 @@ run lxpolkit &
 #run spotify &
 #run atom &
 run urxvtd -q -o -f &
-run emacs --daemon &

@@ -2,7 +2,7 @@
 
 ;; Autostart applications in the background
 (run-shell-command "nitrogen --restore")
-(run-shell-command "picom")
+(run-shell-command "picom -b")
 (run-shell-command "lxpolkit")
 (run-shell-command "xsetroot -cursor_name left_ptr")
 (run-shell-command "urxvtd -q -o -f")

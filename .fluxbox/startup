@@ -18,7 +18,6 @@ volumeicon &
 # sbxkb &   # keyboard layout switcher for the tray
 mpd &
 urxvtd -q -o -f &
-emacs --daemon &
 
 # exec is for starting Fluxbox itself, do not put an ampersand (&) after this or Fluxbox will exit immediately.
 # exec /usr/bin/fluxbox

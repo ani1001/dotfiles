@@ -1,7 +1,7 @@
 from libqtile.config import EzKey as Key
 from .mouse import *
 
-terminal = "st"
+terminal = "alacritty"
 
 keys = [
     # Switch between windows

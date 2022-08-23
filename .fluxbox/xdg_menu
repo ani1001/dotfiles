@@ -4,15 +4,14 @@
     [exec] (Disks) {gnome-disks}
     [exec] (Emacs (GUI\)) {/usr/bin/emacs }
     [exec] (Emacs (Terminal\)) {/usr/bin/x-terminal-emulator -e /usr/bin/emacs -nw }
+    [exec] (Keyboard layout viewer) {kbd-layout-viewer5}
     [exec] (Kvantum Manager) {kvantummanager}
     [exec] (Mousepad) {mousepad }
     [exec] (Neovim) {/usr/bin/x-terminal-emulator -e nvim }
     [exec] (Plank) {plank}
-    [exec] (PlayOnLinux) {playonlinux }
     [exec] (Rxvt Color Unicode Terminal) {urxvt}
     [exec] (Screenshot) {xfce4-screenshooter}
     [exec] (Sensor Viewer) {xfce4-sensors}
-    [exec] (Terminator) {terminator}
     [exec] (Vim) {/usr/bin/x-terminal-emulator -e vim }
     [exec] (Xarchiver) {xarchiver }
     [exec] (nitrogen) {nitrogen}
@@ -20,92 +19,88 @@
   [end] # (Accessories)
   [submenu] (Development)
     [exec] (Geany) {geany }
-    [exec] (OCaml) {/usr/bin/x-terminal-emulator -e ocaml}
-    [exec] (dmd/phobos documentation v2.100.0) {xdg-open /usr/share/dmd/html/d/spec/spec.html}
   [end] # (Development)
   [submenu] (Graphics)
-    [exec] (Flameshot) {/usr/bin/flameshot}
-    [exec] (FontForge) {fontforge }
-    [exec] (GNU Image Manipulation Program) {gimp-2.10 }
-    [exec] (ImageMagick (color depth=q16\)) {/usr/bin/display-im6.q16 -nostdin }
-    [exec] (R) {/usr/bin/x-terminal-emulator -e R}
     [exec] (Ristretto Image Viewer) {ristretto }
     [exec] (XSane) {xsane}
   [end] # (Graphics)
   [submenu] (Multimedia)
+    [exec] (Audacious) {audacious }
     [exec] (Ex Falso) {exfalso}
     [exec] (Ncmpcpp) {/usr/bin/x-terminal-emulator -e ncmpcpp}
     [exec] (Parole Media Player) {parole }
     [exec] (PulseAudio Volume Control) {pavucontrol}
-    [exec] (Qmmp) {qmmp }
     [exec] (Quod Libet) {quodlibet --run --play-file }
     [exec] (VLC media player) {/usr/bin/vlc --started-from-file }
     [exec] (Xfburn) {xfburn}
   [end] # (Multimedia)
   [submenu] (Network)
     [exec] (Brave Web Browser) {/usr/bin/brave-browser-stable }
-    [exec] (Chromium Web Browser) {/usr/bin/chromium }
     [exec] (Firefox ESR) {/usr/lib/firefox-esr/firefox-esr }
     [exec] (HexChat) {hexchat --existing }
     [exec] (MEGAsync) {megasync}
-    [exec] (Transmission) {transmission-gtk }
-    [exec] (Xtreme Download Manager) {"/opt/xdman/xdman"}
+    [exec] (pcloud) {"/media/anikb/Galaxy/FLOSS/Applications/AppImages/pcloud" }
     [exec] (qBittorrent) {qbittorrent }
     [exec] (uGet) {env GDK_BACKEND=x11 uget-gtk }
   [end] # (Network)
   [submenu] (Office)
     [exec] (Atril Document Viewer) {atril }
     [exec] (Dictionary) {xfce4-dict}
-    [exec] (Document Viewer) {evince }
+    [exec] (GoldenDict) {goldendict}
     [exec] (LibreOffice) {libreoffice }
     [exec] (LibreOffice Calc) {libreoffice --calc }
     [exec] (LibreOffice Draw) {libreoffice --draw }
     [exec] (LibreOffice Impress) {libreoffice --impress }
     [exec] (LibreOffice Math) {libreoffice --math }
     [exec] (LibreOffice Writer) {libreoffice --writer }
+    [exec] (qpdfview) {qpdfview --unique }
   [end] # (Office)
-  [submenu] (Other)
-    [exec] (JASP) {/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=org.jaspstats.JASP --file-forwarding org.jaspstats.JASP @@ }
-    [exec] (jamovi) {/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=jamovi --file-forwarding org.jamovi.jamovi @@ }
-  [end] # (Other)
   [submenu] (Settings)
     [exec] (Advanced Network Configuration) {nm-connection-editor}
+    [exec] (Anthy Dictionary editor) {kasumi}
     [exec] (Customize Look and Feel) {lxappearance}
     [exec] (Desktop Preferences) {pcmanfm --desktop-pref}
+    [exec] (Fcitx 5 Configuration) {/usr/bin/fcitx5-configtool}
+    [exec] (Fcitx 5 Migration Wizard) {fcitx5-migrator}
+    [exec] (Fcitx Configuration) {fcitx-configtool}
     [exec] (File Manager Settings) {thunar-settings}
     [exec] (Firewall Configuration) {gufw}
+    [exec] (IBus Preferences) {ibus-setup}
+    [exec] (Input Method) {im-config}
+    [exec] (Input Method) {uim-pref-gtk}
     [exec] (LightDM GTK+ Greeter settings) {lightdm-gtk-greeter-settings-pkexec}
+    [exec] (Mozc Setup) {/usr/lib/mozc/mozc_tool --mode=config_dialog}
     [exec] (Openbox Configuration Manager) {obconf }
     [exec] (Power Manager) {xfce4-power-manager-settings}
     [exec] (Qt5 Settings) {qt5ct}
     [exec] (Removable Drives and Media) {thunar-volman-settings}
-    [exec] (Screensaver) {xscreensaver-demo}
-    [exec] (TeXdoctk) {texdoctk}
     [exec] (Tint2 Settings) {tint2conf}
     [exec] (Xfce Terminal Settings) {xfce4-terminal --preferences}
   [end] # (Settings)
   [submenu] (System)
     [exec] (Alacritty) {alacritty}
     [exec] (BleachBit) {bleachbit}
-    [exec] (BleachBit (as root\)) {pkexec bleachbit}
+    [exec] (BleachBit as Administrator) {pkexec bleachbit}
     [exec] (Bulk Rename) {thunar --bulk-rename }
     [exec] (CPU-X) {cpu-x}
-    [exec] (Disk Usage Analyzer) {baobab }
+    [exec] (Fcitx) {fcitx}
+    [exec] (Fcitx 5) {/usr/bin/fcitx5}
     [exec] (File Manager PCManFM) {pcmanfm }
     [exec] (GParted) {/usr/sbin/gparted }
-    [exec] (GSmartControl) {"/usr/bin/gsmartcontrol-root"}
     [exec] (Htop) {/usr/bin/x-terminal-emulator -e htop}
+    [exec] (Multilingual Terminal) {mlterm}
     [exec] (Print Settings) {system-config-printer}
     [exec] (Psensor) {psensor}
     [exec] (Synaptic Package Manager) {synaptic-pkexec}
     [exec] (Task Manager) {xfce4-taskmanager}
+    [exec] (Thai X terminal) {txiterm -ls -cursorColor yellow -cursorColorThai red -bg black -fg white}
     [exec] (Thunar File Manager) {thunar }
     [exec] (Tint2) {tint2}
     [exec] (UXTerm) {uxterm}
     [exec] (XTerm) {xterm}
     [exec] (Xfce Terminal) {xfce4-terminal}
-    [exec] (conky) {conky --daemonize --pause=1}
     [exec] (gmrun) {gmrun}
     [exec] (kitty) {kitty}
+    [exec] (ranger) {/usr/bin/x-terminal-emulator -e ranger}
   [end] # (System)
 [end] # (Applications)

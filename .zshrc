@@ -2,7 +2,7 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/anik/.oh-my-zsh"
+export ZSH="/home/anikb/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -107,6 +107,7 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH="$HOME/.cabal/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+export MICRO_TRUECOLOR=1
 
 # Make nano the default editor
 

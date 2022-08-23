@@ -1,11 +1,11 @@
-#! /bin/sh
+#!/bin/sh
 
 [ -e ~/.profile ] && . ~/.profile
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 set -U SXHKD_SHELL sh &
 pgrep -x panel > /dev/null || $HOME/.config/bspwm/panel/panel &
-#$HOME/.config/polybar/launch.sh
+#$HOME/.config/polybar/launch.sh &
 nitrogen --restore &
 picom -b &
 lxpolkit &

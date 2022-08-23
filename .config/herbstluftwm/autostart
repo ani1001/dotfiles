@@ -234,12 +234,12 @@ xsetroot -cursor_name left_ptr &
 
 nitrogen --restore &
 #feh --bg-fill $HOME/.config/herbstluftwm/wall.png
-picom &
+picom -b &
 lxpolkit &
 mpd &
 nm-applet &
 #volumeicon &
-#xfce4-power-manager &
+xfce4-power-manager &
 #numlockx on &
 urxvtd -q -o -f &
 emacs --daemon &
