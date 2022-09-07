@@ -97,14 +97,14 @@ local themes = {
     "vertex"           -- 10
 }
 
-local chosen_theme = themes[4]
+local chosen_theme = themes[8]
 local modkey       = "Mod4"
 local altkey       = "Mod1"
 local terminal     = "alacritty"
 local vi_focus     = false -- vi-like client focus https://github.com/lcpz/awesome-copycats/issues/275
 local cycle_prev   = true  -- cycle with only the previously focused client or all https://github.com/lcpz/awesome-copycats/issues/274
 local editor       = os.getenv("EDITOR") or "nvim"
-local browser      = "brave-browser"
+local browser      = "chromium -no-default-browser-check"
 
 awful.util.terminal = terminal
 --awful.util.tagnames = { "1", "2", "3", "4", "5" }

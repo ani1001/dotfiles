@@ -77,3 +77,70 @@ Aug 22 01:50:33 Sysinfo plugin unloaded
 Aug 22 01:50:33 Perl interface unloaded
 **** ENDING LOGGING AT Mon Aug 22 01:50:33 2022
 
+**** BEGIN LOGGING AT Sat Aug 27 22:29:30 2022
+
+Aug 27 22:29:30 *	Welcome to the freenode IRC Network anik!~manjaro-i@43.245.121.231
+Aug 27 22:29:30 *	Your host is *.freenode.net, running version InspIRCd-3
+Aug 27 22:29:30 *	This server was created 08:12:31 Jul 07 2022
+Aug 27 22:29:30 *	*.freenode.net InspIRCd-3 BDHILRSTWcdghikorswxz ABCDEFIJKLMNOPQRSTUWXYZbcdefhijklmnoprstuvwz :BEFIJLWXYZbdefhjklovw
+Aug 27 22:29:30 *	ACCEPT=30 AWAYLEN=200 BOT=B CALLERID=g CASEMAPPING=ascii CHANLIMIT=#:20 CHANMODES=IXZbew,k,BEFJLWdfjl,ACDKMNOPQRSTUcimnprstuz CHANNELLEN=64 CHANTYPES=# ELIST=CMNTU ESILENCE=CcdiNnPpTtx EXCEPTS=e :are supported by this server
+Aug 27 22:29:30 *	EXTBAN=,ACNOQRSTUacjmnpruwz HOSTLEN=64 INVEX=I KEYLEN=32 KICKLEN=255 LINELEN=512 MAXLIST=I:100,X:100,b:100,e:100,w:100 MAXTARGETS=20 MODES=20 MONITOR=30 NAMELEN=128 NAMESX NETWORK=freenode :are supported by this server
+Aug 27 22:29:30 *	NICKLEN=30 PREFIX=(Yohv)!@%+ REMOVE SAFELIST SECURELIST=60 SILENCE=32 STATUSMSG=!@%+ TOPICLEN=390 UHNAMES USERIP USERLEN=10 USERMODES=,,s,BDHILRSTWcdghikorwxz VBANLIST :are supported by this server
+Aug 27 22:29:30 *	VLIST=b WATCH=32 WHOX :are supported by this server
+Aug 27 22:29:30 *	There are 24 users and 9474 invisible on 9 servers
+Aug 27 22:29:30 *	5 :operator(s) online
+Aug 27 22:29:30 *	20 :unknown connections
+Aug 27 22:29:30 *	13478 :channels formed
+Aug 27 22:29:30 *	I have 3307 clients and 1 servers
+Aug 27 22:29:30 *	Current local users: 3307  Max: 3952
+Aug 27 22:29:30 *	Current global users: 9498  Max: 10575
+Aug 27 22:29:30 *	*.freenode.net message of the day
+Aug 27 22:29:30 *	  Hello, World!
+Aug 27 22:29:30 *	 
+Aug 27 22:29:30 *	  Welcome to the
+Aug 27 22:29:30 *	          __                               _
+Aug 27 22:29:30 *	         / _|_ __ ___  ___ _ __   ___   __| | ___
+Aug 27 22:29:30 *	        | |_| '__/ _ \/ _ \ '_ \ / _ \ / _` |/ _ \
+Aug 27 22:29:30 *	        |  _| | |  __/  __/ | | | (_) | (_| |  __/
+Aug 27 22:29:30 *	        |_| |_|  \___|\___|_| |_|\___/ \__,_|\___|
+Aug 27 22:29:30 *	                                   AUTONOMOUS ZONE
+Aug 27 22:29:30 *	 
+Aug 27 22:29:30 *	  Connect to us on:
+Aug 27 22:29:30 *	 
+Aug 27 22:29:30 *	  Hostname: irc.freenode.net / chat.freenode.net
+Aug 27 22:29:30 *	  Plaintext: 6660-6669
+Aug 27 22:29:30 *	  TLS/SSL: 6697,7000,7070
+Aug 27 22:29:30 *	  Webchat: https://webchat.freenode.net
+Aug 27 22:29:30 *	 
+Aug 27 22:29:30 *	  By connecting to freenode you indicate that you have read and accept our
+Aug 27 22:29:30 *	  policies and guidelines as set out on https://freenode.net and agree to
+Aug 27 22:29:30 *	  be scanned for an open proxy.
+Aug 27 22:29:30 *	 
+Aug 27 22:29:30 *	  If you are looking for assistance, please try:
+Aug 27 22:29:30 *	 
+Aug 27 22:29:30 *	  #help                    - Help with general IRC and Services.
+Aug 27 22:29:30 *	  #chanhelp                - Help with channels and channel services.
+Aug 27 22:29:30 *	  #IRC                     - Help with the IRC.com by freenode app.
+Aug 27 22:29:30 *	 
+Aug 27 22:29:30 *	  Checkout some of our communities and services:
+Aug 27 22:29:30 *	 
+Aug 27 22:29:30 *	  #freenode-bbs            - BBS [https://bbs.freenode.net/]
+Aug 27 22:29:30 *	  #freenode-bbs-discussion - BBS Discussion
+Aug 27 22:29:30 *	  #freenode-jobs           - Jobs [https://jobs.freenode.net/]
+Aug 27 22:29:30 *	  #freenode                - Chat about freenode.
+Aug 27 22:29:30 *	  #anonchan                - Chat anonymously.
+Aug 27 22:29:30 *	 
+Aug 27 22:29:30 *	  Type /join #<channel>
+Aug 27 22:29:30 *	 
+Aug 27 22:29:30 *	  Thank you for using freenode!
+Aug 27 22:29:30 *	End of message of the day.
+Aug 27 22:29:30 *	freenode-aqk.ap7.vd70kn.IP :is now your displayed host
+Aug 27 22:29:30 *	anik sets mode +w on anik
+Aug 27 22:29:30 *	anik sets mode +R on anik
+Aug 27 22:29:30 *	anik sets mode +i on anik
+Aug 27 22:29:30 *	anik sets mode +x on anik
+Aug 27 22:41:43 Checksum plugin unloaded
+Aug 27 22:41:43 Sysinfo plugin unloaded
+Aug 27 22:41:43 Perl interface unloaded
+**** ENDING LOGGING AT Sat Aug 27 22:41:43 2022
+
