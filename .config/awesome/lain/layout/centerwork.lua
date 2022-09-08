@@ -10,11 +10,7 @@
 
 --]]
 
-local floor = math.floor
-local max = math.max
-local mouse = mouse
-local mousegrabber = mousegrabber
-local screen = screen
+local floor, max, mouse, mousegrabber, screen = math.floor, math.max, mouse, mousegrabber, screen
 
 local centerwork = {
     name       = "centerwork",
@@ -142,7 +138,7 @@ local function mouse_resize_handler(c, _, _, _, orientation)
         if g.height + 15 >= wa.height then
             offset = g.height * .5
             cursor = "sb_h_double_arrow"
-        elseif g.y + g.height + 15 <= wa.y + wa.height then
+        elseif not (g.y + g.height + 15 > wa.y + wa.height) then
             offset = g.height
         end
         corner_coords = { x = wa.x + wa.width * (1 - mwfact) / 2, y = g.y + offset }
@@ -150,7 +146,7 @@ local function mouse_resize_handler(c, _, _, _, orientation)
         if g.width + 15 >= wa.width then
             offset = g.width * .5
             cursor = "sb_v_double_arrow"
-        elseif g.x + g.width + 15 <= wa.x + wa.width then
+        elseif not (g.x + g.width + 15 > wa.x + wa.width) then
             offset = g.width
         end
         corner_coords = { y = wa.y + wa.height * (1 - mwfact) / 2, x = g.x + offset }
@@ -160,22 +156,22 @@ local function mouse_resize_handler(c, _, _, _, orientation)
 
     local prev_coords = {}
 
-    mousegrabber.run(function(m)
+    mousegrabber.run(function(_mouse)
         if not c.valid then return false end
-        for _, v in ipairs(m.buttons) do
+        for _, v in ipairs(_mouse.buttons) do
             if v then
-                prev_coords = { x = m.x, y = m.y }
+                prev_coords = { x = _mouse.x, y = _mouse.y }
                 local new_mwfact
                 if orientation == 'vertical' then
-                    new_mwfact = 1 - (m.x - wa.x) / wa.width * 2
+                    new_mwfact = 1 - (_mouse.x - wa.x) / wa.width * 2
                 else
-                    new_mwfact = 1 - (m.y - wa.y) / wa.height * 2
+                    new_mwfact = 1 - (_mouse.y - wa.y) / wa.height * 2
                 end
                 c.screen.selected_tag.master_width_factor = math.min(math.max(new_mwfact, 0.01), 0.99)
                 return true
             end
         end
-        return prev_coords.x == m.x and prev_coords.y == m.y
+        return prev_coords.x == _mouse.x and prev_coords.y == _mouse.y
     end, cursor)
 end
 
@@ -195,14 +191,11 @@ function centerwork.horizontal.mouse_resize_handler(c, corner, x, y)
     return mouse_resize_handler(c, corner, x, y, 'horizontal')
 end
 
-
---[[
-Make focus.byidx and swap.byidx behave more consistently with other layouts.
---]]
+-------------------------------------------------------------------------------
+-- make focus.byidx and swap.byidx behave more consistently with other layouts
 
 local awful = require("awful")
 local gears = require("gears")
-local client = client
 
 local function compare_position(a, b)
     if a.x == b.x then
@@ -215,10 +208,7 @@ end
 local function clients_by_position()
     local this = client.focus
     if this then
-        local sorted = {}
-        for _, c in ipairs(client.focus.first_tag:clients()) do
-            if not c.minimized then sorted[#sorted+1] = c end
-        end
+        local sorted = client.focus.first_tag:clients()
         table.sort(sorted, compare_position)
 
         local idx = 0
@@ -244,8 +234,9 @@ centerwork.focus = {}
 
 --[[
 Drop in replacements for awful.client.focus.byidx and awful.client.swap.byidx
-that behaves consistently with other layouts.
+that behaves consistently with other layouts
 --]]
+
 
 function centerwork.focus.byidx(i)
     if in_centerwork() then

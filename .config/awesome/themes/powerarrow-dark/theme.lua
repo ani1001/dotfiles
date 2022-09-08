@@ -17,14 +17,15 @@ local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 local theme                                     = {}
 theme.dir                                       = os.getenv("HOME") .. "/.config/awesome/themes/powerarrow-dark"
 theme.wallpaper                                 = theme.dir .. "/wall.png"
-theme.font                                      = "Terminus 9"
+theme.font                                      = "Noto Sans Regular 11"
+theme.taglist_font                              = "Noto Sans Regular 13"
 theme.fg_normal                                 = "#DDDDFF"
 theme.fg_focus                                  = "#EA6F81"
 theme.fg_urgent                                 = "#CC9393"
 theme.bg_normal                                 = "#1A1A1A"
 theme.bg_focus                                  = "#313131"
 theme.bg_urgent                                 = "#1A1A1A"
-theme.border_width                              = dpi(1)
+theme.border_width                              = dpi(2)
 theme.border_normal                             = "#3F3F3F"
 theme.border_focus                              = "#7F7F7F"
 theme.border_marked                             = "#CC9393"
@@ -106,14 +107,14 @@ local clock = awful.widget.watch(
 theme.cal = lain.widget.cal({
     attach_to = { clock },
     notification_preset = {
-        font = "Terminus 10",
+        font = "Noto Sans Regular 11",
         fg   = theme.fg_normal,
         bg   = theme.bg_normal
     }
 })
 
 -- Mail IMAP check
-local mailicon = wibox.widget.imagebox(theme.widget_mail)
+-- local mailicon = wibox.widget.imagebox(theme.widget_mail)
 --[[ commented because it needs to be set before use
 mailicon:buttons(my_table.join(awful.button({ }, 1, function () awful.spawn(mail) end)))
 theme.mail = lain.widget.imap({
@@ -132,6 +133,8 @@ theme.mail = lain.widget.imap({
     end
 })
 --]]
+
+--[[
 
 -- MPD
 local musicplr = awful.util.terminal .. " -title Music -e ncmpcpp"
@@ -169,6 +172,8 @@ theme.mpd = lain.widget.mpd({
     end
 })
 
+--]]
+
 -- MEM
 local memicon = wibox.widget.imagebox(theme.widget_mem)
 local mem = lain.widget.mem({
@@ -194,7 +199,7 @@ local temp = lain.widget.temp({
 })
 
 -- / fs
-local fsicon = wibox.widget.imagebox(theme.widget_hdd)
+-- local fsicon = wibox.widget.imagebox(theme.widget_hdd)
 --[[ commented because it needs Gio/Glib >= 2.54
 theme.fs = lain.widget.fs({
     notification_preset = { fg = theme.fg_normal, bg = theme.bg_normal, font = "Terminus 10" },
@@ -272,7 +277,7 @@ local arrl_ld = separators.arrow_left("alpha", theme.bg_focus)
 
 function theme.at_screen_connect(s)
     -- Quake application
-    s.quake = lain.util.quake({ app = awful.util.terminal })
+    -- s.quake = lain.util.quake({ app = awful.util.terminal })
 
     -- If wallpaper is a function, call it with the screen
     local wallpaper = theme.wallpaper
@@ -321,8 +326,8 @@ function theme.at_screen_connect(s)
             keyboardlayout,
             spr,
             arrl_ld,
-            wibox.container.background(mpdicon, theme.bg_focus),
-            wibox.container.background(theme.mpd.widget, theme.bg_focus),
+            -- wibox.container.background(mpdicon, theme.bg_focus),
+            -- wibox.container.background(theme.mpd.widget, theme.bg_focus),
             arrl_dl,
             volicon,
             theme.volume.widget,
