@@ -11,16 +11,10 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
   unset f
 fi
 
-xrdb $HOME/.Xresources &
-xrandr --output VGA1 --brightness 0.9 &
-xset +fp $HOME/.local/share/fonts &
-xset fp rehash &
-
-## Some applications that should be run in the background
-# xscreensaver -no-splash &
-# xsetroot -cursor_name left_ptr &
-# pulseaudio --start &
-# mpd &
+# Sourcing xprofile from a session started with xinit
+# Make sure this is before the 'exec' command or it won't be sourced.
+[ -f /etc/xprofile ] && . /etc/xprofile
+[ -f ~/.xprofile ] && . ~/.xprofile
 
 # Set the default session here
 session=${1:-herbstluftwm}
