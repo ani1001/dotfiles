@@ -66,3 +66,57 @@ Aug 27 22:29:26 *	Capabilities acknowledged: account-notify away-notify cap-noti
 Aug 27 22:29:30 *	*** Ident lookup timed out, using ~manjaro-i instead.
 **** ENDING LOGGING AT Sat Aug 27 22:29:30 2022
 
+**** BEGIN LOGGING AT Fri Sep 16 15:26:09 2022
+
+Sep 16 15:26:09 FiSHLiM plugin loaded
+Sep 16 15:26:09 Sysinfo plugin loaded
+Sep 16 15:26:09 Checksum plugin loaded
+Sep 16 15:26:09 *	Looking up chat.freenode.net
+Sep 16 15:26:16 *	Connecting to chat.freenode.net (45.56.126.124:6667)
+Sep 16 15:26:17 *	Connected. Now logging in.
+Sep 16 15:26:17 *	*** Looking up your ident...
+Sep 16 15:26:17 *	*** Looking up your hostname...
+Sep 16 15:26:18 *	Capabilities supported: account-notify account-tag away-notify batch cap-notify chghost draft/relaymsg=/ echo-message extended-join inspircd.org/poison inspircd.org/standard-replies invite-notify labeled-response message-tags multi-prefix sasl=EXTERNAL,PLAIN server-time setname userhost-in-names 
+Sep 16 15:26:18 *	Capabilities requested: account-notify account-tag away-notify cap-notify chghost extended-join invite-notify multi-prefix server-time setname userhost-in-names 
+Sep 16 15:26:18 *	*** Could not resolve your hostname: Domain not found; using your IP address (202.86.216.251) instead.
+Sep 16 15:26:18 *	Capabilities acknowledged: account-notify account-tag away-notify cap-notify chghost extended-join invite-notify multi-prefix server-time setname userhost-in-names
+Sep 16 15:26:23 *	*** Ident lookup timed out, using ~manjaro-i instead.
+**** ENDING LOGGING AT Fri Sep 16 15:26:21 2022
+
+**** BEGIN LOGGING AT Sat Sep 17 00:49:33 2022
+
+Sep 17 00:49:33 FiSHLiM plugin loaded
+Sep 17 00:49:33 Sysinfo plugin loaded
+Sep 17 00:49:33 Checksum plugin loaded
+Sep 17 00:49:33 *	Looking up chat.freenode.net
+Sep 17 00:49:34 *	Connecting to chat.freenode.net (207.148.28.126:6667)
+Sep 17 00:49:34 *	Connected. Now logging in.
+Sep 17 00:49:34 *	*** Looking up your ident...
+Sep 17 00:49:34 *	*** Looking up your hostname...
+Sep 17 00:49:35 *	Capabilities supported: account-notify account-tag away-notify batch cap-notify chghost draft/relaymsg=/ echo-message extended-join inspircd.org/poison inspircd.org/standard-replies invite-notify labeled-response message-tags multi-prefix sasl=EXTERNAL,PLAIN server-time setname userhost-in-names 
+Sep 17 00:49:35 *	Capabilities requested: account-notify account-tag away-notify cap-notify chghost extended-join invite-notify multi-prefix server-time setname userhost-in-names 
+Sep 17 00:49:35 *	*** Could not resolve your hostname: Domain not found; using your IP address (202.86.216.251) instead.
+Sep 17 00:49:35 *	Capabilities acknowledged: account-notify account-tag away-notify cap-notify chghost extended-join invite-notify multi-prefix server-time setname userhost-in-names
+Sep 17 00:49:40 *	*** Ident lookup timed out, using ~manjaro-i instead.
+**** ENDING LOGGING AT Sat Sep 17 00:49:39 2022
+
+**** BEGIN LOGGING AT Sat Sep 17 00:49:55 2022
+
+Sep 17 00:49:55 *	Looking up irc.libera.chat
+**** BEGIN LOGGING AT Sun Sep 18 00:06:04 2022
+
+Sep 18 00:06:04 FiSHLiM plugin loaded
+Sep 18 00:06:04 Sysinfo plugin loaded
+Sep 18 00:06:04 Checksum plugin loaded
+Sep 18 00:06:04 *	Looking up chat.freenode.net
+Sep 18 00:06:05 *	Connecting to chat.freenode.net (45.56.126.124:6667)
+Sep 18 00:06:05 *	Connected. Now logging in.
+Sep 18 00:06:05 *	*** Looking up your ident...
+Sep 18 00:06:05 *	*** Looking up your hostname...
+Sep 18 00:06:06 *	Capabilities supported: account-notify account-tag away-notify batch cap-notify chghost draft/relaymsg=/ echo-message extended-join inspircd.org/poison inspircd.org/standard-replies invite-notify labeled-response message-tags multi-prefix sasl=EXTERNAL,PLAIN server-time setname userhost-in-names 
+Sep 18 00:06:06 *	Capabilities requested: account-notify account-tag away-notify cap-notify chghost extended-join invite-notify multi-prefix server-time setname userhost-in-names 
+Sep 18 00:06:06 *	*** Could not resolve your hostname: Domain not found; using your IP address (202.86.217.24) instead.
+Sep 18 00:06:06 *	Capabilities acknowledged: account-notify account-tag away-notify cap-notify chghost extended-join invite-notify multi-prefix server-time setname userhost-in-names
+Sep 18 00:06:12 *	*** Ident lookup timed out, using ~manjaro-i instead.
+**** ENDING LOGGING AT Sun Sep 18 00:06:09 2022
+

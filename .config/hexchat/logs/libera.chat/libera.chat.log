@@ -1,0 +1,34 @@
+**** BEGIN LOGGING AT Sat Sep 17 00:50:07 2022
+
+Sep 17 00:50:07 *	CHANLIMIT=#:250 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=Libera.Chat STATUSMSG=@+ CASEMAPPING=rfc1459 NICKLEN=16 MAXNICKLEN=16 CHANNELLEN=50 TOPICLEN=390 DEAF=D :are supported by this server
+Sep 17 00:50:07 *	TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: EXTBAN=$,ajrxz :are supported by this server
+Sep 17 00:50:07 *	There are 68 users and 44308 invisible on 26 servers
+Sep 17 00:50:07 *	38 :IRC Operators online
+Sep 17 00:50:07 *	24 :unknown connection(s)
+Sep 17 00:50:07 *	22215 :channels formed
+Sep 17 00:50:07 *	I have 2899 clients and 1 servers
+Sep 17 00:50:07 *	2899 6188 :Current local users 2899, max 6188
+Sep 17 00:50:07 *	44376 52334 :Current global users 44376, max 52334
+Sep 17 00:50:07 *	Highest connection count: 6189 (6188 clients) (111964 connections received)
+Sep 17 00:50:07 *	- lithium.libera.chat Message of the Day - 
+Sep 17 00:50:07 *	- Welcome to Libera Chat, the IRC network for
+Sep 17 00:50:07 *	- free & open-source software and peer directed projects.
+Sep 17 00:50:07 *	-  
+Sep 17 00:50:07 *	- Use of Libera Chat is governed by our network policies.
+Sep 17 00:50:07 *	-  
+Sep 17 00:50:07 *	- To reduce network abuses we perform open proxy checks
+Sep 17 00:50:07 *	- on hosts at connection time.
+Sep 17 00:50:07 *	-  
+Sep 17 00:50:07 *	- Please visit us in #libera for questions and support.
+Sep 17 00:50:07 *	-  
+Sep 17 00:50:07 *	- Website and documentation:  https://libera.chat
+Sep 17 00:50:07 *	- Webchat:                    https://web.libera.chat
+Sep 17 00:50:07 *	- Network policies:           https://libera.chat/policies
+Sep 17 00:50:07 *	- Email:                      support@libera.chat
+Sep 17 00:50:07 *	End of /MOTD command.
+Sep 17 00:50:07 *	anik sets mode +Z on anik
+Sep 17 00:50:07 *	anik sets mode +i on anik
+Sep 17 00:50:07 *	anik sets mode +w on anik
+Sep 17 00:50:07 -NickServ-	This nickname is registered. Please choose a different nickname, or identify via /msg NickServ IDENTIFY Anik <password>
+**** ENDING LOGGING AT Sat Sep 17 01:31:48 2022
+

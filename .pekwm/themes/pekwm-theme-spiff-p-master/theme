@@ -1,0 +1,255 @@
+# "spiff-p" theme for pekwm by Claes Nästén
+#
+# Migrated from pekwm-cvs to pekwm-0.1.4pre2 by okraits (http://www.okraits.de/)
+# Port of e16 theme by Garrett LeSage (http://linuxart.com/)
+# 
+
+$FONT_TITLE = "DejaVu Sans-8#XFT"
+$FONT = "DejaVu Sans-8#XFT"
+$FONT_CMD = "DejaVu Sans Mono-8#XFT"
+
+Require {
+  Templates = "True"
+}
+
+Background {
+  Texture = "Image background.xpm#Tiled"
+}
+
+Define = "Border" {
+  Border {
+    Focused {
+      TopLeft = "Image brdr-top-left.xpm"
+      Top = "Image brdr-top.xpm"
+      TopRight = "Image brdr-top-right.xpm"
+      Left = "Image brdr-left.xpm"
+      Right = "Image brdr-right.xpm"
+      BottomLeft = "Image brdr-bottom-left.xpm"
+      Bottom = "Image brdr-bottom.xpm"
+      BottomRight = "Image brdr-bottom-right.xpm"
+    }
+    Unfocused {
+      TopLeft = "Image brdr-top-left.xpm"
+      Top = "Image brdr-top.xpm"
+      TopRight = "Image brdr-top-right.xpm"
+      Left = "Image brdr-left.xpm"
+      Right = "Image brdr-right.xpm"
+      BottomLeft = "Image brdr-bottom-left.xpm"
+      Bottom = "Image brdr-bottom.xpm"
+      BottomRight = "Image brdr-bottom-right.xpm"
+    }
+  }
+}
+
+Define = "Title" {
+  Height = "12"
+  Pad = "0 1 2 0"
+  
+  Focused = "Image win-focus.xpm#Scaled"
+  Unfocused = "Image win-unfocus.xpm#Scaled"
+  
+  Tab {
+    Focused = "EMPTY"
+    FocusedSelected = "EMPTY"
+    Unfocused = "EMPTY"
+    UnfocusedSelected = "EMPTY"
+  }
+  Separator {
+    Focused = "Image sep.xpm"
+    Unfocused = "Image sep.xpm"
+  }
+  Font {
+    Focused = "$FONT_TITLE"
+    FocusedSelected = "$FONT_TITLE"
+    Unfocused = "$FONT_TITLE"
+    UnfocusedSelected = "$FONT_TITLE"
+  }
+  FontColor {
+    Focused = "#c5c5c5"
+    FocusedSelected = "#e5e5e5"
+    Unfocused = "#a3a3a3"
+    UnfocusedSelected = "#b3b3b3"
+  }
+}
+
+Define = "Buttons" {
+  Buttons {
+    Right = "Close" {
+      Focused = "Image btn-close-fo.xpm"
+      Unfocused = "Image btn-close-un.xpm"
+      Pressed = "Image btn-close-pr.xpm"
+      Button = "1" { Actions = "Close" }
+      Button = "3" { Actions = "Kill" }
+    }
+    Right = "Maximize" {
+      Focused = "Image btn-maximize-fo.xpm"
+      Unfocused = "Image btn-maximize-un.xpm"
+      Pressed = "Image btn-maximize-pr.xpm"
+      Button = "1" { Actions = "Toggle Maximized 1 1" }
+    }
+    Right = "Iconify" {
+      Focused = "Image btn-iconify-fo.xpm"
+      Unfocused = "Image btn-iconify-un.xpm"
+      Pressed = "Image btn-iconify-pr.xpm"
+      Button = "1" { Actions = "Set Iconified" }
+    }
+  }
+}
+
+Define = "BorderOnly" {
+  Title {
+    Height = "0"
+    Pad = "0 0 0 0"
+    
+    Focused = "EMPTY"
+    Unfocused = "EMPTY"
+    
+    Tab {
+      Focused = "EMPTY"
+      FocusedSelected = "EMPTY"
+      Unfocused = "EMPTY"
+      UnfocusedSelected = "EMPTY"
+    }
+    Separator {
+      Focused = "EMPTY"
+      Unfocused = "EMPTY"
+    }
+    Font {
+      Focused = "EMPTY"
+      FocusedSelected = "EMPTY"
+      Unfocused = "EMPTY"
+      UnfocusedSelected = "EMPTY"
+    }
+    FontColor {
+      Focused = "EMPTY"
+      FocusedSelected = "EMPTY"
+      Unfocused = "EMPTY"
+      UnfocusedSelected = "EMPTY"
+    }
+    Buttons {
+    }
+    @Border
+  }
+}
+
+PDecor {
+
+Decor = "DEFAULT" {
+  Title {
+    @Title
+    @Buttons
+    @Border
+  }
+}
+
+Decor = "MENU" {
+  Title {
+    @Title
+    @Border
+  }
+}
+
+
+Decor = "CMDDIALOG" {
+  @BorderOnly
+}
+
+
+Decor = "STATUSWINDOW" {
+  @BorderOnly
+}
+
+Decor = "WORKSPACEINDICATOR" {
+  @BorderOnly
+}
+
+Decor = "TITLEBARLESS" {
+  @BorderOnly
+}
+
+Decor = "BORDERLESS" {
+  Title {
+    @Title
+    @Buttons
+    
+    Border {
+      Focused {
+        TopLeft = "EMPTY"
+        Top = "EMPTY"
+        TopRight = "EMPTY"
+        Left = "EMPTY"
+        Right = "EMPTY"
+        BottomLeft = "EMPTY"
+        Bottom = "EMPTY"
+        BottomRight = "EMPTY"
+      }
+      Unfocused {
+        TopLeft = "EMPTY"
+        Top = "EMPTY"
+        TopRight = "EMPTY"
+        Left = "EMPTY"
+        Right = "EMPTY"
+        BottomLeft = "EMPTY"
+        Bottom = "EMPTY"
+        BottomRight = "EMPTY"
+      }
+    }
+  }
+}
+
+}
+
+Harbour {
+  Texture = "SolidRaised #dedfde #eeeeee #a5a6a5 1 0"
+}
+
+Menu {
+  Focused {
+    Font = "$FONT"
+    Background = "Solid #4c686d"
+    Item = "EMPTY"
+    Text = "#c5c6c5"
+    Separator = "Solid #c5c6c5 1x1"
+    Arrow = "Solid #c5c6c5 2x2"
+  }
+  Unfocused {
+    Font = "$FONT"
+    Background = "Solid #39555a"
+    Item = "EMPTY"
+    Text = "#c5c6c5"
+    Separator = "Solid #c5c6c5 1x1"
+    Arrow = "Solid #c5c6c5 2x2"
+  }
+  Selected {
+    Font = "$FONT"
+    Background = "Solid #5a797b"
+    Item = "EMPTY"
+    Text = "#ffffff"
+    Arrow = "Solid #ffffff 2x2"
+  }
+  Pad = "2 2 2 2"
+}
+
+CmdDialog {
+  Font = "$FONT_CMD"
+  Texture = "Image win-focus.xpm#Scaled"
+  Text = "#ffffff"
+  Pad = "4 4 4 4"
+}
+
+Status {
+  Font = "$FONT_TITLE"
+  Texture = "Image win-focus.xpm#Scaled"
+  Text = "#ffffff"
+  Pad = "4 4 4 4"
+}
+
+WorkspaceIndicator {
+  Font = "$FONT_TITLE"
+  Background = "Solid #ffffff"
+  Workspace = "Solid #c5c6c5"
+  WorkspaceActive = "Solid #5a797b"
+  Text = "#000000"
+  EdgePadding = "1"
+  WorkspacePadding = "1"
+}

@@ -4,6 +4,5 @@ nitrogen --restore &
 picom -b &
 lxpolkit &
 slstatus &
-mpd &
-emacs --daemon &
+#mpd &
 urxvtd -q -o -f &

@@ -1,0 +1,11 @@
+**** BEGIN LOGGING AT Sat Sep 17 00:50:01 2022
+
+Sep 17 00:50:01 *	*** Checking Ident
+Sep 17 00:50:01 *	*** Looking up your hostname...
+Sep 17 00:50:01 *	*** Couldn't look up your hostname
+Sep 17 00:50:06 *	*** No Ident response
+Sep 17 00:50:06 *	Capabilities supported: account-notify away-notify chghost extended-join multi-prefix sasl=PLAIN,ECDSA-NIST256P-CHALLENGE,EXTERNAL tls account-tag cap-notify echo-message solanum.chat/identify-msg solanum.chat/oper solanum.chat/realhost
+Sep 17 00:50:06 *	Capabilities requested: account-notify away-notify chghost extended-join multi-prefix account-tag cap-notify solanum.chat/identify-msg 
+Sep 17 00:50:06 *	Capabilities acknowledged: account-notify away-notify chghost extended-join multi-prefix account-tag cap-notify solanum.chat/identify-msg
+**** ENDING LOGGING AT Sat Sep 17 00:50:07 2022
+

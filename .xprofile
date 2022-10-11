@@ -4,16 +4,16 @@
 
 [ -f ~/.zshenv ] && . ~/.zshenv
 
-xrdb $HOME/.Xresources &
+xrdb ~/.Xresources &
 xrandr --output VGA1 --brightness 0.9 &
-xset +fp $HOME/.local/share/fonts &
+xset +fp ~/.local/share/fonts &
 xset fp rehash &
 
 ## Some applications that should be run in the background
 # xscreensaver -no-splash &
-# xsetroot -cursor_name left_ptr &
-# pulseaudio --start &
-# mpd &
+xsetroot -cursor_name left_ptr &
+pulseaudio --start &
+mpd &
 
 # Ensure that xrdb has finished running before moving on to start the WM/DE.
 [ -n "$xrdbpid" ] && wait "$xrdbpid"

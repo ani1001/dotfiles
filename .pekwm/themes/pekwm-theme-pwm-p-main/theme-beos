@@ -1,0 +1,29 @@
+# yellow pwm-p variant aka beos
+
+$FONT = "-*-helvetica-*-r-*-*-12-*-*-*-*-*-iso10646-*"
+$MENU_FONT = "-*-courier-*-r-*-*-12-*-*-*-*-*-iso10646-*"
+
+$BG_TEX = "Solid #999999"
+$BG_TEX = "LinesHorz 20% #eeddcc #ffeedd #eeddcc #ffeedd #eeddcc"
+
+$COLOR_FO = "#dedede"
+$COLOR_FO_HI = "#e6e6e6"
+$COLOR_FO_LO = "#858585"
+$TEXT_FO = "#000000"
+
+$COLOR_FO_SEL = "#f8ca45"
+$COLOR_FO_SEL_HI = "#ebe370"
+$COLOR_FO_SEL_LO = "#f8b04b"
+$TEXT_FO_SEL = "#000000"
+
+$COLOR_UN = "#dedede"
+$COLOR_UN_HI = "#e6e6e6"
+$COLOR_UN_LO = "#858585"
+$TEXT_UN = "#000000"
+
+$COLOR_UN_SEL = "#ababab"
+$COLOR_UN_SEL_HI = "#d6d6d6"
+$COLOR_UN_SEL_LO = "#808080"
+$TEXT_UN_SEL = "#000000"
+
+INCLUDE = "$THEME_DIR/template"

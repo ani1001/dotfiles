@@ -1,0 +1,27 @@
+T 1663354213 19*	Now talking on 22#voidlinux
+T 1663354213 22*	Topic for 22#voidlinux is: The Void Linux distribution https://www.voidlinux.org || images: https://repo-default.voidlinux.org/live/current || Getting Started: https://docs.voidlinux.org/xbps/ && https://docs.voidlinux.org/config/services/
+T 1663354213 22*	Topic for 22#voidlinux set by 26maldridge (24Thu Aug 18 23:23:18 2022)
+T 1663354216 23*	ricci (~ricci@user/ricci23) has joined
+T 1663354367 20<anik>30	hello
+T 1663354419 24*	nyah has quit (Quit: leaving)
+T 1663354428 18<19quinq18>	hello
+T 1663354526 23*	nyah (~nyah@90.218.122.11723) has joined
+T 1663354804 23*	attila` (~attila@user/attila23) has joined
+T 1663354933 23*	fuzzy (~fuzzy@162.208.236.15823) has joined
+T 1663355155 24*	Scotty_Trees has quit (Quit: Leaving)
+T 1663355253 18<28tasty18>	hey guys
+T 1663355275 20<anik>30	hi
+T 1663355281 20<anik>30	how are you?
+T 1663355309 18<28tasty18>	listening to horrifyingly strange sounds for pleasure
+T 1663355348 20<anik>30	that is strange
+T 1663355355 18<25tranzystorek-io[18>	an asmrtist then
+T 1663355367 18<28tasty18>	it is technically music
+T 1663355373 24*	atka has quit (Ping timeout: 244 seconds)
+T 1663355392 20<anik>30	yeah it is
+T 1663355413 23*	Qwertz (~Qwertz@109.196.70.20723) has joined
+T 1663355426 23*	atka (~atka@192.252.212.5323) has joined
+T 1663355564 23*	Scotty_Trees (~Scotty_Tr@c-73-197-200-207.hsd1.nj.comcast.net23) has joined
+T 1663355729 23*	koolazer (~koo@user/koolazer23) has joined
+T 1663355739 24*	atka has quit (Ping timeout: 250 seconds)
+T 1663355920 24*	attila` has quit (Ping timeout: 250 seconds)
+T 1663356708 FiSHLiM plugin unloaded

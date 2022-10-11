@@ -1,2 +1,7 @@
 T 1661111385 19*	Now talking on 22#manjaro-talk
 T 1661617770 19*	Now talking on 22#manjaro-talk
+T 1663320384 19*	Now talking on 22#manjaro-talk
+T 1663354180 19*	Now talking on 22#manjaro-talk
+T 1663355253 23*	ClaymorePT (~Claymore@freenode-4ih.9d9.p8mvet.IP23) has joined
+T 1663355260 24*	ClaymorePT has quit (Quit: Mom decided I had to go to bed.)
+T 1663437972 19*	Now talking on 22#manjaro-talk

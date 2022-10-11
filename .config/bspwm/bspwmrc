@@ -4,15 +4,15 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 set -U SXHKD_SHELL sh &
-pgrep -x panel > /dev/null || $HOME/.config/bspwm/panel/panel &
-#$HOME/.config/polybar/launch.sh &
+pgrep -x panel > /dev/null || ~/.config/bspwm/panel/panel &
+#~/.config/polybar/launch.sh &
 nitrogen --restore &
 picom -b &
 lxpolkit &
-mpd &
+#mpd &
 urxvtd -q -o -f &
-emacs --daemon &
-xsetroot -cursor_name left_ptr &
+#emacs --daemon &
+#xsetroot -cursor_name left_ptr &
 wmname LG3D &
 
 bspc monitor -d I II III IV V VI VII VIII IX X

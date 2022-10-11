@@ -1,0 +1,136 @@
+# decor templates for ion-p themes, intended to be included form a
+# file with color definitions.
+
+Require {
+  Templates = "True"
+}
+
+Background {
+    Texture = "Solid $COLOR_XROOT"
+}
+
+Define = "BaseDecor" {
+    Height = "17"
+    HeightAdapt = "True"
+    Pad = "2 2 2 0"
+
+    Focused = "Empty"
+    Unfocused = "Empty"
+
+    Tab {
+        Focused = "SolidRaised $COLOR_TAB_F $COLOR_TAB_F_LIGHT $COLOR_TAB_F_DARK 0 0 1"
+        FocusedSelected = "SolidRaised $COLOR_TAB_FS $COLOR_TAB_FS_LIGHT $COLOR_TAB_FS_DARK 0 0 1"
+        Unfocused = "SolidRaised $COLOR_TAB_U $COLOR_TAB_U_LIGHT $COLOR_TAB_U_DARK 0 0 1"
+        UnfocusedSelected = "SolidRaised $COLOR_TAB_US $COLOR_TAB_US_LIGHT $COLOR_TAB_US_DARK 0 0 1"
+    }
+    Separator {
+        Focused = "Solid #303030 1x17"
+        Unfocused = "Solid #303030 1x17"
+    }
+    Font {
+        Focused = "$FONT"
+    }
+    FontColor {
+        Focused = "$COLOR_FONT_F"
+        FocusedSelected = "$COLOR_FONT_FS"
+        Unfocused = "$COLOR_FONT_U"
+        UnfocusedSelected = "$COLOR_FONT_US"
+    }
+    Buttons {
+    }
+
+    Border {
+        Focused {
+            TopLeft = "Solid $COLOR_BORDER_FOCUSED 1x1"
+            Top = "Solid $COLOR_BORDER_FOCUSED 1x1"
+          TopRight = "Solid $COLOR_BORDER_FOCUSED 1x1"
+            Left = "Solid $COLOR_BORDER_FOCUSED 1x1"
+            Right = "Solid $COLOR_BORDER_FOCUSED 1x1"
+            BottomLeft = "Solid $COLOR_BORDER_FOCUSED 1x1"
+            Bottom = "Solid $COLOR_BORDER_FOCUSED 1x1"
+            BottomRight = "Solid $COLOR_BORDER_FOCUSED 1x1"
+        }
+        Unfocused {
+            TopLeft = "Solid $COLOR_BORDER_UNFOCUSED 1x1"
+            Top = "Solid $COLOR_BORDER_UNFOCUSED 1x1"
+            TopRight = "Solid $COLOR_BORDER_UNFOCUSED 1x1"
+            Left = "Solid $COLOR_BORDER_UNFOCUSED 1x1"
+            Right = "Solid $COLOR_BORDER_UNFOCUSED 1x1"
+            BottomLeft = "Solid $COLOR_BORDER_UNFOCUSED 1x1"
+            Bottom = "Solid $COLOR_BORDER_UNFOCUSED 1x1"
+            BottomRight = "Solid $COLOR_BORDER_UNFOCUSED 1x1"
+        }
+    }
+}
+
+PDecor {
+
+Decor = "DEFAULT" {
+    Title {
+        @BaseDecor
+    }
+}
+
+Decor = "WORKSPACEINDICATOR" {
+   Title {
+        @BaseDecor
+        Height = "0"
+        HeightAdapt = "False"
+   }
+}
+
+}
+
+Harbour {
+    Texture = "SolidRaised $COLOR_TAB_FS $COLOR_TAB_FS_LIGHT $COLOR_TAB_FS_DARK 1 0"
+}
+
+WorkspaceIndicator {
+  Font = "$FONT"
+  Background = "Solid $COLOR_TAB_FS"
+  Workspace = "Solid $COLOR_TAB_FS_LIGHT"
+  WorkspaceActive = "Solid $COLOR_TAB_FS_DARK"
+  Text = "$COLOR_FONT_FS"
+  EdgePadding = "5"
+  WorkspacePadding = "2"
+}
+
+Menu {
+    Focused {
+        Font = "$FONT"
+        Background = "Solid $COLOR_MENU_F_BG"
+        Item = "Solid $COLOR_MENU_F_ITEM 1 0"
+        Separator = "Solid $COLOR_MENU_F_SEP 0x2"
+        Arrow = "Solid $COLOR_MENU_F_TEXT 2x2"
+        Text = "$COLOR_MENU_F_TEXT"
+    }
+    Unfocused {
+        Font = "$FONT"
+        Background = "Solid $COLOR_MENU_U_BG"
+        Item = "Solid $COLOR_MENU_U_ITEM 1 0"
+        Separator = "Solid $COLOR_MENU_U_SEP 0x2"
+        Arrow = "Solid $COLOR_MENU_U_TEXT 2x2"
+        Text = "$COLOR_MENU_U_TEXT"
+    }
+    Selected {
+        Font = "$FONT"
+        Background = "$COLOR_MENU_S_BG"
+        Item = "SolidRaised $COLOR_MENU_S_ITEM $COLOR_MENU_S_ITEM_LIGHT $COLOR_MENU_S_ITEM_DARK 1 0"
+        Arrow = "SolidRaised $COLOR_MENU_S_TEXT $COLOR_MENU_S_TEXT $COLOR_MENU_S_TEXT 1 0"
+        Text = "$COLOR_MENU_S_TEXT"
+    }
+
+    Pad = "2 2 2 2"
+}
+
+CmdDialog {
+    Font = "$FONT"
+    Texture = "Solid $COLOR_CMD_BG"
+    Text = "$COLOR_CMD_TEXT"
+}
+
+Status {
+    Font = "$FONT"
+    Texture = "Solid $COLOR_STATUS_BG"
+    Text = "$COLOR_STATUS_TEXT"
+}

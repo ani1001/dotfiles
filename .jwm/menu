@@ -7,8 +7,8 @@
       <Program label="Terminal">
         urxvtc
       </Program>
-      <Program label="Waterfox">
-        /usr/local/src/waterfox/waterfox-bin
+      <Program label="Browser">
+        chromium -no-default-browser-check
       </Program>
       <Separator/>
       <Include>exec:xdgmenumaker -n -f jwm</Include>

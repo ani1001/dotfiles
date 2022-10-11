@@ -17,7 +17,7 @@ fi
 [ -f ~/.xprofile ] && . ~/.xprofile
 
 # Set the default session here
-session=${1:-herbstluftwm}
+session=${1:-qtile}
 
 case $session in
     awesome           ) exec dbus-launch --auto-syntax --exit-with-session awesome;;
@@ -35,7 +35,7 @@ case $session in
     jwm               ) exec dbus-launch --auto-syntax --exit-with-session jwm;;
     openbox           ) exec dbus-launch --auto-syntax --exit-with-session openbox-session;;
     pekwm             ) exec dbus-launch --auto-syntax --exit-with-session pekwm;;
-    qtile             ) exec dbus-launch --auto-syntax --exit-with-session $HOME/.local/bin/qtile start;;
+    qtile             ) exec dbus-launch --auto-syntax --exit-with-session qtile start;;
     stumpwm           ) exec dbus-launch --auto-syntax --exit-with-session stumpwm;;
     spectrwm          ) exec dbus-launch --auto-syntax --exit-with-session spectrwm;;
     xfce|xfce4        ) exec startxfce4;;

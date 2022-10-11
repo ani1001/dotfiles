@@ -144,3 +144,203 @@ Aug 27 22:41:43 Sysinfo plugin unloaded
 Aug 27 22:41:43 Perl interface unloaded
 **** ENDING LOGGING AT Sat Aug 27 22:41:43 2022
 
+**** BEGIN LOGGING AT Fri Sep 16 15:26:21 2022
+
+Sep 16 15:26:23 *	Welcome to the freenode IRC Network anik!~manjaro-i@202.86.216.251
+Sep 16 15:26:23 *	Your host is *.freenode.net, running version InspIRCd-3
+Sep 16 15:26:23 *	This server was created 23:06:04 Apr 20 2022
+Sep 16 15:26:23 *	*.freenode.net InspIRCd-3 BDHILRSTWcdghikorswxz ABCDEFIJKLMNOPQRSTUWXYZbcdefhijklmnoprstuvwz :BEFIJLWXYZbdefhjklovw
+Sep 16 15:26:23 *	ACCEPT=30 AWAYLEN=200 BOT=B CALLERID=g CASEMAPPING=ascii CHANLIMIT=#:20 CHANMODES=IXZbew,k,BEFJLWdfjl,ACDKMNOPQRSTUcimnprstuz CHANNELLEN=64 CHANTYPES=# ELIST=CMNTU ESILENCE=CcdiNnPpTtx EXCEPTS=e :are supported by this server
+Sep 16 15:26:23 *	EXTBAN=,ACNOQRSTUacjmnpruwz HOSTLEN=64 INVEX=I KEYLEN=32 KICKLEN=255 LINELEN=512 MAXLIST=I:100,X:100,b:100,e:100,w:100 MAXTARGETS=20 MODES=20 MONITOR=30 NAMELEN=128 NAMESX NETWORK=freenode :are supported by this server
+Sep 16 15:26:23 *	NICKLEN=30 PREFIX=(Yohv)!@%+ REMOVE SAFELIST SECURELIST=60 SILENCE=32 STATUSMSG=!@%+ TOPICLEN=390 UHNAMES USERIP USERLEN=10 USERMODES=,,s,BDHILRSTWcdghikorwxz VBANLIST :are supported by this server
+Sep 16 15:26:23 *	VLIST=b WATCH=32 WHOX :are supported by this server
+Sep 16 15:26:23 *	There are 21 users and 10024 invisible on 9 servers
+Sep 16 15:26:23 *	7 :operator(s) online
+Sep 16 15:26:23 *	18 :unknown connections
+Sep 16 15:26:23 *	13853 :channels formed
+Sep 16 15:26:23 *	I have 2566 clients and 1 servers
+Sep 16 15:26:23 *	Current local users: 2566  Max: 4423
+Sep 16 15:26:23 *	Current global users: 10045  Max: 10916
+Sep 16 15:26:23 *	*.freenode.net message of the day
+Sep 16 15:26:23 *	  Hello, World!
+Sep 16 15:26:23 *	 
+Sep 16 15:26:23 *	  Welcome to the
+Sep 16 15:26:23 *	          __                               _
+Sep 16 15:26:23 *	         / _|_ __ ___  ___ _ __   ___   __| | ___
+Sep 16 15:26:23 *	        | |_| '__/ _ \/ _ \ '_ \ / _ \ / _` |/ _ \
+Sep 16 15:26:23 *	        |  _| | |  __/  __/ | | | (_) | (_| |  __/
+Sep 16 15:26:23 *	        |_| |_|  \___|\___|_| |_|\___/ \__,_|\___|
+Sep 16 15:26:23 *	                                   AUTONOMOUS ZONE
+Sep 16 15:26:23 *	 
+Sep 16 15:26:23 *	  Connect to us on:
+Sep 16 15:26:23 *	 
+Sep 16 15:26:23 *	  Hostname: irc.freenode.net / chat.freenode.net
+Sep 16 15:26:23 *	  Plaintext: 6660-6669
+Sep 16 15:26:23 *	  TLS/SSL: 6697,7000,7070
+Sep 16 15:26:23 *	  Webchat: https://webchat.freenode.net
+Sep 16 15:26:23 *	 
+Sep 16 15:26:23 *	  By connecting to freenode you indicate that you have read and accept our
+Sep 16 15:26:23 *	  policies and guidelines as set out on https://freenode.net and agree to
+Sep 16 15:26:23 *	  be scanned for an open proxy.
+Sep 16 15:26:23 *	 
+Sep 16 15:26:23 *	  If you are looking for assistance, please try:
+Sep 16 15:26:23 *	 
+Sep 16 15:26:23 *	  #help                    - Help with general IRC and Services.
+Sep 16 15:26:23 *	  #chanhelp                - Help with channels and channel services.
+Sep 16 15:26:23 *	  #IRC                     - Help with the IRC.com by freenode app.
+Sep 16 15:26:23 *	 
+Sep 16 15:26:23 *	  Checkout some of our communities and services:
+Sep 16 15:26:23 *	 
+Sep 16 15:26:23 *	  #freenode-bbs            - BBS [https://bbs.freenode.net/]
+Sep 16 15:26:23 *	  #freenode-bbs-discussion - BBS Discussion
+Sep 16 15:26:23 *	  #freenode-jobs           - Jobs [https://jobs.freenode.net/]
+Sep 16 15:26:23 *	  #freenode                - Chat about freenode.
+Sep 16 15:26:23 *	  #anonchan                - Chat anonymously.
+Sep 16 15:26:23 *	 
+Sep 16 15:26:23 *	  Type /join #<channel>
+Sep 16 15:26:23 *	 
+Sep 16 15:26:23 *	  Thank you for using freenode!
+Sep 16 15:26:23 *	End of message of the day.
+Sep 16 15:26:23 *	freenode-jbl.v3m.inkq28.IP :is now your displayed host
+Sep 16 15:26:23 *	anik sets mode +w on anik
+Sep 16 15:26:23 *	anik sets mode +R on anik
+Sep 16 15:26:23 *	anik sets mode +i on anik
+Sep 16 15:26:23 *	anik sets mode +x on anik
+Sep 16 15:26:46 Checksum plugin unloaded
+Sep 16 15:26:46 Sysinfo plugin unloaded
+Sep 16 15:26:46 FiSHLiM plugin unloaded
+**** ENDING LOGGING AT Fri Sep 16 15:26:46 2022
+
+**** BEGIN LOGGING AT Sat Sep 17 00:49:39 2022
+
+Sep 17 00:49:40 *	Welcome to the freenode IRC Network anik!~manjaro-i@202.86.216.251
+Sep 17 00:49:40 *	Your host is *.freenode.net, running version InspIRCd-3
+Sep 17 00:49:40 *	This server was created 00:20:08 Apr 21 2022
+Sep 17 00:49:40 *	*.freenode.net InspIRCd-3 BDHILRSTWcdghikorswxz ABCDEFIJKLMNOPQRSTUWXYZbcdefhijklmnoprstuvwz :BEFIJLWXYZbdefhjklovw
+Sep 17 00:49:40 *	ACCEPT=30 AWAYLEN=200 BOT=B CALLERID=g CASEMAPPING=ascii CHANLIMIT=#:20 CHANMODES=IXZbew,k,BEFJLWdfjl,ACDKMNOPQRSTUcimnprstuz CHANNELLEN=64 CHANTYPES=# ELIST=CMNTU ESILENCE=CcdiNnPpTtx EXCEPTS=e :are supported by this server
+Sep 17 00:49:40 *	EXTBAN=,ACNOQRSTUacjmnpruwz HOSTLEN=64 INVEX=I KEYLEN=32 KICKLEN=255 LINELEN=512 MAXLIST=I:100,X:100,b:100,e:100,w:100 MAXTARGETS=20 MODES=20 MONITOR=30 NAMELEN=128 NAMESX NETWORK=freenode :are supported by this server
+Sep 17 00:49:40 *	NICKLEN=30 PREFIX=(Yohv)!@%+ REMOVE SAFELIST SECURELIST=60 SILENCE=32 STATUSMSG=!@%+ TOPICLEN=390 UHNAMES USERIP USERLEN=10 USERMODES=,,s,BDHILRSTWcdghikorwxz VBANLIST :are supported by this server
+Sep 17 00:49:40 *	VLIST=b WATCH=32 WHOX :are supported by this server
+Sep 17 00:49:40 *	There are 21 users and 9611 invisible on 9 servers
+Sep 17 00:49:40 *	6 :operator(s) online
+Sep 17 00:49:40 *	19 :unknown connections
+Sep 17 00:49:40 *	13752 :channels formed
+Sep 17 00:49:40 *	I have 2898 clients and 1 servers
+Sep 17 00:49:40 *	Current local users: 2898  Max: 4875
+Sep 17 00:49:40 *	Current global users: 9632  Max: 10916
+Sep 17 00:49:40 *	*.freenode.net message of the day
+Sep 17 00:49:40 *	  Hello, World!
+Sep 17 00:49:40 *	 
+Sep 17 00:49:40 *	  Welcome to the
+Sep 17 00:49:40 *	          __                               _
+Sep 17 00:49:40 *	         / _|_ __ ___  ___ _ __   ___   __| | ___
+Sep 17 00:49:40 *	        | |_| '__/ _ \/ _ \ '_ \ / _ \ / _` |/ _ \
+Sep 17 00:49:40 *	        |  _| | |  __/  __/ | | | (_) | (_| |  __/
+Sep 17 00:49:40 *	        |_| |_|  \___|\___|_| |_|\___/ \__,_|\___|
+Sep 17 00:49:40 *	                                   AUTONOMOUS ZONE
+Sep 17 00:49:40 *	 
+Sep 17 00:49:40 *	  Connect to us on:
+Sep 17 00:49:40 *	 
+Sep 17 00:49:40 *	  Hostname: irc.freenode.net / chat.freenode.net
+Sep 17 00:49:40 *	  Plaintext: 6660-6669
+Sep 17 00:49:40 *	  TLS/SSL: 6697,7000,7070
+Sep 17 00:49:40 *	  Webchat: https://webchat.freenode.net
+Sep 17 00:49:40 *	 
+Sep 17 00:49:40 *	  By connecting to freenode you indicate that you have read and accept our
+Sep 17 00:49:40 *	  policies and guidelines as set out on https://freenode.net and agree to
+Sep 17 00:49:40 *	  be scanned for an open proxy.
+Sep 17 00:49:40 *	 
+Sep 17 00:49:40 *	  If you are looking for assistance, please try:
+Sep 17 00:49:40 *	 
+Sep 17 00:49:40 *	  #help                    - Help with general IRC and Services.
+Sep 17 00:49:40 *	  #chanhelp                - Help with channels and channel services.
+Sep 17 00:49:40 *	  #IRC                     - Help with the IRC.com by freenode app.
+Sep 17 00:49:40 *	 
+Sep 17 00:49:40 *	  Checkout some of our communities and services:
+Sep 17 00:49:40 *	 
+Sep 17 00:49:40 *	  #freenode-bbs            - BBS [https://bbs.freenode.net/]
+Sep 17 00:49:40 *	  #freenode-bbs-discussion - BBS Discussion
+Sep 17 00:49:40 *	  #freenode-jobs           - Jobs [https://jobs.freenode.net/]
+Sep 17 00:49:40 *	  #freenode                - Chat about freenode.
+Sep 17 00:49:40 *	  #anonchan                - Chat anonymously.
+Sep 17 00:49:40 *	 
+Sep 17 00:49:40 *	  Type /join #<channel>
+Sep 17 00:49:40 *	 
+Sep 17 00:49:40 *	  Thank you for using freenode!
+Sep 17 00:49:40 *	End of message of the day.
+Sep 17 00:49:40 *	freenode-jbl.v3m.inkq28.IP :is now your displayed host
+Sep 17 00:49:40 *	anik sets mode +w on anik
+Sep 17 00:49:40 *	anik sets mode +R on anik
+Sep 17 00:49:40 *	anik sets mode +i on anik
+Sep 17 00:49:40 *	anik sets mode +x on anik
+Sep 17 01:31:47 Checksum plugin unloaded
+Sep 17 01:31:48 Sysinfo plugin unloaded
+**** ENDING LOGGING AT Sat Sep 17 01:31:48 2022
+
+**** BEGIN LOGGING AT Sun Sep 18 00:06:09 2022
+
+Sep 18 00:06:12 *	Welcome to the freenode IRC Network anik!~manjaro-i@202.86.217.24
+Sep 18 00:06:12 *	Your host is *.freenode.net, running version InspIRCd-3
+Sep 18 00:06:12 *	This server was created 23:06:04 Apr 20 2022
+Sep 18 00:06:12 *	*.freenode.net InspIRCd-3 BDHILRSTWcdghikorswxz ABCDEFIJKLMNOPQRSTUWXYZbcdefhijklmnoprstuvwz :BEFIJLWXYZbdefhjklovw
+Sep 18 00:06:12 *	ACCEPT=30 AWAYLEN=200 BOT=B CALLERID=g CASEMAPPING=ascii CHANLIMIT=#:20 CHANMODES=IXZbew,k,BEFJLWdfjl,ACDKMNOPQRSTUcimnprstuz CHANNELLEN=64 CHANTYPES=# ELIST=CMNTU ESILENCE=CcdiNnPpTtx EXCEPTS=e :are supported by this server
+Sep 18 00:06:12 *	EXTBAN=,ACNOQRSTUacjmnpruwz HOSTLEN=64 INVEX=I KEYLEN=32 KICKLEN=255 LINELEN=512 MAXLIST=I:100,X:100,b:100,e:100,w:100 MAXTARGETS=20 MODES=20 MONITOR=30 NAMELEN=128 NAMESX NETWORK=freenode :are supported by this server
+Sep 18 00:06:12 *	NICKLEN=30 PREFIX=(Yohv)!@%+ REMOVE SAFELIST SECURELIST=60 SILENCE=32 STATUSMSG=!@%+ TOPICLEN=390 UHNAMES USERIP USERLEN=10 USERMODES=,,s,BDHILRSTWcdghikorwxz VBANLIST :are supported by this server
+Sep 18 00:06:12 *	VLIST=b WATCH=32 WHOX :are supported by this server
+Sep 18 00:06:12 *	There are 21 users and 9420 invisible on 9 servers
+Sep 18 00:06:12 *	7 :operator(s) online
+Sep 18 00:06:12 *	19 :unknown connections
+Sep 18 00:06:12 *	13718 :channels formed
+Sep 18 00:06:12 *	I have 2373 clients and 1 servers
+Sep 18 00:06:12 *	Current local users: 2373  Max: 4423
+Sep 18 00:06:12 *	Current global users: 9441  Max: 10916
+Sep 18 00:06:12 *	*.freenode.net message of the day
+Sep 18 00:06:12 *	  Hello, World!
+Sep 18 00:06:12 *	 
+Sep 18 00:06:12 *	  Welcome to the
+Sep 18 00:06:12 *	          __                               _
+Sep 18 00:06:12 *	         / _|_ __ ___  ___ _ __   ___   __| | ___
+Sep 18 00:06:12 *	        | |_| '__/ _ \/ _ \ '_ \ / _ \ / _` |/ _ \
+Sep 18 00:06:12 *	        |  _| | |  __/  __/ | | | (_) | (_| |  __/
+Sep 18 00:06:12 *	        |_| |_|  \___|\___|_| |_|\___/ \__,_|\___|
+Sep 18 00:06:12 *	                                   AUTONOMOUS ZONE
+Sep 18 00:06:12 *	 
+Sep 18 00:06:12 *	  Connect to us on:
+Sep 18 00:06:12 *	 
+Sep 18 00:06:12 *	  Hostname: irc.freenode.net / chat.freenode.net
+Sep 18 00:06:12 *	  Plaintext: 6660-6669
+Sep 18 00:06:12 *	  TLS/SSL: 6697,7000,7070
+Sep 18 00:06:12 *	  Webchat: https://webchat.freenode.net
+Sep 18 00:06:12 *	 
+Sep 18 00:06:12 *	  By connecting to freenode you indicate that you have read and accept our
+Sep 18 00:06:12 *	  policies and guidelines as set out on https://freenode.net and agree to
+Sep 18 00:06:12 *	  be scanned for an open proxy.
+Sep 18 00:06:12 *	 
+Sep 18 00:06:12 *	  If you are looking for assistance, please try:
+Sep 18 00:06:12 *	 
+Sep 18 00:06:12 *	  #help                    - Help with general IRC and Services.
+Sep 18 00:06:12 *	  #chanhelp                - Help with channels and channel services.
+Sep 18 00:06:12 *	  #IRC                     - Help with the IRC.com by freenode app.
+Sep 18 00:06:12 *	 
+Sep 18 00:06:12 *	  Checkout some of our communities and services:
+Sep 18 00:06:12 *	 
+Sep 18 00:06:12 *	  #freenode-bbs            - BBS [https://bbs.freenode.net/]
+Sep 18 00:06:12 *	  #freenode-bbs-discussion - BBS Discussion
+Sep 18 00:06:12 *	  #freenode-jobs           - Jobs [https://jobs.freenode.net/]
+Sep 18 00:06:12 *	  #freenode                - Chat about freenode.
+Sep 18 00:06:12 *	  #anonchan                - Chat anonymously.
+Sep 18 00:06:12 *	 
+Sep 18 00:06:12 *	  Type /join #<channel>
+Sep 18 00:06:12 *	 
+Sep 18 00:06:12 *	  Thank you for using freenode!
+Sep 18 00:06:12 *	End of message of the day.
+Sep 18 00:06:12 *	freenode-sf8.r3d.inkq28.IP :is now your displayed host
+Sep 18 00:06:12 *	anik sets mode +w on anik
+Sep 18 00:06:12 *	anik sets mode +R on anik
+Sep 18 00:06:12 *	anik sets mode +i on anik
+Sep 18 00:06:12 *	anik sets mode +x on anik
+Sep 18 00:07:03 Checksum plugin unloaded
+Sep 18 00:07:03 Sysinfo plugin unloaded
+Sep 18 00:07:03 FiSHLiM plugin unloaded
+**** ENDING LOGGING AT Sun Sep 18 00:07:03 2022
+

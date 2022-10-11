@@ -1,0 +1,22 @@
+**** BEGIN LOGGING AT Sat Sep 17 00:49:59 2022
+
+Sep 17 00:49:59 *	Connecting to irc.libera.chat (176.58.122.119:6697)
+Sep 17 00:50:00 *	* Subject: /C=US/O=Internet Security Research Group/CN=ISRG Root X1
+Sep 17 00:50:00 *	* Issuer: /C=US/O=Internet Security Research Group/CN=ISRG Root X1
+Sep 17 00:50:00 *	* Subject: /C=US/O=Let's Encrypt/CN=R3
+Sep 17 00:50:00 *	* Issuer: /C=US/O=Internet Security Research Group/CN=ISRG Root X1
+Sep 17 00:50:00 *	* Subject: /CN=lithium.libera.chat
+Sep 17 00:50:00 *	* Issuer: /C=US/O=Let's Encrypt/CN=R3
+Sep 17 00:50:00 *	* Certification info:
+Sep 17 00:50:00 *	  Subject:
+Sep 17 00:50:00 *	    CN=lithium.libera.chat
+Sep 17 00:50:00 *	  Issuer:
+Sep 17 00:50:00 *	    C=US
+Sep 17 00:50:00 *	    O=Let's Encrypt
+Sep 17 00:50:00 *	    CN=R3
+Sep 17 00:50:00 *	  Public key algorithm: rsaEncryption (4096 bits)
+Sep 17 00:50:00 *	  Sign algorithm sha256WithRSAEncryption
+Sep 17 00:50:00 *	  Valid since Jul 25 05:56:06 2022 GM to Oct 23 05:56:05 2022 GM
+Sep 17 00:50:00 *	* Cipher info:
+Sep 17 00:50:00 *	  Version: TLSv1.3, cipher TLS_AES_256_GCM_SHA384 (256 bits)
+Sep 17 00:50:00 *	Connected. Now logging in.

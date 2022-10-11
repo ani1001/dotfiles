@@ -11,7 +11,7 @@ function run {
 #setxkbmap -layout be
 # start ArcoLinux Welcome  App
 #dex $HOME/.config/autostart/arcolinux-welcome-app.desktop
-xsetroot -cursor_name left_ptr &
+#xsetroot -cursor_name left_ptr &
 #sxhkd -c ~/.jwm/sxhkd/sxhkdrc &
 run volumeicon &
 #run variety &
