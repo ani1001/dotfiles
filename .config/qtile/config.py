@@ -14,4 +14,4 @@ auto_fullscreen = True
 focus_on_window_activation = "smart" # or focus
 reconfigure_screens = True
 auto_minimize = True
-wmname = "Qtile"
+wmname = "LG3D"

@@ -142,7 +142,7 @@ myManageHook = composeAll . concat $
     my4Shifts  = ["Emacs", "Geany", "Sublime_text"]
     my5Shifts  = ["Gimp", "feh", "Inkscape", "Ristretto"]
     my6Shifts  = ["vlc", "mpv"]
-    my7Shifts  = ["kitty", "st-256color", "Terminator", "URxvt"]
+    my7Shifts  = ["Alacritty", "kitty", "st-256color", "Terminator", "URxvt"]
     my8Shifts  = ["Thunar", "nemo", "caja", "pcmanfm"]
     my9Shifts  = ["Transmission-gtk", "Uget-gtk"]
 

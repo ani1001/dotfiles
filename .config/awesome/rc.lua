@@ -45,11 +45,11 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_themes_dir() .. "xresources/theme.lua")
+beautiful.init(gears.filesystem.get_themes_dir() .. "zenburn/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
-editor = os.getenv("EDITOR") or "nvim"
+editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 
 -- Default modkey.
@@ -330,14 +330,14 @@ globalkeys = gears.table.join(
               {description = "show the menubar", group = "launcher"}),
 
     -- dmenu
-    awful.key({ modkey }, "d", function ()
+    awful.key({ modkey }, "d", function()
             os.execute(string.format("dmenu_run -i -fn 'Monospace' -nb '%s' -nf '%s' -sb '%s' -sf '%s'",
             beautiful.bg_normal, beautiful.fg_normal, beautiful.bg_focus, beautiful.fg_focus))
         end,
         {description = "show dmenu", group = "launcher"}),
 
     -- rofi
-    awful.key({ altkey }, "d", function ()
+    awful.key({ altkey }, "d", function()
             os.execute(string.format("rofi -show drun -show-icons"))
         end,
         {description = "show rofi", group = "launcher"})
