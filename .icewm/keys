@@ -1,0 +1,337 @@
+# This is an example for icewm 1.7.0 hotkey definition file.
+# It will be installed as /usr/share/icewm/keys.
+# Place your variants in /etc/icewm or in $HOME/.icewm since
+# modifications to this file will be overwritten when you reinstall icewm.
+#
+# A list of all valid keyboard symbols can be found in
+# /usr/include/X11/keysym.h, keysymdefs.h, XF86keysym.h, ...
+# You'll have to omit XK_ prefixs and to replace XF86XK_ prefixes by
+# XF86. Valid modifiers are Alt, Ctrl, Shift, Meta, Super and Hyper.
+
+# "Multimedia key" bindings for Xorg. Gather the keycodes of your
+# advanced function keys by watching the output of the xev command whilest
+# pressing those keys and map those symbols by using xmodmap.
+
+# Note: some of them might have unwanted side effects through concurrency with
+# other listeners like systemd for the suspend key events
+
+#Picom Toggle
+key "Ctrl+Alt+o" picom-toggle-icewm
+
+#################################################################
+# SUPER + FUNCTION KEYS
+#################################################################
+
+# Vivaldi
+key "Super+F1" vivaldi-stable
+
+# Atom
+key "Super+F2" 	atom
+
+#Inkscape
+key "Super+F3" inkscape
+
+#Gimp
+key "Super+F4" gimp
+
+#Meld
+key "Super+F5" meld
+
+#Vlc
+key "Super+F6" vlc --video-on-top
+
+#Virtualbox
+key "Super+F7" virtualbox
+
+#Thunar
+key "Super+F8" thunar
+
+#Evolution
+key "Super+F9" evolution
+
+#Spotify
+key "Super+F10" spotify
+
+#Rofi Fullscreen
+key "Super+F11" rofi -show drun
+
+#Rofi
+key "Super+F12" rofi -show drun
+
+#################################################################
+# SUPER + ... KEYS
+#################################################################
+
+#Atom
+key "Super+e" atom
+
+#Browser
+key "Super+w" vivaldi-stable
+
+#Conky-toggle
+key "Super+c" conky-toggle
+
+#Htop --- Conflict
+key "Super+h" urxvt 'htop task manager' -e htop
+
+#arcolinux-logout
+key "Super+x" arcolinux-logout
+
+#Rofi theme selector
+key "Super+r" rofi-theme-selector
+
+#Urxvt
+key "Super+t" urxvt
+
+#Pavucontrol
+key "Super+v" pavucontrol
+
+#Pragha
+key "Super+m" pragha
+
+#alacritty
+#key Super+Return" alacritty
+
+#Xkill
+key "Super+Escape" xkill
+
+#Keyboard dependent
+#alacritty
+key "Super+KP_Enter" alacritty
+
+#################################################################
+# SUPER + SHIFT KEYS
+#################################################################
+
+#File-Manager
+key "Super+Shift+Return"	thunar
+
+#Keyboard dependent
+#File-Manager
+#key "Super+Shift+KP_Enter" thunar
+
+#dmenu
+key "Super+Shift+d" dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
+
+#reload icewm:
+key "Super+Shift+r"  icewm --restart
+
+#Keyboard dependent
+key "Super+Shift+KP_Enter" thunar
+
+#################################################################
+# CONTROL + ALT KEYS
+#################################################################
+
+#arcolinux-welcome-app
+key "Ctrl+Alt+w" arcolinux-welcome-app
+
+#arcolinux-tweak-tool
+key "Ctrl+Alt+e" arcolinux-tweak-tool
+
+#conky-rotate
+#key "Ctrl+Alt+Next" conky-rotate -n
+
+#conky-rotate
+#key "Ctrl+Alt+Prior" conky-rotate -p
+
+#File-Manager
+key "Ctrl+Alt+b" thunar
+
+#Catfish
+key "Ctrl+Alt+c" catfish
+
+#Chromium
+key "Ctrl+Alt+g" chromium -no-default-browser-check
+
+#Evolution
+#key "Ctrl+Alt+e" evolution
+
+#Firefox
+key "Ctrl+Alt+f" firefox
+
+#Nitrogen
+key "Ctrl+Alt+i" nitrogen
+
+#arcolinux-logout
+key "Ctrl+Alt+k" arcolinux-logout
+
+#arcolinux-logout
+key "Ctrl+Alt+l" arcolinux-logout
+
+#Pamac-manager
+key "Alt+Ctrl+p" pamac-manager 
+
+#Xfce4-settings-manager
+key "Ctrl+Alt+m" xfce4-settings-manager
+
+#Pulse Audio Control
+key "Ctrl+Alt_L+u" pavucontrol
+
+#Rofi theme selector
+key "Ctrl+Alt+r" rofi-theme-selector
+
+#Spotify
+key "Ctrl+Alt+s" spotify
+
+#alacritty
+#key Ctrl+Alt+Return" alacritty
+
+#alacritty
+#key Ctrl+Alt+t" alacritty
+
+#Vivaldi
+key "Ctrl+Alt+v" vivaldi-stable
+
+#Xfce4-appfinder
+key "Ctrl+Alt+a" xfce4-appfinder
+
+#Keyboard dependent
+#alacritty
+#key "Ctrl+Alt+KP_Enter" alacritty
+
+
+#################################################################
+# ALT + ... KEYS
+#################################################################
+
+#Wallpaper trash
+key "Alt+t" variety -t
+
+#Wallpaper next
+key "Alt+n" variety -n
+
+#Wallpaper previous
+key "Alt+p" variety -p
+
+#Wallpaper favorite
+key "Alt+f" variety -f
+
+#Wallpaper previous
+key Alt+Left" variety -p
+
+#Wallpaper next
+key "Alt+Right" variety -n
+
+#Wallpaper toggle-pause
+key "Alt+Up" variety --toggle-pause
+
+#Wallpaper resume
+key "Alt+Down" variety --resume
+
+#Xfce4-appfinder
+#key "Alt+F2" xfce4-appfinder --collapsed
+
+#Xfce4-appfinder
+key "Alt+F3" xfce4-appfinder
+
+#################################################################
+#VARIETY KEYS WITH PYWAL
+#################################################################
+
+#Wallpaper trash
+key "Alt+Shift+t" variety -t && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
+
+#Wallpaper next
+key "Alt+Shift+n" variety -n && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
+
+#Wallpaper previous
+key "Alt+Shift+p" variety -p && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
+
+#Wallpaper favorite
+key "Alt+Shift+f" variety -f && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
+
+#Wallpaper update
+key "Alt+Shift+u" wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
+
+#################################################################
+# CONTROL + SHIFT KEYS
+#################################################################
+
+#Xcfe4-TaskManager
+key "Ctrl+Shift+Escape" xfce4-taskmanager
+
+#################################################################
+#     SCREENSHOTS
+#################################################################
+
+#Scrot
+key "Print" scrot 'ArcoLinux-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'
+
+#screeenshooter
+key "Ctrl+Print" xfce4-screenshooter
+
+#Gnome-Screenshot
+#key "Ctrl+Shift+Print" gnome-screenshot -i
+
+#################################################################
+#     FUNCTION KEYS
+#################################################################
+
+#xfce4-terminal dropdown
+key "F12" xfce4-terminal --drop-down
+
+#################################################################
+#     MULTIMEDIA KEYS
+#################################################################
+
+#################################################################
+#################################################################
+##################   DESKTOP SPECIFIC    ########################
+#################################################################
+#################################################################
+
+#################################################################
+# CTRL + ALT KEYS
+#################################################################
+
+
+#################################################################
+# SUPER + KEYS
+#################################################################
+
+
+#################################################################
+# SUPER + ALT KEYS
+#################################################################
+
+
+#################################################################
+# SUPER + CONTROL KEYS
+#################################################################
+
+
+#################################################################
+# SUPER + SHIFT KEYS
+#################################################################
+
+
+#################################################################
+# SUPER + CONTROL KEYS
+#################################################################
+oo
+
+#################################################################
+# ALT KEYS
+#################################################################
+
+
+#################################################################
+# ALT + SHIFT KEYS
+#################################################################
+
+
+#################################################################
+# CTRL + ALT KEYS
+#################################################################
+
+#
+#key "XF86Standby"         /bin/sh -c "{ test -e /run/systemd/system && systemctl suspend; } ||:"
+#key "XF86Sleep"           /bin/sh -c "{ test -e /run/systemd/system && systemctl suspend; } ||:"
+#key "XF86AudioLowerVolume"  amixer sset Master 5%-
+#key "XF86AudioRaiseVolume"  amixer sset Master 5%+
+#key "XF86AudioMute"         amixer sset Master toggle
+#key "XF86HomePage"          xdg-open about:blank
+#key "XF86Search"            xdg-open https://www.google.com
+#key "XF86Eject"             eject
+#key "XF86Calculator"        /bin/sh -c "gnome-calculator || xcalc || ( type bc >/dev/null 2>&1 && xterm -e bc -l)"

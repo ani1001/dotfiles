@@ -1,0 +1,64 @@
+!#/bin/bash
+
+# These things are run when an ICEWM X Session is started.
+# You may place a similar script in $HOME/.config/openbox/autostart
+# to run user-specific things.
+#
+# You can set picom to use either xrender or glx
+# Change if issues
+
+#generate menu
+xdgmenumaker -f icewm > ~/.icewm/menu
+
+#picom
+picom -b &
+
+# start ArcoLinux Welcome  App
+#dex $HOME/.config/autostart/arcolinux-welcome-app.desktop
+
+# Set background image
+#feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg
+nitrogen --restore &
+
+#Pamac-aur tray#
+#pamac-tray &
+
+#bluetooth#
+#blueberry-tray &
+
+#on laptops without seperate numeric keyboard put hashtag in front
+#numlockx &
+
+## GNOME PolicyKit authentication
+#/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
+## Volume control for systray
+volumeicon &
+
+## Turn off/on System Beep
+#xset b off
+
+## Enable power management
+xfce4-power-manager &
+
+##Clipboard Manager
+#(xfce4-clipman) &
+
+## XFCE4 Settings
+#xfsettingsd &
+
+#Variety
+#variety &
+
+#Network Manager Applet
+nm-applet &
+
+#plank &
+
+#discord &
+
+#insync start &
+
+#dropbox &
+
+lxpolkit &

@@ -1,0 +1,13 @@
+[app] (name=fbrun)
+  [Position]	(CENTER)	{0 0}
+  [Layer]	{2}
+[end]
+[app] (name=thunar) (class=Thunar) (role=Thunar-1666895232-2179142406)
+  [Maximized]	{yes}
+[end]
+[app] (name=Navigator) (class=waterfox) (role=browser)
+  [Maximized]	{yes}
+[end]
+[app] (name=geany) (class=Geany)
+  [Maximized]	{yes}
+[end]

@@ -17,7 +17,7 @@ fi
 [ -f ~/.xprofile ] && . ~/.xprofile
 
 # Set the default session here
-session=${1:-qtile}
+session=${1:-fluxbox}
 
 case $session in
     awesome           ) exec dbus-launch --auto-syntax --exit-with-session awesome;;
@@ -25,7 +25,7 @@ case $session in
     bspwm             ) exec dbus-launch --auto-syntax --exit-with-session bspwm;;
     cwm               ) exec dbus-launch --auto-syntax --exit-with-session cwm;;
     dwm               ) exec dbus-launch --auto-syntax --exit-with-session dwm;;
-    fluxbox           ) exec dbus-launch --auto-syntax --exit-with-session fluxbox;;
+    fluxbox           ) exec dbus-launch --auto-syntax --exit-with-session startfluxbox;;
     frankenwm         ) exec dbus-launch --auto-syntax --exit-with-session frankenwm;;
     fvwm3             ) exec dbus-launch --auto-syntax --exit-with-session fvwm3;;
     herbstluftwm      ) exec dbus-launch --auto-syntax --exit-with-session herbstluftwm;;

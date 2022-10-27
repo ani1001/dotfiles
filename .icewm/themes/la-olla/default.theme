@@ -1,0 +1,112 @@
+ThemeName="la olla"
+ThemeDescription="Un tema oscuro con varios colores, inspirado en la música de la banda La Olla Express"
+ThemeAuthor="Ren Canteros Sousa <ren.kudun@gmail.com>"
+License="GPL"
+Look=flat
+
+RolloverButtonsSupported=1
+TitleBarHeight=17
+TitleBarCentered=1
+TitleBarJustify=50
+
+BorderSizeX=2
+BorderSizeY=2
+CornerSizeX=16
+CornerSizeY=16
+DlgBorderSizeX=2
+DlgBorderSizeY=2
+
+#DesktopBackgroundCenter=1 # 0/1
+#DesktopBackgroundScaled=1 # 0 / 1
+DesktopBackgroundColor="#212121"
+#DesktopBackgroundImage=""
+
+ColorNormalBorder="rgb:21/21/21"
+ColorActiveBorder="rgb:30/33/34"
+ColorActiveTitleBar="rgb:30/33/34"
+ColorNormalTitleBar="rgb:30/33/34"
+ColorNormalButton="rgb:30/33/34"
+ColorActiveButton="rgb:30/33/34"
+ColorNormalTitleBarText="rgb:84/ae/00"
+ColorActiveTitleBarText="rgb:84/ae/00"
+
+ColorNormalMenu="rgb:21/21/21"
+ColorActiveMenuItem="rgb:21/21/21"
+ColorNormalMenuItemText="white"
+ColorActiveMenuItemText="black"
+ColorDisabledMenuItemText="rgb:80/80/80"
+
+ColorMoveSizeStatus="rgb:21/21/21"
+ColorMoveSizeStatusText="rgb:e0/46/13"
+
+ColorDefaultTaskBar="#28292b"
+ColorNormalTaskBarApp="#28292b"
+ColorNormalTaskBarAppText="rgb:ff/ff/ff"
+ColorActiveTaskBarApp="#28292b"
+ColorActiveTaskBarAppText="rgb:e0/46/13"
+ColorMinimizedTaskBarApp="#A0A0A0"
+ColorMinimizedTaskBarAppText="rgb:ff/ff/ff"
+
+ColorQuickSwitch="#28292b"
+ColorQuickSwitchText="white"
+ColorQuickSwitchActive="#e56016"
+
+TaskBarClockLeds=1
+ColorClock=""
+ColorClockText="#84ae00"
+
+ColorToolTip="#c2e300"
+ColorToolTipText="black"
+ColorLabel="#c2e300"
+ColorLabelText="black"
+
+ColorListBox="#28292b"
+ColorListBoxText="white"
+ColorListBoxSelection="#c2e300"
+ColorListBoxSelectionText="#000000"
+
+ColorScrollBarArrow="white"
+ColorScrollBarSlider="#28292b"
+ColorScrollBarButton="#28292b"
+ColorScrollBarButtonArrow="#ff9a0c"
+ColorScrollBarInactiveArrow="gray"
+
+ColorCPUStatusUser="#52ace4"
+ColorCPUStatusSystem="#c1e40a"
+ColorCPUStatusNice="#ff9a0c"
+ColorCPUStatusIdle="#28292b"
+ColorNet="#52ace4"
+ColorNetSend="#ff9a0c"
+ColorNetReceive="#c1e40a"
+ColorNetIdle="#28292b"
+
+ColorMEMStatusFree="#28292b"
+ColorMEMStatusCached="#52ace4"
+ColorMEMStatusUser="#20a9ff"
+ColorMEMStatusBuffers="black"
+
+ColorActiveWorkspaceButtonText="white"
+ColorNormalWorkspaceButtonText="white"
+
+# Font Specification
+TitleFontNameXft                =       sans-serif:size=10:bold
+MenuFontNameXft                 =       sans-serif:size=10
+MinimizedWindowFontNameXft      =       sans-serif:size=10
+ActiveButtonFontNameXft         =       sans-serif:size=10
+NormalButtonFontNameXft         =       sans-serif:size=10
+ToolButtonFontNameXft           =       sans-serif:size=10
+NormalWorkspaceFontNameXft      =       sans-serif:size=10
+ActiveWorkspaceFontNameXft      =       sans-serif:size=10
+QuickSwitchFontNameXft          =       sans-serif:size=10
+ListBoxFontNameXft              =       sans-serif:size=10
+StatusFontNameXft               =       sans-serif:size=10
+ToolTipFontNameXft              =       sans-serif:size=10
+ActiveTaskBarFontNameXft        =       sans-serif:size=10
+NormalTaskBarFontNameXft        =       sans-serif:size=10
+ClockFontNameXft                =       sans-serif:size=10
+InputFontNameXft                =       sans-serif:size=10
+
+DesktopBackgroundColor="#555555"
+DesktopBackgroundCenter=0
+DesktopBackgroundScaled=1 
+DesktopBackgroundImage="/usr/share/backgrounds/arcolinux/arco-wallpaper.jpg"

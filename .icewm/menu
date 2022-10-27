@@ -1,0 +1,84 @@
+menu "Applications" _none_ {
+  menu "Accessories" _none_ {
+    prog "Application Finder" _none_ xfce4-appfinder
+    prog "Disks" _none_ gnome-disks
+    prog "Kvantum Manager" _none_ kvantummanager
+    prog "Mousepad" _none_ mousepad 
+    prog "Qlipper" _none_ qlipper
+    prog "Terminator" _none_ terminator
+    prog "Xarchiver" _none_ xarchiver 
+    prog "nitrogen" _none_ nitrogen
+    prog "picom" _none_ picom
+  }
+  menu "Development" _none_ {
+    prog "Emacs" _none_ emacs 
+    prog "Emacs (Client)" _none_ sh -c "if [ -n \\"\\$*\\" ]; then exec emacsclient --alternate-editor= --display=\\"\\$DISPLAY\\" \\"\\$@\\"; else exec emacsclient --alternate-editor= --create-frame; fi" placeholder 
+    prog "Geany" _none_ geany 
+    prog "Icon Browser" _none_ gtk4-icon-browser
+  }
+  menu "Graphics" _none_ {
+    prog "Flameshot" _none_ /usr/bin/flameshot
+    prog "Mirage" _none_ mirage 
+    prog "Ristretto Image Viewer" _none_ ristretto 
+  }
+  menu "Multimedia" _none_ {
+    prog "DeaDBeeF" _none_ deadbeef 
+    prog "Parole Media Player" _none_ parole 
+    prog "PulseAudio Volume Control" _none_ pavucontrol
+    prog "VLC media player" _none_ /usr/bin/vlc --started-from-file 
+    prog "mpv Media Player" _none_ mpv --player-operation-mode=pseudo-gui -- 
+  }
+  menu "Network" _none_ {
+    prog "Chromium" _none_ chromium 
+    prog "Firefox Web Browser" _none_ firefox 
+    prog "Geary" _none_ geary 
+    prog "HexChat" _none_ hexchat --existing 
+    prog "MEGAsync" _none_ megasync
+    prog "pcloud" _none_ "/run/media/anik/Galaxy/FLOSS/Apps/AppImage/pcloud" 
+    prog "qBittorrent" _none_ qbittorrent 
+    prog "uGet" _none_ env GDK_BACKEND=x11 uget-gtk 
+  }
+  menu "Office" _none_ {
+    prog "Zathura" _none_ zathura 
+    prog "qpdfview" _none_ qpdfview --unique 
+  }
+  menu "Other" _none_ {
+    prog "Rofi" _none_ rofi -show
+    prog "Rofi Theme Selector" _none_ rofi-theme-selector
+  }
+  menu "Settings" _none_ {
+    prog "ARandR" _none_ arandr
+    prog "Advanced Network Configuration" _none_ nm-connection-editor
+    prog "Customize Look and Feel" _none_ lxappearance
+    prog "Desktop Preferences" _none_ pcmanfm --desktop-pref
+    prog "File Manager Settings" _none_ thunar-settings
+    prog "Power Manager" _none_ xfce4-power-manager-settings
+    prog "Qt5 Settings" _none_ qt5ct
+    prog "Removable Drives and Media" _none_ thunar-volman-settings
+    prog "Text Editor Settings" _none_ mousepad --preferences
+    prog "Xfce Terminal Settings" _none_ xfce4-terminal --preferences
+  }
+  menu "System" _none_ {
+    prog "Alacritty" _none_ alacritty
+    prog "BleachBit" _none_ bleachbit
+    prog "Bulk Rename" _none_ thunar --bulk-rename 
+    prog "CPU-X" _none_ cpu-x
+    prog "File Manager PCManFM" _none_ pcmanfm 
+    prog "GParted" _none_ /usr/bin/gparted-pkexec 
+    prog "GSmartControl" _none_ "/usr/bin/gsmartcontrol-root"
+    prog "Htop" _none_ xterm -e htop
+    prog "Manage Printing" _none_ xdg-open http://localhost:631/
+    prog "Oracle VM VirtualBox" _none_ VirtualBox 
+    prog "Psensor" _none_ psensor
+    prog "System Profiler and Benchmark" _none_ hardinfo
+    prog "Task Manager" _none_ xfce4-taskmanager
+    prog "Thunar File Manager" _none_ thunar 
+    prog "Tint2" _none_ tint2
+    prog "UXTerm" _none_ uxterm
+    prog "XTerm" _none_ xterm
+    prog "Xfce Terminal" _none_ xfce4-terminal
+    prog "conky" _none_ conky --daemonize --pause=1
+    prog "ranger" _none_ xterm -e ranger
+    prog "rxvt-unicode" _none_ urxvt
+  }
+}

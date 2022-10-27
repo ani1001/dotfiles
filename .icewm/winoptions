@@ -1,0 +1,13 @@
+# This is an example for icewm 1.8.0 window options file.
+# It will be installed as /usr/share/icewm/winoptions.
+# Place your variants in /etc/icewm or in $HOME/.icewm since
+# modifications to this file will be overwritten when you reinstall icewm.
+
+
+thunar.Thunar."File Operation Progress".startMinimized: 1
+thunar.Thunar."Confirm to replace files".startMinimized: 1
+Firefox.firefox."Quit and close tabs?".startMinimized: 1
+#fullKeys=1
+
+
+
