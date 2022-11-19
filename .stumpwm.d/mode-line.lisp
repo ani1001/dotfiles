@@ -3,7 +3,7 @@
 ;; Mode-line format
 (setf *screen-mode-line-format* (list " ")
       *screen-mode-line-format* (list "[^B%n^b] %W^>%d")
-      *mode-line-position* :bottom
+      *mode-line-position* :top
       *mode-line-border-width* 1
       *mode-line-pad-x* 1
       *mode-line-pad-y* 0

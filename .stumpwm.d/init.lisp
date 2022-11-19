@@ -14,9 +14,9 @@
 ;; Window appearance
 (setf *message-window-padding* 10
       *message-window-y-padding* 10
-      *message-window-gravity* :top-left
+      *message-window-gravity* :bottom-left
       *timeout-wait* 5
-      *input-window-gravity* :top-left
+      *input-window-gravity* :bottom-left
       *maxsize-border-width* 1
       *transient-border-width* 1
       *normal-border-width* 0
