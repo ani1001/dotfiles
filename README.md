@@ -33,7 +33,7 @@ Built around a tiling window manager workflow with carefully curated, lightweigh
 
 ## 🚀 Quick Start
 
-```bash
+bash
 # Clone the repository
 git clone https://github.com/yourusername/dotfiles.git ~/dotfiles
 
